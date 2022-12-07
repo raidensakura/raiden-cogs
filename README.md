@@ -1,5 +1,5 @@
 [![](https://img.shields.io/badge/raiden--cogs-by%20Raiden-ff69b4)](https://github.com/raidensakura)
-[![](https://discord.com/api/guilds/616969119685935162/widget.png)](https://dsc.g/transience/) 
+[![](https://discord.com/api/guilds/616969119685935162/widget.png)](https://dsc.gg/transience/) 
 [![](https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg)](https://github.com/Cog-Creators/Red-DiscordBot) 
 [![](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/python/black) 
 # raiden-cogs
