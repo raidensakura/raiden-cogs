@@ -35,9 +35,9 @@ class Longcat(BaseCog):
             head = Image.open(bundled_data_path(self) / "head_oyen.png")
         elif str(ctx.message.content.split(ctx.prefix)[1]).startswith("ny"):
             len_prefix = len(ctx.prefix) + 2
-            the_cat = [Image.open(bundled_data_path(self) / "butt_pink.png")]
-            trunk = Image.open(bundled_data_path(self) / "trunk_pink.png")
-            head = Image.open(bundled_data_path(self) / "head_pink.png")
+            the_cat = [Image.open(bundled_data_path(self) / "nyan_back.png")]
+            trunk = Image.open(bundled_data_path(self) / "nyan_mid.png")
+            head = Image.open(bundled_data_path(self) / "nyan_front.png")
         else:
             len_prefix = len(ctx.prefix) + 1
             the_cat = [Image.open(bundled_data_path(self) / "butt.png")]
