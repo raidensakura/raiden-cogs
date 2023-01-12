@@ -19,11 +19,11 @@ HIT = [
     "💥 It was a critical hit.",
     "🚛 It hit like a truck, sending them to another world.",
     "🍰 It easily hit, like a piece of cake.",
-	"🎯 Bullseye! Hit it right on target."
+    "🎯 Bullseye! Hit it right on target.",
 ]
 MISS = [
     "🦋 It missed and they didn't even flinch.",
     "🍃 Unfortunately, it missed and went with the wind.",
     "😐 It missed and it wasn't very amusing.",
-	"📉 But it missed, probably because they were lagging."
+    "📉 But it missed, probably because they were lagging.",
 ]

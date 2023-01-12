@@ -3,7 +3,7 @@
     "short": "Throw random stuff at your Discord friends",
     "description": "A cog to throw random things at your friends that may or may not upset them. Originally a roleplay cog by owo-cogs, modified by raidensakura.",
     "end_user_data_statement": "This cog does not persistently store any PII data or metadata about users.",
-    "author": ["raiden"],
+    "author": ["raidensakura"],
     "required_cogs": {},
     "requirements": ["tabulate"],
     "tags": [
