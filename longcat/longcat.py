@@ -26,6 +26,7 @@ class Longcat(BaseCog):
     @commands.bot_has_permissions(attach_files=True)
     @commands.command(aliases=catto)
     async def cat(self, ctx):
+        """Summon a longcat."""
         # grab the length of prefix + "lm" or "c" to exclude later
         if str(ctx.message.content.split(ctx.prefix)[1]).startswith("lm"):
             len_prefix = len(ctx.prefix) + 2
