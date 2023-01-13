@@ -43,8 +43,7 @@ class Longcat(BaseCog):
             the_cat = [Image.open(bundled_data_path(self) / "butt.png")]
             trunk = Image.open(bundled_data_path(self) / "trunk.png")
             head = Image.open(bundled_data_path(self) / "head.png")
-        # grab length of trunks and subtract 1 for "c" or "o"
-        # and substract one to length because of letter t
+        # grab length of trunks and subtract 1 for "t", "o" or "n"
         len_cat = len(ctx.message.content) - len_prefix - 1
 
         i = 0
