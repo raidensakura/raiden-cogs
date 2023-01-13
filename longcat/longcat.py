@@ -74,10 +74,10 @@ class Longcat(BaseCog):
             return [b_base], t_base, h_base
 
         # grab the length of prefix + letters for bottom
-        if str(ctx.message.content.split(ctx.prefix)[1]).startswith("lm"):
+        if str(ctx.message.content.lower().split(ctx.prefix)[1]).startswith("lm"):
             len_prefix = len(ctx.prefix) + 2
             the_cat, trunk, head = applyFilter(trulyRGB=True)
-        elif str(ctx.message.content.split(ctx.prefix)[1]).startswith("ny"):
+        elif str(ctx.message.content.lower().split(ctx.prefix)[1]).startswith("ny"):
             len_prefix = len(ctx.prefix) + 2
             the_cat = [Image.open(bundled_data_path(self) / "nyan_back.png")]
             trunk = Image.open(bundled_data_path(self) / "nyan_mid.png")
