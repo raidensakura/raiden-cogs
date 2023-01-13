@@ -1,5 +1,6 @@
-import os
+import io
 import time
+import random
 import discord
 from PIL import Image
 from redbot.core import commands
@@ -26,13 +27,56 @@ class Longcat(BaseCog):
     @commands.bot_has_permissions(attach_files=True)
     @commands.command(aliases=catto)
     async def cat(self, ctx):
-        """Summon a longcat."""
-        # grab the length of prefix + "lm" or "c" to exclude later
+        """Summon a longcat. Can also be summoned with `nyan` or `lmao` """
+
+        # Fully RGB yes
+        def randomColor():
+            r = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
+            a = 128
+            return (r, g, b, a)
+
+        # b for bottom, t for trunk and h for head
+        def fetchColor(t, b, h, trulyRGB):
+            color = randomColor()
+            if trulyRGB:
+                # colors of bottom, trunk and head will be mismatched
+                b_overlay = Image.new(size=t.size, color=randomColor(), mode="RGBA")
+                t_overlay = Image.new(size=b.size, color=randomColor(), mode="RGBA")
+                h_overlay = Image.new(size=h.size, color=randomColor(), mode="RGBA")
+            else:
+                b_overlay = Image.new(size=t.size, color=color, mode="RGBA")
+                t_overlay = Image.new(size=b.size, color=color, mode="RGBA")
+                h_overlay = Image.new(size=h.size, color=color, mode="RGBA")
+            return b_overlay, t_overlay, h_overlay
+
+        def fetchFilter():
+            b_base = Image.open(bundled_data_path(self) / "bottom.png")
+            t_base = Image.open(bundled_data_path(self) / "trunk.png")
+            h_base = Image.open(bundled_data_path(self) / "head.png")
+            b_outline = Image.open(bundled_data_path(self) / "bottom_outline.png")
+            t_outline = Image.open(bundled_data_path(self) / "trunk_outline.png")
+            h_outline = Image.open(bundled_data_path(self) / "head_outline.png")
+            return b_base, t_base, h_base, b_outline, t_outline, h_outline
+
+        def applyFilter(trulyRGB):
+            b_base, t_base, h_base, b_outline, t_outline, h_outline = fetchFilter()
+            b_color, t_color, h_color = fetchColor(b_base, t_base, h_base, trulyRGB)
+
+            b_base.paste(b_color, None, mask=b_base)
+            t_base.paste(t_color, None, mask=t_base)
+            h_base.paste(h_color, None, mask=h_base)
+
+            b_base.paste(b_outline, None, mask=b_outline)
+            t_base.paste(t_outline, None, mask=t_outline)
+            h_base.paste(h_outline, None, mask=h_outline)
+            return [b_base], t_base, h_base
+
+        # grab the length of prefix + letters for bottom
         if str(ctx.message.content.split(ctx.prefix)[1]).startswith("lm"):
             len_prefix = len(ctx.prefix) + 2
-            the_cat = [Image.open(bundled_data_path(self) / "butt_oyen.png")]
-            trunk = Image.open(bundled_data_path(self) / "trunk_oyen.png")
-            head = Image.open(bundled_data_path(self) / "head_oyen.png")
+            the_cat, trunk, head = applyFilter(trulyRGB=True)
         elif str(ctx.message.content.split(ctx.prefix)[1]).startswith("ny"):
             len_prefix = len(ctx.prefix) + 2
             the_cat = [Image.open(bundled_data_path(self) / "nyan_back.png")]
@@ -40,10 +84,8 @@ class Longcat(BaseCog):
             head = Image.open(bundled_data_path(self) / "nyan_front.png")
         else:
             len_prefix = len(ctx.prefix) + 1
-            the_cat = [Image.open(bundled_data_path(self) / "butt.png")]
-            trunk = Image.open(bundled_data_path(self) / "trunk.png")
-            head = Image.open(bundled_data_path(self) / "head.png")
-        # grab length of trunks and subtract 1 for "t", "o" or "n"
+            the_cat, trunk, head = applyFilter(trulyRGB=False)
+        # grab length of trunks and subtract 1 for head letter
         len_cat = len(ctx.message.content) - len_prefix - 1
 
         i = 0
@@ -61,8 +103,7 @@ class Longcat(BaseCog):
             x_offset += im.size[0]
         # I'm giving it a name based on a timestamp, this prevents future problems
         litter_box = str(time.time()).split(".")[0] + ".png"
-        cat.save(bundled_data_path(self) / litter_box)
-        await ctx.send(
-            file=discord.File(fp=str((bundled_data_path(self) / litter_box)))
-        )
-        os.remove(bundled_data_path(self) / litter_box)
+        with io.BytesIO() as image_binary:
+            cat.save(image_binary, "PNG", optimize=True, quality=95)
+            image_binary.seek(0)
+            await ctx.send(file=discord.File(fp=image_binary, filename=litter_box))
