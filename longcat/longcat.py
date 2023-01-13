@@ -73,10 +73,20 @@ class Longcat(BaseCog):
             h_base.paste(h_outline, None, mask=h_outline)
             return [b_base], t_base, h_base
 
+        def rainbowTrunks(t):
+            t_base = Image.open(bundled_data_path(self) / "trunk.png")
+            t_color = Image.new(size=t.size, color=randomColor(), mode="RGBA")
+            t_outline = Image.open(bundled_data_path(self) / "trunk_outline.png")
+            t_base.paste(t_color, None, mask=t_base)
+            t_base.paste(t_outline, None, mask=t_outline)
+            return t_base
+        
+        trulyRGB = False
         # grab the length of prefix + letters for bottom
         if str(ctx.message.content.lower().split(ctx.prefix)[1]).startswith("lm"):
             len_prefix = len(ctx.prefix) + 2
-            the_cat, trunk, head = applyFilter(trulyRGB=True)
+            trulyRGB = True
+            the_cat, trunk, head = applyFilter(trulyRGB)
         elif str(ctx.message.content.lower().split(ctx.prefix)[1]).startswith("ny"):
             len_prefix = len(ctx.prefix) + 2
             the_cat = [Image.open(bundled_data_path(self) / "nyan_back.png")]
@@ -90,6 +100,7 @@ class Longcat(BaseCog):
 
         i = 0
         while i < (len_cat):
+            if trulyRGB: trunk = rainbowTrunks(trunk)
             the_cat.append(trunk)
             i += 1
         the_cat.append(head)
