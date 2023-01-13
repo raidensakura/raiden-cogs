@@ -43,6 +43,7 @@
 <h2 align="center">Dev Stuff</h2>
 
 <h3 align="center">Formatting</h3>
+<p align="center">To make sure things stay nice and clean.</p>
 
 ```py
 pip install -U black isort
@@ -50,6 +51,7 @@ black .; isort .
 ```
 
 <h3 align="center"><code>.vscode/settings.json</code></h3>
+<p align="center">To make sure the venv always open when I work on cogs.</p>
 
 ```json
 {
