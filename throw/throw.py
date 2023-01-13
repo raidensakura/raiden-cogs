@@ -4,9 +4,8 @@ import discord
 from redbot.core import Config, commands
 from redbot.core.bot import Red
 from redbot.core.commands import Context
-from redbot.core.utils.chat_formatting import box, bold, quote
-from redbot.core.utils.menus import menu, DEFAULT_CONTROLS
-
+from redbot.core.utils.chat_formatting import bold, box, quote
+from redbot.core.utils.menus import DEFAULT_CONTROLS, menu
 from tabulate import tabulate
 
 from .constants import *

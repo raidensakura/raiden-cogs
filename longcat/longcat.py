@@ -1,12 +1,12 @@
 import io
-import time
 import random
+import time
+
 import discord
 from PIL import Image
 from redbot.core import commands
-from redbot.core.data_manager import bundled_data_path
-
 from redbot.core.bot import Red
+from redbot.core.data_manager import bundled_data_path
 
 BaseCog = getattr(commands, "Cog", object)
 
@@ -27,7 +27,7 @@ class Longcat(BaseCog):
     @commands.bot_has_permissions(attach_files=True)
     @commands.command(aliases=catto)
     async def cat(self, ctx):
-        """Summon a longcat. Can also be summoned with `nyan` or `lmao` """
+        """Summon a longcat. Can also be summoned with `nyan` or `lmao`"""
 
         # Fully RGB yes
         def randomColor():
