@@ -5,8 +5,8 @@
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
  <a href="[https://github.com/raidensakura](https://github.com/python/black)"><img src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
 </div>
-
-<p align="center">My collection of badly written Red V3 cogs</p>
+<br>
+<p align="center">A collection of <strike>Badly written</strike> cogs I made for fun in the process of learning Python.</p>
 
 <h2 align="center">Installation</h2>
 
@@ -18,7 +18,7 @@
 
 <h2 align="center">List of Cogs</h2>
 
-<table>
+<table align="center">
  
  <thead>
   <tr>
@@ -29,7 +29,12 @@
  
  <tr>
   <td>throw</td>
-  <td><details><summary>Throw random stuff at your Discord friends.</summary> This is a modified version of the Roleplay cog by <a href="">owo</a>.</details>
+  <td><details><summary>Throw random stuff at your Discord friends.</summary> This is a modified version of the Roleplay cog by <a href="https://github.com/o-wo/owo-cogs">owo</a>.</details>
+ </tr>
+ 
+  <tr>
+  <td>longcat</td>
+  <td><details><summary>Summon differently-colored longcat.</summary> This is a modified version of the Longcat cog by <a href="https://github.com/Aioxas/ax-cogs">Aioxas</a>.</details>
  </tr>
  
 </table>
