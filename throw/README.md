@@ -7,67 +7,15 @@
  <a href="https://ko-fi.com/P5P6D65UW"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_red.png" style="height: 25px;"></a>
 </div>
 <br>
-<p align="center">A collection of <strike>badly written</strike> cogs I made for fun in the process of learning Python.</p>
+<p align="center"><b>Throw</b> - A cog to throw randomly selected object to your Discord friends (or enemies). Has a chance of missing. <a href="https://github.com/o-wo/owo-cogs">o-wo</a> originally made this cog, but I modified it to something different to commemorate Discord's Snowball bot for 2021's christmas event.<br><br>
+<img src="https://media.discordapp.net/attachments/964625519977046076/1063717100461502484/image.png">
+
+</p>
 
 <h2 align="center">Installation</h2>
 
 ```ini
 [p]load downloader
 [p]repo add raiden-cogs https://github.com/raidensakura/raiden-cogs/
-[p]cog install raiden-cogs <cog_name>
+[p]cog install raiden-cogs throw
 ```
-
-<h2 align="center">List of Cogs</h2>
-
-<table align="center">
- 
- <thead>
-  <tr>
-   <td>Name</td>
-   <td>Description</td>
-  </tr>
- </thead>
- 
- <tr>
-  <td>throw</td>
-  <td>Throw random stuff at your Discord friends. This is a modified version of the Roleplay cog by <a href="https://github.com/o-wo/owo-cogs">owo</a>.</td>
- </tr>
- 
-  <tr>
-   <td>longcat</td>
-   <td>Summon differently-colored longcat. This is a modified version of the Longcat cog by <a href="https://github.com/Aioxas/ax-cogs">Aioxas</a>.</td>
-  </tr>
- 
-</table>
-
-<h2 align="center">Dev Stuff</h2>
-
-<h3 align="center">Formatting</h3>
-<p align="center">To make sure things stay nice and clean.</p>
-
-```py
-pip install -U black isort
-black .; isort .
-```
-
-<h3 align="center"><code>.vscode/settings.json</code></h3>
-<p align="center">To make sure the venv always open when I work on cogs.</p>
-
-```json
-{
-	"python.terminal.activateEnvironment": true,
-	"python.terminal.activateEnvInCurrentTerminal": true,
-	"python.defaultInterpreterPath": "C:\\Users\\Raiden\\redenv\\Scripts\\python.exe"
-}
-
-```
-
-<h2 align="center">Credits</h2>
-
-<p align="center">
- <ul>
-  <li><a href="https://github.com/o-wo">ow0x</a> for their Roleplay cog</li>
-  <li><a href="https://github.com/Aioxas">Aioxas</a> for their Longcat cog</li>
-  <li><a href="https://discord.red">Cog-Creators Community</a> for Red Bot and its documentation</li>
- </ul>
-</p>
