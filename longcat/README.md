@@ -1,4 +1,5 @@
-<h1 align="center"><img src="https://files.catbox.moe/92mfqx.png"><img src="https://img.icons8.com/cotton/512/settings.png" style="height: 70px;"></h1>
+<p align="center"><img src="https://files.catbox.moe/92mfqx.png"><img src="https://img.icons8.com/cotton/512/settings.png" style="height: 70px;"></p>
+<h1 align="center">Longcat</h1>
 <div align="center">
  <a href="https://github.com/raidensakura"><img src="https://img.shields.io/badge/raiden--cogs-by%20Raiden-d11df9"></a>
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
