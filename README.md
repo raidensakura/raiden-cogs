@@ -29,12 +29,12 @@
  </thead>
  
  <tr>
-  <td>throw</td>
+  <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/throw">throw</a></td>
   <td>Throw random stuff at your Discord friends. This is a modified version of the Roleplay cog by <a href="https://github.com/o-wo/owo-cogs">owo</a>.</td>
  </tr>
  
   <tr>
-   <td>longcat</td>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/longcat">longcat</a></td>
    <td>Summon differently-colored longcat. This is a modified version of the Longcat cog by <a href="https://github.com/Aioxas/ax-cogs">Aioxas</a>.</td>
   </tr>
  
