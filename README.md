@@ -47,7 +47,7 @@
 
 ```py
 pip install -U black isort
-black .; isort .
+black . ; isort .
 ```
 
 <h3 align="center"><code>.vscode/settings.json</code></h3>
