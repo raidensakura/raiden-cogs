@@ -37,6 +37,11 @@
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/longcat">longcat</a></td>
    <td>Summon differently-colored longcat. This is a modified version of the Longcat cog by <a href="https://github.com/Aioxas/ax-cogs">Aioxas</a>.</td>
   </tr>
+  
+  <tr>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/choose">choose</a></td>
+   <td>A cog to replace Red Bot's <a href="https://docs.discord.red/en/stable/cog_guides/general.html?highlight=general">General</a> cog <code>choose</code> command to something more intuitive.</td>
+  </tr>
  
 </table>
 
