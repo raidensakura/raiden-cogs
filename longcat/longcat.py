@@ -8,10 +8,13 @@ from redbot.core import commands
 from redbot.core.bot import Red
 from redbot.core.data_manager import bundled_data_path
 
-BaseCog = getattr(commands, "Cog", object)
 
+class Longcat(commands.Cog):
+    """
+    Summon variably-lengthed, randomly-colored longcats.
+    Can be summoned with `lmao`, `cat` and `nyan`.
+    """
 
-class Longcat(BaseCog):
     def __init__(self, bot: Red):
         self.bot = bot
 
@@ -19,17 +22,16 @@ class Longcat(BaseCog):
     catto = ["c" + "a" * i + "t" for i in range(2, 42)]
     lmao = ["lm" + "a" * i + "o" for i in range(1, 42)]
     nyan = ["ny" + "a" * i + "n" for i in range(1, 42)]
-    catto.extend(lmao)
-    catto.extend(nyan)
+
+    alias_list = catto + lmao + nyan
 
     @commands.guild_only()
     @commands.cooldown(1, 5, commands.BucketType.member)
     @commands.bot_has_permissions(attach_files=True)
-    @commands.command(aliases=catto)
+    @commands.command(aliases=alias_list)
     async def cat(self, ctx):
         """Summon a longcat. Can also be summoned with `nyan` or `lmao`"""
 
-        # Fully RGB yes
         def randomColor():
             r = random.randint(0, 255)
             g = random.randint(0, 255)
@@ -80,7 +82,7 @@ class Longcat(BaseCog):
             t_base.paste(t_color, None, mask=t_base)
             t_base.paste(t_outline, None, mask=t_outline)
             return t_base
-        
+
         trulyRGB = False
         # grab the length of prefix + letters for bottom
         if str(ctx.message.content.lower().split(ctx.prefix)[1]).startswith("lm"):
@@ -100,14 +102,13 @@ class Longcat(BaseCog):
 
         i = 0
         while i < (len_cat):
-            if trulyRGB: trunk = rainbowTrunks(trunk)
+            if trulyRGB:
+                trunk = rainbowTrunks(trunk)
             the_cat.append(trunk)
             i += 1
         the_cat.append(head)
         widths, heights = zip(*(i.size for i in the_cat))
-        total_widths = sum(widths)
-        total_heights = max(heights)
-        cat = Image.new("RGBA", (total_widths, total_heights))
+        cat = Image.new("RGBA", (sum(widths), max(heights)))
         x_offset = 0
         for im in the_cat:
             cat.paste(im, (x_offset, 0))
