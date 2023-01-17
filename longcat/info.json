@@ -3,7 +3,7 @@
     "short": "All hail Longcat. Improved from Aioxas' Longcat cog.",
     "description": "Send a looooongcat based on how long you typed the command.",
 	"install_msg": "It's a looooooong loooooooong cat",
-    "end_user_data_statement": "This cog does not persistently store any PII data or metadata about users.",
+    "end_user_data_statement": "This cog does not persistently store any data about users.",
     "author": ["raidensakura", "Aioxas"],
     "required_cogs": {},
     "requirements": ["Pillow"],
