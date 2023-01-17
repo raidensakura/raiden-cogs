@@ -6,7 +6,7 @@ from redbot.core import commands
 from redbot.core.bot import Red
 
 
-class BetterChoose(commands.Cog):
+class Choose(commands.Cog):
     """
     A better replacement for core `choose` command.
     Supports multiple delimiters: `;`, `,`, `\\n`, `|`, and `#`
@@ -64,7 +64,7 @@ async def setup(bot: Red) -> None:
     if old_choose:
         bot.remove_command(old_choose.name)
 
-    cog = BetterChoose(bot)
+    cog = Choose(bot)
 
     r = bot.add_cog(cog)
     if r is not None:
