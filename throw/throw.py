@@ -25,6 +25,7 @@ class Throw(commands.Cog):
             f"Cog version:  v{self.__version__}"
         )
 
+    # TODO: Delete user throw stats
     async def red_delete_data_for_user(self, **kwargs):
         """Nothing to delete"""
         pass
@@ -50,7 +51,7 @@ class Throw(commands.Cog):
     @commands.command()
     @commands.guild_only()
     @commands.bot_has_permissions(embed_links=True)
-    @commands.cooldown(1, 10, commands.BucketType.member)
+    @commands.cooldown(1, 5, commands.BucketType.member)
     async def throw(self, ctx: Context, *, member: discord.Member):
         """Throw a random item at someone, with a GIF reaction"""
         if member.id == ctx.me.id:

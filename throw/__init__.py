@@ -1,11 +1,17 @@
-from discord.utils import maybe_coroutine
+import json
+from pathlib import Path
+
+from redbot.core.bot import Red
 
 from .throw import Throw
 
-__red_end_user_data_statement__ = (
-    "This cog does not persistently store any PII data or metadata about users."
-)
+with open(Path(__file__).parent / "info.json") as fp:
+    __red_end_user_data_statement__ = json.load(fp)["end_user_data_statement"]
 
 
-async def setup(bot):
-    await maybe_coroutine(bot.add_cog, Throw(bot))
+async def setup(bot: Red) -> None:
+    cog = Throw(bot)
+
+    r = bot.add_cog(cog)
+    if r is not None:
+        await r
