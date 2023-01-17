@@ -44,11 +44,28 @@ class BetterChoose(commands.Cog):
             e = discord.Embed(
                 color=(await ctx.embed_colour()), title=random.choice(choosearray)
             )
-            e.set_footer(text=f"✨ Choosing for {ctx.author.display_name}, from a list of {len(choosearray)} options.")
+            e.set_footer(
+                text=f"✨ Choosing for {ctx.author.display_name}, from a list of {len(choosearray)} options."
+            )
         else:
             return await ctx.send("Not enough options to pick from.")
 
         try:
             return await ctx.send(embed=e)
         except:
-            return await ctx.send("Oops, I encountered an error while trying to send the embed.")
+            return await ctx.send(
+                "Oops, I encountered an error while trying to send the embed."
+            )
+
+
+async def setup(bot: Red) -> None:
+    global old_choose
+    old_choose = bot.get_command("choose")
+    if old_choose:
+        bot.remove_command(old_choose.name)
+
+    cog = BetterChoose(bot)
+
+    r = bot.add_cog(cog)
+    if r is not None:
+        await r
