@@ -15,8 +15,23 @@ class Longcat(commands.Cog):
     Can be summoned with `lmao`, `cat` and `nyan`.
     """
 
+    __author__ = ["raidensakura"]
+    __version__ = "1.0.0"
+
     def __init__(self, bot: Red):
         self.bot = bot
+
+    def format_help_for_context(self, ctx: commands.Context) -> str:
+        """
+        Thanks Sinbad!
+        """
+        pre_processed = super().format_help_for_context(ctx)
+        s = "s" if len(self.__author__) > 1 else ""
+        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+
+    async def red_delete_data_for_user(self, **kwargs) -> None:
+        """Nothing to delete"""
+        return
 
     # limit to 42 trunks
     catto = ["c" + "a" * i + "t" for i in range(2, 42)]

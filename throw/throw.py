@@ -12,23 +12,10 @@ from .constants import *
 
 
 class Throw(commands.Cog):
-    """Throw stuff and your Discord friends or virtual strangers."""
+    """Throw stuff at your Discord friends or virtual strangers."""
 
-    __authors__ = ["raidensakura"]
-    __version__ = "1.2.0"
-
-    def format_help_for_context(self, ctx: commands.Context) -> str:
-        """Thanks Sinbad."""
-        return (
-            f"{super().format_help_for_context(ctx)}\n\n"
-            f"Authors:  {', '.join(self.__authors__)}\n"
-            f"Cog version:  v{self.__version__}"
-        )
-
-    # TODO: Delete user throw stats
-    async def red_delete_data_for_user(self, **kwargs):
-        """Nothing to delete"""
-        pass
+    __author__ = ["raidensakura"]
+    __version__ = "1.0.0"
 
     def __init__(self, bot: Red):
         self.bot = bot
@@ -39,6 +26,19 @@ class Throw(commands.Cog):
         self.config.register_global(**default_global)
         self.config.register_member(**default_user)
         self.config.register_user(**default_user)
+
+    def format_help_for_context(self, ctx: commands.Context) -> str:
+        """
+        Thanks Sinbad!
+        """
+        pre_processed = super().format_help_for_context(ctx)
+        s = "s" if len(self.__author__) > 1 else ""
+        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+
+    # TODO: Delete user throw stats
+    async def red_delete_data_for_user(self, **kwargs):
+        """Nothing to delete"""
+        return
 
     @staticmethod
     async def temp_tip(ctx: commands.Context):

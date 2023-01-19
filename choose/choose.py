@@ -1,3 +1,4 @@
+import logging
 import random
 from re import split
 
@@ -5,12 +6,17 @@ import discord
 from redbot.core import commands
 from redbot.core.bot import Red
 
+log = logging.getLogger("red.raidensakura.choose")
+
 
 class Choose(commands.Cog):
     """
     A better replacement for core `choose` command.
     Supports multiple delimiters: `;`, `,`, `\\n`, `|`, and `#`
     """
+
+    __author__ = ["raidensakura"]
+    __version__ = "1.0.0"
 
     def __init__(self, bot):
         self.bot = bot
@@ -23,6 +29,14 @@ class Choose(commands.Cog):
             except:
                 pass
             self.bot.add_command(old_choose)
+
+    def format_help_for_context(self, ctx: commands.Context) -> str:
+        """
+        Thanks Sinbad!
+        """
+        pre_processed = super().format_help_for_context(ctx)
+        s = "s" if len(self.__author__) > 1 else ""
+        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
 
     async def red_delete_data_for_user(self, **kwargs) -> None:
         """Nothing to delete"""
@@ -52,7 +66,8 @@ class Choose(commands.Cog):
 
         try:
             return await ctx.send(embed=e)
-        except:
+        except Exception as exc:
+            log.exception("Error trying to send choose embed.", exc_info=exc)
             return await ctx.send(
                 "Oops, I encountered an error while trying to send the embed."
             )
