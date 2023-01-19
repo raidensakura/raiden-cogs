@@ -19,7 +19,7 @@ class Throw(commands.Cog):
 
     def __init__(self, bot: Red):
         self.bot = bot
-        self.config = Config.get_conf(self, 12345676985684321, force_registration=True)
+        self.config = Config.get_conf(self, 180109040514130509, force_registration=True)
         default_global = {"schema_version": 1}
         self.possible_actions = ["THROW"]
         default_user = {"ITEMS_THROWN": 0, "TIMES_HIT": 0}
