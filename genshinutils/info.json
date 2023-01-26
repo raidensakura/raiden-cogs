@@ -1,12 +1,12 @@
 {
     "name": "GenshinUtils",
-    "short": "A Genshin Impact cog",
-    "description": "",
-	"install_msg": "",
-    "end_user_data_statement": "This cog does not persistently store any data about users.",
+    "short": "A Genshin Impact utility cog",
+    "description": "Various useful utilities for Genshin Impact, such as retrieving profile data and many more.",
+	"install_msg": "Thank you for installing my cog. This is continuously being worked on, expect rapid changes.\nI test stuff in my Discord: https://dsc.gg/transience",
+    "end_user_data_statement": "This cog interact with a public API to store your linked game UID.",
     "author": ["raidensakura"],
     "required_cogs": {},
-    "requirements": ["genshin"],
+    "requirements": ["genshin", "enkanetwork", "aioenkanetworkcard"],
     "tags": [
         "genshin"
     ],
