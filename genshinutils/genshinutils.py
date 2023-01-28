@@ -3,10 +3,10 @@ from typing import Literal
 
 from enkanetwork import EnkaNetworkAPI
 from redbot.core import Config, checks, commands
-from redbot.core.bot import Red
 from redbot.core.commands import Context
 
 from .profile import GenshinProfile
+from .register import GenshinRegister
 from .settings import GenshinSet
 
 enka_client = EnkaNetworkAPI()
@@ -14,7 +14,7 @@ enka_client = EnkaNetworkAPI()
 log = logging.getLogger("red.raidensakura.genshinutils")
 
 
-class GenshinUtils(GenshinSet, GenshinProfile, commands.Cog):
+class GenshinUtils(GenshinSet, GenshinRegister, GenshinProfile, commands.Cog):
     """GenshinUtils commands."""
 
     __author__ = ["raidensakura"]
@@ -23,14 +23,17 @@ class GenshinUtils(GenshinSet, GenshinProfile, commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.config = Config.get_conf(self, 243316261264556032, force_registration=True)
-        default_global = {"schema_version": 1, "verification": True}
-        default_user = {"UID": ""}
+        default_global = {
+            "schema_version": 1,
+            "verification": True,
+            "encryption_key": "",
+        }
+        default_user = {"UID": "", "ltuid": "", "ltoken": ""}
         self.config.register_global(**default_global)
         self.config.register_user(**default_user)
         self.enka_client = enka_client
 
     def cog_unload(self):
-        log.debug(f"[Cog Unload] Executing tasks.")
         enka_client._close()
 
     def format_help_for_context(self, ctx: commands.Context) -> str:
@@ -42,12 +45,12 @@ class GenshinUtils(GenshinSet, GenshinProfile, commands.Cog):
     async def red_delete_data_for_user(
         self,
         *,
-        requester: Literal["discord", "owner", "user", "user_strict"],
+        requester: Literal["discord_deleted_user", "owner", "user_strict", "user"],
         user_id: int,
     ):
         await self.config.user_from_id(user_id).clear()
 
     @commands.group()
-    @commands.guild_only()
     async def genshin(self, ctx: commands.Context):
         """GenshinUtils main command."""
+        # TODO: Embed explaining what this cog does and its info

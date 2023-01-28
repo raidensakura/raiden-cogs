@@ -6,7 +6,7 @@
     "end_user_data_statement": "This cog interact with a public API to store your linked game UID.",
     "author": ["raidensakura"],
     "required_cogs": {},
-    "requirements": ["genshin", "enkanetwork", "aioenkanetworkcard"],
+    "requirements": ["genshin", "enkanetwork", "aioenkanetworkcard", "fernet"],
     "tags": [
         "genshin"
     ],
