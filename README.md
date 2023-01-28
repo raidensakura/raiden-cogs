@@ -42,6 +42,11 @@
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/choose">choose</a></td>
    <td>A cog to replace Red Bot's <a href="https://docs.discord.red/en/stable/cog_guides/general.html?highlight=general">General</a> cog <code>choose</code> command to something more intuitive.</td>
   </tr>
+  
+  <tr>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/genshinutils">genshinutils</a></td>
+   <td>Multipurpose Genshin Impact oriented cog.</td>
+  </tr> 
  
 </table>
 
