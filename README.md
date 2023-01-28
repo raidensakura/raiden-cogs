@@ -45,7 +45,7 @@
   
   <tr>
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/genshinutils">genshinutils</a></td>
-   <td>Multipurpose Genshin Impact oriented cog.</td>
+   <td>Multipurpose Genshin Impact oriented cog. Able to retrieve game profile data, character data and many more.</td>
   </tr> 
  
 </table>
