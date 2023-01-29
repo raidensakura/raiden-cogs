@@ -1,13 +1,10 @@
 import logging
-from typing import Union
+from time import mktime
 
 import genshin
-
-import discord
-from time import mktime
 from redbot.core import checks, commands
 
-from .utils import validate_uid, get_user_cookie, generate_embed
+from .utils import generate_embed, get_user_cookie, validate_uid
 
 log = logging.getLogger("red.raidensakura.genshinutils")
 

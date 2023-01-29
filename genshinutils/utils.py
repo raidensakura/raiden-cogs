@@ -10,12 +10,14 @@ from .constants import common_names
 
 log = logging.getLogger("red.raidensakura.genshinutils")
 
+"""I make it a function so it's more readable"""
 # Used internally
 def bytes_to_string(bytes):
     str = bytes.decode()
     return str
 
 
+"""I make it a function so it's more readable"""
 # Used internally
 def string_to_bytes(str):
     bytes = str.encode()
@@ -135,5 +137,8 @@ Returns: discord.Embed
 def generate_embed(title, color):
     cog_url = "https://project-mei.xyz/genshinutils"
     e = discord.Embed(title=title, color=color, url=cog_url)
-    e.set_footer(text="genshinutils cog by raidensakura", icon_url="https://avatars.githubusercontent.com/u/120461773?s=64&v=4")
+    e.set_footer(
+        text="genshinutils cog by raidensakura",
+        icon_url="https://avatars.githubusercontent.com/u/120461773?s=64&v=4",
+    )
     return e

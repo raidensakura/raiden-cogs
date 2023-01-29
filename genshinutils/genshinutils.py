@@ -4,10 +4,10 @@ from typing import Literal
 from enkanetwork import EnkaNetworkAPI
 from redbot.core import Config, checks, commands
 
+from .notes import GenshinNotes
 from .profile import GenshinProfile
 from .register import GenshinRegister
 from .settings import GenshinSet
-from .notes import GenshinNotes
 
 enka_client = EnkaNetworkAPI()
 

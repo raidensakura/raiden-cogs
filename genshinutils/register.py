@@ -67,7 +67,7 @@ class GenshinRegister(commands.Cog):
             author_discord_id, data.player.signature
         ):
             return await ctx.send(
-                f"Your signature does not contain your Discord tag.\nNote that it may take up to 15 minutes for changes to be reflected."
+                "Your signature does not contain your Discord tag.\nNote that it may take up to 15 minutes for changes to be reflected."
             )
         await self.config.user(ctx.author).UID.set(uid)
         return await ctx.send(f"Successfully set UID for {ctx.author.name} to {uid}.")
