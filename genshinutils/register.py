@@ -153,7 +153,9 @@ class GenshinRegister(commands.Cog):
                 client = genshin.Client(cookies)
                 accounts = await client.get_game_accounts()
             except Exception as exc:
-                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
+                return await ctx.send(
+                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
+                )
         """
         Accounts: [ GenshinAccount(lang="", game_biz="", level=int...), GenshinAccount(...) ]
         Recognized game_biz:
