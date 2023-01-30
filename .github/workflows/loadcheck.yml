@@ -45,7 +45,6 @@ jobs:
           pip install ${{ matrix.red-version }}
           pip install -r dev-requirements.txt
           pip install jsonrpc-websocket
-          pip install pillow genshin enkanetwork aioenkanetworkcard fernet
       - name: Prepare files
         run: |
           mkdir -p /home/runner/.config/Red-DiscordBot
