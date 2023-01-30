@@ -56,8 +56,8 @@
 <p align="center">To make sure things stay nice and clean.</p>
 
 ```py
-pip install -U black isort
-black . ; isort .
+pip install -U black isort flake8
+black . ; isort . ; flake8 .
 ```
 
 <h3 align="center"><code>.vscode/settings.json</code></h3>
