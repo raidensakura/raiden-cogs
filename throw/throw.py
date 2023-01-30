@@ -120,7 +120,7 @@ class Throw(commands.Cog):
                 for key, value in data.items():
                     if action in key:
                         sent = str(data.get("ITEMS_THROWN", " ")).replace("0", " ")
-                        received = str(data.get(f"TIMES_HIT", " ")).replace("0", " ")
+                        received = str(data.get("TIMES_HIT", " ")).replace("0", " ")
                         array.append([action.lower(), received, sent])
 
             for act in self.possible_actions:

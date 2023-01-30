@@ -8,7 +8,7 @@ from discord import Embed
 from discord.channel import DMChannel
 from redbot.core import commands
 
-from .utils import decrypt_config, encrypt_config
+from .utils import decrypt_config, encrypt_config, generate_embed
 
 log = logging.getLogger("red.raidensakura.genshinutils")
 
@@ -65,7 +65,10 @@ class GenshinRegister(commands.Cog):
             author_discord_id, data.player.signature
         ):
             return await ctx.send(
-                "Your signature does not contain your Discord tag.\nNote that it may take up to 15 minutes for changes to be reflected."
+                (
+                    "Your signature does not contain your Discord tag.\n"
+                    "Note that it may take up to 15 minutes for changes to be reflected."
+                )
             )
         await self.config.user(ctx.author).UID.set(uid)
         return await ctx.send(f"Successfully set UID for {ctx.author.name} to {uid}.")
@@ -74,9 +77,9 @@ class GenshinRegister(commands.Cog):
     Important Notes:
     1. Command has proprietary DM check since I want it to preface a a disclaimer when run in a server.
        This command deals with sensitive information and I want it to be taken very seriously.
-    2. I fully acknowledge storing the encryption key along with the encrypted data itself is terrible security practice.
-       Hoyolab account token can be used to perform destructive account actions, and potentially get your account banned for abuse.
-       Since the cog is open-source, the purpose of the encryption is to prevent bot owners from having plaintext access to them
+    2. I fully acknowledge storing the encryption key along with the encrypted data itself is bad practice.
+       Hoyolab account token can be used to perform potentially dangerous account actions.
+       Since the cog is OSS, the purpose is to prevent bot owners from having plaintext access to them
        in a way such that is require a bit of coding and encryption knowledge to access them on demand.
     """
 
@@ -101,34 +104,35 @@ class GenshinRegister(commands.Cog):
             else:
                 owner = app_info.owner
             desc = (
-                "This command lets the bot perform Hoyolab account actions on your behalf, authenticated using your token. "
-                "The token will then be linked to your Discord ID and stored encrypted in the bot's config, along with the encryption key. "
-                "Make sure **you fully acknowledge the risks of sharing your account token online** before proceeding.\n\n"
-                "For security reason, please run this command in a DM channel when setting token.\n\n"
-                "Read on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
+                "This command links your Hoyolab account token to your Discord account. "
+                "Your account token allow the bot to perform various account actions on your behalf, "
+                "such as claiming daily login, fetching character data etc. "
+                "Your token will be stored in the bot's config, and bot owner will always have access to it. "
+                "Make sure **you fully understand the risk of sharing your token online** before proceeding."
+                "\n\nFor security reason, please run this command in a DM channel when setting token."
+                "\n\nRead on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
             )
-            e = Embed(
-                color=(await ctx.embed_colour()),
-                title="Important Disclaimer",
-                description=desc,
-            )
+            e = generate_embed(title="Important Disclaimer", desc=desc, color=await ctx.embed_color())
             if app_info.bot_public:
                 public = "Can be invited by anyone."
             else:
                 public = "Can only be invited by the owner."
             e.add_field(name="Bot Owner", value=owner)
-            e.add_field(name="Invite Link Privacy", value=public)
+            e.add_field(name="Bot Invite Link Privacy", value=public)
             if ctx.me.avatar_url:
                 e.set_thumbnail(url=ctx.me.avatar_url)
             e.set_footer(text=f"Command invoked by {ctx.author}.")
             return await ctx.send(embed=e)
 
         if not cookie:
+            cog_url = "https://project-mei.xyz/genshinutils"
+            bot_prefix = f"{escape(ctx.prefix)}"
+            command_name = f"{escape(ctx.command.name)}"
             msg = (
                 f"**Provide a valid cookie to bind your Discord account to.**\n\n"
-                f"` » ` Instruction on how to obtain your Hoyolab cookie:\n<https://project-mei.xyz/genshinutils>\n\n"
-                f"` » ` For command help context: `{escape(ctx.prefix)}help genshin register {escape(ctx.command.name)}`\n\n"
-                f"` » ` To read disclaimers, this command again in any server."
+                f"` » ` Instruction on how to obtain your Hoyolab cookie:\n<{cog_url}>\n\n"
+                f"` » ` For command help context: `{bot_prefix}help genshin register {command_name}`\n\n"
+                f"` » ` To read disclaimers, type this command again in any server."
             )
             return await ctx.send(msg)
 

@@ -60,7 +60,10 @@ class Choose(commands.Cog):
         if len(choosearray) > 1:
             e = discord.Embed(color=(await ctx.embed_colour()), title=random.choice(choosearray))
             e.set_footer(
-                text=f"✨ Choosing for {ctx.author.display_name}, from a list of {len(choosearray)} options."
+                text=(
+                    f"✨ Choosing for {ctx.author.display_name}, "
+                    f"from a list of {len(choosearray)} options."
+                )
             )
         else:
             return await ctx.send("Not enough options to pick from.")

@@ -116,28 +116,29 @@ class GenshinProfile(commands.Cog):
                 value=data.stats.spiral_abyss,
                 inline=True,
             )
+            total_oculi = data.stats.anemoculi + data.stats.geoculi
+            + data.stats.electroculi + data.stats.dendroculi
             e.add_field(
                 name="Total Oculi Collected",
-                value=(
-                    f"{data.stats.anemoculi + data.stats.geoculi + data.stats.electroculi + data.stats.dendroculi}"
-                ),
+                value=total_oculi,
                 inline=True,
             )
             e.add_field(
                 name="Waypoints Unlocked",
-                value=(f"{data.stats.unlocked_waypoints}"),
+                value=data.stats.unlocked_waypoints,
                 inline=True,
             )
+            total_chest = data.stats.common_chests + data.stats.precious_chests
+            + data.stats.exquisite_chests + data.stats.luxurious_chests
+            + data.stats.remarkable_chests
             e.add_field(
                 name="Total Chests Opened",
-                value=(
-                    f"{data.stats.common_chests + data.stats.precious_chests + data.stats.exquisite_chests + data.stats.luxurious_chests + data.stats.remarkable_chests}"
-                ),
+                value=total_chest,
                 inline=True,
             )
             e.add_field(
                 name="Domains Unlocked",
-                value=(f"{data.stats.unlocked_domains}"),
+                value=data.stats.unlocked_domains,
                 inline=True,
             )
 

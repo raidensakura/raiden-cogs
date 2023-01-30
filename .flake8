@@ -1,5 +1,5 @@
 [flake8]
-ignore = W503,E203,E402
-per-file-ignores = __init__.py:F401,consts.py:E501
-max-line-length = 99
-exclude = .git,.venv,.tox,__pycache__
+ignore = E302
+per-file-ignores = __init__.py:F401, constants.py:E501
+max-line-length = 110
+exclude = .git, .venv, .tox, __pycache__
