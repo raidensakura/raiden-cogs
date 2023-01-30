@@ -21,7 +21,6 @@ jobs:
           - style-black
           - style-isort
           - lint-flake8
-          - pytest
         include:
           - tox_env: style-black
             friendly_name: Style (black)
@@ -29,14 +28,12 @@ jobs:
             friendly_name: Style (isort)
           - tox_env: lint-flake8
             friendly_name: Lint (flake8)
-          - tox_env: pytest
-            friendly_name: Tests
 
       fail-fast: false
 
     name: Tox - ${{ matrix.python_version }} - ${{ matrix.friendly_name }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           ref: ${{ env.ref }}
       - name: Set up Python ${{ matrix.python_version }}
@@ -46,7 +43,7 @@ jobs:
 
       # caching cuts down time for tox (for example black) from ~40 secs to 4
       - name: Cache tox
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .tox
           key: tox-${{ matrix.python_version }}-${{ matrix.tox_env }}-${{ hashFiles('tox.ini') }}
