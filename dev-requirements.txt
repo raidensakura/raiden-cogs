@@ -10,7 +10,7 @@ cachetools
 gidgethub  # ghissues, gitub
 pillow  # genshinutils
 genshin  # genshinutils
-enkanetwork  # genshinutils
+enkanetwork.py  # genshinutils
 aioenkanetworkcard  # genshinutils
 fernet  # genshinutils
 
