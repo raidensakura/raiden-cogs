@@ -21,8 +21,6 @@ jobs:
           - style-black
           - style-isort
           - lint-flake8
-          # - type-pyright
-          - docs
           - pytest
         include:
           - tox_env: style-black
