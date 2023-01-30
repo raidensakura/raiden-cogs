@@ -9,6 +9,7 @@ cachetools
 # Cogs
 gidgethub  # ghissues, gitub
 pillow  # genshinutils
+tabulate  # throw
 genshin  # genshinutils
 enkanetwork.py  # genshinutils
 aioenkanetworkcard  # genshinutils
