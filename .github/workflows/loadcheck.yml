@@ -40,10 +40,11 @@ jobs:
         run: |
           python3 -m venv .venv
           source .venv/bin/activate
-          pip install setuptools wheel pillow
+          pip install setuptools wheel
           pip install ${{ matrix.red-version }}
           pip install -r dev-requirements.txt
           pip install jsonrpc-websocket
+          pip install pillow genshin enkanetwork aioenkanetworkcard fernet
       - name: Prepare files
         run: |
           mkdir -p /home/runner/.config/Red-DiscordBot
