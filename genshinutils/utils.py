@@ -79,11 +79,11 @@ async def validate_uid(u, config):
 
     elif isinstance(u, str) and len(u) == 9 and u.isdigit():
         uid = u
-        log.debug(f"[validate_uid] This is a valid UID.")
+        log.debug("[validate_uid] This is a valid UID.")
 
     else:
         uid = None
-        log.debug(f"[validate_uid] This is not a valid UID.")
+        log.debug("[validate_uid] This is not a valid UID.")
 
     return uid
 
@@ -130,13 +130,13 @@ async def get_user_cookie(config, user):
 
 
 """
-Accepts: str(title), str(author), color
+Accepts: str(title), str(desc), color
 Returns: discord.Embed
 """
 # generate_embed
-def generate_embed(title, color):
+def generate_embed(title="", desc="", color=""):
     cog_url = "https://project-mei.xyz/genshinutils"
-    e = discord.Embed(title=title, color=color, url=cog_url)
+    e = discord.Embed(title=title, description=desc, color=color, url=cog_url)
     e.set_footer(
         text="genshinutils cog by raidensakura",
         icon_url="https://avatars.githubusercontent.com/u/120461773?s=64&v=4",

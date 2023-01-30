@@ -5,7 +5,7 @@ from typing import Union
 
 import discord
 import genshin
-from redbot.core import checks, commands
+from redbot.core import commands
 
 from .constants import character_namecards
 from .utils import (enka_get_character_card, generate_embed, get_user_cookie,
@@ -49,8 +49,8 @@ class GenshinProfile(commands.Cog):
                 )
 
             e = generate_embed(
-                f"Profile for {data.player.nickname} [AR {data.player.level}]",
-                await ctx.embed_color(),
+                title=f"Profile for {data.player.nickname} [AR {data.player.level}]",
+                color=await ctx.embed_color(),
             )
             if data.player.characters_preview:
                 char_str = ""
@@ -105,8 +105,8 @@ class GenshinProfile(commands.Cog):
                 )
 
             e = generate_embed(
-                f"Profile for {data.info.nickname} [AR {data.info.level}]",
-                await ctx.embed_color(),
+                title=f"Profile for {data.info.nickname} [AR {data.info.level}]",
+                color=await ctx.embed_color(),
             )
             if data.characters:
                 e.set_thumbnail(url=data.characters[0].icon)

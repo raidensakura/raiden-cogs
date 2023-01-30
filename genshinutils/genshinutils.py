@@ -2,8 +2,9 @@ import logging
 from typing import Literal
 
 from enkanetwork import EnkaNetworkAPI
-from redbot.core import Config, checks, commands
+from redbot.core import Config, commands
 
+from .daily import GenshinDaily
 from .notes import GenshinNotes
 from .profile import GenshinProfile
 from .register import GenshinRegister
@@ -15,7 +16,12 @@ log = logging.getLogger("red.raidensakura.genshinutils")
 
 
 class GenshinUtils(
-    GenshinSet, GenshinRegister, GenshinProfile, GenshinNotes, commands.Cog
+    GenshinSet,
+    GenshinRegister,
+    GenshinProfile,
+    GenshinNotes,
+    GenshinDaily,
+    commands.Cog,
 ):
     """GenshinUtils commands."""
 

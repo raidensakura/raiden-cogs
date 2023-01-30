@@ -6,7 +6,7 @@ from re import escape
 import genshin
 from discord import Embed
 from discord.channel import DMChannel
-from redbot.core import checks, commands
+from redbot.core import commands
 
 from .utils import decrypt_config, encrypt_config
 
@@ -93,7 +93,7 @@ class GenshinRegister(commands.Cog):
             if cookie:
                 try:
                     await ctx.message.delete()
-                except:
+                except Exception:
                     pass
 
             # Preface disclaimer
@@ -103,11 +103,11 @@ class GenshinRegister(commands.Cog):
             else:
                 owner = app_info.owner
             desc = (
-                f"This command lets the bot perform Hoyolab account actions on your behalf, authenticated using your token. "
-                f"The token will then be linked to your Discord ID and stored encrypted in the bot's config, along with the encryption key. "
-                f"Make sure **you fully acknowledge the risks of sharing your account token online** before proceeding.\n\n"
-                f"For security reason, please run this command in a DM channel when setting token.\n\n"
-                f"Read on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
+                "This command lets the bot perform Hoyolab account actions on your behalf, authenticated using your token. "
+                "The token will then be linked to your Discord ID and stored encrypted in the bot's config, along with the encryption key. "
+                "Make sure **you fully acknowledge the risks of sharing your account token online** before proceeding.\n\n"
+                "For security reason, please run this command in a DM channel when setting token.\n\n"
+                "Read on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
             )
             e = Embed(
                 color=(await ctx.embed_colour()),
@@ -187,7 +187,7 @@ class GenshinRegister(commands.Cog):
         await self.config.user(ctx.author).ltoken.set(encoded_ltoken)
 
         # Send success embed
-        desc = f"Successfully bound a Genshin Impact account to your Discord account. Details are as follow."
+        desc = "Successfully bound a Genshin Impact account to your Discord account. Details are as follow."
         e = Embed(
             color=(await ctx.embed_colour()),
             title="Account Binding Success",

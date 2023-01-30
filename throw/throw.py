@@ -4,11 +4,11 @@ import discord
 from redbot.core import Config, commands
 from redbot.core.bot import Red
 from redbot.core.commands import Context
-from redbot.core.utils.chat_formatting import bold, box, quote
+from redbot.core.utils.chat_formatting import box
 from redbot.core.utils.menus import DEFAULT_CONTROLS, menu
 from tabulate import tabulate
 
-from .constants import *
+from .constants import ITEMS, HIT, MISS
 
 
 class Throw(commands.Cog):
@@ -119,7 +119,7 @@ class Throw(commands.Cog):
             def parse_actions(data, array, action: str):
                 for key, value in data.items():
                     if action in key:
-                        sent = str(data.get(f"ITEMS_THROWN", " ")).replace("0", " ")
+                        sent = str(data.get("ITEMS_THROWN", " ")).replace("0", " ")
                         received = str(data.get(f"TIMES_HIT", " ")).replace("0", " ")
                         array.append([action.lower(), received, sent])
 

@@ -2,7 +2,7 @@ import logging
 from time import mktime
 
 import genshin
-from redbot.core import checks, commands
+from redbot.core import commands
 
 from .utils import generate_embed, get_user_cookie, validate_uid
 
@@ -38,7 +38,8 @@ class GenshinNotes(commands.Cog):
                     f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
                 )
             e = generate_embed(
-                f"Game Notes for {ctx.author.display_name}", await ctx.embed_color()
+                title=f"Game Notes for {ctx.author.display_name}",
+                color=await ctx.embed_color(),
             )
             e.add_field(
                 name="🌙 Resin",
