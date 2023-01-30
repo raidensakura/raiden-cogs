@@ -1,24 +1,18 @@
-# Red itself is also a requriement, however it is not listed here because
+# Red itself is also a requirement, however it is not listed here because
 # some people may have special setups (eg dev version installed)
 
-# Required for utils
-tabulate
-cachetools
-asyncache
-
-# Required for optional PandasSQLDriver in utils
-pandas
-
 # Cogs
-plotly  # betteruptime, stattrack, googletrends
-kaleido  # betteruptime, stattrack, googletrends
 gidgethub  # ghissues, gitub
-pytrends  # googletrends
-psutil  # stattrack, system
-markdownify  # status
-rapidfuzz  # timechannel
-wakeonlan  # wol
-expr.py  # calc
+pillow  # genshinutils
+genshin  # genshinutils
+enkanetwork  # genshinutils
+aioenkanetworkcard  # genshinutils
+fernet  # genshinutils
+
+# Required by EnkaNetwork.py
+pydantic
+aiohttp
+cachetools
 
 # checking tools
 pyright
@@ -29,14 +23,5 @@ pytest
 tox
 pre-commit
 
-# docs
-sphinx
-sphinx-rtd-theme
-furo
-
 # checks
 python-dotenv
-
-# docs
-sphinx_rtd_theme
-furo
