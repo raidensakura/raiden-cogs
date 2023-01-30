@@ -117,7 +117,7 @@ class GenshinProfile(commands.Cog):
                 inline=True,
             )
             total_oculi = data.stats.anemoculi + data.stats.geoculi
-            + data.stats.electroculi + data.stats.dendroculi
+            +data.stats.electroculi + data.stats.dendroculi
             e.add_field(
                 name="Total Oculi Collected",
                 value=total_oculi,
@@ -129,8 +129,8 @@ class GenshinProfile(commands.Cog):
                 inline=True,
             )
             total_chest = data.stats.common_chests + data.stats.precious_chests
-            + data.stats.exquisite_chests + data.stats.luxurious_chests
-            + data.stats.remarkable_chests
+            +data.stats.exquisite_chests + data.stats.luxurious_chests
+            +data.stats.remarkable_chests
             e.add_field(
                 name="Total Chests Opened",
                 value=total_chest,

@@ -112,7 +112,9 @@ class GenshinRegister(commands.Cog):
                 "\n\nFor security reason, please run this command in a DM channel when setting token."
                 "\n\nRead on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
             )
-            e = generate_embed(title="Important Disclaimer", desc=desc, color=await ctx.embed_color())
+            e = generate_embed(
+                title="Important Disclaimer", desc=desc, color=await ctx.embed_color()
+            )
             if app_info.bot_public:
                 public = "Can be invited by anyone."
             else:
