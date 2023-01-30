@@ -1,6 +1,11 @@
 # Red itself is also a requirement, however it is not listed here because
 # some people may have special setups (eg dev version installed)
 
+# Required by EnkaNetwork.py
+pydantic
+aiohttp
+cachetools
+
 # Cogs
 gidgethub  # ghissues, gitub
 pillow  # genshinutils
@@ -8,11 +13,6 @@ genshin  # genshinutils
 enkanetwork  # genshinutils
 aioenkanetworkcard  # genshinutils
 fernet  # genshinutils
-
-# Required by EnkaNetwork.py
-pydantic
-aiohttp
-cachetools
 
 # checking tools
 pyright
