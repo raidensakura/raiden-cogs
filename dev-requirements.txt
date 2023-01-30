@@ -1,0 +1,42 @@
+# Red itself is also a requriement, however it is not listed here because
+# some people may have special setups (eg dev version installed)
+
+# Required for utils
+tabulate
+cachetools
+asyncache
+
+# Required for optional PandasSQLDriver in utils
+pandas
+
+# Cogs
+plotly  # betteruptime, stattrack, googletrends
+kaleido  # betteruptime, stattrack, googletrends
+gidgethub  # ghissues, gitub
+pytrends  # googletrends
+psutil  # stattrack, system
+markdownify  # status
+rapidfuzz  # timechannel
+wakeonlan  # wol
+expr.py  # calc
+
+# checking tools
+pyright
+black
+isort
+flake8
+pytest
+tox
+pre-commit
+
+# docs
+sphinx
+sphinx-rtd-theme
+furo
+
+# checks
+python-dotenv
+
+# docs
+sphinx_rtd_theme
+furo
