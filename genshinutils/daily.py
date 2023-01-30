@@ -42,9 +42,7 @@ class GenshinDaily(commands.Cog):
                 )
                 e.add_field(name="Total Login", value=f"{claimed_rewards} days")
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
             else:
                 signed_in = "✅"
                 e = generate_embed(
@@ -54,9 +52,7 @@ class GenshinDaily(commands.Cog):
                 )
                 e.set_thumbnail(reward.icon)
                 e.add_field(name="Reward", value=f"{reward.name} x{reward.amount}")
-                e.add_field(
-                    name="Total Login", value=f"{signed_in} {claimed_rewards + 1} days"
-                )
+                e.add_field(name="Total Login", value=f"{signed_in} {claimed_rewards + 1} days")
             return await ctx.send(embed=e)
 
         uid = await validate_uid(ctx.author, self.config)

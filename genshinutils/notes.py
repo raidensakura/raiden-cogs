@@ -34,9 +34,7 @@ class GenshinNotes(commands.Cog):
                 client = genshin.Client(cookie)
                 data = await client.get_notes(uid)
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
             e = generate_embed(
                 title=f"Game Notes for {ctx.author.display_name}",
                 color=await ctx.embed_color(),
@@ -96,9 +94,7 @@ class GenshinNotes(commands.Cog):
                 client = genshin.Client(cookie)
                 data = await client.get_full_honkai_user(20177789)
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
             return await log.debug(f"```{data}```")
 
         uid = await validate_uid(ctx.author, self.config)

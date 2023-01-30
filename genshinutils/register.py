@@ -57,9 +57,7 @@ class GenshinRegister(commands.Cog):
             with ctx.typing():
                 data = await self.enka_client.fetch_user(uid)
         except Exception as exc:
-            return await ctx.send(
-                f"Unable to retrieve data from enka.network:\n`{exc}`"
-            )
+            return await ctx.send(f"Unable to retrieve data from enka.network:\n`{exc}`")
 
         author_discord_id = f"{ctx.author.name}#{ctx.author.discriminator}"
 
@@ -153,9 +151,7 @@ class GenshinRegister(commands.Cog):
                 client = genshin.Client(cookies)
                 accounts = await client.get_game_accounts()
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
         """
         Accounts: [ GenshinAccount(lang="", game_biz="", level=int...), GenshinAccount(...) ]
         Recognized game_biz:
@@ -170,9 +166,7 @@ class GenshinRegister(commands.Cog):
                 genshin_acc_list.append(account)
 
         if not genshin_acc_list:
-            return await ctx.send(
-                "Couldn't find a linked Genshin UID in your Hoyolab account."
-            )
+            return await ctx.send("Couldn't find a linked Genshin UID in your Hoyolab account.")
 
         # https://www.geeksforgeeks.org/python-get-the-object-with-the-max-attribute-value-in-a-list-of-objects/
         # get genshin account with the highest level
@@ -209,9 +203,7 @@ class GenshinRegister(commands.Cog):
         log.debug(
             f"[Register Hoyolab] Encrypted ltoken saved: {await self.config.user(ctx.author).ltoken()}"
         )
-        log.debug(
-            f"[Register Hoyolab] Encryption key saved: {await self.config.encryption_key()}"
-        )
+        log.debug(f"[Register Hoyolab] Encryption key saved: {await self.config.encryption_key()}")
 
         decoded_ltuid = await decrypt_config(self.config, encoded_ltuid)
         decoded_ltoken = await decrypt_config(self.config, encoded_ltoken)

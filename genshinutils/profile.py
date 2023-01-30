@@ -8,8 +8,13 @@ import genshin
 from redbot.core import commands
 
 from .constants import character_namecards
-from .utils import (enka_get_character_card, generate_embed, get_user_cookie,
-                    validate_char_name, validate_uid)
+from .utils import (
+    enka_get_character_card,
+    generate_embed,
+    get_user_cookie,
+    validate_char_name,
+    validate_uid,
+)
 
 log = logging.getLogger("red.raidensakura.genshinutils")
 
@@ -44,9 +49,7 @@ class GenshinProfile(commands.Cog):
             try:
                 data = await self.enka_client.fetch_user(uid)
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from enka.network:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from enka.network:\n`{exc}`")
 
             e = generate_embed(
                 title=f"Profile for {data.player.nickname} [AR {data.player.level}]",
@@ -80,29 +83,21 @@ class GenshinProfile(commands.Cog):
             with io.BytesIO() as image_binary:
                 char_card = await enka_get_character_card(uid, char_name)
                 if not char_card:
-                    return await ctx.send(
-                        "This user does not have that character featured."
-                    )
+                    return await ctx.send("This user does not have that character featured.")
                 temp_filename = str(time.time()).split(".")[0] + ".png"
-                log.debug(
-                    f"[generate_char_info] Pillow object for character card:\n{char_card}"
-                )
+                log.debug(f"[generate_char_info] Pillow object for character card:\n{char_card}")
                 first_card = next(iter(char_card.values()))
                 card_object = next(iter(first_card.values()))
                 card_object.save(image_binary, "PNG", optimize=True, quality=95)
                 image_binary.seek(0)
-                return await ctx.send(
-                    file=discord.File(fp=image_binary, filename=temp_filename)
-                )
+                return await ctx.send(file=discord.File(fp=image_binary, filename=temp_filename))
 
         async def genshin_generate_profile(uid):
             try:
                 client = genshin.Client(cookie)
                 data = await client.get_partial_genshin_user(uid)
             except Exception as exc:
-                return await ctx.send(
-                    f"Unable to retrieve data from Hoyolab API:\n`{exc}`"
-                )
+                return await ctx.send(f"Unable to retrieve data from Hoyolab API:\n`{exc}`")
 
             e = generate_embed(
                 title=f"Profile for {data.info.nickname} [AR {data.info.level}]",
@@ -115,9 +110,7 @@ class GenshinProfile(commands.Cog):
                     e.set_image(url=namecard_url)
             e.add_field(name="Achievements", value=data.stats.achievements, inline=True)
             e.add_field(name="Days Active", value=data.stats.days_active, inline=True)
-            e.add_field(
-                name="Characters Unlocked", value=data.stats.characters, inline=True
-            )
+            e.add_field(name="Characters Unlocked", value=data.stats.characters, inline=True)
             e.add_field(
                 name="Current Spiral Abyss Floor",
                 value=data.stats.spiral_abyss,
@@ -178,9 +171,7 @@ class GenshinProfile(commands.Cog):
                 with ctx.typing():
                     return await enka_generate_profile(uid)
 
-            log.debug(
-                f"[{ctx.command.name}] Not a UID, assuming it's a character name..."
-            )
+            log.debug(f"[{ctx.command.name}] Not a UID, assuming it's a character name...")
             char = validate_char_name(user_or_uid)
             if not char:
                 return await ctx.send(
@@ -201,9 +192,7 @@ class GenshinProfile(commands.Cog):
         if user_or_uid and character:
             uid = await validate_uid(user_or_uid, self.config)
             if not uid:
-                return await ctx.send(
-                    "Not a valid UID or user does not have a UID linked."
-                )
+                return await ctx.send("Not a valid UID or user does not have a UID linked.")
 
             char = validate_char_name(character)
             if not char:

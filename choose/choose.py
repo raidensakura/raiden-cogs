@@ -58,9 +58,7 @@ class Choose(commands.Cog):
         choosearray = split(r";|,|\n|\||#", options)
 
         if len(choosearray) > 1:
-            e = discord.Embed(
-                color=(await ctx.embed_colour()), title=random.choice(choosearray)
-            )
+            e = discord.Embed(color=(await ctx.embed_colour()), title=random.choice(choosearray))
             e.set_footer(
                 text=f"✨ Choosing for {ctx.author.display_name}, from a list of {len(choosearray)} options."
             )
@@ -71,9 +69,7 @@ class Choose(commands.Cog):
             return await ctx.send(embed=e)
         except Exception as exc:
             log.exception("Error trying to send choose embed.", exc_info=exc)
-            return await ctx.send(
-                "Oops, I encountered an error while trying to send the embed."
-            )
+            return await ctx.send("Oops, I encountered an error while trying to send the embed.")
 
 
 async def setup(bot: Red) -> None:

@@ -8,7 +8,7 @@ from redbot.core.utils.chat_formatting import box
 from redbot.core.utils.menus import DEFAULT_CONTROLS, menu
 from tabulate import tabulate
 
-from .constants import ITEMS, HIT, MISS
+from .constants import HIT, ITEMS, MISS
 
 
 class Throw(commands.Cog):
@@ -132,9 +132,7 @@ class Throw(commands.Cog):
                 return str(user.avatar_url)
 
             pages = []
-            dedupe_list_1 = [
-                x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0
-            ]
+            dedupe_list_1 = [x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0]
             server_table = tabulate(
                 dedupe_list_1, headers=header, colalign=colalign, tablefmt="psql"
             )
@@ -148,21 +146,15 @@ class Throw(commands.Cog):
             for action in self.possible_actions:
                 parse_actions(global_actions_data, global_actions_array, action)
 
-            dedupe_list_2 = [
-                x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0
-            ]
+            dedupe_list_2 = [x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0]
             global_table = tabulate(
                 dedupe_list_2, headers=header, colalign=colalign, tablefmt="psql"
             )
             embed = discord.Embed(
                 colour=await ctx.embed_colour(), description=box(global_table, "nim")
             )
-            embed.set_author(
-                name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user)
-            )
-            embed.set_footer(
-                text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author)
-            )
+            embed.set_author(name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user))
+            embed.set_footer(text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author))
             pages.append(embed)
 
         await menu(ctx, pages, DEFAULT_CONTROLS, timeout=60.0)

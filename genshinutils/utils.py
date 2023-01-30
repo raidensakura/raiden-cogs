@@ -105,9 +105,7 @@ Returns: { UID: { Character: <Pillow Object> } }
 """
 # enka_get_character_card
 async def enka_get_character_card(uid, char_name):
-    async with encbanner.ENC(
-        lang="en", splashArt=True, characterName=char_name
-    ) as encard:
+    async with encbanner.ENC(lang="en", splashArt=True, characterName=char_name) as encard:
         ENCpy = await encard.enc(uids=uid)
         return await encard.creat(ENCpy, 2)
 
