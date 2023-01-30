@@ -78,6 +78,7 @@ black . ; isort .
  <ul>
   <li><a href="https://github.com/o-wo">ow0x</a> for their Roleplay cog</li>
   <li><a href="https://github.com/Aioxas">Aioxas</a> for their Longcat cog</li>
+  <li><a href="https://github.com/Vexed01/Vex-Cogs">Vexed</a> for their Workflow scripts</li>
   <li><a href="https://discord.red">Cog-Creators Community</a> for Red Bot and its documentation</li>
  </ul>
 </p>
