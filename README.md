@@ -82,4 +82,4 @@ pre-commit install
  </ul>
 </p>
 
-<p align="right">(<a href="#readme-top">Back to top</a>)</p>
+<p align="right">(<a href="#">Back to top</a>)</p>
