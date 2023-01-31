@@ -1,17 +1,19 @@
 {
-    "name": "Choose",
-    "short": "Choose between multiple options",
+    "author": [
+        "raidensakura"
+    ],
     "description": "A better replacement for core `choose` command.",
-	"install_msg": "Thanks for installing. This cog replaces core's `choose` command with a more intuitive one.",
+    "disabled": false,
     "end_user_data_statement": "This cog does not persistently store any data about users.",
-    "author": ["raidensakura"],
+    "hidden": false,
+    "install_msg": "Thanks for installing. This cog replaces core's `choose` command with a more intuitive one.",
+    "min_bot_version": "3.4.12",
+    "name": "Choose",
     "required_cogs": {},
     "requirements": [],
+    "short": "Choose between multiple options",
     "tags": [
         "choose"
     ],
-    "min_bot_version": "3.4.12",
-    "hidden": false,
-    "disabled": false,
     "type": "COG"
 }

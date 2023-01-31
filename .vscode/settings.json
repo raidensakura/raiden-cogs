@@ -1,0 +1,6 @@
+{
+    "autoDocstring.docstringFormat": "one-line-sphinx",
+    "autoDocstring.guessTypes": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.terminal.activateEnvironment": true
+}

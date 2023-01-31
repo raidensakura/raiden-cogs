@@ -1,17 +1,22 @@
 {
-    "name": "Longcat",
-    "short": "All hail Longcat. Improved from Aioxas' Longcat cog.",
+    "author": [
+        "raidensakura",
+        "Aioxas"
+    ],
     "description": "Send a looooongcat based on how long you typed the command.",
-	"install_msg": "It's a looooooong loooooooong cat",
+    "disabled": false,
     "end_user_data_statement": "This cog does not persistently store any data about users.",
-    "author": ["raidensakura", "Aioxas"],
+    "hidden": false,
+    "install_msg": "It's a looooooong loooooooong cat",
+    "min_bot_version": "3.4.12",
+    "name": "Longcat",
     "required_cogs": {},
-    "requirements": ["Pillow"],
+    "requirements": [
+        "Pillow"
+    ],
+    "short": "All hail Longcat. Improved from Aioxas' Longcat cog.",
     "tags": [
         "fun"
     ],
-    "min_bot_version": "3.4.12",
-    "hidden": false,
-    "disabled": false,
     "type": "COG"
 }

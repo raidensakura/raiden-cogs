@@ -1,17 +1,24 @@
 {
-    "name": "GenshinUtils",
-    "short": "A Genshin Impact utility cog",
+    "author": [
+        "raidensakura"
+    ],
     "description": "Various useful utilities for Genshin Impact, such as retrieving profile data and many more.",
-	"install_msg": "Thank you for installing my cog. This is continuously being worked on, expect rapid changes.\nI test stuff in my Discord: https://dsc.gg/transience",
+    "disabled": false,
     "end_user_data_statement": "This cog stores your Genshin UID, Hoyolab ID and Hoyolab Account token if provided.",
-    "author": ["raidensakura"],
+    "hidden": false,
+    "install_msg": "Thank you for installing my cog. This is continuously being worked on, expect rapid changes.\nI test stuff in my Discord: https://dsc.gg/transience",
+    "min_bot_version": "3.4.12",
+    "name": "GenshinUtils",
     "required_cogs": {},
-    "requirements": ["genshin", "enkanetwork", "aioenkanetworkcard", "fernet"],
+    "requirements": [
+        "genshin",
+        "enkanetwork",
+        "aioenkanetworkcard",
+        "fernet"
+    ],
+    "short": "A Genshin Impact utility cog",
     "tags": [
         "genshin"
     ],
-    "min_bot_version": "3.4.12",
-    "hidden": false,
-    "disabled": false,
     "type": "COG"
 }

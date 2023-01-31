@@ -1,4 +1,3 @@
-# https://github.com/Vexed01/Vex-Cogs/blob/master/.github/workflows/checks.yml
 name: Checks
 
 on:
