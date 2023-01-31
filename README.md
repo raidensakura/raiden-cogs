@@ -8,7 +8,8 @@
  <a href="https://ko-fi.com/P5P6D65UW"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_red.png" style="height: 25px;"></a>
 </div>
 <br>
-<p align="center">A collection of <strike>badly written</strike> cogs I made for fun in the process of learning Python.</p>
+<p align="center">A collection of <strike>badly written</strike> homemade cogs I made for fun in the process of learning Python.</p>
+<p align="center"><b>Support:</b> Join my <a href="https://dsc.gg/transience">Discord server</a> or mention <code>Raiden#5008</code> in <a href="https://discord.gg/GET4DVk">Red Cog Support server.</a></p>
 
 <h2 align="center">Installation</h2>
 
