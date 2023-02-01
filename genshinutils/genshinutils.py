@@ -1,6 +1,7 @@
 import logging
 from typing import Literal
 
+from discord.ext import tasks
 from enkanetwork import EnkaNetworkAPI
 from redbot.core import Config, commands
 
@@ -40,9 +41,11 @@ class GenshinUtils(
         self.config.register_global(**default_global)
         self.config.register_user(**default_user)
         self.enka_client = enka_client
+        self.run_tasks.start()
 
     def cog_unload(self):
-        enka_client._close()
+        log.debug("Cog unload")
+        self.run_tasks.stop()
 
     def format_help_for_context(self, ctx: commands.Context) -> str:
         """Thanks Sinbad!"""
@@ -62,3 +65,11 @@ class GenshinUtils(
     async def genshin(self, ctx: commands.Context):
         """GenshinUtils main command."""
         # TODO: Embed explaining what this cog does and its info
+
+    @tasks.loop(hours=24)
+    async def run_tasks(self):
+        """Schedule tasks to run based on a set loop"""
+
+    @run_tasks.before_loop
+    async def before_run_tasks(self):
+        await self.bot.wait_until_ready()

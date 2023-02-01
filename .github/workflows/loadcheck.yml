@@ -3,8 +3,8 @@ name: "Cog load test"
 on:
   push:
     branches:
-      - master
-      - genshin
+      - main
+  pull_request:
 
 jobs:
   loadcheck:
@@ -19,12 +19,12 @@ jobs:
             friendly-red: "Red 3.4.18"
       fail-fast: false
 
-    name: Cog load test - Python ${{ matrix.python-version }} & ${{ matrix.friendly-red }}
+    name: Python ${{ matrix.python-version }} & ${{ matrix.friendly-red }}
     steps:
       - uses: actions/checkout@v3
 
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v4
         with:
           python-version: ${{ matrix.python-version }}
 
