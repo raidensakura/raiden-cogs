@@ -11,10 +11,10 @@
     "name": "GenshinUtils",
     "required_cogs": {},
     "requirements": [
-        "genshin",
-        "enkanetwork",
+        "enkanetwork.py",
         "aioenkanetworkcard",
-        "fernet"
+        "cryptography",
+        "genshin"
     ],
     "short": "A Genshin Impact utility cog",
     "tags": [
