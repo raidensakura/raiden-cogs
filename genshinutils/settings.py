@@ -1,6 +1,6 @@
 import logging
 
-from redbot.core import checks, commands
+from redbot.core import commands
 
 log = logging.getLogger("red.raidensakura.genshinutils")
 
@@ -12,19 +12,19 @@ class GenshinSet(commands.Cog):
     async def genshinset(self, ctx: commands.Context):
         """Various global settings for GenshinUtils cog."""
 
-    @checks.is_owner()
+    @commands.is_owner()
     @genshinset.command()
     async def ltoken(self, ctx: commands.Context):
         """Instructions on how to set global `ltoken` secret."""
         await ctx.send(f"Use `{ctx.prefix}set api hoyolab ltoken your_ltoken_here`.")
 
-    @checks.is_owner()
+    @commands.is_owner()
     @genshinset.command()
     async def ltuid(self, ctx: commands.Context):
         """Instructions on how to set global `ltuid` secret."""
         await ctx.send(f"Use `{ctx.prefix}set api hoyolab ltuid your_ltuid_here`.")
 
-    @checks.is_owner()
+    @commands.is_owner()
     @genshinset.command()
     async def verification(self, ctx: commands.Context, toggle: bool):
         """
