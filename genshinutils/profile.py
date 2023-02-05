@@ -155,7 +155,7 @@ class GenshinProfile(commands.Cog):
 
             cookie = await get_user_cookie(self.config, ctx.author)
 
-            with ctx.typing():
+            async with ctx.typing():
                 if not cookie:
                     return await enka_generate_profile(uid)
 
@@ -169,7 +169,7 @@ class GenshinProfile(commands.Cog):
         if user_or_uid and not character:
             uid = await validate_uid(user_or_uid, self.config)
             if uid:
-                with ctx.typing():
+                async with ctx.typing():
                     return await enka_generate_profile(uid)
 
             log.debug(f"[{ctx.command.name}] Not a UID, assuming it's a character name...")
@@ -186,7 +186,7 @@ class GenshinProfile(commands.Cog):
             if not uid:
                 return await ctx.send("You do not have a UID linked.")
 
-            with ctx.typing():
+            async with ctx.typing():
                 return await enka_generate_char_img(uid, char)
 
         """This handles if both [user_or_uid] and [character] are appropriately passed"""
@@ -199,5 +199,5 @@ class GenshinProfile(commands.Cog):
             if not char:
                 return await ctx.send("Character name invalid or not in dictionary.")
 
-            with ctx.typing():
+            async with ctx.typing():
                 return await enka_generate_char_img(uid, char)

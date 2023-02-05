@@ -63,5 +63,5 @@ class GenshinDaily(commands.Cog):
         if not cookie:
             return await ctx.send("No cookie.")
 
-        with ctx.typing():
+        async with ctx.typing():
             return await redeem_daily()

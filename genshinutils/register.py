@@ -54,7 +54,7 @@ class GenshinRegister(commands.Cog):
             return await ctx.send("Invalid UID provided, it must consist of 9 digits.")
 
         try:
-            with ctx.typing():
+            async with ctx.typing():
                 data = await self.enka_client.fetch_user(uid)
         except Exception as exc:
             return await ctx.send(f"Unable to retrieve data from enka.network:\n`{exc}`")

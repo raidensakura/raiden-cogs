@@ -105,6 +105,6 @@ class GenshinNotes(commands.Cog):
         if not cookie:
             return await ctx.send("No cookie.")
 
-        with ctx.typing():
+        async with ctx.typing():
             # return await test_honkai()
             return await generate_diary(uid)

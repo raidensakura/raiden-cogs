@@ -2,20 +2,18 @@
 # some people may have special setups (eg dev version installed)
 
 # Cogs
-gidgethub  # ghissues, gitub
-pillow  # genshinutils
 tabulate  # throw
+pillow  # genshinutils
 genshin  # genshinutils
 enkanetwork.py  # genshinutils
 aioenkanetworkcard  # genshinutils
-fernet  # genshinutils
+cryptography  # genshinutils
 
 # checking tools
 pyright
 black
 isort
 flake8
-pytest
 tox
 pre-commit
 
