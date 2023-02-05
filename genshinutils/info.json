@@ -14,7 +14,8 @@
         "enkanetwork.py",
         "aioenkanetworkcard",
         "cryptography",
-        "genshin"
+        "genshin",
+        "pillow"
     ],
     "short": "A Genshin Impact utility cog",
     "tags": [
