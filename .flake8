@@ -1,7 +1,5 @@
 [flake8]
 # ignore = E302
 per-file-ignores = __init__.py:F401, constants.py:E501
-# So flake8 won't whine when my comments are too long
-# Black and isort still set at 99
-max-line-length = 110
+max-line-length = 99
 exclude = .git, .venv, .tox, __pycache__
