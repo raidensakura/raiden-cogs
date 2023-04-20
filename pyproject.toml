@@ -14,7 +14,8 @@ dependencies = [
     "genshin",
     "enkanetwork.py",
     "aioenkanetworkcard",
-    "cryptography"
+    "cryptography",
+	"python-dotenv"
 ]
 
 [project.urls]
@@ -26,8 +27,7 @@ dev = [
     "black",
     "ruff",
 	"tox",
-	"pre-commit",
-	"python-dotenv"
+	"pre-commit"
 ]
 
 [tool.setuptools]
