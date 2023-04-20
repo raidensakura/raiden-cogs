@@ -1,4 +1,5 @@
 import logging
+from abc import ABC
 from typing import Literal
 
 from discord.ext import tasks
@@ -16,6 +17,11 @@ enka_client = EnkaNetworkAPI()
 log = logging.getLogger("red.raidensakura.genshinutils")
 
 
+class CompositeMetaClass(type(commands.Cog), type(ABC)):
+    """This allows the metaclass used for proper type detection to coexist with discord.py's
+    metaclass."""
+
+
 class GenshinUtils(
     GenshinSet,
     GenshinRegister,
@@ -23,6 +29,7 @@ class GenshinUtils(
     GenshinNotes,
     GenshinDaily,
     commands.Cog,
+    metaclass=CompositeMetaClass,
 ):
     """GenshinUtils commands."""
 
@@ -51,7 +58,10 @@ class GenshinUtils(
         """Thanks Sinbad!"""
         pre_processed = super().format_help_for_context(ctx)
         s = "s" if len(self.__author__) > 1 else ""
-        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+        return (
+            f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}"
+            "\nCog Version: {self.__version__}"
+        )
 
     async def red_delete_data_for_user(
         self,
