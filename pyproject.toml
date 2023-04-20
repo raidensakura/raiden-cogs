@@ -8,22 +8,18 @@ authors = [
 ]
 license = {file = "LICENSE"}
 requires-python = ">=3.8"
+dependencies = [
+    "tabulate",
+    "Pillow",
+    "genshin",
+    "enkanetwork.py",
+    "aioenkanetworkcard",
+    "cryptography"
+]
 
 [project.urls]
 "Issue Tracker" = "https://github.com/raidensakura/raiden-cogs/issues"
 "Source Code" = "https://github.com/raidensakura/raiden-cogs"
-
-[options]
-requires = [
-	# throw
-	"tabulate",
-	# genshinutils
-	"pillow",
-	"genshin",
-	"enkanetwork.py",
-	"aioenkanetworkcard",
-	"cryptography",
-]
 
 [project.optional-dependencies]
 dev = [
