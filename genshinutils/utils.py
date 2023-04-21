@@ -92,16 +92,16 @@ def validate_char_name(arg):
         return str(formal_name).strip("{'\"}")
 
 
-async def enka_get_character_card(uid, char_name):
+async def enka_get_character_card(uid, char_name=None):
     """Generate one or more character build image objects in a dict
 
     :param str uid: UID of the player
     :param str char_name: formal name of the character
     :return dict: dict containing Pillow image object for the character
     """
-    async with encbanner.ENC(lang="en", splashArt=True, characterName=char_name) as encard:
+    async with encbanner.ENC(lang="en", splashArt=True, miniInfo=True) as encard:
         ENCpy = await encard.enc(uids=uid)
-        return await encard.creat(ENCpy, 2)
+        return await encard.creat(ENCpy, 4)
 
 
 async def get_user_cookie(config, user):

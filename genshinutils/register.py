@@ -67,7 +67,7 @@ class GenshinRegister(commands.Cog):
             return await ctx.send(
                 (
                     "Your signature does not contain your Discord tag.\n"
-                    "Note that it may take up to 15 minutes for changes to be reflected."
+                    "It may take up to 15 minutes for changes to be reflected."
                 )
             )
         await self.config.user(ctx.author).UID.set(uid)
@@ -75,12 +75,14 @@ class GenshinRegister(commands.Cog):
 
     """
     Important Notes:
-    1. Command has proprietary DM check since I want it to preface a a disclaimer when run in a server.
-       This command deals with sensitive information and I want it to be taken very seriously.
-    2. I fully acknowledge storing the encryption key along with the encrypted data itself is bad practice.
-       Hoyolab account token can be used to perform potentially dangerous account actions.
-       Since the cog is OSS, the purpose is to prevent bot owners from having plaintext access to them
-       in a way such that is require a bit of coding and encryption knowledge to access them on demand.
+    1. This has proprietary DM check since to preface a disclaimer.
+    2. I fully acknowledge storing the encryption key along 
+       with the encrypted data itself is bad practice.
+       Hoyolab account token can be used to performpotentially
+       dangerous account actions. Since the cog is OSS, the purpose is 
+       to prevent bot owners from having plaintext access to them
+       in a way such that is require a bit of coding and encryption
+       knowledge to access them on demand.
     """
 
     @register.command()
@@ -90,7 +92,6 @@ class GenshinRegister(commands.Cog):
         """Link or unlink a Hoyolab account token to your Discord account."""
 
         if not isinstance(ctx.channel, DMChannel):
-
             if cookie:
                 try:
                     await ctx.message.delete()
@@ -105,11 +106,10 @@ class GenshinRegister(commands.Cog):
                 owner = app_info.owner
             desc = (
                 "This command links your Hoyolab account token to your Discord account. "
-                "Your account token allow the bot to perform various account actions on your behalf, "
+                "This allow the bot to perform various account actions on your behalf, "
                 "such as claiming daily login, fetching character data etc. "
-                "Your token will be stored in the bot's config, and bot owner will always have access to it. "
-                "Make sure **you fully understand the risk of sharing your token online** before proceeding."
-                "\n\nFor security reason, please run this command in a DM channel when setting token."
+                "Make sure you understand the risk of sharing your token online before proceeding."
+                "\n\nPlease run this command in a DM channel when setting token."
                 "\n\nRead on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
             )
             e = generate_embed(
@@ -133,7 +133,8 @@ class GenshinRegister(commands.Cog):
             msg = (
                 f"**Provide a valid cookie to bind your Discord account to.**\n\n"
                 f"` » ` Instruction on how to obtain your Hoyolab cookie:\n<{cog_url}>\n\n"
-                f"` » ` For command help context: `{bot_prefix}help genshin register {command_name}`\n\n"
+                f"` » ` For command help context: "
+                f"`{bot_prefix}help genshin register {command_name}`\n\n"
                 f"` » ` To read disclaimers, type this command again in any server."
             )
             return await ctx.send(msg)
@@ -186,8 +187,17 @@ class GenshinRegister(commands.Cog):
         await self.config.user(ctx.author).ltuid.set(encoded_ltuid)
         await self.config.user(ctx.author).ltoken.set(encoded_ltoken)
 
+        # Debugging stuff
+        log.debug(f"Encrypted credentials saved for {ctx.author}")
+
+        decoded_ltuid = await decrypt_config(self.config, encoded_ltuid)
+
+        log.debug(f"Decoded ltuid for {ctx.author}: {decoded_ltuid}")
+
         # Send success embed
-        desc = "Successfully bound a Genshin Impact account to your Discord account. Details are as follow."
+        desc = (
+            "Successfully bound Genshin account to your Discord account. " "Details are as follow."
+        )
         e = Embed(
             color=(await ctx.embed_colour()),
             title="Account Binding Success",
@@ -201,18 +211,3 @@ class GenshinRegister(commands.Cog):
         e.set_thumbnail(url=ctx.message.author.avatar_url)
 
         return await ctx.send(embed=e)
-
-        # Debugging stuff
-        log.debug(
-            f"[Register Hoyolab] Encrypted ltuid saved: {await self.config.user(ctx.author).ltuid()}"
-        )
-        log.debug(
-            f"[Register Hoyolab] Encrypted ltoken saved: {await self.config.user(ctx.author).ltoken()}"
-        )
-        log.debug(f"[Register Hoyolab] Encryption key saved: {await self.config.encryption_key()}")
-
-        decoded_ltuid = await decrypt_config(self.config, encoded_ltuid)
-        decoded_ltoken = await decrypt_config(self.config, encoded_ltoken)
-
-        log.debug(f"[Register Hoyolab] Decoded ltuid: {decoded_ltuid}")
-        log.debug(f"[Register Hoyolab] Decoded ltoken: {decoded_ltoken}")

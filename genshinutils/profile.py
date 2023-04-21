@@ -81,14 +81,13 @@ class GenshinProfile(commands.Cog):
 
         async def enka_generate_char_img(uid, char_name):
             with io.BytesIO() as image_binary:
-                char_card = await enka_get_character_card(uid, char_name)
+                char_card = await enka_get_character_card(uid)
                 if not char_card:
-                    return await ctx.send("This user does not have that character featured.")
+                    return await ctx.send("This user does not have any character featured.")
                 temp_filename = str(time.time()).split(".")[0] + ".png"
                 log.debug(f"[generate_char_info] Pillow object for character card:\n{char_card}")
-                first_card = next(iter(char_card.values()))
-                card_object = next(iter(first_card.values()))
-                card_object.save(image_binary, "PNG", optimize=True, quality=95)
+                first_card = char_card.get("card").get("1-4")
+                first_card.save(image_binary, "PNG", optimize=True, quality=95)
                 image_binary.seek(0)
                 return await ctx.send(file=discord.File(fp=image_binary, filename=temp_filename))
 
