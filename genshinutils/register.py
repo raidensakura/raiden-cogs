@@ -76,10 +76,10 @@ class GenshinRegister(commands.Cog):
     """
     Important Notes:
     1. This has proprietary DM check since to preface a disclaimer.
-    2. I fully acknowledge storing the encryption key along 
+    2. I fully acknowledge storing the encryption key along
        with the encrypted data itself is bad practice.
        Hoyolab account token can be used to performpotentially
-       dangerous account actions. Since the cog is OSS, the purpose is 
+       dangerous account actions. Since the cog is OSS, the purpose is
        to prevent bot owners from having plaintext access to them
        in a way such that is require a bit of coding and encryption
        knowledge to access them on demand.
@@ -110,7 +110,7 @@ class GenshinRegister(commands.Cog):
                 "such as claiming daily login, fetching character data etc. "
                 "Make sure you understand the risk of sharing your token online before proceeding."
                 "\n\nPlease run this command in a DM channel when setting token."
-                "\n\nRead on how to obtain your token [here](https://project-mei.xyz/genshinutils)."
+                "\n\nRead how to obtain your token [here](https://project-mei.xyz/genshinutils)."
             )
             e = generate_embed(
                 title="Important Disclaimer", desc=desc, color=await ctx.embed_color()
