@@ -2,18 +2,14 @@ name: "Cog load test"
 
 on:
   push:
-    branches:
-      - main
-      - genshin
 
 jobs:
   loadcheck:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9"]
+        python-version: ["3.8", "3.9", "3.10", "3.11"]
         red-version:
-          # this workflow required pr #5453 commit d27dbde, which is in dev & pypi 3.4.15+
           - "git+https://github.com/Cog-Creators/Red-DiscordBot@V3/develop#egg=Red-DiscordBot"
           - "Red-DiscordBot"
         include:
