@@ -5,7 +5,7 @@
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
  <a href="[https://github.com/raidensakura](https://github.com/python/black)"><img src="https://img.shields.io/badge/code%20style-black-1c1c1c.svg"></a>
  <a href="https://dsc.gg/transience/"><img src="https://discord.com/api/guilds/616969119685935162/widget.png"></a><br>
- <a href="https://ko-fi.com/P5P6D65UW"><img src="https://storage.ko-fi.com/cdn/brandasset/kofi_button_red.png" style="height: 25px;"></a>
+ <a href="https://ko-fi.com/P5P6D65UW"><img src="https://ko-fi.com/img/githubbutton_sm.svg"></a>
 </div>
 <br>
 <p align="center"><b>GenshinUtils</b> - Multipurpose Genshin Impact cog. For now, it's able to display in-game profile information and featured character build cards.<br><br>
