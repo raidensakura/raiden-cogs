@@ -27,7 +27,10 @@ class Longcat(commands.Cog):
         """
         pre_processed = super().format_help_for_context(ctx)
         s = "s" if len(self.__author__) > 1 else ""
-        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+        return (
+            f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}"
+            f"\nCog Version: {self.__version__}"
+        )
 
     async def red_delete_data_for_user(self, **kwargs) -> None:
         """Nothing to delete"""

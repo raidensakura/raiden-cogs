@@ -26,7 +26,7 @@ class Choose(commands.Cog):
         if old_choose:
             try:
                 self.bot.remove_command("choose")
-            except:
+            except Exception:
                 pass
             self.bot.add_command(old_choose)
 
@@ -36,7 +36,10 @@ class Choose(commands.Cog):
         """
         pre_processed = super().format_help_for_context(ctx)
         s = "s" if len(self.__author__) > 1 else ""
-        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+        return (
+            f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\n"
+            f"Cog Version: {self.__version__}"
+        )
 
     async def red_delete_data_for_user(self, **kwargs) -> None:
         """Nothing to delete"""
@@ -55,11 +58,12 @@ class Choose(commands.Cog):
         choosearray = split(r";|,|\n|\||#", options)
 
         if len(choosearray) > 1:
-            e = discord.Embed(
-                color=(await ctx.embed_colour()), title=random.choice(choosearray)
-            )
+            e = discord.Embed(color=(await ctx.embed_colour()), title=random.choice(choosearray))
             e.set_footer(
-                text=f"✨ Choosing for {ctx.author.display_name}, from a list of {len(choosearray)} options."
+                text=(
+                    f"✨ Choosing for {ctx.author.display_name}, "
+                    f"from a list of {len(choosearray)} options."
+                )
             )
         else:
             return await ctx.send("Not enough options to pick from.")
@@ -68,9 +72,7 @@ class Choose(commands.Cog):
             return await ctx.send(embed=e)
         except Exception as exc:
             log.exception("Error trying to send choose embed.", exc_info=exc)
-            return await ctx.send(
-                "Oops, I encountered an error while trying to send the embed."
-            )
+            return await ctx.send("Oops, I encountered an error while trying to send the embed.")
 
 
 async def setup(bot: Red) -> None:

@@ -1,0 +1,61 @@
+[project]
+name = "raiden-cogs"
+version = "1.0.0"
+description = "Cogs for Red bot made by raidensakura"
+readme = "README.md"
+authors = [
+    {name = "raidensakura"},
+]
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+dependencies = [
+    "tabulate",
+    "Pillow",
+    "genshin",
+    "enkanetwork.py",
+    "aioenkanetworkcard",
+    "cryptography",
+	"python-dotenv"
+]
+
+[project.urls]
+"Issue Tracker" = "https://github.com/raidensakura/raiden-cogs/issues"
+"Source Code" = "https://github.com/raidensakura/raiden-cogs"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "ruff",
+	"tox",
+	"pre-commit"
+]
+
+[tool.setuptools]
+py-modules = [
+	"choose",
+	"genshinutils",
+	"longcat",
+	"throw"
+]
+
+[tool.black]
+line-length = 99
+target-version = ["py38"]
+extend-exclude = ".stubs"
+
+[tool.isort]
+profile = "black"
+line_length = 99
+
+[tool.ruff]
+target-version = "py38"
+line-length = 99
+select = ["C90", "E", "F", "I001", "PGH004", "RUF100"]
+fix = true
+fixable = ["I001"]
+isort.combine-as-imports = true
+force-exclude = true
+
+[tool.ruff.mccabe]
+# Unlike Flake8, default to a complexity level of 10.
+max-complexity = 25

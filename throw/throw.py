@@ -4,11 +4,11 @@ import discord
 from redbot.core import Config, commands
 from redbot.core.bot import Red
 from redbot.core.commands import Context
-from redbot.core.utils.chat_formatting import bold, box, quote
+from redbot.core.utils.chat_formatting import box
 from redbot.core.utils.menus import DEFAULT_CONTROLS, menu
 from tabulate import tabulate
 
-from .constants import *
+from .constants import HIT, ITEMS, MISS
 
 
 class Throw(commands.Cog):
@@ -19,7 +19,7 @@ class Throw(commands.Cog):
 
     def __init__(self, bot: Red):
         self.bot = bot
-        self.config = Config.get_conf(self, 180109040514130509, force_registration=True)
+        self.config = Config.get_conf(self, 243316261264556032, force_registration=True)
         default_global = {"schema_version": 1}
         self.possible_actions = ["THROW"]
         default_user = {"ITEMS_THROWN": 0, "TIMES_HIT": 0}
@@ -33,7 +33,10 @@ class Throw(commands.Cog):
         """
         pre_processed = super().format_help_for_context(ctx)
         s = "s" if len(self.__author__) > 1 else ""
-        return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
+        return (
+            f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}"
+            f"\nCog Version: {self.__version__}"
+        )
 
     # TODO: Delete user throw stats
     async def red_delete_data_for_user(self, **kwargs):
@@ -119,8 +122,8 @@ class Throw(commands.Cog):
             def parse_actions(data, array, action: str):
                 for key, value in data.items():
                     if action in key:
-                        sent = str(data.get(f"ITEMS_THROWN", " ")).replace("0", " ")
-                        received = str(data.get(f"TIMES_HIT", " ")).replace("0", " ")
+                        sent = str(data.get("ITEMS_THROWN", " ")).replace("0", " ")
+                        received = str(data.get("TIMES_HIT", " ")).replace("0", " ")
                         array.append([action.lower(), received, sent])
 
             for act in self.possible_actions:
@@ -132,9 +135,7 @@ class Throw(commands.Cog):
                 return str(user.avatar_url)
 
             pages = []
-            dedupe_list_1 = [
-                x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0
-            ]
+            dedupe_list_1 = [x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0]
             server_table = tabulate(
                 dedupe_list_1, headers=header, colalign=colalign, tablefmt="psql"
             )
@@ -148,21 +149,15 @@ class Throw(commands.Cog):
             for action in self.possible_actions:
                 parse_actions(global_actions_data, global_actions_array, action)
 
-            dedupe_list_2 = [
-                x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0
-            ]
+            dedupe_list_2 = [x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0]
             global_table = tabulate(
                 dedupe_list_2, headers=header, colalign=colalign, tablefmt="psql"
             )
             embed = discord.Embed(
                 colour=await ctx.embed_colour(), description=box(global_table, "nim")
             )
-            embed.set_author(
-                name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user)
-            )
-            embed.set_footer(
-                text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author)
-            )
+            embed.set_author(name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user))
+            embed.set_footer(text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author))
             pages.append(embed)
 
         await menu(ctx, pages, DEFAULT_CONTROLS, timeout=60.0)
