@@ -1,5 +1,4 @@
-<p align="center"><img src="https://files.catbox.moe/92mfqx.png"><img src="https://img.icons8.com/cotton/512/settings.png" style="height: 70px;"></p>
-<h1 align="center">Choose</h1>
+<h1 align="center"><img src="https://cdn.project-mei.xyz/68747470733a2f2f696d6167652e6d79616e696d656c6973742e6e65742f75692f666b4c4954614a546566616678464b5047527a6e676751555f6954556c644e4a4474784c665943647730695336656a53454548425f4a4d6c6831314c66714c33-v97ofuq7U43I.png"></h1>
 <div align="center">
  <a href="https://github.com/raidensakura"><img src="https://img.shields.io/badge/raiden--cogs-by%20Raiden-d11df9"></a>
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
@@ -9,7 +8,7 @@
 </div>
 <br>
 <p align="center"><b>Choose</b> - A cog that replaces the default choose command with something more intuitive. Supports multiple delimiters: <code>;</code>, <code>,</code>, <code>\n</code>, <code>|</code>, and <code>#</code>. This cog remove and add core General cog's <code>choose</code> command on load and unload respectively (if present).<br><br>
-<img src="https://media.discordapp.net/attachments/964625519977046076/1064978699914596414/image.png">
+<img src="https://cdn.project-mei.xyz/image2-0l9NOjZxAllr.png">
 
 </p>
 

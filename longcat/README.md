@@ -1,5 +1,4 @@
-<p align="center"><img src="https://files.catbox.moe/92mfqx.png"><img src="https://img.icons8.com/cotton/512/settings.png" style="height: 70px;"></p>
-<h1 align="center">Longcat</h1>
+<h1 align="center"><img src="https://cdn.project-mei.xyz/68747470733a2f2f696d6167652e6d79616e696d656c6973742e6e65742f75692f666b4c4954614a546566616678464b5047527a6e676751555f6954556c644e4a4474784c665943647730695336656a53454548425f4a4d6c6831314c66714c33-v97ofuq7U43I.png"></h1>
 <div align="center">
  <a href="https://github.com/raidensakura"><img src="https://img.shields.io/badge/raiden--cogs-by%20Raiden-d11df9"></a>
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
@@ -9,7 +8,7 @@
 </div>
 <br>
 <p align="center"><b>Longcat</b> - A cog to summon variable-length, differently-colored Longcats. <a href="https://github.com/Aioxas/ax-cogs">Aioxas</a> originally made this cog, but I modified it further to fix string concatenation issue when your prefix has a space, and support with <a href="https://github.com/Vexed01/Vex-Cogs">caseinsensitive</a> cog by Vex. Also added randomly-generated colors for the cat.<br><br>
-<img src="https://media.discordapp.net/attachments/964625519977046076/1063715442973225010/image.png">
+<img src="https://cdn.project-mei.xyz/image-ioAOSPHSd2uG.png">
 
 </p>
 
