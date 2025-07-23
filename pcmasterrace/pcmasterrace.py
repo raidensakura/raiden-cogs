@@ -1,0 +1,433 @@
+import discord
+from redbot.core import commands, Config
+import json
+import re
+from .utils import (
+    get_page,
+    draw_bar_graph,
+    build_combo_embed,
+    DEFAULT_WEIGHT,
+    DEFAULT_COLOR,
+    CPU_SCORES_PATH,
+    GPU_SCORES_PATH,
+    WEIGHTS_PATH,
+)
+from .views import ScoreView, UserScoreView
+
+with open(WEIGHTS_PATH, "r", encoding="utf-8") as f:
+    WEIGHTS = json.load(f)
+
+
+class PCMasterRace(commands.Cog):
+    """Submit and rank your CPU/GPU combos!"""
+
+    default_user = {"cpu": None, "gpu": None}
+
+    def __init__(self, bot):
+        self.bot = bot
+        self.config = Config.get_conf(self, identifier=1234567890, force_registration=True)
+        self.config.register_user(**self.default_user)
+
+        with open(CPU_SCORES_PATH, "r", encoding="utf-8") as f:
+            self.cpu_scores = json.load(f)
+        with open(GPU_SCORES_PATH, "r", encoding="utf-8") as f:
+            self.gpu_scores = json.load(f)
+
+    @commands.group(aliases=["pcmr"])
+    @commands.guild_only()
+    async def pcmasterrace(self, ctx):
+        """PC Master Race commands."""
+        pass
+
+    def regex_match(self, name, candidates):
+        """
+        Attempts to find a matching candidate from a list based on the provided name using several strategies:
+        1. Case-insensitive exact match.
+        2. Case-insensitive whole word regex match.
+        3. Case-insensitive substring match (in either direction).
+        Args:
+            name (str): The name to match against the candidates.
+            candidates (Iterable[str]): A collection of candidate strings to search.
+        Returns:
+            str or None: The first matching candidate string, or None if no match is found.
+        """
+
+        for key in candidates:
+            if key.lower() == name.lower():
+                return key
+        pattern = re.compile(r"\b" + re.escape(name) + r"\b", re.IGNORECASE)
+        for key in candidates:
+            if pattern.search(key):
+                return key
+        for key in candidates:
+            if name.lower() in key.lower() or key.lower() in name.lower():
+                return key
+        return None
+
+    async def fetch_all_gpu_scores(self, gpu_name: str = ""):
+        """
+        Fetches and calculates weighted GPU scores for all GPUs or a specific GPU.
+        If a GPU name is provided, attempts to match it using regex and returns the weighted scores
+        for the matched GPU. If no match is found, returns an empty dictionary. If no GPU name is
+        provided, returns weighted scores for all GPUs.
+        Each GPU's scores are calculated using predefined weights, and the weighted total is included
+        in the result.
+        Args:
+            gpu_name (str, optional): The name of the GPU to fetch scores for. Defaults to "".
+        Returns:
+            dict: A dictionary mapping GPU names to their score details, including the weighted score.
+        """
+
+        scores = {}
+        items = self.gpu_scores.items()
+        if gpu_name:
+            match = self.regex_match(gpu_name, self.gpu_scores.keys())
+            if match:
+                items = [(match, self.gpu_scores[match])]
+            else:
+                return {}
+        for name, data in items:
+            weighted = 0
+            score_details = {}
+            for score_name, value in data.items():
+                weight = WEIGHTS.get(score_name, DEFAULT_WEIGHT)
+                score_details[score_name] = value
+                weighted += value * weight
+            score_details["weighted"] = int(round(weighted))
+            scores[name] = score_details
+        return scores
+
+    async def fetch_all_cpu_scores(self, cpu_name: str = ""):
+        """
+        Fetches and calculates weighted CPU scores for all CPUs or a specific CPU.
+        If a CPU name is provided, attempts to match it against known CPU names using regex.
+        Returns the weighted scores for the matched CPU if found, otherwise returns an empty dictionary.
+        If no CPU name is provided, returns weighted scores for all CPUs.
+        Args:
+            cpu_name (str, optional): The name of the CPU to fetch scores for. Defaults to "".
+        Returns:
+            dict: A dictionary mapping CPU names to their score details, including individual scores and the weighted total.
+        """
+
+        scores = {}
+        items = self.cpu_scores.items()
+        if cpu_name:
+            match = self.regex_match(cpu_name, self.cpu_scores.keys())
+            if match:
+                items = [(match, self.cpu_scores[match])]
+            else:
+                return {}
+        for name, data in items:
+            weighted = 0
+            score_details = {}
+            for score_name, value in data.items():
+                weight = WEIGHTS.get(score_name, DEFAULT_WEIGHT)
+                score_details[score_name] = value
+                weighted += value * weight
+            score_details["weighted"] = int(round(weighted))
+            scores[name] = score_details
+        return scores
+
+    async def fetch_gpu_score(self, gpu_name):
+        """
+        Calculates and returns the weighted score for a given GPU name.
+        This method attempts to match the provided GPU name against known GPU scores.
+        If a match is found, it computes a weighted sum of the GPU's scores using predefined weights.
+        If no match is found, it returns 0.
+        Args:
+            gpu_name (str): The name of the GPU to fetch the score for.
+        Returns:
+            int: The weighted score for the GPU, or 0 if no match is found.
+        """
+
+        match = self.regex_match(gpu_name, self.gpu_scores.keys())
+        if match:
+            gpu_data = self.gpu_scores[match]
+            weighted = 0
+            for score_name, value in gpu_data.items():
+                weight = WEIGHTS.get(score_name, DEFAULT_WEIGHT)
+                weighted += value * weight
+            return int(round(weighted))
+        return 0
+
+    async def fetch_cpu_score(self, cpu_name):
+        """
+        Calculates and returns the weighted CPU score for a given CPU name.
+        This method attempts to match the provided CPU name against known CPU scores.
+        If a match is found, it computes a weighted sum of the CPU's scores using predefined weights.
+        If no match is found, it returns 0.
+        Args:
+            cpu_name (str): The name of the CPU to fetch the score for.
+        Returns:
+            int: The weighted CPU score if a match is found, otherwise 0.
+        """
+
+        match = self.regex_match(cpu_name, self.cpu_scores.keys())
+        if match:
+            cpu_data = self.cpu_scores[match]
+            weighted = 0
+            for score_name, value in cpu_data.items():
+                weight = WEIGHTS.get(score_name, DEFAULT_WEIGHT)
+                weighted += value * weight
+            return int(round(weighted))
+        return 0
+
+    def combined_score(self, cpu_score, gpu_score):
+        """
+        Calculates the combined score by averaging the CPU and GPU scores.
+        Args:
+            cpu_score (int or float): The score representing CPU performance.
+            gpu_score (int or float): The score representing GPU performance.
+        Returns:
+            int: The rounded average of the CPU and GPU scores.
+        """
+
+        return int(round((cpu_score + gpu_score) / 2))
+
+    async def get_all_users(self, guild):
+        """
+        Asynchronously retrieves all users from the guild who have both CPU and GPU data configured.
+        Args:
+            guild (discord.Guild): The guild from which to retrieve members.
+        Returns:
+            list: A list of tuples, each containing a discord.Member object and their associated configuration data.
+                  Only users with both 'cpu' and 'gpu' data are included.
+        """
+
+        users = []
+        for user_id in await self.config.all_users():
+            member = guild.get_member(user_id)
+            if not member:
+                continue
+            data = await self.config.user_from_id(user_id).all()
+            if data["cpu"] and data["gpu"]:
+                users.append((member, data))
+        return users
+
+    @pcmasterrace.group(name="chart")
+    async def chart(self, ctx):
+        """Show leaderboard for all parts or server member's build."""
+        pass
+
+    @chart.command(name="parts")
+    async def chart_parts(self, ctx):
+        """List all GPU and CPU scores as a bar graph image with interactive buttons and pagination (embed only)."""
+        if not self.gpu_scores and not self.cpu_scores:
+            await ctx.send("No GPU or CPU scores set.")
+            return
+
+        # Prepare separate dicts for GPU and CPU weighted scores
+        gpu_weighted_scores = {}
+        cpu_weighted_scores = {}
+
+        for name in self.gpu_scores.keys():
+            gpu_weighted_scores[name] = await self.fetch_gpu_score(name)
+        for name in self.cpu_scores.keys():
+            cpu_weighted_scores[name] = await self.fetch_cpu_score(name)
+
+        # Sort GPU and CPU scores by weighted score, highest first
+        gpu_weighted_scores = dict(sorted(gpu_weighted_scores.items(), key=lambda x: x[1], reverse=True))
+        cpu_weighted_scores = dict(sorted(cpu_weighted_scores.items(), key=lambda x: x[1], reverse=True))
+
+        view = ScoreView(ctx, gpu_weighted_scores, cpu_weighted_scores)
+        await self.send_view(ctx, view, cpu_weighted_scores)
+
+    @chart.command(name="users")
+    async def chart_users(self, ctx):
+        """
+        Show a bar graph comparing all server members' builds (CPU+GPU combos).
+        """
+        users = await self.get_all_users(ctx.guild)
+        if not users:
+            await ctx.send("No users have submitted combos.")
+            return
+
+        cpu_scores = {}
+        gpu_scores = {}
+        combined_scores = {}
+
+        for member, data in users:
+            cpu_score = await self.fetch_cpu_score(data["cpu"])
+            gpu_score = await self.fetch_gpu_score(data["gpu"])
+            combo_score = self.combined_score(cpu_score, gpu_score)
+            cpu_scores[member.display_name] = cpu_score
+            gpu_scores[member.display_name] = gpu_score
+            combined_scores[member.display_name] = combo_score
+
+        cpu_scores = dict(sorted(cpu_scores.items(), key=lambda x: x[1], reverse=True))
+        gpu_scores = dict(sorted(gpu_scores.items(), key=lambda x: x[1], reverse=True))
+        combined_scores = dict(sorted(combined_scores.items(), key=lambda x: x[1], reverse=True))
+
+        view = UserScoreView(ctx, cpu_scores, gpu_scores, combined_scores)
+        await self.send_view(ctx, view, cpu_scores)
+
+    async def send_view(self, ctx, view, cpu_scores):
+        """
+        Sends an embed message displaying CPU scores with a bar graph image and interactive pagination buttons.
+        Args:
+            ctx: The context in which the command was invoked.
+            view: The discord UI view containing pagination buttons.
+            cpu_scores: A list of CPU score data to be displayed.
+        Side Effects:
+            - Sends a message to the Discord channel with an embed and optional image attachment.
+            - Updates the state of pagination buttons based on the number of pages.
+            - Stores the sent message in the view for future reference.
+        """
+
+        page_scores, total_pages = get_page(cpu_scores, 0)
+        title = f"CPU Scores (Page 1/{total_pages})"
+        img_bytes = draw_bar_graph(page_scores, title)
+        embed = discord.Embed(title=title, color=await ctx.embed_color() or DEFAULT_COLOR)
+        files = []
+        view.prev_button.disabled = True
+        view.next_button.disabled = total_pages <= 1
+        view.prev5_button.disabled = True
+        view.next5_button.disabled = total_pages <= 1
+        if img_bytes:
+            file = discord.File(img_bytes, filename="userscores.png")
+            files = [file]
+            embed.set_image(url="attachment://userscores.png")
+        sent = await ctx.send(embed=embed, view=view, files=files)
+        view.message = sent
+
+    @pcmasterrace.group(name="set")
+    async def set_cmd(self, ctx):
+        """Set various settings for this cog."""
+        pass
+
+    @pcmasterrace.group(name="view")
+    async def view_cmd(self, ctx):
+        """View combos."""
+        pass
+
+    @set_cmd.command(name="combo")
+    async def combo_set(self, ctx, *, combo: str = ""):
+        """
+        Set, update, or remove your CPU/GPU combo.
+        Example usage: `pcmr set combo Ryzen 7 5800X + RTX 3080`\n
+
+        If you already have a combo, it will be updated.
+        To remove your combo, use: `pcmr set combo remove`
+        """
+        if combo is None:
+            await ctx.send_help(ctx.command)
+            return
+        if combo.strip().lower() == "remove":
+            await self.config.user(ctx.author).set(self.default_user)
+            await ctx.send("Your combo has been removed.")
+            return
+
+        parts = re.split(r"\+|,|/", combo)
+        if len(parts) < 2:
+            await ctx.send(
+                f"Please provide both CPU and GPU, e.g:\n`{ctx.prefix}pcmr set combo 5700X + RTX 3080`"
+            )
+            return
+
+        cpu_name = parts[0].strip()
+        gpu_name = parts[1].strip()
+
+        cpu_scores = await self.fetch_all_cpu_scores(cpu_name)
+        gpu_scores = await self.fetch_all_gpu_scores(gpu_name)
+
+        if not cpu_scores:
+            await ctx.send(f"Could not find CPU score for `{cpu_name}`.")
+            return
+        if not gpu_scores:
+            await ctx.send(f"Could not find GPU score for `{gpu_name}`.")
+            return
+
+        await self.config.user(ctx.author).cpu.set(cpu_name)
+        await self.config.user(ctx.author).gpu.set(gpu_name)
+
+        embed = build_combo_embed(
+            self,
+            ctx.author,
+            cpu_name,
+            gpu_name,
+            cpu_scores,
+            gpu_scores,
+            embed_color=await ctx.embed_color() or DEFAULT_COLOR,
+            combined_score_title="Your combo has been set!",
+        )
+        await ctx.send(embed=embed)
+
+    @view_cmd.command(name="combo")
+    async def combo_view(self, ctx, member: discord.Member = None):
+        """View your or another member's combo."""
+        member = member or ctx.author
+        data = await self.config.user(member).all()
+        if not data["cpu"] or not data["gpu"]:
+            await ctx.send(f"{member.display_name} has not submitted a combo.")
+            return
+
+        cpu_scores = await self.fetch_all_cpu_scores(data["cpu"])
+        gpu_scores = await self.fetch_all_gpu_scores(data["gpu"])
+
+        embed = build_combo_embed(
+            self,
+            member,
+            data["cpu"],
+            data["gpu"],
+            cpu_scores,
+            gpu_scores,
+            embed_color=await ctx.embed_color() or DEFAULT_COLOR,
+        )
+        await ctx.send(embed=embed)
+
+    @pcmasterrace.command(name="wiki")
+    async def wiki(self, ctx):
+        """
+        Show information about how scores and combos work.
+        """
+        # Build description as before
+        description = (
+            "**How scores are calculated:**\n"
+            "Each CPU and GPU has several benchmark scores. Each score is multiplied by a weight (defined in the config), "
+            "then all weighted scores are summed to get a final weighted score for the part.\n\n"
+            "**Score Types & Weights:**\n"
+        )
+        # Dynamically list CPU and GPU score types and weights
+        cpu_score_types = set()
+        gpu_score_types = set()
+        for cpu in self.cpu_scores.values():
+            cpu_score_types.update(cpu.keys())
+        for gpu in self.gpu_scores.values():
+            gpu_score_types.update(gpu.keys())
+
+        description += "**CPU Score Types & Weights:**\n"
+        for score_type in cpu_score_types:
+            weight = WEIGHTS.get(score_type, DEFAULT_WEIGHT)
+            description += f"- `{score_type}`: weight = `{weight}`\n"
+
+        description += "\n**GPU Score Types & Weights:**\n"
+        for score_type in gpu_score_types:
+            weight = WEIGHTS.get(score_type, DEFAULT_WEIGHT)
+            description += f"- `{score_type}`: weight = `{weight}`\n"
+
+        description += (
+            "\n**Combo Score Formula:**\n"
+            "Your combo score is the average of your CPU and GPU weighted scores:\n"
+            "`combo_score = (cpu_score + gpu_score) / 2`\n\n"
+            "**How to add your combo:**\n"
+            "Use the command:\n"
+            "`{prefix}pcmr set combo <CPU Name> + <GPU Name>`\n"
+            "Example:\n"
+            "`{prefix}pcmr set combo Ryzen 7 5800X + RTX 3080`\n\n"
+            "To remove your combo:\n"
+            "`{prefix}pcmr set combo remove`\n"
+            "You can view your combo with:\n"
+            "`{prefix}pcmr view combo`\n"
+            "Or view another member's combo:\n"
+            "`{prefix}pcmr view combo @member`"
+        ).replace("{prefix}", ctx.prefix)
+        embed = discord.Embed(
+            title="PCMasterRace Wiki",
+            description=description,
+            color=await ctx.embed_color() or DEFAULT_COLOR,
+        )
+        await ctx.send(embed=embed)
+
+
+def setup(bot):
+    bot.add_cog(PCMasterRace(bot))
