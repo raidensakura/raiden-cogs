@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://files.catbox.moe/92mfqx.png"><img src="https://img.icons8.com/cotton/512/settings.png" style="height: 70px;"></h1>
+<h1 align="center"><img src="https://cdn.project-mei.xyz/68747470733a2f2f696d6167652e6d79616e696d656c6973742e6e65742f75692f666b4c4954614a546566616678464b5047527a6e676751555f6954556c644e4a4474784c665943647730695336656a53454548425f4a4d6c6831314c66714c33-v97ofuq7U43I.png"></h1>
 <div align="center">
  <a href="https://github.com/raidensakura"><img src="https://img.shields.io/badge/raiden--cogs-by%20Raiden-d11df9"></a>
  <a href="https://github.com/Cog-Creators/Red-DiscordBot"><img src="https://img.shields.io/badge/Red%20DiscordBot-V3-red.svg"></a>
@@ -42,29 +42,35 @@
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/choose">choose</a></td>
    <td>A cog to replace Red Bot's <a href="https://docs.discord.red/en/stable/cog_guides/general.html?highlight=general">General</a> cog <code>choose</code> command to something more intuitive.</td>
   </tr>
+
+  <tr>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/pcmasterrace">pcmasterrace</a></td>
+   <td>A cog to track PC build combo and rank them among other builds in the server.</td>
+  </tr>
  
 </table>
 
-<h2 align="center">Dev Stuff</h2>
+<h2 align="center">Contributing</h2>
+This project has included pre-commit script that can automatically run black and ruff linter on every commit.
 
-<h3 align="center">Formatting</h3>
-<p align="center">To make sure things stay nice and clean.</p>
+1. Install development dependencies.
+   ```console
+   $ uv sync --dev
+   ```
+2. Run the pre-commit hook.
+   ```console
+   $ uv run pre-commit
+   ```
+3. Install the pre-commit hook (Optional).
+   ```console
+   $ uv run pre-commit install
+   ```
 
-```py
-pip install -U black isort
-black . ; isort .
-```
+Alternatively, you can also lint the codebase manually
 
-<h3 align="center"><code>.vscode/settings.json</code></h3>
-<p align="center">To make sure the venv always open when I work on cogs.</p>
-
-```json
-{
-	"python.terminal.activateEnvironment": true,
-	"python.terminal.activateEnvInCurrentTerminal": true,
-	"python.defaultInterpreterPath": "C:\\Users\\Raiden\\redenv\\Scripts\\python.exe"
-}
-
+```console
+$ uv run black .
+$ uv run ruff format .
 ```
 
 <h2 align="center">Credits</h2>

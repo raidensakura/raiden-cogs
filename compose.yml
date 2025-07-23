@@ -1,0 +1,25 @@
+services:
+  redbot:
+    container_name: redbot
+    image: phasecorex/red-discordbot:core
+    restart: unless-stopped
+    volumes:
+      - ./redbot:/data
+      - ./pcmasterrace:/cogs/pcmasterrace
+    env_file:
+      - .env
+    environment:
+      EXTRA_ARGS: --dev --debug
+      REDBOT_VERSION: ==3.5.20
+    develop:
+      watch:
+      - path: ./pcmasterrace
+        action: restart
+        ignore:
+        - __pycache__
+
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: "1450"

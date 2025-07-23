@@ -1,0 +1,76 @@
+[project]
+requires-python = "<3.12,>=3.9"
+name = "raiden-cogs"
+version = "0.1.0"
+description = "Raiden's cogs for Red Discord Bot"
+authors = [
+    { name = "Raiden Sakura", email = "raiden@project-mei.xyz" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "black==23.12.0",
+    "ruff==0.11.11",
+    "pre-commit==3.6.0"
+]
+
+[tool.ruff]
+# Exclude a variety of commonly ignored directories.
+exclude = [
+    ".bzr",
+    ".direnv",
+    ".eggs",
+    ".git",
+    ".git-rewrite",
+    ".hg",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".nox",
+    ".pants.d",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".svn",
+    ".tox",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "buck-out",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+]
+select = ["C90", "E", "F", "I001", "PGH004", "RUF100"]
+ignore = ["F405", "E741", "C901", "F403", "E501"]
+fixable = ["ALL"]
+mccabe.max-complexity = 25
+isort.combine-as-imports = true
+unfixable = []
+
+[tool.black]
+line-length = "110"
+target-version = ['py311']
+include = '\.pyi?$'
+extend-exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.venv
+    | venv
+    | venv2
+    | _build
+    | build
+    | dist
+    | plugins
+    | temp
+  )/
+)
+'''
