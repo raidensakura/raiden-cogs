@@ -266,28 +266,22 @@ class PCMasterRace(commands.Cog):
             return int(round(weighted))
         return 0
 
-    def combined_score(self, cpu_score, gpu_score, resolution="1440p"):
+    def combined_score(self, cpu_score, gpu_score, cpu_weight=0.4, gpu_weight=0.6):
         """
-        Calculates a combined performance score based on CPU and GPU scores,
-        adjusted for the specified display resolution.
-        The GPU score is scaled by a bias factor depending on the resolution:
-            - "1080p": 0.7
-            - "1440p": 0.8 (default)
-            - "4k": 0.9
-        The final score is the minimum of the CPU score and the biased GPU score,
-        rounded to the nearest integer.
+        Calculates a combined performance score using a weighted harmonic mean with bias, recommended for balancing CPU and GPU contributions.
+        The formula used is:
+            combined_score = round(2 * (cpu_score * gpu_score) / (cpu_weight * gpu_score + gpu_weight * cpu_score))
+        This approach ensures that the lower-performing component (CPU or GPU) has a greater impact on the final score, which is ideal for system bottleneck analysis.
         Args:
             cpu_score (float or int): The performance score of the CPU.
             gpu_score (float or int): The performance score of the GPU.
-            resolution (str, optional): The display resolution.
-                Supported values are "1080p", "1440p", and "4k". Defaults to "1440p".
+            cpu_weight (float, optional): The weight or importance assigned to the CPU score. Defaults to 0.4.
+            gpu_weight (float, optional): The weight or importance assigned to the GPU score. Defaults to 0.6.
         Returns:
-            int: The combined performance score.
+            int: The combined performance score as an integer.
         """
 
-        bias = {"1080p": 0.7, "1440p": 0.8, "4k": 0.9}
-        gpu_bias = bias.get(resolution, 0.8)
-        return int(round(min(cpu_score, gpu_score * gpu_bias)))
+        return int(round(2 * (cpu_score * gpu_score) / (cpu_weight * gpu_score + gpu_weight * cpu_score)))
 
     async def get_all_users(self, guild):
         """
@@ -509,12 +503,13 @@ class PCMasterRace(commands.Cog):
             page1 += f"- `{score_type}`: weight = `{weight}`\n"
         page1 += (
             "\n**Combo Score Formula:**\n"
-            "Your combo score is calculated as the minimum of your CPU weighted score and your GPU weighted score (scaled by resolution bias):\n"
-            "`combo_score = min(cpu_score, gpu_score * bias)`\n"
-            "Where `bias` is:\n"
-            "- `0.7` for 1080p\n"
-            "- `0.8` for 1440p (default)\n"
-            "- `0.9` for 4k\n"
+            "Your combo score is calculated using a weighted harmonic mean (with CPU/GPU bias):\n"
+            "`combo_score = round(2 * (cpu_score * gpu_score) / (cpu_weight * gpu_score + gpu_weight * cpu_score))`\n"
+            "Where:\n"
+            "- `cpu_score` and `gpu_score` are the weighted scores for your CPU and GPU\n"
+            "- `cpu_weight` is the CPU bias (default: 0.4)\n"
+            "- `gpu_weight` is the GPU bias (default: 0.6)\n"
+            "This formula gives more weight to the lower-performing part, reflecting real-world bottlenecks.\n"
         )
 
         # Page 2: How to use, commands, data sources
