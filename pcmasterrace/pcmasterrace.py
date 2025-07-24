@@ -13,6 +13,7 @@ from .utils import (
     WEIGHTS_PATH,
 )
 from .views import ScoreView, UserScoreView
+from redbot.core.utils.views import SimpleMenu
 
 with open(WEIGHTS_PATH, "r", encoding="utf-8") as f:
     WEIGHTS = json.load(f)
@@ -292,8 +293,6 @@ class PCMasterRace(commands.Cog):
         files = []
         view.prev_button.disabled = True
         view.next_button.disabled = total_pages <= 1
-        view.prev5_button.disabled = True
-        view.next5_button.disabled = total_pages <= 1
         if img_bytes:
             file = discord.File(img_bytes, filename="userscores.png")
             files = [file]
@@ -389,16 +388,9 @@ class PCMasterRace(commands.Cog):
     @pcmasterrace.command(name="wiki")
     async def wiki(self, ctx):
         """
-        Show information about how scores and combos work.
+        Show information about how scores and combos work (multi-page).
         """
-        # Build description as before
-        description = (
-            "**How scores are calculated:**\n"
-            "Each CPU and GPU has several benchmark scores. Each score is multiplied by a weight (defined in the config), "
-            "then all weighted scores are summed to get a final weighted score for the part.\n\n"
-            "**Score Types & Weights:**\n"
-        )
-        # Dynamically list CPU and GPU score types and weights
+        # Page 1: Score calculation, types, weights, formula
         cpu_score_types = set()
         gpu_score_types = set()
         for cpu in self.cpu_scores.values():
@@ -406,24 +398,31 @@ class PCMasterRace(commands.Cog):
         for gpu in self.gpu_scores.values():
             gpu_score_types.update(gpu.keys())
 
-        description += "**CPU Score Types & Weights:**\n"
+        page1 = (
+            "**How scores are calculated:**\n"
+            "Each CPU and GPU has several benchmark scores. Each score is multiplied by a weight (defined in the config), "
+            "then all weighted scores are summed to get a final weighted score for the part.\n\n"
+            "**CPU Score Types & Weights:**\n"
+        )
         for score_type in cpu_score_types:
             weight = WEIGHTS.get(score_type, DEFAULT_WEIGHT)
-            description += f"- `{score_type}`: weight = `{weight}`\n"
-
-        description += "\n**GPU Score Types & Weights:**\n"
+            page1 += f"- `{score_type}`: weight = `{weight}`\n"
+        page1 += "\n**GPU Score Types & Weights:**\n"
         for score_type in gpu_score_types:
             weight = WEIGHTS.get(score_type, DEFAULT_WEIGHT)
-            description += f"- `{score_type}`: weight = `{weight}`\n"
-
-        description += (
+            page1 += f"- `{score_type}`: weight = `{weight}`\n"
+        page1 += (
             "\n**Combo Score Formula:**\n"
             "Your combo score is calculated as the minimum of your CPU weighted score and your GPU weighted score (scaled by resolution bias):\n"
             "`combo_score = min(cpu_score, gpu_score * bias)`\n"
             "Where `bias` is:\n"
             "- `0.7` for 1080p\n"
             "- `0.8` for 1440p (default)\n"
-            "- `0.9` for 4k\n\n"
+            "- `0.9` for 4k\n"
+        )
+
+        # Page 2: How to use, commands, data sources
+        page2 = (
             "**How to add your combo:**\n"
             "Use the command:\n"
             "`{prefix}pcmr set combo <CPU Name> + <GPU Name>`\n"
@@ -444,12 +443,20 @@ class PCMasterRace(commands.Cog):
             "- [3DMark Speed Way](https://www.topcpu.net/en/gpu-r/3dmark-speed-way)\n"
             "- [3DMark Time Spy Extreme](https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme)\n"
         ).replace("{prefix}", ctx.prefix)
-        embed = discord.Embed(
-            title="PCMasterRace Wiki",
-            description=description,
-            color=await ctx.embed_color() or DEFAULT_COLOR,
-        )
-        await ctx.send(embed=embed)
+
+        embeds = [
+            discord.Embed(
+                title="PCMasterRace Wiki (Page 1/2)",
+                description=page1,
+                color=await ctx.embed_color() or DEFAULT_COLOR,
+            ),
+            discord.Embed(
+                title="PCMasterRace Wiki (Page 2/2)",
+                description=page2,
+                color=await ctx.embed_color() or DEFAULT_COLOR,
+            ),
+        ]
+        await SimpleMenu(embeds, use_select_menu=True).start(ctx)
 
 
 def setup(bot):

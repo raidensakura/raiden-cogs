@@ -3,8 +3,8 @@ from .utils import get_page, draw_bar_graph, get_page_dict, DEFAULT_COLOR
 
 
 class TabButton(discord.ui.Button):
-    def __init__(self, label, tab_name, author, style=discord.ButtonStyle.secondary):
-        super().__init__(label=label, style=style, custom_id=f"tab_{tab_name}")
+    def __init__(self, label, tab_name, author, style=discord.ButtonStyle.secondary, row=1):
+        super().__init__(label=label, style=style, custom_id=f"tab_{tab_name}", row=row)
         self.tab_name = tab_name
         self.author = author
 
@@ -43,6 +43,45 @@ class PageButton(discord.ui.Button):
             await view.update_message(interaction)
 
 
+class PageDropdown(discord.ui.Select):
+    def __init__(self, total_pages, current_page, author, row=1):
+        # Calculate start and end indices for the dropdown
+        if total_pages <= 25:
+            start = 0
+            end = total_pages
+        else:
+            # Center current_page if possible
+            half = 12
+            start = max(0, current_page - half)
+            end = min(total_pages, start + 25)
+            # If at the end, shift window left
+            if end - start < 25 and end == total_pages:
+                start = max(0, end - 25)
+        options = [
+            discord.SelectOption(label=f"Page {i+1}", value=str(i), default=(i == current_page))
+            for i in range(start, end)
+        ]
+        super().__init__(
+            placeholder="Select page...",
+            min_values=1,
+            max_values=1,
+            options=options,
+            custom_id="page_dropdown",
+            row=row,
+        )
+        self.author = author
+
+    async def callback(self, interaction: discord.Interaction):
+        if interaction.user.id != self.author.id:
+            await interaction.response.send_message("This dropdown isn't for you.", ephemeral=True)
+            return
+
+        view = self.view
+        selected_page = int(self.values[0])
+        view.page = selected_page
+        await view.update_message(interaction)
+
+
 def update_tab_styles(view, tab_buttons, tab_map, active_tab):
     for i, btn in enumerate(tab_buttons):
         btn.style = (
@@ -57,11 +96,10 @@ def make_tab_buttons(tabs, author):
 
 
 def make_pagination_buttons(author, style=discord.ButtonStyle.secondary, row=1):
+    # Only previous and next buttons now
     return [
-        PageButton("5 ⏮️", -5, author, style, row),
-        PageButton("⏪", -1, author, style, row),
-        PageButton("⏩", 1, author, style, row),
-        PageButton("⏭️ 5", 5, author, style, row),
+        PageButton("◀️", -1, author, style, row),
+        PageButton("▶️", 1, author, style, row),
     ]
 
 
@@ -92,10 +130,12 @@ async def update_scores_message(
 
     view.prev_button.disabled = page == 0
     view.next_button.disabled = page >= total_pages - 1
-    view.prev5_button.disabled = page == 0
-    view.next5_button.disabled = page >= total_pages - 1
+    # Remove prev5_button and next5_button
     if hasattr(view, "update_tab_styles"):
         view.update_tab_styles()
+    # Update dropdown options
+    if hasattr(view, "update_page_dropdown"):
+        view.update_page_dropdown(total_pages, page)
     await interaction.response.edit_message(embed=embed, view=view, attachments=files)
 
 
@@ -114,9 +154,12 @@ class ScoreView(discord.ui.View):
             self.add_item(btn)
 
         pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.gray, row=1)
-        self.prev5_button, self.prev_button, self.next_button, self.next5_button = pagination_buttons
+        self.prev_button, self.next_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
+
+        self.page_dropdown = PageDropdown(self.total_pages, self.page, ctx.author, row=2)
+        self.add_item(self.page_dropdown)
 
         self.update_tab_styles()
 
@@ -124,9 +167,15 @@ class ScoreView(discord.ui.View):
         tab_map = {"cpu": 0, "gpu": 1}
         update_tab_styles(self, self.tab_buttons, tab_map, self.tab)
 
+    def update_page_dropdown(self, total_pages, current_page):
+        self.remove_item(self.page_dropdown)
+        self.page_dropdown = PageDropdown(total_pages, current_page, self.ctx.author, row=2)
+        self.add_item(self.page_dropdown)
+
     async def update_message(self, interaction):
         scores = self.gpu_scores if self.tab == "gpu" else self.cpu_scores
         title = "GPU Scores" if self.tab == "gpu" else "CPU Scores"
+        _, self.total_pages = get_page(scores, 0)
         await update_scores_message(
             interaction,
             self.ctx,
@@ -165,9 +214,15 @@ class UserScoreView(discord.ui.View):
             self.add_item(btn)
 
         pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.secondary, row=1)
-        self.prev5_button, self.prev_button, self.next_button, self.next5_button = pagination_buttons
+        self.prev_button, self.next_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
+
+        # Calculate total pages for dropdown
+        scores = self.get_scores()
+        _, total_pages = get_page_dict(scores, 0, self.per_page)
+        self.page_dropdown = PageDropdown(total_pages, self.page, ctx.author, row=2)
+        self.add_item(self.page_dropdown)
 
         self.update_tab_styles()
 
@@ -183,16 +238,21 @@ class UserScoreView(discord.ui.View):
         else:
             return self.combined_scores
 
+    def update_page_dropdown(self, total_pages, current_page):
+        self.remove_item(self.page_dropdown)
+        self.page_dropdown = PageDropdown(total_pages, current_page, self.ctx.author, row=2)
+        self.add_item(self.page_dropdown)
+
     async def update_message(self, interaction):
         scores = self.get_scores()
-        title = f"{self.tab.upper()} Scores"
+        _, total_pages = get_page_dict(scores, 0, self.per_page)
         await update_scores_message(
             interaction,
             self.ctx,
             scores,
             self.page,
-            None,
-            title,
+            total_pages,
+            f"{self.tab.upper()} Scores",
             "userscores.png",
             self,
             DEFAULT_COLOR,
