@@ -437,12 +437,12 @@ class PCMasterRace(commands.Cog):
             "`{prefix}pcmr view combo @member`\n\n"
             "**Data Sources:**\n"
             "CPU scores:\n"
-            "- [Single Thread](https://www.cpubenchmark.net/single-thread/desktop)\n"
-            "- [Multi Thread](https://www.cpubenchmark.net/multithread/desktop)\n"
+            "- [Single Thread](https://www.cpubenchmark.net/single-thread)\n"
+            "- [Multi Thread](https://www.cpubenchmark.net/multithread)\n"
             "- [Gaming](https://www.cpubenchmark.net/top-gaming-cpus.html)\n"
             "GPU scores:\n"
-            "- [3DMark Speed Way](https://www.topcpu.net/en/gpu-r/3dmark-speed-way-desktop)\n"
-            "- [3DMark Time Spy Extreme](https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme-desktop)\n"
+            "- [3DMark Speed Way](https://www.topcpu.net/en/gpu-r/3dmark-speed-way)\n"
+            "- [3DMark Time Spy Extreme](https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme)\n"
         ).replace("{prefix}", ctx.prefix)
         embed = discord.Embed(
             title="PCMasterRace Wiki",

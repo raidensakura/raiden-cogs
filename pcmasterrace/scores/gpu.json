@@ -1,265 +1,187 @@
 {
-    "Arc A310": {
-        "speedway": 232,
-        "timespy_extreme": 1496
-    },
-    "Arc A350": {
-        "timespy_extreme": 1481
-    },
-    "Arc A380": {
-        "speedway": 576,
-        "timespy_extreme": 2017
-    },
-    "Arc A580": {
-        "speedway": 2058,
-        "timespy_extreme": 5186
-    },
-    "Arc A750": {
-        "speedway": 2355,
-        "timespy_extreme": 6033
-    },
-    "Arc A770": {
-        "speedway": 2442,
-        "timespy_extreme": 6525
-    },
-    "Arc B570": {
-        "speedway": 1948,
-        "timespy_extreme": 6004
-    },
-    "Arc B580": {
-        "speedway": 2478,
-        "timespy_extreme": 7068
-    },
-    "Arc Pro A60": {
-        "timespy_extreme": 3623
-    },
-    "FirePro S10000": {
-        "timespy_extreme": 1038
-    },
-    "FirePro W5100": {
-        "timespy_extreme": 586
-    },
-    "FirePro W7100": {
-        "timespy_extreme": 1185
-    },
-    "GeForce GT 1010": {
-        "timespy_extreme": 153
-    },
-    "GeForce GT 1010 DDR4": {
-        "timespy_extreme": 153
-    },
-    "GeForce GT 1030": {
-        "timespy_extreme": 173
-    },
-    "GeForce GT 1030 DDR4": {
-        "timespy_extreme": 177
-    },
-    "GeForce GT 430": {
-        "timespy_extreme": 58
-    },
-    "GeForce GT 440": {
-        "timespy_extreme": 76
-    },
-    "GeForce GT 610": {
-        "timespy_extreme": 32
-    },
-    "GeForce GT 620": {
-        "timespy_extreme": 55
-    },
-    "GeForce GT 630": {
-        "timespy_extreme": 67
-    },
-    "GeForce GT 640": {
-        "timespy_extreme": 160
-    },
-    "GeForce GT 710": {
-        "timespy_extreme": 69
-    },
-    "GeForce GT 720": {
-        "timespy_extreme": 86
-    },
-    "GeForce GT 730": {
-        "timespy_extreme": 105
-    },
-    "GeForce GT 740": {
-        "timespy_extreme": 182
-    },
-    "GeForce GTS 450": {
-        "timespy_extreme": 107
-    },
-    "GeForce GTX 1050": {
-        "timespy_extreme": 509
-    },
-    "GeForce GTX 1050 Ti": {
-        "timespy_extreme": 1093
-    },
-    "GeForce GTX 1060 3 GB": {
-        "timespy_extreme": 1771
-    },
-    "GeForce GTX 1060 3 GB GP104": {
-        "timespy_extreme": 1771
-    },
-    "GeForce GTX 1060 6 GB": {
-        "timespy_extreme": 1917
-    },
-    "GeForce GTX 1060 6 GB GDDR5X": {
-        "timespy_extreme": 1917
-    },
-    "GeForce GTX 1060 6 GB GP104": {
-        "timespy_extreme": 1917
-    },
-    "GeForce GTX 1060 6 GB Rev. 2": {
-        "timespy_extreme": 1917
-    },
-    "GeForce GTX 1070": {
-        "timespy_extreme": 2825
-    },
-    "GeForce GTX 1070 GDDR5X": {
-        "timespy_extreme": 2825
-    },
-    "GeForce GTX 1070 Ti": {
-        "timespy_extreme": 3134
-    },
-    "GeForce GTX 1080": {
-        "timespy_extreme": 3446
-    },
-    "GeForce GTX 1080 Ti": {
-        "timespy_extreme": 4658
-    },
-    "GeForce GTX 1080 Ti 10 GB": {
-        "timespy_extreme": 4658
-    },
-    "GeForce GTX 1630": {
-        "timespy_extreme": 953
-    },
-    "GeForce GTX 1650": {
-        "timespy_extreme": 1606
-    },
-    "GeForce GTX 1650 GDDR6": {
-        "timespy_extreme": 1607
-    },
-    "GeForce GTX 1650 SUPER": {
-        "timespy_extreme": 2072
-    },
-    "GeForce GTX 1660": {
-        "timespy_extreme": 2465
-    },
-    "GeForce GTX 1660 SUPER": {
-        "timespy_extreme": 2792
-    },
-    "GeForce GTX 1660 Ti": {
-        "timespy_extreme": 2883
-    },
-    "GeForce GTX 660": {
-        "timespy_extreme": 260
-    },
-    "GeForce GTX 660 OEM": {
-        "timespy_extreme": 260
-    },
-    "GeForce GTX 750": {
-        "timespy_extreme": 167
-    },
-    "GeForce GTX 750 GM206": {
-        "timespy_extreme": 167
-    },
-    "GeForce GTX 750 Ti": {
-        "timespy_extreme": 308
-    },
-    "GeForce GTX 950": {
-        "timespy_extreme": 396
-    },
-    "GeForce GTX 960": {
-        "timespy_extreme": 1025
-    },
-    "GeForce GTX 970": {
-        "timespy_extreme": 1683
-    },
-    "GeForce GTX 980": {
-        "timespy_extreme": 2049
-    },
-    "GeForce GTX 980 Ti": {
-        "timespy_extreme": 2807
-    },
-    "GeForce GTX TITAN": {
-        "timespy_extreme": 1418
-    },
-    "GeForce GTX TITAN X": {
-        "timespy_extreme": 2632
-    },
-    "GeForce GTX TITAN Z": {
-        "timespy_extreme": 1371
-    },
-    "GeForce RTX 2060": {
-        "speedway": 1397,
-        "timespy_extreme": 3504
-    },
-    "GeForce RTX 2060 12 GB": {
-        "speedway": 1572,
-        "timespy_extreme": 3697
-    },
-    "GeForce RTX 2060 SUPER": {
-        "speedway": 1838,
-        "timespy_extreme": 4125
-    },
-    "GeForce RTX 2070": {
-        "speedway": 1896,
-        "timespy_extreme": 4309
-    },
-    "GeForce RTX 2070 SUPER": {
-        "speedway": 2070,
-        "timespy_extreme": 4764
-    },
-    "GeForce RTX 2080": {
-        "speedway": 2171,
-        "timespy_extreme": 5146
-    },
-    "GeForce RTX 2080 SUPER": {
-        "speedway": 2221,
-        "timespy_extreme": 5382
-    },
-    "GeForce RTX 2080 Ti": {
-        "speedway": 3042,
-        "timespy_extreme": 7001
-    },
-    "GeForce RTX 2080 Ti 12 GB": {
-        "speedway": 3042,
-        "timespy_extreme": 7001
-    },
-    "GeForce RTX 3050 6 GB": {
-        "speedway": 1123,
-        "timespy_extreme": 2182
-    },
-    "GeForce RTX 3050 8 GB GA107": {
-        "speedway": 1621,
-        "timespy_extreme": 3391
-    },
-    "GeForce RTX 3060": {
-        "speedway": 2181,
-        "timespy_extreme": 4097
-    },
-    "GeForce RTX 3060 8 GB": {
-        "speedway": 1621,
-        "timespy_extreme": 3391
-    },
-    "GeForce RTX 3060 GA104": {
-        "speedway": 2228,
-        "timespy_extreme": 4231
-    },
-    "GeForce RTX 3060 Ti": {
-        "speedway": 2965,
-        "timespy_extreme": 5710
-    },
-    "GeForce RTX 3060 Ti GA103": {
-        "speedway": 2965,
-        "timespy_extreme": 5710
-    },
-    "GeForce RTX 3060 Ti GDDR6X": {
-        "speedway": 3097,
-        "timespy_extreme": 5941
-    },
-    "GeForce RTX 3070": {
-        "speedway": 3453,
-        "timespy_extreme": 6762
+    "RTX PRO 6000 Blackwell": {
+        "speedway": 15285,
+        "timespy_extreme": 28056
+    },
+    "GeForce RTX 5090 D": {
+        "speedway": 14790,
+        "timespy_extreme": 25999
+    },
+    "GeForce RTX 5090": {
+        "speedway": 14621,
+        "timespy_extreme": 25825
+    },
+    "GeForce RTX 4090": {
+        "speedway": 10074,
+        "timespy_extreme": 19460
+    },
+    "GeForce RTX 4090 D": {
+        "speedway": 9719,
+        "timespy_extreme": 17914
+    },
+    "GeForce RTX 5080": {
+        "speedway": 9296,
+        "timespy_extreme": 16627
+    },
+    "RTX 6000 Ada": {
+        "speedway": 8028,
+        "timespy_extreme": 12629
+    },
+    "RTX 6000 Ada Generation": {
+        "speedway": 8028,
+        "timespy_extreme": 12629
+    },
+    "GeForce RTX 5070 Ti": {
+        "speedway": 7699,
+        "timespy_extreme": 13531
+    },
+    "GeForce RTX 4080 SUPER": {
+        "speedway": 7450,
+        "timespy_extreme": 14052
+    },
+    "GeForce RTX 4080": {
+        "speedway": 7254,
+        "timespy_extreme": 14002
+    },
+    "RTX 5000 Ada Generation": {
+        "speedway": 6473,
+        "timespy_extreme": 12700
+    },
+    "Radeon RX 9070 XT": {
+        "speedway": 6403,
+        "timespy_extreme": 14633
+    },
+    "GeForce RTX 4070 Ti SUPER": {
+        "speedway": 6396,
+        "timespy_extreme": 11874
+    },
+    "Radeon RX 7900 XTX": {
+        "speedway": 6363,
+        "timespy_extreme": 15278
+    },
+    "GeForce RTX 3090 Ti": {
+        "speedway": 5903,
+        "timespy_extreme": 11318
+    },
+    "GeForce RTX 5070": {
+        "speedway": 5896,
+        "timespy_extreme": 10789
+    },
+    "Radeon RX 9070": {
+        "speedway": 5844,
+        "timespy_extreme": 13072
+    },
+    "GeForce RTX 4090 Mobile": {
+        "speedway": 5604,
+        "timespy_extreme": 10528
+    },
+    "GeForce RTX 4070": {
+        "speedway": 5508,
+        "timespy_extreme": 7907
+    },
+    "GeForce RTX 4070 Ti": {
+        "speedway": 5508,
+        "timespy_extreme": 10894
+    },
+    "GeForce RTX 3090": {
+        "speedway": 5383,
+        "timespy_extreme": 10258
+    },
+    "Radeon RX 7900 XT": {
+        "speedway": 5364,
+        "timespy_extreme": 13130
+    },
+    "GeForce RTX 3080 Ti": {
+        "speedway": 5330,
+        "timespy_extreme": 10032
+    },
+    "GeForce RTX 4070 SUPER": {
+        "speedway": 5241,
+        "timespy_extreme": 9967
+    },
+    "GeForce RTX 3080 12 GB": {
+        "speedway": 5089,
+        "timespy_extreme": 9411
+    },
+    "RTX 4500 Ada Generation": {
+        "speedway": 5002,
+        "timespy_extreme": 9588
+    },
+    "RTX A6000": {
+        "speedway": 4965,
+        "timespy_extreme": 9324
+    },
+    "GeForce RTX 3080 Ti 20 GB": {
+        "speedway": 4926,
+        "timespy_extreme": 9720
+    },
+    "GeForce RTX 4080 Mobile": {
+        "speedway": 4728,
+        "timespy_extreme": 9051
+    },
+    "Radeon PRO W7900": {
+        "speedway": 4674,
+        "timespy_extreme": 11552
+    },
+    "GeForce RTX 3080": {
+        "speedway": 4633,
+        "timespy_extreme": 8879
+    },
+    "RTX 5000 Mobile Ada Generation": {
+        "speedway": 4577,
+        "timespy_extreme": 7885
+    },
+    "RTX A5500": {
+        "speedway": 4462,
+        "timespy_extreme": 8016
+    },
+    "GeForce RTX 5070 Ti Mobile": {
+        "speedway": 4421,
+        "timespy_extreme": 8328
+    },
+    "Radeon RX 7900 GRE": {
+        "speedway": 4417,
+        "timespy_extreme": 10591
+    },
+    "GeForce RTX 5060 Ti 16 GB": {
+        "speedway": 4152,
+        "timespy_extreme": 7486
+    },
+    "RTX 4000 Mobile Ada Generation": {
+        "speedway": 4118,
+        "timespy_extreme": 7597
+    },
+    "Radeon RX 6950 XT": {
+        "speedway": 4087,
+        "timespy_extreme": 10545
+    },
+    "GeForce RTX 5060 Ti 8 GB": {
+        "speedway": 4084,
+        "timespy_extreme": 7342
+    },
+    "GeForce RTX 5060 Ti": {
+        "speedway": 4044,
+        "timespy_extreme": 7331
+    },
+    "RTX A5000": {
+        "speedway": 4022,
+        "timespy_extreme": 7285
+    },
+    "Radeon RX 7800 XT": {
+        "speedway": 3978,
+        "timespy_extreme": 9448
+    },
+    "Radeon RX 7900M": {
+        "speedway": 3943,
+        "timespy_extreme": 8440
+    },
+    "Radeon RX 6900 XT": {
+        "speedway": 3920,
+        "timespy_extreme": 10076
+    },
+    "Radeon PRO W7800": {
+        "speedway": 3818,
+        "timespy_extreme": 9724
     },
     "GeForce RTX 3070 Ti": {
         "speedway": 3761,
@@ -273,33 +195,40 @@
         "speedway": 3761,
         "timespy_extreme": 7416
     },
-    "GeForce RTX 3080": {
-        "speedway": 4633,
-        "timespy_extreme": 8879
+    "RTX 4000 Ada Generation": {
+        "speedway": 3666,
+        "timespy_extreme": 6708
     },
-    "GeForce RTX 3080 12 GB": {
-        "speedway": 5089,
-        "timespy_extreme": 9411
+    "Radeon RX 6800 XT": {
+        "speedway": 3653,
+        "timespy_extreme": 9315
     },
-    "GeForce RTX 3080 Ti": {
-        "speedway": 5330,
-        "timespy_extreme": 10032
+    "GeForce RTX 5060": {
+        "speedway": 3494,
+        "timespy_extreme": 6452
     },
-    "GeForce RTX 3080 Ti 20 GB": {
-        "speedway": 4926,
-        "timespy_extreme": 9720
+    "GeForce RTX 3070": {
+        "speedway": 3453,
+        "timespy_extreme": 6762
     },
-    "GeForce RTX 3090": {
-        "speedway": 5383,
-        "timespy_extreme": 10258
+    "RTX 3500 Mobile Ada Generation": {
+        "speedway": 3448,
+        "timespy_extreme": 6570
     },
-    "GeForce RTX 3090 Ti": {
-        "speedway": 5903,
-        "timespy_extreme": 11318
+    "RTX A4500": {
+        "speedway": 3422,
+        "timespy_extreme": 6380
     },
-    "GeForce RTX 4060": {
-        "speedway": 2646,
-        "timespy_extreme": 4959
+    "GeForce RTX 5070 Mobile": {
+        "speedway": 3268,
+        "timespy_extreme": 6218
+    },
+    "TITAN RTX": {
+        "speedway": 3224,
+        "timespy_extreme": 7332
+    },
+    "Radeon PRO W7700": {
+        "speedway": 3224
     },
     "GeForce RTX 4060 Ti 16 GB": {
         "speedway": 3216,
@@ -309,428 +238,1367 @@
         "speedway": 3214,
         "timespy_extreme": 6181
     },
-    "GeForce RTX 4070": {
-        "speedway": 5508,
-        "timespy_extreme": 7907
-    },
-    "GeForce RTX 4070 SUPER": {
-        "speedway": 5241,
-        "timespy_extreme": 9967
-    },
-    "GeForce RTX 4070 Ti": {
-        "speedway": 5508,
-        "timespy_extreme": 10894
-    },
-    "GeForce RTX 4070 Ti SUPER": {
-        "speedway": 6396,
-        "timespy_extreme": 11874
-    },
-    "GeForce RTX 4080": {
-        "speedway": 7254,
-        "timespy_extreme": 14002
-    },
-    "GeForce RTX 4080 SUPER": {
-        "speedway": 7450,
-        "timespy_extreme": 14052
-    },
-    "GeForce RTX 4090": {
-        "speedway": 10074,
-        "timespy_extreme": 19460
-    },
-    "GeForce RTX 4090 D": {
-        "speedway": 9719,
-        "timespy_extreme": 17914
-    },
-    "GeForce RTX 5060": {
-        "speedway": 3494,
-        "timespy_extreme": 6452
-    },
-    "GeForce RTX 5060 Ti": {
-        "speedway": 4044,
-        "timespy_extreme": 7331
-    },
-    "GeForce RTX 5060 Ti 16 GB": {
-        "speedway": 4152,
-        "timespy_extreme": 7486
-    },
-    "GeForce RTX 5060 Ti 8 GB": {
-        "speedway": 4084,
-        "timespy_extreme": 7342
-    },
-    "GeForce RTX 5070": {
-        "speedway": 5896,
-        "timespy_extreme": 10789
-    },
-    "GeForce RTX 5070 Ti": {
-        "speedway": 7699,
-        "timespy_extreme": 13531
-    },
-    "GeForce RTX 5080": {
-        "speedway": 9296,
-        "timespy_extreme": 16627
-    },
-    "GeForce RTX 5090": {
-        "speedway": 14621,
-        "timespy_extreme": 25825
-    },
-    "GeForce RTX 5090 D": {
-        "speedway": 14790,
-        "timespy_extreme": 25999
-    },
-    "NVS 810": {
-        "speedway": 0
-    },
-    "P102 100": {
-        "timespy_extreme": 3817
-    },
-    "P104 100": {
-        "timespy_extreme": 2718
-    },
-    "P106 090": {
-        "timespy_extreme": 1018
-    },
-    "P106 100": {
-        "timespy_extreme": 1866
-    },
-    "RTX 2000 Ada Generation": {
-        "speedway": 1970,
-        "timespy_extreme": 3601
-    },
-    "RTX 4000 Ada Generation": {
-        "speedway": 3666,
-        "timespy_extreme": 6708
-    },
-    "RTX 4500 Ada Generation": {
-        "speedway": 5002,
-        "timespy_extreme": 9588
-    },
-    "RTX 5000 Ada Generation": {
-        "speedway": 6473,
-        "timespy_extreme": 12700
-    },
-    "RTX 6000 Ada": {
-        "speedway": 8028,
-        "timespy_extreme": 12629
-    },
-    "RTX 6000 Ada Generation": {
-        "speedway": 8028,
-        "timespy_extreme": 12629
-    },
-    "RTX A400": {
-        "speedway": 308
-    },
-    "RTX PRO 6000 Blackwell": {
-        "speedway": 15285,
-        "timespy_extreme": 28056
-    },
-    "Radeon HD 7750": {
-        "timespy_extreme": 214
-    },
-    "Radeon HD 7790": {
-        "timespy_extreme": 409
-    },
-    "Radeon HD 7850": {
-        "timespy_extreme": 325
-    },
-    "Radeon HD 7870 XT": {
-        "timespy_extreme": 352
-    },
-    "Radeon HD 7950": {
-        "timespy_extreme": 1019
-    },
-    "Radeon HD 7970": {
-        "timespy_extreme": 1209
-    },
-    "Radeon HD 7990": {
-        "timespy_extreme": 999
-    },
-    "Radeon PRO W6400": {
-        "speedway": 184,
-        "timespy_extreme": 1644
-    },
-    "Radeon PRO W7500": {
-        "speedway": 1157,
-        "timespy_extreme": 2939
-    },
-    "Radeon PRO W7600": {
-        "speedway": 1858
-    },
-    "Radeon PRO W7700": {
-        "speedway": 3224
-    },
-    "Radeon Pro Duo": {
-        "timespy_extreme": 2406
-    },
-    "Radeon Pro VII": {
-        "timespy_extreme": 4369
-    },
-    "Radeon Pro W5500": {
-        "timespy_extreme": 2317
-    },
-    "Radeon Pro W5700": {
-        "timespy_extreme": 4103
-    },
-    "Radeon Pro W6400": {
-        "speedway": 184,
-        "timespy_extreme": 1644
-    },
-    "Radeon Pro W6600": {
-        "speedway": 1370,
-        "timespy_extreme": 3695
-    },
-    "Radeon Pro W6800": {
-        "speedway": 3041,
-        "timespy_extreme": 7552
-    },
-    "Radeon Pro WX 2100": {
-        "timespy_extreme": 282
-    },
-    "Radeon Pro WX 3100": {
-        "timespy_extreme": 544
-    },
-    "Radeon Pro WX 3200": {
-        "timespy_extreme": 476
-    },
-    "Radeon Pro WX 4100": {
-        "timespy_extreme": 774
-    },
-    "Radeon Pro WX 5100": {
-        "timespy_extreme": 852
-    },
-    "Radeon Pro WX 7100": {
-        "timespy_extreme": 1716
-    },
-    "Radeon Pro WX 9100": {
-        "timespy_extreme": 2859
-    },
-    "Radeon R5 240 OEM": {
-        "timespy_extreme": 105
-    },
-    "Radeon R7 360": {
-        "timespy_extreme": 517
-    },
-    "Radeon R7 370": {
-        "timespy_extreme": 758
-    },
-    "Radeon R9 380": {
-        "timespy_extreme": 1239
-    },
-    "Radeon R9 380X": {
-        "timespy_extreme": 1294
-    },
-    "Radeon R9 390": {
-        "timespy_extreme": 1931
-    },
-    "Radeon R9 390X": {
-        "timespy_extreme": 2041
-    },
-    "Radeon R9 FURY": {
-        "timespy_extreme": 2277
-    },
-    "Radeon R9 FURY X": {
-        "timespy_extreme": 2453
-    },
-    "Radeon R9 Nano": {
-        "timespy_extreme": 2191
-    },
-    "Radeon RX 460": {
-        "timespy_extreme": 776
-    },
-    "Radeon RX 470": {
-        "timespy_extreme": 1701
-    },
-    "Radeon RX 480": {
-        "timespy_extreme": 1889
-    },
-    "Radeon RX 550": {
-        "timespy_extreme": 546
-    },
-    "Radeon RX 5500 XT": {
-        "timespy_extreme": 2298
-    },
-    "Radeon RX 560": {
-        "timespy_extreme": 799
-    },
-    "Radeon RX 560 XT": {
-        "timespy_extreme": 1671
-    },
-    "Radeon RX 5600 XT": {
-        "timespy_extreme": 3561
-    },
-    "Radeon RX 570": {
-        "timespy_extreme": 1770
-    },
-    "Radeon RX 5700": {
-        "timespy_extreme": 3956
-    },
-    "Radeon RX 5700 XT": {
-        "timespy_extreme": 4414
-    },
-    "Radeon RX 5700 XT 50th Anniversary": {
-        "timespy_extreme": 4142
-    },
-    "Radeon RX 580": {
-        "timespy_extreme": 1968
-    },
-    "Radeon RX 580 2048SP": {
-        "timespy_extreme": 1764
-    },
-    "Radeon RX 590": {
-        "timespy_extreme": 2147
-    },
-    "Radeon RX 590 GME": {
-        "timespy_extreme": 2037
-    },
-    "Radeon RX 6300": {
-        "speedway": 52,
-        "timespy_extreme": 203
-    },
-    "Radeon RX 6400": {
-        "speedway": 103,
-        "timespy_extreme": 1662
-    },
-    "Radeon RX 6500 XT": {
-        "speedway": 180,
-        "timespy_extreme": 2280
-    },
-    "Radeon RX 6600": {
-        "speedway": 1418,
-        "timespy_extreme": 3700
-    },
-    "Radeon RX 6600 LE": {
-        "timespy_extreme": 3428
-    },
-    "Radeon RX 6600 XT": {
-        "speedway": 1675,
-        "timespy_extreme": 4399
-    },
-    "Radeon RX 6650 XT": {
-        "speedway": 1699,
-        "timespy_extreme": 4532
-    },
-    "Radeon RX 6700": {
-        "speedway": 1955,
-        "timespy_extreme": 5120
-    },
-    "Radeon RX 6700 XT": {
-        "speedway": 2282,
-        "timespy_extreme": 5957
-    },
-    "Radeon RX 6750 GRE": {
-        "speedway": 2219,
-        "timespy_extreme": 5837
-    },
-    "Radeon RX 6750 GRE 10 GB": {
-        "speedway": 1928,
-        "timespy_extreme": 5039
-    },
-    "Radeon RX 6750 GRE 12 GB": {
-        "speedway": 2219,
-        "timespy_extreme": 5837
-    },
-    "Radeon RX 6750 XT": {
-        "speedway": 2376,
-        "timespy_extreme": 6275
+    "Radeon RX 7700 XT": {
+        "speedway": 3181,
+        "timespy_extreme": 7853
+    },
+    "GeForce RTX 3080 Ti Mobile": {
+        "speedway": 3147,
+        "timespy_extreme": 6164
+    },
+    "Quadro RTX 8000": {
+        "speedway": 3121,
+        "timespy_extreme": 6871
+    },
+    "GeForce RTX 3060 Ti GDDR6X": {
+        "speedway": 3097,
+        "timespy_extreme": 5941
     },
     "Radeon RX 6800": {
         "speedway": 3062,
         "timespy_extreme": 7771
     },
-    "Radeon RX 6800 XT": {
-        "speedway": 3653,
-        "timespy_extreme": 9315
+    "GeForce RTX 2080 Ti 12 GB": {
+        "speedway": 3042,
+        "timespy_extreme": 7001
     },
-    "Radeon RX 6900 XT": {
-        "speedway": 3920,
-        "timespy_extreme": 10076
+    "GeForce RTX 2080 Ti": {
+        "speedway": 3042,
+        "timespy_extreme": 7001
     },
-    "Radeon RX 6950 XT": {
-        "speedway": 4087,
-        "timespy_extreme": 10545
+    "Radeon Pro W6800": {
+        "speedway": 3041,
+        "timespy_extreme": 7552
     },
-    "Radeon RX 7600": {
-        "speedway": 2024,
-        "timespy_extreme": 5219
-    },
-    "Radeon RX 7600 XT": {
-        "speedway": 2044,
-        "timespy_extreme": 5289
-    },
-    "Radeon RX 7650 GRE": {
-        "speedway": 2054,
-        "timespy_extreme": 5073
-    },
-    "Radeon RX 7700 XT": {
-        "speedway": 3181,
-        "timespy_extreme": 7853
-    },
-    "Radeon RX 7800 XT": {
-        "speedway": 3978,
-        "timespy_extreme": 9448
-    },
-    "Radeon RX 7900 GRE": {
-        "speedway": 4417,
-        "timespy_extreme": 10591
-    },
-    "Radeon RX 7900 XT": {
-        "speedway": 5364,
-        "timespy_extreme": 13130
-    },
-    "Radeon RX 7900 XTX": {
-        "speedway": 6363,
-        "timespy_extreme": 15278
-    },
-    "Radeon RX 9060 XT 16 GB": {
-        "speedway": 2995,
-        "timespy_extreme": 7616
+    "Quadro RTX 6000": {
+        "speedway": 3006,
+        "timespy_extreme": 6699
     },
     "Radeon RX 9060 XT 8 GB": {
         "speedway": 3005,
         "timespy_extreme": 7290
     },
-    "Radeon RX 9070": {
-        "speedway": 5844,
-        "timespy_extreme": 13072
+    "GeForce RTX 3080 Mobile": {
+        "speedway": 2995,
+        "timespy_extreme": 5787
     },
-    "Radeon RX 9070 XT": {
-        "speedway": 6403,
-        "timespy_extreme": 14633
+    "Radeon RX 9060 XT 16 GB": {
+        "speedway": 2995,
+        "timespy_extreme": 7616
     },
-    "Radeon RX Vega 56": {
-        "timespy_extreme": 3310
+    "GeForce RTX 3060 Ti GA103": {
+        "speedway": 2965,
+        "timespy_extreme": 5710
     },
-    "Radeon RX Vega 64": {
-        "timespy_extreme": 3619
+    "GeForce RTX 3060 Ti": {
+        "speedway": 2965,
+        "timespy_extreme": 5710
     },
-    "Radeon VII": {
-        "timespy_extreme": 4374
+    "GeForce RTX 4070 Mobile": {
+        "speedway": 2924,
+        "timespy_extreme": 5699
     },
-    "Radeon Vega Frontier Edition": {
-        "timespy_extreme": 3348
+    "GeForce RTX 5060 Mobile": {
+        "speedway": 2887,
+        "timespy_extreme": 5566
     },
-    "T1000": {
-        "timespy_extreme": 1406
+    "GeForce RTX 3070 Ti Mobile": {
+        "speedway": 2840,
+        "timespy_extreme": 5507
     },
-    "T1000 8 GB": {
-        "timespy_extreme": 1419
+    "RTX A4000": {
+        "speedway": 2838,
+        "timespy_extreme": 5367
     },
-    "T600": {
-        "timespy_extreme": 1038
+    "Radeon RX 7800M": {
+        "speedway": 2784,
+        "timespy_extreme": 6803
     },
-    "TITAN RTX": {
-        "speedway": 3224,
-        "timespy_extreme": 7332
+    "GeForce RTX 3070 Mobile": {
+        "speedway": 2653,
+        "timespy_extreme": 5092
+    },
+    "RTX 3000 Mobile Ada Generation": {
+        "speedway": 2652,
+        "timespy_extreme": 3580
+    },
+    "GeForce RTX 4060": {
+        "speedway": 2646,
+        "timespy_extreme": 4959
+    },
+    "GeForce RTX 4060 Mobile": {
+        "speedway": 2586,
+        "timespy_extreme": 4869
+    },
+    "RTX 4000 SFF Ada Generation": {
+        "speedway": 2542,
+        "timespy_extreme": 4783
+    },
+    "Arc B580": {
+        "speedway": 2478,
+        "timespy_extreme": 7068
+    },
+    "Arc A770": {
+        "speedway": 2442,
+        "timespy_extreme": 6525
+    },
+    "Radeon RX 6750 XT": {
+        "speedway": 2376,
+        "timespy_extreme": 6275
+    },
+    "Arc A750": {
+        "speedway": 2355,
+        "timespy_extreme": 6033
+    },
+    "Radeon RX 6700 XT": {
+        "speedway": 2282,
+        "timespy_extreme": 5957
+    },
+    "GeForce RTX 3060 GA104": {
+        "speedway": 2228,
+        "timespy_extreme": 4231
+    },
+    "GeForce RTX 2080 SUPER": {
+        "speedway": 2221,
+        "timespy_extreme": 5382
+    },
+    "Radeon RX 6750 GRE": {
+        "speedway": 2219,
+        "timespy_extreme": 5837
+    },
+    "Radeon RX 6750 GRE 12 GB": {
+        "speedway": 2219,
+        "timespy_extreme": 5837
+    },
+    "GeForce RTX 3060": {
+        "speedway": 2181,
+        "timespy_extreme": 4097
+    },
+    "Radeon RX 6850M XT": {
+        "speedway": 2177,
+        "timespy_extreme": 5456
+    },
+    "GeForce RTX 2080": {
+        "speedway": 2171,
+        "timespy_extreme": 5146
+    },
+    "Quadro RTX 5000": {
+        "speedway": 2159,
+        "timespy_extreme": 5056
+    },
+    "RTX A4000 Mobile": {
+        "speedway": 2142,
+        "timespy_extreme": 4742
+    },
+    "RTX 2000 Mobile Ada Generation": {
+        "speedway": 2142,
+        "timespy_extreme": 3730
+    },
+    "GeForce RTX 2080 SUPER Mobile": {
+        "speedway": 2116,
+        "timespy_extreme": 4881
+    },
+    "RTX A3000 Mobile 12 GB": {
+        "speedway": 2105,
+        "timespy_extreme": 4223
+    },
+    "RTX A3000 Mobile": {
+        "speedway": 2105,
+        "timespy_extreme": 4223
+    },
+    "Radeon RX 6800M": {
+        "speedway": 2096,
+        "timespy_extreme": 5418
+    },
+    "GeForce RTX 2080 Mobile": {
+        "speedway": 2095,
+        "timespy_extreme": 4723
+    },
+    "GeForce RTX 2070 SUPER": {
+        "speedway": 2070,
+        "timespy_extreme": 4764
+    },
+    "Arc A580": {
+        "speedway": 2058,
+        "timespy_extreme": 5186
+    },
+    "Radeon RX 7650 GRE": {
+        "speedway": 2054,
+        "timespy_extreme": 5073
+    },
+    "Radeon RX 7600 XT": {
+        "speedway": 2044,
+        "timespy_extreme": 5289
+    },
+    "Arc A770M": {
+        "speedway": 2025,
+        "timespy_extreme": 5078
+    },
+    "Radeon RX 7600": {
+        "speedway": 2024,
+        "timespy_extreme": 5219
+    },
+    "RTX 2000 Ada Generation": {
+        "speedway": 1970,
+        "timespy_extreme": 3601
+    },
+    "Radeon RX 6700": {
+        "speedway": 1955,
+        "timespy_extreme": 5120
+    },
+    "Arc B570": {
+        "speedway": 1948,
+        "timespy_extreme": 6004
+    },
+    "Radeon RX 6750 GRE 10 GB": {
+        "speedway": 1928,
+        "timespy_extreme": 5039
+    },
+    "Radeon RX 7700S": {
+        "speedway": 1902,
+        "timespy_extreme": 4827
+    },
+    "GeForce RTX 2070": {
+        "speedway": 1896,
+        "timespy_extreme": 4309
+    },
+    "GeForce RTX 3060 Mobile": {
+        "speedway": 1892,
+        "timespy_extreme": 3953
+    },
+    "Radeon 8060S": {
+        "speedway": 1882,
+        "timespy_extreme": 4878
+    },
+    "Radeon PRO W7600": {
+        "speedway": 1858
+    },
+    "GeForce RTX 2070 SUPER Mobile": {
+        "speedway": 1840,
+        "timespy_extreme": 3967
+    },
+    "GeForce RTX 2060 SUPER": {
+        "speedway": 1838,
+        "timespy_extreme": 4125
+    },
+    "Radeon RX 7600M XT": {
+        "speedway": 1794,
+        "timespy_extreme": 4554
+    },
+    "AMD Radeon RX 7600M": {
+        "speedway": 1792,
+        "timespy_extreme": 4554
+    },
+    "Radeon RX 6700M": {
+        "speedway": 1778,
+        "timespy_extreme": 4302
+    },
+    "Quadro RTX 4000": {
+        "speedway": 1743,
+        "timespy_extreme": 3696
+    },
+    "Radeon RX 7600S": {
+        "speedway": 1724,
+        "timespy_extreme": 4336
+    },
+    "GeForce RTX 2070 Mobile": {
+        "speedway": 1701,
+        "timespy_extreme": 3582
+    },
+    "Radeon RX 6650 XT": {
+        "speedway": 1699,
+        "timespy_extreme": 4532
+    },
+    "Radeon RX 6600 XT": {
+        "speedway": 1675,
+        "timespy_extreme": 4399
+    },
+    "Quadro RTX 4000 Max Q": {
+        "speedway": 1668,
+        "timespy_extreme": 3309
+    },
+    "GeForce RTX 2080 SUPER Max Q": {
+        "speedway": 1664,
+        "timespy_extreme": 3819
+    },
+    "Quadro RTX 4000 Mobile": {
+        "speedway": 1664,
+        "timespy_extreme": 3490
+    },
+    "GeForce RTX 3060 8 GB": {
+        "speedway": 1621,
+        "timespy_extreme": 3391
+    },
+    "GeForce RTX 3050 8 GB GA107": {
+        "speedway": 1621,
+        "timespy_extreme": 3391
+    },
+    "Radeon RX 6650M XT": {
+        "speedway": 1613,
+        "timespy_extreme": 4113
+    },
+    "GeForce RTX 2070 Mobile Refresh": {
+        "speedway": 1574,
+        "timespy_extreme": 3634
+    },
+    "Radeon RX 6800S": {
+        "speedway": 1572,
+        "timespy_extreme": 4016
+    },
+    "GeForce RTX 2060 12 GB": {
+        "speedway": 1572,
+        "timespy_extreme": 3697
+    },
+    "GeForce RTX 2070 SUPER Max Q": {
+        "speedway": 1562,
+        "timespy_extreme": 3542
+    },
+    "RTX A2000": {
+        "speedway": 1480,
+        "timespy_extreme": 2712
+    },
+    "Radeon RX 6650M": {
+        "speedway": 1473,
+        "timespy_extreme": 3825
+    },
+    "RTX A2000 12 GB": {
+        "speedway": 1460,
+        "timespy_extreme": 2681
+    },
+    "GeForce RTX 2070 Max Q Refresh": {
+        "speedway": 1451,
+        "timespy_extreme": 3193
+    },
+    "Arc A730M": {
+        "speedway": 1447,
+        "timespy_extreme": 4064
+    },
+    "GeForce RTX 2060 Max Q": {
+        "speedway": 1432,
+        "timespy_extreme": 3676
+    },
+    "GeForce RTX 2080 Max Q": {
+        "speedway": 1432,
+        "timespy_extreme": 3676
+    },
+    "Radeon RX 6600": {
+        "speedway": 1418,
+        "timespy_extreme": 3700
+    },
+    "Radeon RX 6600M": {
+        "speedway": 1414,
+        "timespy_extreme": 3689
+    },
+    "GeForce RTX 2070 Max Q": {
+        "speedway": 1410,
+        "timespy_extreme": 3230
+    },
+    "GeForce RTX 2060": {
+        "speedway": 1397,
+        "timespy_extreme": 3504
+    },
+    "Radeon RX 6700S": {
+        "speedway": 1379,
+        "timespy_extreme": 3587
+    },
+    "Quadro RTX 5000 Max Q": {
+        "speedway": 1375,
+        "timespy_extreme": 3588
+    },
+    "Radeon Pro W6600": {
+        "speedway": 1370,
+        "timespy_extreme": 3695
+    },
+    "Tesla T4": {
+        "speedway": 1304,
+        "timespy_extreme": 2600
+    },
+    "RTX A2000 Mobile": {
+        "speedway": 1290,
+        "timespy_extreme": 2836
+    },
+    "GeForce RTX 2060 Mobile": {
+        "speedway": 1262,
+        "timespy_extreme": 2756
+    },
+    "Radeon Pro W6600M": {
+        "speedway": 1254,
+        "timespy_extreme": 3266
+    },
+    "GeForce RTX 2060 Mobile Refresh": {
+        "speedway": 1217,
+        "timespy_extreme": 2937
+    },
+    "Quadro RTX 3000 Mobile": {
+        "speedway": 1214,
+        "timespy_extreme": 2648
+    },
+    "Radeon PRO W7500": {
+        "speedway": 1157,
+        "timespy_extreme": 2939
+    },
+    "RTX A1000 Mobile 6 GB": {
+        "speedway": 1135,
+        "timespy_extreme": 2250
+    },
+    "GeForce RTX 3050 6 GB": {
+        "speedway": 1123,
+        "timespy_extreme": 2182
+    },
+    "Arc A550M": {
+        "speedway": 954,
+        "timespy_extreme": 2347
+    },
+    "Arc 140T Mobile": {
+        "speedway": 732,
+        "timespy_extreme": 1986
+    },
+    "Quadro RTX 3000 Max Q": {
+        "speedway": 723,
+        "timespy_extreme": 3324
+    },
+    "Arc A380": {
+        "speedway": 576,
+        "timespy_extreme": 2017
+    },
+    "Radeon 880M": {
+        "speedway": 544
+    },
+    "AMD Radeon 890M": {
+        "speedway": 544,
+        "timespy_extreme": 1640
+    },
+    "Radeon 890M": {
+        "speedway": 544,
+        "timespy_extreme": 1640
+    },
+    "Arc 130T Mobile": {
+        "speedway": 488,
+        "timespy_extreme": 1638
+    },
+    "RTX A500 Mobile": {
+        "speedway": 476,
+        "timespy_extreme": 1604
+    },
+    "AMD Radeon 780M": {
+        "speedway": 458,
+        "timespy_extreme": 1324
+    },
+    "Radeon 780M": {
+        "speedway": 458,
+        "timespy_extreme": 1324
+    },
+    "GeForce RTX 3050 Mobile": {
+        "speedway": 448,
+        "timespy_extreme": 2247
+    },
+    "GeForce RTX 3050 Ti Mobile": {
+        "speedway": 444,
+        "timespy_extreme": 2464
+    },
+    "ROG Ally Extreme GPU": {
+        "speedway": 398,
+        "timespy_extreme": 1325
+    },
+    "Radeon 680M": {
+        "speedway": 344,
+        "timespy_extreme": 1087
+    },
+    "Radeon 760M": {
+        "speedway": 343,
+        "timespy_extreme": 1124
+    },
+    "GeForce RTX 2050 Mobile": {
+        "speedway": 339,
+        "timespy_extreme": 1735
+    },
+    "RTX A400": {
+        "speedway": 308
+    },
+    "Radeon 740M": {
+        "speedway": 290,
+        "timespy_extreme": 559
+    },
+    "Arc A310": {
+        "speedway": 232,
+        "timespy_extreme": 1496
+    },
+    "ROG Ally GPU": {
+        "speedway": 229,
+        "timespy_extreme": 726
+    },
+    "Radeon RX 6550M": {
+        "speedway": 209,
+        "timespy_extreme": 2082
+    },
+    "Radeon 660M": {
+        "speedway": 204,
+        "timespy_extreme": 701
+    },
+    "Radeon Pro W6400": {
+        "speedway": 184,
+        "timespy_extreme": 1644
+    },
+    "Radeon PRO W6400": {
+        "speedway": 184,
+        "timespy_extreme": 1644
+    },
+    "Radeon RX 6500 XT": {
+        "speedway": 180,
+        "timespy_extreme": 2280
+    },
+    "Arc A370M": {
+        "speedway": 170,
+        "timespy_extreme": 1599
+    },
+    "Radeon RX 6500M": {
+        "speedway": 110,
+        "timespy_extreme": 1934
+    },
+    "Radeon RX 6400": {
+        "speedway": 103,
+        "timespy_extreme": 1662
+    },
+    "Radeon RX 6300": {
+        "speedway": 52,
+        "timespy_extreme": 203
+    },
+    "Radeon 610M": {
+        "speedway": 48,
+        "timespy_extreme": 232
+    },
+    "NVS 810": {
+        "speedway": 0
     },
     "TITAN V": {
         "timespy_extreme": 7021
     },
-    "TITAN X Pascal": {
-        "timespy_extreme": 4812
+    "Quadro GV100": {
+        "timespy_extreme": 6340
     },
     "TITAN Xp": {
         "timespy_extreme": 4845
     },
+    "TITAN X Pascal": {
+        "timespy_extreme": 4812
+    },
+    "GeForce GTX 1080 Ti 10 GB": {
+        "timespy_extreme": 4658
+    },
+    "GeForce GTX 1080 Ti": {
+        "timespy_extreme": 4658
+    },
+    "Radeon RX 5700 XT": {
+        "timespy_extreme": 4414
+    },
+    "Radeon VII": {
+        "timespy_extreme": 4374
+    },
+    "Radeon Pro VII": {
+        "timespy_extreme": 4369
+    },
+    "Quadro P6000": {
+        "timespy_extreme": 4147
+    },
+    "Radeon RX 5700 XT 50th Anniversary": {
+        "timespy_extreme": 4142
+    },
+    "Radeon Pro W5700": {
+        "timespy_extreme": 4103
+    },
+    "Quadro GP100": {
+        "timespy_extreme": 4076
+    },
+    "Radeon RX 5700": {
+        "timespy_extreme": 3956
+    },
+    "Tesla P40": {
+        "timespy_extreme": 3894
+    },
+    "P102 100": {
+        "timespy_extreme": 3817
+    },
+    "Arc Pro A60": {
+        "timespy_extreme": 3623
+    },
+    "Radeon RX Vega 64": {
+        "timespy_extreme": 3619
+    },
+    "Radeon RX 5600 XT": {
+        "timespy_extreme": 3561
+    },
+    "GeForce GTX 1080": {
+        "timespy_extreme": 3446
+    },
+    "Radeon RX 6600 LE": {
+        "timespy_extreme": 3428
+    },
+    "Radeon RX 6600S": {
+        "timespy_extreme": 3389
+    },
+    "Radeon Vega Frontier Edition": {
+        "timespy_extreme": 3348
+    },
+    "Radeon RX Vega 56": {
+        "timespy_extreme": 3310
+    },
+    "Tesla P10": {
+        "timespy_extreme": 3292
+    },
+    "Tesla P100 PCIe 16 GB": {
+        "timespy_extreme": 3292
+    },
+    "GeForce GTX 1080 Mobile": {
+        "timespy_extreme": 3226
+    },
+    "GeForce GTX 1070 Ti": {
+        "timespy_extreme": 3134
+    },
+    "Quadro P5000": {
+        "timespy_extreme": 2900
+    },
+    "GeForce GTX 1660 Ti": {
+        "timespy_extreme": 2883
+    },
+    "Radeon Pro WX 9100": {
+        "timespy_extreme": 2859
+    },
+    "GeForce GTX 1070 GDDR5X": {
+        "timespy_extreme": 2825
+    },
+    "GeForce GTX 1070": {
+        "timespy_extreme": 2825
+    },
+    "GeForce GTX 980 Ti": {
+        "timespy_extreme": 2807
+    },
+    "Radeon RX 5600M": {
+        "timespy_extreme": 2796
+    },
+    "GeForce GTX 1660 SUPER": {
+        "timespy_extreme": 2792
+    },
+    "GeForce GTX 1080 Max Q": {
+        "timespy_extreme": 2728
+    },
+    "P104 100": {
+        "timespy_extreme": 2718
+    },
+    "GeForce GTX TITAN X": {
+        "timespy_extreme": 2632
+    },
+    "GeForce GTX 1070 Mobile": {
+        "timespy_extreme": 2582
+    },
+    "GeForce GTX 1660 Ti Mobile": {
+        "timespy_extreme": 2574
+    },
+    "Radeon Pro 5600M": {
+        "timespy_extreme": 2546
+    },
+    "GeForce GTX 1660": {
+        "timespy_extreme": 2465
+    },
+    "Radeon R9 FURY X": {
+        "timespy_extreme": 2453
+    },
+    "Tesla M40 24 GB": {
+        "timespy_extreme": 2425
+    },
+    "Quadro M6000": {
+        "timespy_extreme": 2415
+    },
+    "Radeon Pro Duo": {
+        "timespy_extreme": 2406
+    },
+    "Tesla M4": {
+        "timespy_extreme": 2375
+    },
+    "Tesla M40": {
+        "timespy_extreme": 2375
+    },
+    "Radeon Pro W5500": {
+        "timespy_extreme": 2317
+    },
+    "GeForce GTX 1660 Ti Max Q": {
+        "timespy_extreme": 2304
+    },
+    "Radeon RX 5500 XT": {
+        "timespy_extreme": 2298
+    },
+    "Quadro P4000": {
+        "timespy_extreme": 2287
+    },
+    "Radeon R9 FURY": {
+        "timespy_extreme": 2277
+    },
+    "GeForce GTX 1070 Max Q": {
+        "timespy_extreme": 2263
+    },
+    "Radeon R9 Nano": {
+        "timespy_extreme": 2191
+    },
+    "RTX A1000 Mobile": {
+        "timespy_extreme": 2161
+    },
+    "Radeon RX 590": {
+        "timespy_extreme": 2147
+    },
+    "GeForce GTX 1650 SUPER": {
+        "timespy_extreme": 2072
+    },
+    "Tesla P4": {
+        "timespy_extreme": 2049
+    },
+    "GeForce GTX 980": {
+        "timespy_extreme": 2049
+    },
+    "Radeon R9 390X": {
+        "timespy_extreme": 2041
+    },
+    "Radeon RX 590 GME": {
+        "timespy_extreme": 2037
+    },
+    "Radeon RX 5500M": {
+        "timespy_extreme": 2002
+    },
+    "Radeon RX 580": {
+        "timespy_extreme": 1968
+    },
+    "Radeon R9 390": {
+        "timespy_extreme": 1931
+    },
+    "GeForce GTX 1060 6 GB GDDR5X": {
+        "timespy_extreme": 1917
+    },
+    "GeForce GTX 1060 6 GB GP104": {
+        "timespy_extreme": 1917
+    },
+    "GeForce GTX 1060 6 GB Rev. 2": {
+        "timespy_extreme": 1917
+    },
+    "GeForce GTX 1060 6 GB": {
+        "timespy_extreme": 1917
+    },
+    "Radeon RX 480": {
+        "timespy_extreme": 1889
+    },
+    "Quadro P4000 Mobile": {
+        "timespy_extreme": 1869
+    },
+    "P106 100": {
+        "timespy_extreme": 1866
+    },
+    "GeForce GTX 1060 3 GB": {
+        "timespy_extreme": 1771
+    },
+    "GeForce GTX 1060 3 GB GP104": {
+        "timespy_extreme": 1771
+    },
+    "Radeon RX 570": {
+        "timespy_extreme": 1770
+    },
+    "GeForce GTX 980M": {
+        "timespy_extreme": 1767
+    },
+    "Radeon RX 580 2048SP": {
+        "timespy_extreme": 1764
+    },
+    "Quadro P2000 Mobile": {
+        "timespy_extreme": 1723
+    },
+    "Radeon Pro WX 7100": {
+        "timespy_extreme": 1716
+    },
+    "Radeon RX 470": {
+        "timespy_extreme": 1701
+    },
+    "Quadro M5000": {
+        "timespy_extreme": 1692
+    },
+    "GeForce GTX 1060 Mobile": {
+        "timespy_extreme": 1687
+    },
+    "Radeon Pro 580": {
+        "timespy_extreme": 1684
+    },
+    "GeForce GTX 970": {
+        "timespy_extreme": 1683
+    },
+    "Radeon RX 560 XT": {
+        "timespy_extreme": 1671
+    },
+    "GeForce GTX 1650 Ti Mobile": {
+        "timespy_extreme": 1668
+    },
+    "Radeon RX 580 Mobile": {
+        "timespy_extreme": 1626
+    },
+    "GeForce GTX 1650 GDDR6": {
+        "timespy_extreme": 1607
+    },
+    "GeForce GTX 1650": {
+        "timespy_extreme": 1606
+    },
+    "Radeon Pro 5500M": {
+        "timespy_extreme": 1574
+    },
+    "GeForce GTX 1650 Mobile": {
+        "timespy_extreme": 1559
+    },
+    "GeForce GTX 1060 Max Q": {
+        "timespy_extreme": 1548
+    },
+    "Quadro P2200": {
+        "timespy_extreme": 1536
+    },
+    "Quadro T2000 Max Q": {
+        "timespy_extreme": 1505
+    },
+    "Arc A350": {
+        "timespy_extreme": 1481
+    },
+    "Quadro T1000 Mobile GDDR6": {
+        "timespy_extreme": 1439
+    },
+    "Quadro T1000 Mobile": {
+        "timespy_extreme": 1439
+    },
+    "GeForce GTX 1650 Ti Max Q": {
+        "timespy_extreme": 1429
+    },
+    "Quadro T2000 Mobile": {
+        "timespy_extreme": 1426
+    },
+    "T1000 8 GB": {
+        "timespy_extreme": 1419
+    },
+    "GeForce GTX TITAN": {
+        "timespy_extreme": 1418
+    },
+    "T1000": {
+        "timespy_extreme": 1406
+    },
+    "GeForce GTX TITAN Z": {
+        "timespy_extreme": 1371
+    },
+    "Radeon Pro 575": {
+        "timespy_extreme": 1351
+    },
+    "Quadro P2000": {
+        "timespy_extreme": 1350
+    },
+    "Arc A350M": {
+        "timespy_extreme": 1336
+    },
+    "GeForce GTX 1650 Max Q": {
+        "timespy_extreme": 1318
+    },
+    "Quadro M5000M": {
+        "timespy_extreme": 1312
+    },
+    "Radeon R9 380X": {
+        "timespy_extreme": 1294
+    },
+    "Quadro K6000": {
+        "timespy_extreme": 1292
+    },
+    "Quadro T1000 Max Q": {
+        "timespy_extreme": 1279
+    },
+    "Radeon RX Vega M GH": {
+        "timespy_extreme": 1271
+    },
+    "T600 Mobile": {
+        "timespy_extreme": 1244
+    },
+    "Radeon R9 380": {
+        "timespy_extreme": 1239
+    },
+    "Radeon Pro Vega 20": {
+        "timespy_extreme": 1211
+    },
+    "Radeon HD 7970": {
+        "timespy_extreme": 1209
+    },
+    "FirePro W7100": {
+        "timespy_extreme": 1185
+    },
+    "Quadro M4000M": {
+        "timespy_extreme": 1122
+    },
+    "GeForce GTX 1050 Ti Mobile": {
+        "timespy_extreme": 1099
+    },
+    "GeForce GTX 1050 Ti": {
+        "timespy_extreme": 1093
+    },
+    "Quadro M4000": {
+        "timespy_extreme": 1086
+    },
+    "GeForce GTX 970M": {
+        "timespy_extreme": 1044
+    },
+    "FirePro S10000": {
+        "timespy_extreme": 1038
+    },
+    "T600": {
+        "timespy_extreme": 1038
+    },
+    "GeForce GTX 1050 Max Q": {
+        "timespy_extreme": 1038
+    },
+    "GeForce GTX 960": {
+        "timespy_extreme": 1025
+    },
+    "Radeon HD 7950": {
+        "timespy_extreme": 1019
+    },
+    "P106 090": {
+        "timespy_extreme": 1018
+    },
+    "GeForce GTX 1050 Ti Max Q": {
+        "timespy_extreme": 1016
+    },
+    "Radeon HD 7990": {
+        "timespy_extreme": 999
+    },
+    "T550 Mobile": {
+        "timespy_extreme": 959
+    },
+    "GeForce GTX 1630": {
+        "timespy_extreme": 953
+    },
+    "Quadro M3000M": {
+        "timespy_extreme": 941
+    },
+    "Quadro K5200": {
+        "timespy_extreme": 941
+    },
+    "Radeon RX Vega M GL": {
+        "timespy_extreme": 926
+    },
+    "Radeon Pro WX 5100": {
+        "timespy_extreme": 852
+    },
+    "Radeon RX 560X Mobile": {
+        "timespy_extreme": 806
+    },
+    "Radeon RX 560": {
+        "timespy_extreme": 799
+    },
+    "GeForce GTX 965M": {
+        "timespy_extreme": 798
+    },
+    "Radeon RX 460": {
+        "timespy_extreme": 776
+    },
+    "Radeon Pro WX 4100": {
+        "timespy_extreme": 774
+    },
+    "Radeon HD 8970M": {
+        "timespy_extreme": 770
+    },
+    "Radeon R7 370": {
+        "timespy_extreme": 758
+    },
+    "Quadro P1000": {
+        "timespy_extreme": 733
+    },
     "Xe DG1": {
         "timespy_extreme": 716
+    },
+    "Quadro K4200": {
+        "timespy_extreme": 702
+    },
+    "Quadro M2000": {
+        "timespy_extreme": 690
+    },
+    "Quadro P1000 Mobile": {
+        "timespy_extreme": 663
+    },
+    "Radeon Pro 460": {
+        "timespy_extreme": 636
+    },
+    "Iris Xe Graphics 80EU": {
+        "timespy_extreme": 628
+    },
+    "Iris Xe Graphics G7 80EU": {
+        "timespy_extreme": 628
+    },
+    "Iris Xe Graphics 96EU": {
+        "timespy_extreme": 612
+    },
+    "Iris Xe Graphics G7 96EU": {
+        "timespy_extreme": 612
+    },
+    "Radeon Vega 7": {
+        "timespy_extreme": 604
+    },
+    "FirePro W5100": {
+        "timespy_extreme": 586
+    },
+    "Radeon RX Vega 11": {
+        "timespy_extreme": 583
+    },
+    "Radeon RX Vega 11 Mobile": {
+        "timespy_extreme": 572
+    },
+    "Radeon RX Vega 11 Embedded": {
+        "timespy_extreme": 572
+    },
+    "Radeon Vega 11 Embedded": {
+        "timespy_extreme": 572
+    },
+    "GeForce GTX 960M": {
+        "timespy_extreme": 565
+    },
+    "Quadro P600 Mobile": {
+        "timespy_extreme": 559
+    },
+    "Quadro M2000M": {
+        "timespy_extreme": 552
+    },
+    "Radeon HD 7970M": {
+        "timespy_extreme": 551
+    },
+    "Radeon RX 550": {
+        "timespy_extreme": 546
+    },
+    "Radeon Pro WX 3100": {
+        "timespy_extreme": 544
+    },
+    "Radeon R7 360": {
+        "timespy_extreme": 517
+    },
+    "GeForce GTX 1050": {
+        "timespy_extreme": 509
+    },
+    "Quadro K5100M": {
+        "timespy_extreme": 507
+    },
+    "Radeon Vega 7 Mobile": {
+        "timespy_extreme": 477
+    },
+    "Radeon Pro WX 3200": {
+        "timespy_extreme": 476
+    },
+    "Radeon Pro WX 3200 Mobile": {
+        "timespy_extreme": 465
+    },
+    "Radeon Vega 6 Mobile": {
+        "timespy_extreme": 445
+    },
+    "Quadro K1200": {
+        "timespy_extreme": 439
+    },
+    "GeForce MX550": {
+        "timespy_extreme": 438
+    },
+    "Radeon Pro WX 4150 Mobile": {
+        "timespy_extreme": 436
+    },
+    "Radeon Vega 8": {
+        "timespy_extreme": 423
+    },
+    "Radeon HD 7790": {
+        "timespy_extreme": 409
+    },
+    "GeForce GTX 950": {
+        "timespy_extreme": 396
+    },
+    "UHD Graphics 32EU": {
+        "timespy_extreme": 382
+    },
+    "Radeon Vega 6": {
+        "timespy_extreme": 377
+    },
+    "Quadro P600": {
+        "timespy_extreme": 374
+    },
+    "Radeon Vega 10 Mobile": {
+        "timespy_extreme": 371
+    },
+    "Quadro M1000M": {
+        "timespy_extreme": 363
+    },
+    "UHD Graphics 770": {
+        "timespy_extreme": 356
+    },
+    "Quadro P620": {
+        "timespy_extreme": 356
+    },
+    "Iris Xe Graphics G4": {
+        "timespy_extreme": 355
+    },
+    "Radeon HD 7870 XT": {
+        "timespy_extreme": 352
+    },
+    "Radeon Vega 8 Mobile": {
+        "timespy_extreme": 351
+    },
+    "GeForce MX450 30.5W 8Gbps": {
+        "timespy_extreme": 351
+    },
+    "Radeon Vega 8 Embedded": {
+        "timespy_extreme": 351
+    },
+    "Iris Pro Graphics 580": {
+        "timespy_extreme": 336
+    },
+    "Radeon HD 7850": {
+        "timespy_extreme": 325
+    },
+    "GeForce GTX 750 Ti": {
+        "timespy_extreme": 308
+    },
+    "UHD Graphics 750": {
+        "timespy_extreme": 304
+    },
+    "Radeon HD 8870M": {
+        "timespy_extreme": 296
+    },
+    "UHD Graphics 730": {
+        "timespy_extreme": 289
+    },
+    "Iris Pro Graphics 6200": {
+        "timespy_extreme": 283
+    },
+    "Radeon Pro WX 2100": {
+        "timespy_extreme": 282
+    },
+    "Iris Plus Graphics 655": {
+        "timespy_extreme": 280
+    },
+    "GeForce GTX 660": {
+        "timespy_extreme": 260
+    },
+    "GeForce GTX 660 OEM": {
+        "timespy_extreme": 260
+    },
+    "Iris Plus Graphics 650": {
+        "timespy_extreme": 256
+    },
+    "GeForce MX450 30.5W 10Gbps": {
+        "timespy_extreme": 240
+    },
+    "Quadro K620": {
+        "timespy_extreme": 240
+    },
+    "Iris Plus Graphics 640": {
+        "timespy_extreme": 233
+    },
+    "Iris Graphics 540": {
+        "timespy_extreme": 233
+    },
+    "Radeon R7 M370": {
+        "timespy_extreme": 224
+    },
+    "GeForce MX350": {
+        "timespy_extreme": 223
+    },
+    "Radeon R7 M440": {
+        "timespy_extreme": 223
+    },
+    "GeForce MX450 25W": {
+        "timespy_extreme": 222
+    },
+    "GeForce MX250": {
+        "timespy_extreme": 222
+    },
+    "Radeon HD 7750": {
+        "timespy_extreme": 214
+    },
+    "Radeon Vega 3": {
+        "timespy_extreme": 203
+    },
+    "UHD Graphics P630": {
+        "timespy_extreme": 201
+    },
+    "GeForce MX150": {
+        "timespy_extreme": 201
+    },
+    "UHD Graphics 630": {
+        "timespy_extreme": 198
+    },
+    "GeForce GT 755M": {
+        "timespy_extreme": 198
+    },
+    "Quadro P400": {
+        "timespy_extreme": 196
+    },
+    "GeForce GT 750M": {
+        "timespy_extreme": 193
+    },
+    "HD Graphics 630": {
+        "timespy_extreme": 186
+    },
+    "GeForce GT 740": {
+        "timespy_extreme": 182
+    },
+    "GeForce GT 1030 DDR4": {
+        "timespy_extreme": 177
+    },
+    "GeForce MX130": {
+        "timespy_extreme": 175
+    },
+    "Radeon Vega 3 Mobile": {
+        "timespy_extreme": 174
+    },
+    "GeForce GT 1030": {
+        "timespy_extreme": 173
+    },
+    "UHD Graphics 710": {
+        "timespy_extreme": 167
+    },
+    "GeForce GTX 750 GM206": {
+        "timespy_extreme": 167
+    },
+    "GeForce GTX 750": {
+        "timespy_extreme": 167
+    },
+    "Iris Graphics 6100": {
+        "timespy_extreme": 164
+    },
+    "UHD Graphics 620": {
+        "timespy_extreme": 161
+    },
+    "GeForce GT 640": {
+        "timespy_extreme": 160
+    },
+    "HD Graphics 530": {
+        "timespy_extreme": 158
+    },
+    "GeForce GT 1010": {
+        "timespy_extreme": 153
+    },
+    "GeForce GT 1010 DDR4": {
+        "timespy_extreme": 153
+    },
+    "GeForce GT 730M": {
+        "timespy_extreme": 153
+    },
+    "GeForce GT 650M": {
+        "timespy_extreme": 153
+    },
+    "HD Graphics 620": {
+        "timespy_extreme": 152
+    },
+    "GeForce GT 640M": {
+        "timespy_extreme": 151
+    },
+    "UHD Graphics 24EU": {
+        "timespy_extreme": 150
+    },
+    "GeForce 930M": {
+        "timespy_extreme": 145
+    },
+    "UHD Graphics 16EU": {
+        "timespy_extreme": 144
+    },
+    "HD Graphics 6000": {
+        "timespy_extreme": 143
+    },
+    "UHD Graphics 617": {
+        "timespy_extreme": 134
+    },
+    "GeForce 940MX": {
+        "timespy_extreme": 132
+    },
+    "GeForce GT 640M LE": {
+        "timespy_extreme": 129
+    },
+    "GeForce MX330": {
+        "timespy_extreme": 126
+    },
+    "HD Graphics 615": {
+        "timespy_extreme": 125
+    },
+    "GeForce 940M": {
+        "timespy_extreme": 120
+    },
+    "GeForce 930MX": {
+        "timespy_extreme": 114
+    },
+    "HD Graphics 5500": {
+        "timespy_extreme": 110
+    },
+    "GeForce 840M": {
+        "timespy_extreme": 110
+    },
+    "GeForce MX110": {
+        "timespy_extreme": 109
+    },
+    "GeForce 920MX": {
+        "timespy_extreme": 108
+    },
+    "GeForce GTS 450": {
+        "timespy_extreme": 107
+    },
+    "GeForce GT 555M": {
+        "timespy_extreme": 106
+    },
+    "GeForce GT 730": {
+        "timespy_extreme": 105
+    },
+    "Radeon R5 240 OEM": {
+        "timespy_extreme": 105
+    },
+    "Radeon HD 8570M": {
+        "timespy_extreme": 104
+    },
+    "UHD Graphics 610": {
+        "timespy_extreme": 102
+    },
+    "GeForce GT 740M": {
+        "timespy_extreme": 99
+    },
+    "UHD Graphics 615": {
+        "timespy_extreme": 98
+    },
+    "Radeon R5 M430": {
+        "timespy_extreme": 98
+    },
+    "HD Graphics 515": {
+        "timespy_extreme": 98
+    },
+    "GeForce 830M": {
+        "timespy_extreme": 97
+    },
+    "Radeon HD 8670M": {
+        "timespy_extreme": 97
+    },
+    "HD Graphics 610": {
+        "timespy_extreme": 90
+    },
+    "HD Graphics 510": {
+        "timespy_extreme": 86
+    },
+    "GeForce GT 720": {
+        "timespy_extreme": 86
+    },
+    "GeForce 920M": {
+        "timespy_extreme": 85
+    },
+    "GeForce GT 440": {
+        "timespy_extreme": 76
+    },
+    "GeForce GT 710": {
+        "timespy_extreme": 69
+    },
+    "GeForce GT 630": {
+        "timespy_extreme": 67
+    },
+    "GeForce GT 430": {
+        "timespy_extreme": 58
+    },
+    "GeForce GT 620": {
+        "timespy_extreme": 55
+    },
+    "UHD Graphics 600": {
+        "timespy_extreme": 36
+    },
+    "GeForce GT 610": {
+        "timespy_extreme": 32
     }
 }

@@ -6,8 +6,8 @@ import time
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; GPU-Benchmark-Scraper/1.0)"}
 
 URLS = {
-    "speedway": "https://www.topcpu.net/en/gpu-r/3dmark-speed-way-desktop",
-    "timespy_extreme": "https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme-desktop",
+    "speedway": "https://www.topcpu.net/en/gpu-r/3dmark-speed-way",
+    "timespy_extreme": "https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme",
 }
 
 

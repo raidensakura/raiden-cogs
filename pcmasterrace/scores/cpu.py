@@ -6,8 +6,8 @@ import time
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; benchmark-scraper/1.0)"}
 
 URLS = {
-    "singlethread": "https://www.cpubenchmark.net/single-thread/desktop",
-    "multithread": "https://www.cpubenchmark.net/multithread/desktop",
+    "singlethread": "https://www.cpubenchmark.net/single-thread",
+    "multithread": "https://www.cpubenchmark.net/multithread",
     "gaming": "https://www.cpubenchmark.net/top-gaming-cpus.html",
 }
 
