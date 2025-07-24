@@ -175,7 +175,7 @@ class PCMasterRace(commands.Cog):
 
     def combined_score(self, cpu_score, gpu_score, resolution="1440p"):
         """
-        Calculates a combined performance score based on CPU and GPU scores, 
+        Calculates a combined performance score based on CPU and GPU scores,
         adjusted for the specified display resolution.
         The GPU score is scaled by a bias factor depending on the resolution:
             - "1080p": 0.7
@@ -186,7 +186,7 @@ class PCMasterRace(commands.Cog):
         Args:
             cpu_score (float or int): The performance score of the CPU.
             gpu_score (float or int): The performance score of the GPU.
-            resolution (str, optional): The display resolution. 
+            resolution (str, optional): The display resolution.
                 Supported values are "1080p", "1440p", and "4k". Defaults to "1440p".
         Returns:
             int: The combined performance score.
@@ -457,6 +457,118 @@ class PCMasterRace(commands.Cog):
             ),
         ]
         await SimpleMenu(embeds, use_select_menu=True).start(ctx)
+
+    @pcmasterrace.command(name="compare")
+    async def compare(self, ctx, *members: discord.Member):
+        """
+        Compare builds of multiple users (CPU, GPU, and combined).
+        Usage: {prefix}pcmr compare @user1 @user2 [@user3 ...]
+        If no users are provided, compares you and your combo.
+        If one user is provided, compares you and that user.
+        """
+        # If no members provided, compare user with themselves (show their own stats)
+        if not members:
+            members = (ctx.author,)
+        # If only one member provided, compare ctx.author and that member
+        elif len(members) == 1:
+            if members[0] == ctx.author:
+                await ctx.send("Please mention another member to compare.")
+                return
+            members = (ctx.author, members[0])
+        # If more than 10 members, limit for readability
+        if len(members) > 10:
+            await ctx.send("You can compare up to 10 users at once.")
+            return
+
+        # Gather data for all members
+        user_data = []
+        for member in members:
+            data = await self.config.user(member).all()
+            if not data["cpu"] or not data["gpu"]:
+                await ctx.send(f"{member.display_name} has not submitted a combo.")
+                return
+            cpu_score = await self.fetch_cpu_score(data["cpu"])
+            gpu_score = await self.fetch_gpu_score(data["gpu"])
+            combo_score = self.combined_score(cpu_score, gpu_score)
+            cpu_full = self.regex_match(data["cpu"], self.cpu_scores.keys()) or data["cpu"]
+            gpu_full = self.regex_match(data["gpu"], self.gpu_scores.keys()) or data["gpu"]
+            user_data.append({
+                "member": member,
+                "cpu_score": cpu_score,
+                "gpu_score": gpu_score,
+                "combo_score": combo_score,
+                "cpu_full": cpu_full,
+                "gpu_full": gpu_full,
+            })
+
+        # Sort by combined score descending
+        user_data.sort(key=lambda d: d["combo_score"], reverse=True)
+
+        # Prepare comparison description
+        desc = ""
+        base = user_data[0]
+        for other in user_data[1:]:
+            def percent(a, b):
+                return (a / b) * 100 if b else 0
+            cpu_percent = percent(other["cpu_score"], base["cpu_score"])
+            gpu_percent = percent(other["gpu_score"], base["gpu_score"])
+            combo_percent = percent(other["combo_score"], base["combo_score"])
+            cpu_diff = other["cpu_score"] - base["cpu_score"]
+            gpu_diff = other["gpu_score"] - base["gpu_score"]
+            combo_diff = other["combo_score"] - base["combo_score"]
+            desc += (
+                f"**{other['member'].display_name}:**\n"
+                f"CPU: **{cpu_percent:.1f}%** of {base['member'].display_name} (Δ {cpu_diff:+})\n"
+                f"GPU: **{gpu_percent:.1f}%** of {base['member'].display_name} (Δ {gpu_diff:+})\n"
+                f"Combined: **{combo_percent:.1f}%** of {base['member'].display_name} (Δ {combo_diff:+})\n\n"
+            )
+        if not desc:
+            desc = "Only one user to compare."
+
+        embed = discord.Embed(
+            title="Build Comparison",
+            description=desc,
+            color=await ctx.embed_color() or DEFAULT_COLOR,
+        )
+
+        # Add a field for each user
+        for d in user_data:
+            embed.add_field(
+                name=f"{d['member'].display_name}'s Build",
+                value=(
+                    f"CPU: `{d['cpu_full']}`\nGPU: `{d['gpu_full']}`\n"
+                    f"CPU Score: **{d['cpu_score']}**\nGPU Score: **{d['gpu_score']}**\nCombined: **{d['combo_score']}**"
+                ),
+                inline=True,
+            )
+
+        # Prepare bar graph data
+        labels = [d["member"].display_name for d in user_data]
+        cpu_scores = [d["cpu_score"] for d in user_data]
+        gpu_scores = [d["gpu_score"] for d in user_data]
+        combo_scores = [d["combo_score"] for d in user_data]
+
+        # Draw the bar graph
+        img_bytes = draw_bar_graph(
+            cpu_scores + gpu_scores + combo_scores,
+            "Build Comparison",
+            labels=labels * 3,
+            bar_colors=(
+                [0xFF6666] * len(labels) +
+                [0x66FF66] * len(labels) +
+                [0x6666FF] * len(labels)
+            ),
+            group_labels=["CPU", "GPU", "Combined"],
+            group_size=len(labels),
+        )
+
+        files = []
+        if img_bytes:
+            file = discord.File(img_bytes, filename="compare.png")
+            files = [file]
+            embed.set_image(url="attachment://compare.png")
+
+        await ctx.send(embed=embed, files=files)
 
 
 def setup(bot):

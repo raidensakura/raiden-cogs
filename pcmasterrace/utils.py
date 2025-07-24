@@ -6,6 +6,7 @@ from PIL import Image, ImageDraw, ImageFont
 import re
 
 FONT_PATH = Path(__file__).parent / "fonts" / "NotoSans.ttf"
+ALT_FONT_PATH = Path(__file__).parent / "fonts" / "BitcountPropDouble.ttf"
 WEIGHTS_PATH = Path(__file__).parent / "scores" / "weights.json"
 CPU_SCORES_PATH = Path(__file__).parent / "scores" / "cpu.json"
 GPU_SCORES_PATH = Path(__file__).parent / "scores" / "gpu.json"
@@ -57,25 +58,41 @@ def get_page(scores, page):
     return dict(page_items), total_pages
 
 
-def draw_bar_graph(scores, title, page=0):
+def draw_bar_graph(
+    scores,
+    title,
+    page=0,
+    labels=None,
+    bar_colors=None,
+    group_labels=None,
+    group_size=None,
+):
     """
     Generates a paginated horizontal bar graph image from a dictionary of scores.
+    Supports custom bar colors and grouped data.
     Args:
-        scores (dict): A dictionary mapping labels (str) to numeric scores (int or float).
+        scores (dict or list): If dict, maps labels to scores. If list, expects scores for each bar.
         title (str): The title to display at the top of the graph.
         page (int, optional): The page number for pagination (default is 0).
+        labels (list, optional): List of labels for each bar.
+        bar_colors (list, optional): List of RGB tuples for each bar.
+        group_labels (list, optional): List of group labels (e.g., categories).
+        group_size (int, optional): Number of bars per group.
     Returns:
         io.BytesIO or None: A BytesIO object containing the PNG image of the bar graph,
             or None if there are no items to display.
-    Notes:
-        - The function sorts the scores in descending order and paginates the results.
-        - Labels are cleaned by removing common words and wrapped if too long.
-        - The bar graph is rendered using PIL, with scores displayed inside or outside bars
-          depending on available space.
-        - If there are multiple pages, the page number is shown in the title.
     """
 
-    items = sorted(scores.items(), key=lambda x: -x[1])
+    # Prepare items
+    if isinstance(scores, dict):
+        items = sorted(scores.items(), key=lambda x: -x[1])
+        values = [v for _, v in items]
+        item_labels = [k for k, _ in items]
+    else:
+        values = list(scores)
+        item_labels = labels if labels else [str(i) for i in range(len(values))]
+        items = list(zip(item_labels, values))
+
     if not items:
         return None
 
@@ -84,6 +101,9 @@ def draw_bar_graph(scores, title, page=0):
     start = page * PAGE_SIZE
     end = start + PAGE_SIZE
     page_items = items[start:end]
+    page_values = values[start:end]
+    page_labels = item_labels[start:end]
+    page_colors = bar_colors[start:end] if bar_colors else None
 
     width = 700
     bar_height = 32
@@ -94,18 +114,28 @@ def draw_bar_graph(scores, title, page=0):
     min_label_font_size = 14
     score_font_size = 20
     title_font_size = 28
-    bar_color = (70, 130, 180)
+    group_font_size = 22
+    default_bar_color = (70, 130, 180)
     bg_color = (30, 30, 30)
     text_color = (240, 240, 240)
     inside_text_color = (30, 30, 30)
-    max_score = max(v for _, v in items)
-    height = margin * 2 + len(page_items) * (bar_height + spacing) + 60
+    max_score = max(page_values) if page_values else 0
+
+    # Calculate height (add extra space for group labels if needed)
+    group_label_height = 0
+    if group_labels and group_size:
+        group_label_height = 24
+        num_groups = (len(page_items) + group_size - 1) // group_size
+        height = margin * 2 + len(page_items) * (bar_height + spacing) + num_groups * group_label_height + 60
+    else:
+        height = margin * 2 + len(page_items) * (bar_height + spacing) + 60
 
     img = Image.new("RGB", (width, height), bg_color)
     draw = ImageDraw.Draw(img)
     font_label = ImageFont.truetype(str(FONT_PATH), label_font_size)
     font_score = ImageFont.truetype(str(FONT_PATH), score_font_size)
     title_font = ImageFont.truetype(str(FONT_PATH), title_font_size)
+    group_font = ImageFont.truetype(str(ALT_FONT_PATH), group_font_size)
 
     # Draw title (add page info if more than one page)
     title_text = title
@@ -114,20 +144,36 @@ def draw_bar_graph(scores, title, page=0):
     draw.text((margin, margin), title_text, font=title_font, fill=text_color)
     y = margin + title_font_size + 20  # Adjusted for bigger font
 
-    for name, value in page_items:
+    # Draw bars (with grouping)
+    group_idx = 0
+    for idx, (name, value) in enumerate(page_items):
+        # Draw group label if needed
+        if group_labels and group_size and idx % group_size == 0:
+            group_label = group_labels[group_idx] if group_idx < len(group_labels) else ""
+            # Calculate text width to center horizontally
+            group_label_bbox = draw.textbbox((0, 0), group_label, font=group_font)
+            group_label_width = group_label_bbox[2] - group_label_bbox[0]
+            x_centered = (width - group_label_width) // 2
+            draw.text(
+                (x_centered, y),
+                group_label,
+                font=group_font,
+                fill=text_color,
+            )
+            y += group_label_height
+            group_idx += 1
+
         # Remove words mentioned in COMMON_WORDS from label (case-insensitive)
-        label = str(name)
+        label = str(page_labels[idx])
         for word in COMMON_WORDS:
-            # Remove all case variations using case-insensitive replace
             pattern = re.compile(re.escape(word), re.IGNORECASE)
             label = pattern.sub("", label)
         label = label.strip()
 
         # Adjust label font size and wrap if too long
-        label_font = font_label
+        label_font_used = font_label
         label_lines = [label]
         if len(label) > 18:
-            # Try to split label into two lines at a space near the middle
             mid = len(label) // 2
             split_pos = label.rfind(" ", 0, mid)
             if split_pos == -1:
@@ -139,12 +185,16 @@ def draw_bar_graph(scores, title, page=0):
                 ]
             else:
                 label_lines = [label[:mid].strip(), label[mid:].strip()]
-            label_font = ImageFont.truetype(str(FONT_PATH), min_label_font_size)
+            label_font_used = ImageFont.truetype(str(FONT_PATH), min_label_font_size)
 
         if max_score == 0:
             bar_len = 0
         else:
             bar_len = int((width - label_width - margin * 2) * (value / max_score))
+
+        # Bar color
+        bar_color = page_colors[idx] if page_colors and idx < len(page_colors) else default_bar_color
+
         draw.rectangle(
             [label_width, y, label_width + bar_len, y + bar_height],
             fill=bar_color,
@@ -154,18 +204,18 @@ def draw_bar_graph(scores, title, page=0):
         label_y = y + 2
         if len(label_lines) == 2:
             line_height = (bar_height - 4) // 2
-            draw.text((margin, label_y), label_lines[0], font=label_font, fill=text_color)
+            draw.text((margin, label_y), label_lines[0], font=label_font_used, fill=text_color)
             draw.text(
                 (margin, label_y + line_height),
                 label_lines[1],
-                font=label_font,
+                font=label_font_used,
                 fill=text_color,
             )
         else:
             draw.text(
                 (margin, label_y + (bar_height - label_font_size) // 2),
                 label_lines[0],
-                font=label_font,
+                font=label_font_used,
                 fill=text_color,
             )
 
