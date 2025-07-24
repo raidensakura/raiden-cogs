@@ -418,8 +418,12 @@ class PCMasterRace(commands.Cog):
 
         description += (
             "\n**Combo Score Formula:**\n"
-            "Your combo score is the average of your CPU and GPU weighted scores:\n"
-            "`combo_score = (cpu_score + gpu_score) / 2`\n\n"
+            "Your combo score is calculated as the minimum of your CPU weighted score and your GPU weighted score (scaled by resolution bias):\n"
+            "`combo_score = min(cpu_score, gpu_score * bias)`\n"
+            "Where `bias` is:\n"
+            "- `0.7` for 1080p\n"
+            "- `0.8` for 1440p (default)\n"
+            "- `0.9` for 4k\n\n"
             "**How to add your combo:**\n"
             "Use the command:\n"
             "`{prefix}pcmr set combo <CPU Name> + <GPU Name>`\n"
@@ -430,7 +434,15 @@ class PCMasterRace(commands.Cog):
             "You can view your combo with:\n"
             "`{prefix}pcmr view combo`\n"
             "Or view another member's combo:\n"
-            "`{prefix}pcmr view combo @member`"
+            "`{prefix}pcmr view combo @member`\n\n"
+            "**Data Sources:**\n"
+            "CPU scores:\n"
+            "- [Single Thread](https://www.cpubenchmark.net/single-thread/desktop)\n"
+            "- [Multi Thread](https://www.cpubenchmark.net/multithread/desktop)\n"
+            "- [Gaming](https://www.cpubenchmark.net/top-gaming-cpus.html)\n"
+            "GPU scores:\n"
+            "- [3DMark Speed Way](https://www.topcpu.net/en/gpu-r/3dmark-speed-way-desktop)\n"
+            "- [3DMark Time Spy Extreme](https://www.topcpu.net/en/gpu-r/3dmark-time-spy-extreme-desktop)\n"
         ).replace("{prefix}", ctx.prefix)
         embed = discord.Embed(
             title="PCMasterRace Wiki",

@@ -3,11 +3,16 @@ from .utils import get_page, draw_bar_graph, get_page_dict, DEFAULT_COLOR
 
 
 class TabButton(discord.ui.Button):
-    def __init__(self, label, tab_name, style=discord.ButtonStyle.secondary):
+    def __init__(self, label, tab_name, author, style=discord.ButtonStyle.secondary):
         super().__init__(label=label, style=style, custom_id=f"tab_{tab_name}")
         self.tab_name = tab_name
+        self.author = author
 
     async def callback(self, interaction: discord.Interaction):
+        if interaction.user.id != self.author.id:
+            await interaction.response.send_message("This button isn't for you.", ephemeral=True)
+            return
+
         view = self.view
         view.tab = self.tab_name
         view.page = 0
@@ -17,11 +22,16 @@ class TabButton(discord.ui.Button):
 
 
 class PageButton(discord.ui.Button):
-    def __init__(self, label, delta, style=discord.ButtonStyle.secondary, row=1):
+    def __init__(self, label, delta, author, style=discord.ButtonStyle.secondary, row=1):
         super().__init__(label=label, style=style, custom_id=f"page_{label.lower()}", row=row)
         self.delta = delta
+        self.author = author
 
     async def callback(self, interaction: discord.Interaction):
+        if interaction.user.id != self.author.id:
+            await interaction.response.send_message("This button isn't for you.", ephemeral=True)
+            return
+
         view = self.view
         if hasattr(view, "get_scores"):
             scores = view.get_scores()
@@ -42,13 +52,16 @@ def update_tab_styles(view, tab_buttons, tab_map, active_tab):
         )
 
 
-# Shared pagination button declarations
-def get_pagination_buttons(style=discord.ButtonStyle.secondary, row=1):
+def make_tab_buttons(tabs, author):
+    return [TabButton(label=tab.upper(), tab_name=tab, author=author) for tab in tabs]
+
+
+def make_pagination_buttons(author, style=discord.ButtonStyle.secondary, row=1):
     return [
-        PageButton("5 ⏮️", -5, style, row),
-        PageButton("⏪", -1, style, row),
-        PageButton("⏩", 1, style, row),
-        PageButton("⏭️ 5", 5, style, row),
+        PageButton("5 ⏮️", -5, author, style, row),
+        PageButton("⏪", -1, author, style, row),
+        PageButton("⏩", 1, author, style, row),
+        PageButton("⏭️ 5", 5, author, style, row),
     ]
 
 
@@ -76,7 +89,7 @@ async def update_scores_message(
         file = discord.File(img_bytes, filename=embed_image_name)
         files = [file]
         embed.set_image(url=f"attachment://{embed_image_name}")
-    # Update pagination button states
+
     view.prev_button.disabled = page == 0
     view.next_button.disabled = page >= total_pages - 1
     view.prev5_button.disabled = page == 0
@@ -96,16 +109,11 @@ class ScoreView(discord.ui.View):
         self.ctx = ctx
         _, self.total_pages = get_page(self.gpu_scores, 0)
 
-        # Tab buttons
-        self.tab_buttons = [
-            TabButton("CPU", "cpu"),
-            TabButton("GPU", "gpu"),
-        ]
+        self.tab_buttons = make_tab_buttons(["cpu", "gpu"], ctx.author)
         for btn in self.tab_buttons:
             self.add_item(btn)
 
-        # Pagination buttons
-        pagination_buttons = get_pagination_buttons(discord.ButtonStyle.gray, row=1)
+        pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.gray, row=1)
         self.prev5_button, self.prev_button, self.next_button, self.next5_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
@@ -152,17 +160,11 @@ class UserScoreView(discord.ui.View):
         self.message = None
         self.per_page = 10
 
-        # Tab buttons (first row)
-        self.tab_buttons = [
-            TabButton("CPU", "cpu"),
-            TabButton("GPU", "gpu"),
-            TabButton("Combined", "combined"),
-        ]
+        self.tab_buttons = make_tab_buttons(["cpu", "gpu", "combined"], ctx.author)
         for btn in self.tab_buttons:
             self.add_item(btn)
 
-        # Pagination buttons (second row)
-        pagination_buttons = get_pagination_buttons(discord.ButtonStyle.secondary, row=1)
+        pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.secondary, row=1)
         self.prev5_button, self.prev_button, self.next_button, self.next5_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
@@ -189,7 +191,7 @@ class UserScoreView(discord.ui.View):
             self.ctx,
             scores,
             self.page,
-            None,  # total_pages will be calculated inside update_scores_message
+            None,
             title,
             "userscores.png",
             self,
