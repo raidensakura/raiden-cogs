@@ -172,17 +172,28 @@ class PCMasterRace(commands.Cog):
             return int(round(weighted))
         return 0
 
-    def combined_score(self, cpu_score, gpu_score):
+    def combined_score(self, cpu_score, gpu_score, resolution="1440p"):
         """
-        Calculates the combined score by averaging the CPU and GPU scores.
+        Calculates a combined performance score based on CPU and GPU scores, 
+        adjusted for the specified display resolution.
+        The GPU score is scaled by a bias factor depending on the resolution:
+            - "1080p": 0.7
+            - "1440p": 0.8 (default)
+            - "4k": 0.9
+        The final score is the minimum of the CPU score and the biased GPU score,
+        rounded to the nearest integer.
         Args:
-            cpu_score (int or float): The score representing CPU performance.
-            gpu_score (int or float): The score representing GPU performance.
+            cpu_score (float or int): The performance score of the CPU.
+            gpu_score (float or int): The performance score of the GPU.
+            resolution (str, optional): The display resolution. 
+                Supported values are "1080p", "1440p", and "4k". Defaults to "1440p".
         Returns:
-            int: The rounded average of the CPU and GPU scores.
+            int: The combined performance score.
         """
 
-        return int(round((cpu_score + gpu_score) / 2))
+        bias = {"1080p": 0.7, "1440p": 0.8, "4k": 0.9}
+        gpu_bias = bias.get(resolution, 0.8)
+        return int(round(min(cpu_score, gpu_score * gpu_bias)))
 
     async def get_all_users(self, guild):
         """
