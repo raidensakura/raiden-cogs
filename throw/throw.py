@@ -64,9 +64,7 @@ class Throw(commands.Cog):
             em.set_image(url="https://i.imgur.com/IX2IfuM.gif")
             return await ctx.send(embed=em)
         if member.id == ctx.author.id:
-            return await ctx.send(
-                f"Congratulations, **{ctx.author.name}**. " "You threw yourself."
-            )
+            return await ctx.send(f"Congratulations, **{ctx.author.name}**. " "You threw yourself.")
         async with ctx.typing():
             item = choice(ITEMS)
             hit = choice([True, False])
@@ -80,15 +78,9 @@ class Throw(commands.Cog):
                 await self.config.member(member).TIMES_HIT.set(times_hit + 1)
                 await self.config.user(ctx.author).ITEMS_THROWN.set(gitems_thrown + 1)
                 await self.config.user(member).TIMES_HIT.set(gtimes_hit + 1)
-                message = (
-                    f"_**{ctx.author.name}** threw {item[0]}_ at {member.mention}\n"
-                    f"{choice(HIT)}"
-                )
+                message = f"_**{ctx.author.name}** threw {item[0]}_ at {member.mention}\n" f"{choice(HIT)}"
             else:
-                message = (
-                    f"_**{ctx.author.name}** threw {item[0]}_ at {member.mention}\n"
-                    f"{choice(MISS)}"
-                )
+                message = f"_**{ctx.author.name}** threw {item[0]}_ at {member.mention}\n" f"{choice(MISS)}"
 
             embed = discord.Embed(description=message, colour=member.colour)
 
@@ -132,15 +124,9 @@ class Throw(commands.Cog):
                 return str(user.avatar_url)
 
             pages = []
-            dedupe_list_1 = [
-                x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0
-            ]
-            server_table = tabulate(
-                dedupe_list_1, headers=header, colalign=colalign, tablefmt="psql"
-            )
-            emb = discord.Embed(
-                colour=await ctx.embed_colour(), description=box(server_table, "nim")
-            )
+            dedupe_list_1 = [x for i, x in enumerate(people_with_no_creativity, 1) if i % 2 != 0]
+            server_table = tabulate(dedupe_list_1, headers=header, colalign=colalign, tablefmt="psql")
+            emb = discord.Embed(colour=await ctx.embed_colour(), description=box(server_table, "nim"))
             emb.set_author(name=f"Throw Stats | {user.name}", icon_url=get_avatar(user))
             emb.set_footer(text="Go to next page to see your global throw stats!")
             pages.append(emb)
@@ -148,21 +134,11 @@ class Throw(commands.Cog):
             for action in self.possible_actions:
                 parse_actions(global_actions_data, global_actions_array, action)
 
-            dedupe_list_2 = [
-                x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0
-            ]
-            global_table = tabulate(
-                dedupe_list_2, headers=header, colalign=colalign, tablefmt="psql"
-            )
-            embed = discord.Embed(
-                colour=await ctx.embed_colour(), description=box(global_table, "nim")
-            )
-            embed.set_author(
-                name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user)
-            )
-            embed.set_footer(
-                text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author)
-            )
+            dedupe_list_2 = [x for i, x in enumerate(global_actions_array, 1) if i % 2 != 0]
+            global_table = tabulate(dedupe_list_2, headers=header, colalign=colalign, tablefmt="psql")
+            embed = discord.Embed(colour=await ctx.embed_colour(), description=box(global_table, "nim"))
+            embed.set_author(name=f"Global Throw Stats | {user.name}", icon_url=get_avatar(user))
+            embed.set_footer(text=f"Requester: {ctx.author}", icon_url=get_avatar(ctx.author))
             pages.append(embed)
 
         await menu(ctx, pages, DEFAULT_CONTROLS, timeout=60.0)
