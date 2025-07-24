@@ -347,8 +347,10 @@ class PCMasterRace(commands.Cog):
             await ctx.send(f"Could not find GPU score for `{gpu_name}`.")
             return
 
-        await self.config.user(ctx.author).cpu.set(cpu_name)
-        await self.config.user(ctx.author).gpu.set(gpu_name)
+        matched_cpu = next(iter(cpu_scores.keys()))
+        matched_gpu = next(iter(gpu_scores.keys()))
+        await self.config.user(ctx.author).cpu.set(matched_cpu)
+        await self.config.user(ctx.author).gpu.set(matched_gpu)
 
         embed = build_combo_embed(
             self,
