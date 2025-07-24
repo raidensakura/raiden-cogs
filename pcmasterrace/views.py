@@ -96,7 +96,6 @@ def make_tab_buttons(tabs, author):
 
 
 def make_pagination_buttons(author, style=discord.ButtonStyle.secondary, row=1):
-    # Only previous and next buttons now
     return [
         PageButton("◀️", -1, author, style, row),
         PageButton("▶️", 1, author, style, row),
@@ -130,10 +129,8 @@ async def update_scores_message(
 
     view.prev_button.disabled = page == 0
     view.next_button.disabled = page >= total_pages - 1
-    # Remove prev5_button and next5_button
     if hasattr(view, "update_tab_styles"):
         view.update_tab_styles()
-    # Update dropdown options
     if hasattr(view, "update_page_dropdown"):
         view.update_page_dropdown(total_pages, page)
     await interaction.response.edit_message(embed=embed, view=view, attachments=files)
