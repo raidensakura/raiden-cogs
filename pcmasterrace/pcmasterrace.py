@@ -14,10 +14,12 @@ from .utils import (
 )
 from .views import ScoreView, UserScoreView
 from redbot.core.utils.views import SimpleMenu
+import logging
 
 with open(WEIGHTS_PATH, "r", encoding="utf-8") as f:
     WEIGHTS = json.load(f)
 
+log = logging.getLogger("red.raidensakura.pcmasterrace")
 
 class PCMasterRace(commands.Cog):
     """Submit and rank your CPU/GPU combos!"""
@@ -34,36 +36,127 @@ class PCMasterRace(commands.Cog):
         with open(GPU_SCORES_PATH, "r", encoding="utf-8") as f:
             self.gpu_scores = json.load(f)
 
+    async def cog_load(self):
+        await self.migrate_user_combos()
+
+    async def migrate_user_combos(self):
+        # Migrate user configs: convert saved CPU/GPU strings to full part names if needed
+        all_users = await self.config.all_users()
+        updated = False
+        for user_id, data in all_users.items():
+            cpu = data.get("cpu")
+            gpu = data.get("gpu")
+            new_cpu = None
+            new_gpu = None
+            if cpu:
+                match = await self.regex_match(cpu, self.cpu_scores.keys())
+                if match and match != cpu:
+                    new_cpu = match
+            if gpu:
+                match = await self.regex_match(gpu, self.gpu_scores.keys())
+                if match and match != gpu:
+                    new_gpu = match
+            if new_cpu or new_gpu:
+                user_conf = self.config.user_from_id(user_id)
+                if new_cpu:
+                    await user_conf.cpu.set(new_cpu)
+                if new_gpu:
+                    await user_conf.gpu.set(new_gpu)
+                updated = True
+        if updated:
+            log.info("Migrated user combos to full part names in config.")
+
     @commands.group(aliases=["pcmr"])
     @commands.guild_only()
     async def pcmasterrace(self, ctx):
         """PC Master Race commands."""
         pass
 
-    def regex_match(self, name, candidates):
+    async def regex_match(self, name, candidates, return_options=False, ctx=None):
         """
-        Attempts to find a matching candidate from a list based on the provided name using several strategies:
+        Attempts to find the best matching candidate(s) from a list based on the provided name using several strategies:
         1. Case-insensitive exact match.
-        2. Case-insensitive whole word regex match.
-        3. Case-insensitive substring match (in either direction).
+        2. Case-insensitive, normalized (alphanumeric, no spaces) match.
+        3. Case-insensitive regex match for whole words or numbers (e.g., "3080" matches "RTX 3080", "i7-12700K" matches "Intel Core i7-12700K").
+        4. Case-insensitive substring match (in either direction).
+        If return_options is True and multiple matches are found, prompts the user to select one (requires ctx).
         Args:
             name (str): The name to match against the candidates.
             candidates (Iterable[str]): A collection of candidate strings to search.
+            return_options (bool): If True, return all matches and prompt user if multiple.
+            ctx: The command context (required if return_options is True and multiple matches).
         Returns:
-            str or None: The first matching candidate string, or None if no match is found.
+            str or None: The best matching candidate string, or None if no match is found.
         """
 
+        def normalize(s):
+            return re.sub(r"[\W_]+", "", s).lower()
+
+        name_norm = normalize(name)
+        candidates = list(candidates)
+        matches = []
+
+        # 1. Case-insensitive exact match
         for key in candidates:
             if key.lower() == name.lower():
-                return key
-        pattern = re.compile(r"\b" + re.escape(name) + r"\b", re.IGNORECASE)
+                matches.append(key)
+        if matches:
+            if return_options and len(matches) > 1 and ctx:
+                return await self._prompt_user_choice(ctx, matches, name)
+            return matches[0]
+
+        # 2. Normalized (alphanumeric, no spaces) match
+        for key in candidates:
+            if normalize(key) == name_norm:
+                matches.append(key)
+        if matches:
+            if return_options and len(matches) > 1 and ctx:
+                return await self._prompt_user_choice(ctx, matches, name)
+            return matches[0]
+
+        # 3. Regex: match as a whole word or model code
+        pattern = re.compile(rf"\b{re.escape(name)}\b", re.IGNORECASE)
         for key in candidates:
             if pattern.search(key):
-                return key
+                matches.append(key)
+        if matches:
+            if return_options and len(matches) > 1 and ctx:
+                return await self._prompt_user_choice(ctx, matches, name)
+            return matches[0]
+
+        # 4. Substring match (in either direction)
         for key in candidates:
             if name.lower() in key.lower() or key.lower() in name.lower():
-                return key
+                matches.append(key)
+        if matches:
+            if return_options and len(matches) > 1 and ctx:
+                return await self._prompt_user_choice(ctx, matches, name)
+            return matches[0]
+
         return None
+
+    async def _prompt_user_choice(self, ctx, options, name):
+        """
+        Helper to prompt the user to select from multiple options.
+        """
+        if len(options) == 1:
+            return options[0]
+        desc = "\n".join(f"{i+1}. `{opt}`" for i, opt in enumerate(options))
+        prompt = (
+            f"Multiple matches found for `{name}`. Please reply with the number of your choice:\n{desc}"
+        )
+        await ctx.send(prompt)
+
+        def check(m):
+            return m.author == ctx.author and m.channel == ctx.channel and m.content.isdigit() and 1 <= int(m.content) <= len(options)
+
+        try:
+            msg = await ctx.bot.wait_for("message", check=check, timeout=30)
+            idx = int(msg.content) - 1
+            return options[idx]
+        except Exception:
+            await ctx.send("No valid selection made. Cancelling.")
+            return None
 
     async def fetch_all_gpu_scores(self, gpu_name: str = ""):
         """
@@ -82,7 +175,7 @@ class PCMasterRace(commands.Cog):
         scores = {}
         items = self.gpu_scores.items()
         if gpu_name:
-            match = self.regex_match(gpu_name, self.gpu_scores.keys())
+            match = await self.regex_match(gpu_name, self.gpu_scores.keys())
             if match:
                 items = [(match, self.gpu_scores[match])]
             else:
@@ -113,7 +206,7 @@ class PCMasterRace(commands.Cog):
         scores = {}
         items = self.cpu_scores.items()
         if cpu_name:
-            match = self.regex_match(cpu_name, self.cpu_scores.keys())
+            match = await self.regex_match(cpu_name, self.cpu_scores.keys())
             if match:
                 items = [(match, self.cpu_scores[match])]
             else:
@@ -141,7 +234,7 @@ class PCMasterRace(commands.Cog):
             int: The weighted score for the GPU, or 0 if no match is found.
         """
 
-        match = self.regex_match(gpu_name, self.gpu_scores.keys())
+        match = await self.regex_match(gpu_name, self.gpu_scores.keys())
         if match:
             gpu_data = self.gpu_scores[match]
             weighted = 0
@@ -163,7 +256,7 @@ class PCMasterRace(commands.Cog):
             int: The weighted CPU score if a match is found, otherwise 0.
         """
 
-        match = self.regex_match(cpu_name, self.cpu_scores.keys())
+        match = await self.regex_match(cpu_name, self.cpu_scores.keys())
         if match:
             cpu_data = self.cpu_scores[match]
             weighted = 0
@@ -337,26 +430,27 @@ class PCMasterRace(commands.Cog):
         cpu_name = parts[0].strip()
         gpu_name = parts[1].strip()
 
-        cpu_scores = await self.fetch_all_cpu_scores(cpu_name)
-        gpu_scores = await self.fetch_all_gpu_scores(gpu_name)
+        matched_cpu = await self.regex_match(cpu_name, self.cpu_scores.keys(), return_options=True, ctx=ctx)
+        matched_gpu = await self.regex_match(gpu_name, self.gpu_scores.keys(), return_options=True, ctx=ctx)
 
-        if not cpu_scores:
+        if not matched_cpu:
             await ctx.send(f"Could not find CPU score for `{cpu_name}`.")
             return
-        if not gpu_scores:
+        if not matched_gpu:
             await ctx.send(f"Could not find GPU score for `{gpu_name}`.")
             return
 
-        matched_cpu = next(iter(cpu_scores.keys()))
-        matched_gpu = next(iter(gpu_scores.keys()))
+        cpu_scores = await self.fetch_all_cpu_scores(matched_cpu)
+        gpu_scores = await self.fetch_all_gpu_scores(matched_gpu)
+
         await self.config.user(ctx.author).cpu.set(matched_cpu)
         await self.config.user(ctx.author).gpu.set(matched_gpu)
 
         embed = build_combo_embed(
             self,
             ctx.author,
-            cpu_name,
-            gpu_name,
+            matched_cpu,
+            matched_gpu,
             cpu_scores,
             gpu_scores,
             embed_color=await ctx.embed_color() or DEFAULT_COLOR,
@@ -492,8 +586,8 @@ class PCMasterRace(commands.Cog):
             cpu_score = await self.fetch_cpu_score(data["cpu"])
             gpu_score = await self.fetch_gpu_score(data["gpu"])
             combo_score = self.combined_score(cpu_score, gpu_score)
-            cpu_full = self.regex_match(data["cpu"], self.cpu_scores.keys()) or data["cpu"]
-            gpu_full = self.regex_match(data["gpu"], self.gpu_scores.keys()) or data["gpu"]
+            cpu_full = await self.regex_match(data["cpu"], self.cpu_scores.keys()) or data["cpu"]
+            gpu_full = await self.regex_match(data["gpu"], self.gpu_scores.keys()) or data["gpu"]
             user_data.append({
                 "member": member,
                 "cpu_score": cpu_score,
@@ -572,6 +666,6 @@ class PCMasterRace(commands.Cog):
 
         await ctx.send(embed=embed, files=files)
 
-
 def setup(bot):
-    bot.add_cog(PCMasterRace(bot))
+    cog = PCMasterRace(bot)
+    bot.add_cog(cog)
