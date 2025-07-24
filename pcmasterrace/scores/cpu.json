@@ -13,14 +13,14 @@
         "gaming": 10564
     },
     "Intel Core Ultra 7 265KF": {
-        "singlethread": 4912,
-        "multithread": 58871,
+        "singlethread": 4913,
+        "multithread": 58872,
         "gaming": 9434
     },
     "Intel Core Ultra 7 265K": {
         "singlethread": 4904,
-        "multithread": 58840,
-        "gaming": 9525
+        "multithread": 58843,
+        "gaming": 9526
     },
     "Intel Core Ultra 9 285": {
         "singlethread": 4881,
@@ -59,7 +59,8 @@
         "multithread": 24874
     },
     "Apple M3 8 Core": {
-        "singlethread": 4743
+        "singlethread": 4743,
+        "multithread": 19187
     },
     "AMD EPYC 4565P": {
         "singlethread": 4738,
@@ -67,18 +68,18 @@
     },
     "AMD Ryzen 9 9950X3D": {
         "singlethread": 4738,
-        "multithread": 70256,
-        "gaming": 11278
+        "multithread": 70257,
+        "gaming": 11277
     },
     "AMD Ryzen 9 9950X": {
         "singlethread": 4737,
-        "multithread": 66032,
+        "multithread": 66028,
         "gaming": 6839
     },
     "Intel Core Ultra 9 275HX": {
-        "singlethread": 4722,
-        "multithread": 56274,
-        "gaming": 9038
+        "singlethread": 4724,
+        "multithread": 56331,
+        "gaming": 9045
     },
     "Intel Core Ultra 5 245KF": {
         "singlethread": 4717,
@@ -102,7 +103,7 @@
     },
     "Intel Core i9-14900K": {
         "singlethread": 4697,
-        "multithread": 58679,
+        "multithread": 58680,
         "gaming": 7970
     },
     "Intel Core i9-14900KF": {
@@ -112,8 +113,8 @@
     },
     "AMD Ryzen 9 9900X": {
         "singlethread": 4672,
-        "multithread": 54647,
-        "gaming": 8197
+        "multithread": 54648,
+        "gaming": 8198
     },
     "AMD EPYC 4345P": {
         "singlethread": 4672,
@@ -121,8 +122,8 @@
     },
     "AMD Ryzen 7 9700X": {
         "singlethread": 4654,
-        "multithread": 37166,
-        "gaming": 6266
+        "multithread": 37164,
+        "gaming": 6265
     },
     "Intel Core Ultra 7 255HX": {
         "singlethread": 4646,
@@ -135,9 +136,9 @@
         "gaming": 12390
     },
     "Intel Core Ultra 7 265": {
-        "singlethread": 4624,
-        "multithread": 48769,
-        "gaming": 7939
+        "singlethread": 4629,
+        "multithread": 48852,
+        "gaming": 7948
     },
     "Intel Core Ultra 7 265T": {
         "singlethread": 4624,
@@ -161,13 +162,13 @@
         "singlethread": 4603,
         "multithread": 31316
     },
-    "AMD Ryzen Threadripper 9980X": {
-        "singlethread": 4593,
-        "multithread": 151320
-    },
     "Apple M4 Pro 12 Core": {
-        "singlethread": 4590,
-        "multithread": 32930
+        "singlethread": 4592,
+        "multithread": 32940
+    },
+    "AMD Ryzen Threadripper 9980X": {
+        "singlethread": 4591,
+        "multithread": 153564
     },
     "AMD Ryzen Threadripper PRO 9985WX 64-Cores": {
         "singlethread": 4586,
@@ -192,8 +193,8 @@
     },
     "AMD Ryzen 5 9600X": {
         "singlethread": 4571,
-        "multithread": 30031,
-        "gaming": 7007
+        "multithread": 30032,
+        "gaming": 7008
     },
     "AMD EPYC 4545P": {
         "singlethread": 4568,
@@ -221,7 +222,8 @@
         "gaming": 8757
     },
     "Apple A17 Pro": {
-        "singlethread": 4540
+        "singlethread": 4540,
+        "multithread": 12218
     },
     "AMD Ryzen Threadripper 9960X 24-Cores": {
         "singlethread": 4536,
@@ -250,8 +252,8 @@
         "gaming": 9729
     },
     "Intel Core Ultra 9 285H": {
-        "singlethread": 4489,
-        "multithread": 33791
+        "singlethread": 4491,
+        "multithread": 33796
     },
     "Intel Core i7-14700KF": {
         "singlethread": 4480,
@@ -277,15 +279,15 @@
         "multithread": 31044,
         "gaming": 7379
     },
+    "AMD Ryzen 9 9955HX": {
+        "singlethread": 4466,
+        "multithread": 57649,
+        "gaming": 6081
+    },
     "Intel Core Ultra 5 225F": {
         "singlethread": 4465,
         "multithread": 31360,
         "gaming": 7481
-    },
-    "AMD Ryzen 9 9955HX": {
-        "singlethread": 4464,
-        "multithread": 57615,
-        "gaming": 6079
     },
     "Intel Core Ultra 5 245T": {
         "singlethread": 4440,
@@ -331,8 +333,8 @@
     },
     "Intel Core i9-14900": {
         "singlethread": 4382,
-        "multithread": 45315,
-        "gaming": 6623
+        "multithread": 45318,
+        "gaming": 6625
     },
     "AMD EPYC 4564P": {
         "singlethread": 4371,
@@ -355,7 +357,7 @@
     },
     "Intel Core i7-13700KF": {
         "singlethread": 4336,
-        "multithread": 45817,
+        "multithread": 45816,
         "gaming": 6598
     },
     "Intel Core i7-13700K": {
@@ -364,12 +366,13 @@
         "gaming": 6709
     },
     "Intel Core i9-12900KS": {
-        "singlethread": 4332,
-        "multithread": 43711,
-        "gaming": 5881
+        "singlethread": 4330,
+        "multithread": 43695,
+        "gaming": 5879
     },
     "Intel Core Ultra 9 288V": {
         "singlethread": 4330,
+        "multithread": 20115,
         "gaming": 3572
     },
     "Intel Xeon 6369P": {
@@ -391,12 +394,13 @@
         "multithread": 26057
     },
     "Intel Xeon 6325P": {
-        "singlethread": 4283
+        "singlethread": 4283,
+        "multithread": 16045
     },
     "Intel Core i7-14700": {
-        "singlethread": 4275,
-        "multithread": 41559,
-        "gaming": 6155
+        "singlethread": 4274,
+        "multithread": 41548,
+        "gaming": 6152
     },
     "Intel Core i5-14600KF": {
         "singlethread": 4273,
@@ -423,12 +427,12 @@
     },
     "Intel Core i7-14700F": {
         "singlethread": 4261,
-        "multithread": 41774,
-        "gaming": 6455
+        "multithread": 41772,
+        "gaming": 6456
     },
     "Intel Core i9-13980HX": {
         "singlethread": 4254,
-        "multithread": 46431,
+        "multithread": 46434,
         "gaming": 6746
     },
     "Intel Core i7-14701TE": {
@@ -437,8 +441,8 @@
     },
     "Intel Core i9-14900HX": {
         "singlethread": 4250,
-        "multithread": 45378,
-        "gaming": 7065
+        "multithread": 45379,
+        "gaming": 7066
     },
     "AMD EPYC 9575F": {
         "singlethread": 4244,
@@ -455,7 +459,8 @@
         "gaming": 7306
     },
     "Intel Core Ultra 7 268V": {
-        "singlethread": 4211
+        "singlethread": 4212,
+        "multithread": 20224
     },
     "Apple M2 Ultra 24 Core": {
         "singlethread": 4204,
@@ -508,8 +513,8 @@
     },
     "Intel Core i9-12900KF": {
         "singlethread": 4145,
-        "multithread": 40986,
-        "gaming": 5276
+        "multithread": 40982,
+        "gaming": 5275
     },
     "Apple M2 Max 12 Core 3680 MHz": {
         "singlethread": 4142,
@@ -517,7 +522,7 @@
     },
     "Intel Core i9-12900K": {
         "singlethread": 4136,
-        "multithread": 41214,
+        "multithread": 41213,
         "gaming": 5454
     },
     "AMD Ryzen 5 7600X": {
@@ -545,7 +550,8 @@
         "gaming": 10833
     },
     "Apple A18 Pro": {
-        "singlethread": 4126
+        "singlethread": 4126,
+        "multithread": 12920
     },
     "Intel Core i5-13600K": {
         "singlethread": 4124,
@@ -586,12 +592,12 @@
     },
     "Apple M2 Pro 10 Core 3480 MHz": {
         "singlethread": 4101,
-        "multithread": 21888
+        "multithread": 21890
     },
     "Intel Core i7-13700": {
         "singlethread": 4101,
-        "multithread": 36392,
-        "gaming": 5487
+        "multithread": 36386,
+        "gaming": 5486
     },
     "Apple M2 Pro 12 Core 3480 MHz": {
         "singlethread": 4098,
@@ -612,7 +618,8 @@
         "gaming": 6856
     },
     "Apple A16": {
-        "singlethread": 4072
+        "singlethread": 4072,
+        "multithread": 10033
     },
     "AMD Ryzen 7 7700": {
         "singlethread": 4063,
@@ -626,6 +633,7 @@
     },
     "Intel Core Ultra 7 256V": {
         "singlethread": 4050,
+        "multithread": 19962,
         "gaming": 3443
     },
     "AMD Ryzen 9 7945HX3D": {
@@ -640,6 +648,7 @@
     },
     "Intel Core Ultra 7 258V": {
         "singlethread": 4047,
+        "multithread": 19147,
         "gaming": 3363
     },
     "AMD Ryzen 9 7945HX": {
@@ -661,7 +670,8 @@
         "multithread": 96173
     },
     "Apple A16 Bionic": {
-        "singlethread": 4031
+        "singlethread": 4031,
+        "multithread": 10985
     },
     "AMD Ryzen Threadripper PRO 7965WX": {
         "singlethread": 4026,
@@ -679,7 +689,7 @@
     },
     "Intel Core i7-12700K": {
         "singlethread": 4013,
-        "multithread": 34413,
+        "multithread": 34412,
         "gaming": 4482
     },
     "Intel Core i9-12900": {
@@ -693,12 +703,13 @@
         "gaming": 6728
     },
     "ARM - 12 Core 2000 MHz": {
-        "singlethread": 3991
+        "singlethread": 3991,
+        "multithread": 16944
     },
     "Intel Core i7-14700HX": {
         "singlethread": 3988,
-        "multithread": 37165,
-        "gaming": 6168
+        "multithread": 37169,
+        "gaming": 6167
     },
     "Intel Core i7-12700KF": {
         "singlethread": 3985,
@@ -748,8 +759,8 @@
     },
     "AMD Ryzen 9 7940HX": {
         "singlethread": 3955,
-        "multithread": 53928,
-        "gaming": 5290
+        "multithread": 53906,
+        "gaming": 5288
     },
     "AMD Ryzen Threadripper PRO 7985WX": {
         "singlethread": 3954,
@@ -762,11 +773,11 @@
     },
     "AMD Ryzen AI 7 PRO 350": {
         "singlethread": 3952,
-        "multithread": 24194
+        "multithread": 24195
     },
     "Intel Core i5-14500": {
         "singlethread": 3951,
-        "multithread": 31422,
+        "multithread": 31427,
         "gaming": 5550
     },
     "AMD Ryzen 9 8945H": {
@@ -784,8 +795,8 @@
     },
     "AMD Ryzen 7 7745HX": {
         "singlethread": 3947,
-        "multithread": 32576,
-        "gaming": 4987
+        "multithread": 32581,
+        "gaming": 4988
     },
     "AMD Ryzen 7 PRO 8700G": {
         "singlethread": 3940,
@@ -798,12 +809,13 @@
         "gaming": 6185
     },
     "Apple A18": {
-        "singlethread": 3932
+        "singlethread": 3932,
+        "multithread": 12439
     },
     "AMD Ryzen 7 8700G": {
-        "singlethread": 3930,
-        "multithread": 31713,
-        "gaming": 3956
+        "singlethread": 3931,
+        "multithread": 31714,
+        "gaming": 3955
     },
     "Intel Core i5-12600K": {
         "singlethread": 3926,
@@ -850,7 +862,8 @@
         "gaming": 6750
     },
     "Apple M2 8 Core 3500 MHz": {
-        "singlethread": 3898
+        "singlethread": 3898,
+        "multithread": 15653
     },
     "AMD Ryzen 9 PRO 8945HS": {
         "singlethread": 3897,
@@ -858,7 +871,7 @@
     },
     "AMD Ryzen 7 8700F": {
         "singlethread": 3897,
-        "multithread": 31350,
+        "multithread": 31348,
         "gaming": 3913
     },
     "Intel Xeon E E-2486": {
@@ -866,13 +879,16 @@
         "multithread": 23605
     },
     "Intel Core Ultra 5 226V": {
-        "singlethread": 3895
+        "singlethread": 3895,
+        "multithread": 18578
     },
     "AMD Ryzen 3 PRO 8300GE": {
-        "singlethread": 3893
+        "singlethread": 3893,
+        "multithread": 14719
     },
     "AMD EPYC 4124P": {
-        "singlethread": 3891
+        "singlethread": 3891,
+        "multithread": 17958
     },
     "AMD Ryzen 5 8500G": {
         "singlethread": 3890,
@@ -880,11 +896,8 @@
         "gaming": 4036
     },
     "Intel Core Ultra 5 236V": {
-        "singlethread": 3886
-    },
-    "AMD Ryzen 7 PRO 7745": {
-        "singlethread": 3883,
-        "multithread": 33014
+        "singlethread": 3886,
+        "multithread": 18744
     },
     "AMD Ryzen 5 8600G": {
         "singlethread": 3878,
@@ -896,15 +909,21 @@
         "multithread": 30100,
         "gaming": 3657
     },
+    "AMD Ryzen 7 PRO 7745": {
+        "singlethread": 3876,
+        "multithread": 32959
+    },
     "AMD Ryzen AI 5 340": {
-        "singlethread": 3873
+        "singlethread": 3873,
+        "multithread": 20196
     },
     "Intel Core i5-14490F": {
         "singlethread": 3873,
         "multithread": 28662
     },
     "AMD Ryzen 3 8300G": {
-        "singlethread": 3873
+        "singlethread": 3873,
+        "multithread": 14374
     },
     "AMD Ryzen AI 9 HX 375": {
         "singlethread": 3870,
@@ -916,7 +935,8 @@
         "multithread": 41383
     },
     "Intel Core Ultra 5 228V": {
-        "singlethread": 3866
+        "singlethread": 3866,
+        "multithread": 17277
     },
     "Intel Core i5-13500": {
         "singlethread": 3865,
@@ -924,7 +944,7 @@
         "gaming": 5149
     },
     "Intel Core i7-12700": {
-        "singlethread": 3864,
+        "singlethread": 3865,
         "multithread": 30276,
         "gaming": 4074
     },
@@ -944,6 +964,7 @@
     },
     "AMD Ryzen 5 PRO 215": {
         "singlethread": 3851,
+        "multithread": 19789,
         "gaming": 3456
     },
     "Intel Core i7-14700T": {
@@ -970,14 +991,16 @@
         "multithread": 160417
     },
     "Intel Core Ultra 5 238V": {
-        "singlethread": 3846
+        "singlethread": 3846,
+        "multithread": 18433
     },
     "AMD EPYC 9655": {
         "singlethread": 3845,
         "multithread": 156085
     },
     "AMD Ryzen 3 PRO 8300G": {
-        "singlethread": 3844
+        "singlethread": 3844,
+        "multithread": 14540
     },
     "AMD Ryzen 5 7500F": {
         "singlethread": 3842,
@@ -1021,14 +1044,19 @@
         "gaming": 3966
     },
     "Intel Core i7-13700T": {
-        "singlethread": 3819,
-        "multithread": 28257,
-        "gaming": 4879
+        "singlethread": 3820,
+        "multithread": 28229,
+        "gaming": 4864
     },
     "Intel Core i7-13700HX": {
         "singlethread": 3819,
-        "multithread": 32644,
+        "multithread": 32638,
         "gaming": 5065
+    },
+    "Intel Core i9-13900HK": {
+        "singlethread": 3816,
+        "multithread": 28308,
+        "gaming": 5631
     },
     "AMD Ryzen 7 260": {
         "singlethread": 3815,
@@ -1038,11 +1066,6 @@
     "Intel Xeon w9-3595X": {
         "singlethread": 3814,
         "multithread": 102934
-    },
-    "Intel Core i9-13900HK": {
-        "singlethread": 3814,
-        "multithread": 28303,
-        "gaming": 5629
     },
     "Intel Xeon w5-3535X": {
         "singlethread": 3813,
@@ -1054,30 +1077,36 @@
         "gaming": 4644
     },
     "ARM - 10 Core 2000 MHz": {
-        "singlethread": 3807
+        "singlethread": 3807,
+        "multithread": 9787
     },
     "Apple M1 Pro 10 Core 3200 MHz": {
         "singlethread": 3800,
-        "multithread": 21916
+        "multithread": 21917
     },
     "Intel Xeon E E-2434": {
-        "singlethread": 3800
+        "singlethread": 3800,
+        "multithread": 15133
     },
     "AMD Ryzen 3 8300GE": {
-        "singlethread": 3795
+        "singlethread": 3795,
+        "multithread": 13771
     },
     "AMD Ryzen 5 PRO 8640U": {
         "singlethread": 3792,
         "multithread": 23509
     },
     "Intel Xeon 6333P": {
-        "singlethread": 3791
+        "singlethread": 3791,
+        "multithread": 18751
     },
     "Intel Core i3-14100F": {
-        "singlethread": 3790
+        "singlethread": 3790,
+        "multithread": 15402
     },
     "ARM Apple M1 (Virtual) 4 Core 0 MHz": {
-        "singlethread": 3789
+        "singlethread": 3789,
+        "multithread": 10123
     },
     "AMD Ryzen 7 PRO 8845HS": {
         "singlethread": 3789,
@@ -1103,7 +1132,7 @@
     },
     "Intel Core i9-12950HX": {
         "singlethread": 3778,
-        "multithread": 31674,
+        "multithread": 31673,
         "gaming": 5064
     },
     "AMD Ryzen 7 8745HS": {
@@ -1117,7 +1146,8 @@
         "gaming": 5291
     },
     "AMD Ryzen AI 5 PRO 340": {
-        "singlethread": 3769
+        "singlethread": 3769,
+        "multithread": 18912
     },
     "Intel Core i7-13850HX": {
         "singlethread": 3769,
@@ -1126,11 +1156,12 @@
     },
     "Intel Core i5-14400": {
         "singlethread": 3764,
-        "multithread": 25251,
-        "gaming": 4418
+        "multithread": 25247,
+        "gaming": 4416
     },
     "AMD Ryzen 5 PRO 7545U": {
         "singlethread": 3763,
+        "multithread": 19450,
         "gaming": 3558
     },
     "AMD EPYC 9375F": {
@@ -1138,7 +1169,8 @@
         "multithread": 95768
     },
     "Apple M1 Pro 8 Core 3200 MHz": {
-        "singlethread": 3761
+        "singlethread": 3761,
+        "multithread": 17199
     },
     "Intel Core i5-14500T": {
         "singlethread": 3760,
@@ -1156,11 +1188,12 @@
         "gaming": 3626
     },
     "Intel Core i3-14100": {
-        "singlethread": 3758
+        "singlethread": 3758,
+        "multithread": 15236
     },
     "Intel Core i9-13900H": {
         "singlethread": 3754,
-        "multithread": 27676,
+        "multithread": 27674,
         "gaming": 5286
     },
     "AMD Ryzen 7 7840HS": {
@@ -1178,6 +1211,7 @@
     },
     "Intel Core Ultra 7 265U": {
         "singlethread": 3745,
+        "multithread": 18364,
         "gaming": 4283
     },
     "Intel Core i9-12900HX": {
@@ -1194,17 +1228,20 @@
         "multithread": 97264
     },
     "Intel Core Ultra 7 255U": {
-        "singlethread": 3739
+        "singlethread": 3739,
+        "multithread": 18608
     },
     "AMD Ryzen 7 8845HS": {
         "singlethread": 3738,
-        "multithread": 28499
+        "multithread": 28498
     },
     "Intel Core 5 120U": {
-        "singlethread": 3738
+        "singlethread": 3737,
+        "multithread": 16930
     },
     "Intel Core 3 100HL": {
-        "singlethread": 3731
+        "singlethread": 3731,
+        "multithread": 17899
     },
     "Intel Core i5-13600T": {
         "singlethread": 3728,
@@ -1221,7 +1258,7 @@
     },
     "Intel Core i5-14400F": {
         "singlethread": 3724,
-        "multithread": 25786,
+        "multithread": 25787,
         "gaming": 4718
     },
     "ARM Apple M1 Max (Virtual) 10 Core 0 MHz": {
@@ -1252,11 +1289,8 @@
         "multithread": 27000
     },
     "Intel Core i7-1270PE": {
-        "singlethread": 3715
-    },
-    "Intel Core Ultra 5 225U": {
-        "singlethread": 3714,
-        "gaming": 4239
+        "singlethread": 3715,
+        "multithread": 17960
     },
     "Intel Core i7-12800HX": {
         "singlethread": 3711,
@@ -1269,8 +1303,8 @@
         "gaming": 6210
     },
     "AMD Ryzen 7 PRO 8840HS": {
-        "singlethread": 3708,
-        "multithread": 27040
+        "singlethread": 3709,
+        "multithread": 27030
     },
     "AMD Ryzen 7 8745H": {
         "singlethread": 3706,
@@ -1315,8 +1349,8 @@
     },
     "AMD Ryzen 5 8400F": {
         "singlethread": 3684,
-        "multithread": 24528,
-        "gaming": 4083
+        "multithread": 24527,
+        "gaming": 4082
     },
     "Intel Core i7-12850HX": {
         "singlethread": 3683,
@@ -1325,13 +1359,16 @@
     },
     "Intel Core i5-12490F": {
         "singlethread": 3682,
+        "multithread": 20202,
         "gaming": 4011
     },
     "Apple M1 8 Core 3200 MHz": {
-        "singlethread": 3680
+        "singlethread": 3680,
+        "multithread": 14147
     },
     "Intel Core 3 100U": {
         "singlethread": 3679,
+        "multithread": 13934,
         "gaming": 3603
     },
     "Intel Core i9-12900E": {
@@ -1340,6 +1377,7 @@
     },
     "AMD Ryzen 5 7545U": {
         "singlethread": 3673,
+        "multithread": 20298,
         "gaming": 3461
     },
     "AMD EPYC 9135": {
@@ -1352,6 +1390,7 @@
     },
     "Intel Core i5-12500": {
         "singlethread": 3666,
+        "multithread": 19896,
         "gaming": 3688
     },
     "AMD EPYC 4364P": {
@@ -1359,7 +1398,8 @@
         "multithread": 34811
     },
     "AMD Ryzen Z1": {
-        "singlethread": 3660
+        "singlethread": 3660,
+        "multithread": 18513
     },
     "Intel Xeon w5-2555X": {
         "singlethread": 3659,
@@ -1371,7 +1411,7 @@
     },
     "AMD Ryzen 5 8645HS": {
         "singlethread": 3656,
-        "multithread": 22617,
+        "multithread": 22616,
         "gaming": 3540
     },
     "AMD Ryzen 5 7640HS": {
@@ -1379,15 +1419,22 @@
         "multithread": 22972,
         "gaming": 3638
     },
-    "AMD Ryzen 5 PRO 7645": {
-        "singlethread": 3653,
-        "multithread": 25501
-    },
     "AMD Ryzen 3 210": {
-        "singlethread": 3652
+        "singlethread": 3652,
+        "multithread": 13175
+    },
+    "AMD Ryzen 5 PRO 7645": {
+        "singlethread": 3651,
+        "multithread": 25485
+    },
+    "Intel Core Ultra 5 225U": {
+        "singlethread": 3649,
+        "multithread": 18792,
+        "gaming": 4212
     },
     "AMD Ryzen 3 8440U": {
-        "singlethread": 3648
+        "singlethread": 3648,
+        "multithread": 12805
     },
     "AMD Ryzen 5 7400F": {
         "singlethread": 3642,
@@ -1404,7 +1451,8 @@
         "multithread": 41406
     },
     "AMD Ryzen 5 8540U": {
-        "singlethread": 3639
+        "singlethread": 3639,
+        "multithread": 18332
     },
     "Intel Core i7-12650HX": {
         "singlethread": 3637,
@@ -1412,7 +1460,7 @@
     },
     "Intel Core i5-13400F": {
         "singlethread": 3634,
-        "multithread": 25032,
+        "multithread": 25033,
         "gaming": 4380
     },
     "Intel Xeon w7-2575X": {
@@ -1439,7 +1487,8 @@
         "multithread": 24973
     },
     "Intel Core i5-12500E": {
-        "singlethread": 3621
+        "singlethread": 3621,
+        "multithread": 20049
     },
     "Intel Core i7-12800HE": {
         "singlethread": 3615,
@@ -1455,18 +1504,18 @@
         "gaming": 5798
     },
     "Intel Core i3-13100F": {
-        "singlethread": 3609
+        "singlethread": 3609,
+        "multithread": 14687
     },
     "AMD Ryzen 7 7445HS": {
         "singlethread": 3606,
+        "multithread": 19235,
         "gaming": 3427
     },
     "Intel Core Ultra 5 235U": {
         "singlethread": 3605,
-        "gaming": 3871
-    },
-    "AMD Ryzen 5 220": {
-        "singlethread": 3603
+        "multithread": 17730,
+        "gaming": 3867
     },
     "ARM - 4 Core 0 MHz": {
         "singlethread": 3601
@@ -1481,46 +1530,55 @@
         "multithread": 21299
     },
     "Intel Core i5-1350P": {
-        "singlethread": 3596
+        "singlethread": 3596,
+        "multithread": 18985
     },
     "Intel Core i7-13700H": {
         "singlethread": 3595,
-        "multithread": 26401,
+        "multithread": 26403,
         "gaming": 5169
     },
     "Virtual @ 3.80GHz": {
-        "singlethread": 3593
+        "singlethread": 3593,
+        "multithread": 16736
     },
     "Intel Xeon w7-3565X": {
         "singlethread": 3592,
         "multithread": 73318
     },
+    "AMD Ryzen 5 220": {
+        "singlethread": 3590,
+        "multithread": 18243
+    },
     "AMD Ryzen Z1 Extreme": {
         "singlethread": 3589,
-        "multithread": 24864
-    },
-    "Intel Core i7-13620H": {
-        "singlethread": 3588,
-        "multithread": 24185,
-        "gaming": 5056
+        "multithread": 24858
     },
     "Apple A15 Bionic": {
-        "singlethread": 3587
+        "singlethread": 3587,
+        "multithread": 9891
+    },
+    "Intel Core i7-13620H": {
+        "singlethread": 3587,
+        "multithread": 24185,
+        "gaming": 5057
     },
     "Intel Core i3-12300HL": {
         "singlethread": 3586,
         "multithread": 20321
     },
     "Intel Core i3-12300": {
-        "singlethread": 3585
+        "singlethread": 3585,
+        "multithread": 14352
     },
     "AMD Ryzen 5 8640HS": {
-        "singlethread": 3584
+        "singlethread": 3584,
+        "multithread": 19889
     },
     "Intel Core i5-13500HX": {
-        "singlethread": 3582,
-        "multithread": 27820,
-        "gaming": 4988
+        "singlethread": 3581,
+        "multithread": 27806,
+        "gaming": 4987
     },
     "AMD Ryzen 7 7840S": {
         "singlethread": 3580,
@@ -1560,7 +1618,8 @@
         "gaming": 3255
     },
     "Intel Xeon E E-2414": {
-        "singlethread": 3563
+        "singlethread": 3563,
+        "multithread": 11929
     },
     "Intel Xeon w7-2475X": {
         "singlethread": 3563,
@@ -1570,21 +1629,23 @@
         "singlethread": 3560,
         "multithread": 33690
     },
-    "Intel Core i7-1370P": {
-        "singlethread": 3558,
-        "gaming": 4656
+    "Intel Xeon W-1390P @ 3.50GHz": {
+        "singlethread": 3559,
+        "multithread": 25077
     },
     "Intel Core 7 150U": {
-        "singlethread": 3557,
-        "gaming": 3757
+        "singlethread": 3558,
+        "multithread": 15288,
+        "gaming": 3758
+    },
+    "Intel Core i7-1370P": {
+        "singlethread": 3558,
+        "multithread": 20317,
+        "gaming": 4656
     },
     "Intel Core i7-12700T": {
         "singlethread": 3556,
         "multithread": 21177
-    },
-    "Intel Xeon W-1390P @ 3.50GHz": {
-        "singlethread": 3555,
-        "multithread": 25062
     },
     "Intel Core i5-13450HX": {
         "singlethread": 3552,
@@ -1606,6 +1667,7 @@
     },
     "AMD Ryzen 5 7540U": {
         "singlethread": 3544,
+        "multithread": 18576,
         "gaming": 3247
     },
     "AMD Ryzen 7 8840U": {
@@ -1613,7 +1675,8 @@
         "multithread": 23338
     },
     "AMD Ryzen 5 PRO 8540U": {
-        "singlethread": 3541
+        "singlethread": 3541,
+        "multithread": 18184
     },
     "AMD EPYC 9B45": {
         "singlethread": 3540,
@@ -1621,22 +1684,22 @@
     },
     "Intel Core i7-12650H": {
         "singlethread": 3540,
-        "multithread": 21969,
-        "gaming": 4320
+        "multithread": 21970,
+        "gaming": 4319
     },
     "Intel Core i5-13400": {
         "singlethread": 3537,
-        "multithread": 23709,
-        "gaming": 3968
+        "multithread": 23712,
+        "gaming": 3969
     },
     "AMD Ryzen 7 5800XT": {
         "singlethread": 3537,
-        "multithread": 27979,
-        "gaming": 4149
+        "multithread": 27981,
+        "gaming": 4150
     },
     "Intel Core i7-12700H": {
         "singlethread": 3536,
-        "multithread": 25622,
+        "multithread": 25620,
         "gaming": 4467
     },
     "AMD Ryzen 5 8640U": {
@@ -1675,14 +1738,17 @@
     },
     "Intel Core i5-12600T": {
         "singlethread": 3516,
+        "multithread": 17446,
         "gaming": 3577
     },
     "Intel Core 5 210H": {
         "singlethread": 3515,
+        "multithread": 18899,
         "gaming": 2409
     },
     "Intel Core i7-1265UL": {
-        "singlethread": 3513
+        "singlethread": 3513,
+        "multithread": 18294
     },
     "Intel Core i9-11900K @ 3.50GHz": {
         "singlethread": 3511,
@@ -1690,8 +1756,8 @@
     },
     "Intel Core Ultra 7 165H": {
         "singlethread": 3508,
-        "multithread": 25916,
-        "gaming": 5322
+        "multithread": 25920,
+        "gaming": 5323
     },
     "AMD EPYC 9755": {
         "singlethread": 3503,
@@ -1702,7 +1768,8 @@
         "multithread": 162675
     },
     "Intel Core i3-14100T": {
-        "singlethread": 3500
+        "singlethread": 3500,
+        "multithread": 13580
     },
     "AMD Ryzen 9 PRO 5945": {
         "singlethread": 3499,
@@ -1718,7 +1785,8 @@
         "multithread": 21009
     },
     "Intel Xeon W-1350P @ 4.00GHz": {
-        "singlethread": 3489
+        "singlethread": 3489,
+        "multithread": 19611
     },
     "Intel Core i7-13705H": {
         "singlethread": 3483,
@@ -1731,10 +1799,12 @@
     },
     "Intel Core i5-12400F": {
         "singlethread": 3481,
+        "multithread": 19427,
         "gaming": 3535
     },
     "Intel Core i5-12500T": {
-        "singlethread": 3479
+        "singlethread": 3479,
+        "multithread": 16399
     },
     "Intel Xeon W-1370 @ 2.90GHz": {
         "singlethread": 3478,
@@ -1742,23 +1812,26 @@
     },
     "Intel Core i5-13500H": {
         "singlethread": 3474,
-        "multithread": 21795,
-        "gaming": 3032
+        "multithread": 21796,
+        "gaming": 3031
     },
     "Intel Core i3-1220PE": {
-        "singlethread": 3474
+        "singlethread": 3474,
+        "multithread": 16146
     },
     "AMD Ryzen 5 PRO 7540U": {
         "singlethread": 3470,
+        "multithread": 17781,
         "gaming": 3193
     },
     "AMD Ryzen 9 5950X": {
         "singlethread": 3470,
-        "multithread": 45431,
+        "multithread": 45428,
         "gaming": 4274
     },
     "Intel Core i5-1340P": {
-        "singlethread": 3469
+        "singlethread": 3469,
+        "multithread": 18761
     },
     "AMD Ryzen 9 5900X": {
         "singlethread": 3469,
@@ -1771,23 +1844,29 @@
         "gaming": 5145
     },
     "Intel Xeon W-1350 @ 3.30GHz": {
-        "singlethread": 3465
+        "singlethread": 3465,
+        "multithread": 18804
     },
     "Intel Core i5-1250P": {
-        "singlethread": 3462
+        "singlethread": 3462,
+        "multithread": 19533
     },
     "Intel Core i7-1360P": {
         "singlethread": 3459,
+        "multithread": 18635,
         "gaming": 3000
     },
     "Intel CoreT i5-1350P": {
-        "singlethread": 3459
+        "singlethread": 3459,
+        "multithread": 19429
     },
     "Intel Core i3-13100": {
-        "singlethread": 3456
+        "singlethread": 3456,
+        "multithread": 13711
     },
     "Intel Core i5-12400": {
-        "singlethread": 3456
+        "singlethread": 3456,
+        "multithread": 18749
     },
     "Intel Xeon Gold 6534": {
         "singlethread": 3456,
@@ -1822,11 +1901,13 @@
         "gaming": 3933
     },
     "Intel Core i7-1355U": {
-        "singlethread": 3444,
-        "gaming": 3301
+        "singlethread": 3445,
+        "multithread": 14301,
+        "gaming": 3302
     },
     "Intel Core i3-12100F": {
-        "singlethread": 3444
+        "singlethread": 3444,
+        "multithread": 14016
     },
     "AMD Ryzen 7 PRO 5845": {
         "singlethread": 3442,
@@ -1852,7 +1933,8 @@
         "gaming": 4528
     },
     "Intel Core i3-12100E": {
-        "singlethread": 3435
+        "singlethread": 3435,
+        "multithread": 14270
     },
     "Intel Xeon E-2388G @ 3.20GHz": {
         "singlethread": 3434,
@@ -1868,10 +1950,12 @@
         "gaming": 4005
     },
     "Intel CoreTM Ultra 5 115U": {
-        "singlethread": 3421
+        "singlethread": 3421,
+        "multithread": 12771
     },
     "Intel Core i3-13100T": {
-        "singlethread": 3421
+        "singlethread": 3421,
+        "multithread": 12848
     },
     "Intel Core i5-12500H": {
         "singlethread": 3420,
@@ -1879,7 +1963,8 @@
         "gaming": 2402
     },
     "Intel Core i5-1345U": {
-        "singlethread": 3419,
+        "singlethread": 3418,
+        "multithread": 14524,
         "gaming": 3102
     },
     "Intel Xeon W-1390 @ 2.80GHz": {
@@ -1888,7 +1973,8 @@
     },
     "Intel Core i7-1365U": {
         "singlethread": 3414,
-        "gaming": 3520
+        "multithread": 14065,
+        "gaming": 3521
     },
     "Intel Core i9-11900F @ 2.50GHz": {
         "singlethread": 3413,
@@ -1903,32 +1989,35 @@
         "multithread": 22827
     },
     "AMD Ryzen 9 6900HX": {
-        "singlethread": 3410,
-        "multithread": 24357,
+        "singlethread": 3409,
+        "multithread": 24351,
         "gaming": 2839
     },
     "Intel Xeon Gold 5420+": {
         "singlethread": 3408,
         "multithread": 58209
     },
-    "Intel Core Ultra 5 125H": {
-        "singlethread": 3400,
-        "multithread": 21098,
-        "gaming": 3247
-    },
     "AMD Ryzen 9 PRO 6950HS": {
         "singlethread": 3400,
         "multithread": 22775,
         "gaming": 2689
     },
+    "Intel Core Ultra 5 125H": {
+        "singlethread": 3399,
+        "multithread": 21095,
+        "gaming": 3247
+    },
     "Intel Core i3-13100E": {
-        "singlethread": 3399
+        "singlethread": 3399,
+        "multithread": 13727
     },
     "Intel Xeon E-2374G @ 3.70GHz": {
-        "singlethread": 3398
+        "singlethread": 3398,
+        "multithread": 13726
     },
     "Intel Core i5-13420H": {
-        "singlethread": 3398
+        "singlethread": 3397,
+        "multithread": 17479
     },
     "AMD Ryzen 7 6810U": {
         "singlethread": 3397,
@@ -1940,17 +2029,20 @@
         "gaming": 3551
     },
     "Intel Xeon E-2386G @ 3.50GHz": {
-        "singlethread": 3392
+        "singlethread": 3392,
+        "multithread": 19506
     },
     "Intel Core 7 160UL": {
-        "singlethread": 3391
+        "singlethread": 3391,
+        "multithread": 11043
     },
     "Intel Core i7-11700K @ 3.60GHz": {
         "singlethread": 3390,
         "multithread": 24409
     },
     "Apple A14 Bionic": {
-        "singlethread": 3389
+        "singlethread": 3389,
+        "multithread": 8554
     },
     "AMD Ryzen 7 5700X": {
         "singlethread": 3385,
@@ -1959,14 +2051,12 @@
     },
     "Intel Core i3-1315U": {
         "singlethread": 3380,
+        "multithread": 11492,
         "gaming": 2617
     },
     "Intel U300E": {
-        "singlethread": 3379
-    },
-    "Intel Core Ultra 7 155U": {
-        "singlethread": 3378,
-        "gaming": 3845
+        "singlethread": 3379,
+        "multithread": 8376
     },
     "Intel Xeon w5-2445": {
         "singlethread": 3377,
@@ -1979,6 +2069,11 @@
     "Intel Xeon w3-2435": {
         "singlethread": 3377,
         "multithread": 26434
+    },
+    "Intel Core Ultra 7 155U": {
+        "singlethread": 3375,
+        "multithread": 16378,
+        "gaming": 3844
     },
     "AMD EPYC 9274F": {
         "singlethread": 3373,
@@ -2006,24 +2101,29 @@
         "gaming": 4478
     },
     "Intel Core i3-1220P": {
-        "singlethread": 3362
+        "singlethread": 3362,
+        "multithread": 14481
     },
     "Intel Xeon Gold 6544Y": {
         "singlethread": 3361,
         "multithread": 50319
     },
     "virt-9.1": {
-        "singlethread": 3361
+        "singlethread": 3361,
+        "multithread": 9863
     },
     "Intel Core i3-12300T": {
-        "singlethread": 3358
+        "singlethread": 3358,
+        "multithread": 13249
     },
     "Intel Core i7-1270P": {
-        "singlethread": 3357,
-        "gaming": 2550
+        "singlethread": 3358,
+        "multithread": 16995,
+        "gaming": 2551
     },
     "Intel Core Ultra 7 165U": {
         "singlethread": 3357,
+        "multithread": 17098,
         "gaming": 3996
     },
     "AMD Ryzen 7 PRO 5755GE": {
@@ -2040,6 +2140,7 @@
     },
     "Intel Core i3-1210U": {
         "singlethread": 3354,
+        "multithread": 10228,
         "gaming": 2619
     },
     "Intel Xeon E-2378G @ 2.80GHz": {
@@ -2047,7 +2148,8 @@
         "multithread": 21153
     },
     "Intel Core i5-12400T": {
-        "singlethread": 3351
+        "singlethread": 3351,
+        "multithread": 15781
     },
     "AMD Ryzen 7 7736U": {
         "singlethread": 3350,
@@ -2060,6 +2162,7 @@
     },
     "Intel Core Ultra 5 135U": {
         "singlethread": 3346,
+        "multithread": 17374,
         "gaming": 3945
     },
     "AMD Ryzen 5 5600T": {
@@ -2068,7 +2171,8 @@
         "gaming": 4717
     },
     "Intel Core i5-11600K @ 3.90GHz": {
-        "singlethread": 3344
+        "singlethread": 3344,
+        "multithread": 19527
     },
     "AMD Ryzen Threadripper PRO 5945WX": {
         "singlethread": 3344,
@@ -2076,24 +2180,29 @@
     },
     "Intel Core i5-1334U": {
         "singlethread": 3343,
+        "multithread": 13410,
         "gaming": 2807
     },
     "Intel Core i5-12450HX": {
-        "singlethread": 3343
-    },
-    "Intel Core i5-1335U": {
-        "singlethread": 3337,
-        "gaming": 3133
+        "singlethread": 3343,
+        "multithread": 18282
     },
     "AMD Ryzen Threadripper PRO 5965WX": {
         "singlethread": 3337,
         "multithread": 66353
     },
+    "Intel Core i5-1335U": {
+        "singlethread": 3337,
+        "multithread": 14286,
+        "gaming": 3133
+    },
     "QTI QCS8550": {
-        "singlethread": 3332
+        "singlethread": 3332,
+        "multithread": 10487
     },
     "Intel Core i5-11600KF @ 3.90GHz": {
-        "singlethread": 3327
+        "singlethread": 3327,
+        "multithread": 19513
     },
     "AMD Ryzen 9 PRO 6950H": {
         "singlethread": 3326,
@@ -2111,7 +2220,7 @@
     },
     "AMD Ryzen Threadripper PRO 5955WX": {
         "singlethread": 3324,
-        "multithread": 49222
+        "multithread": 49220
     },
     "AMD Ryzen 7 7435H": {
         "singlethread": 3324,
@@ -2122,7 +2231,8 @@
         "multithread": 75334
     },
     "Intel Xeon E-2356G @ 3.20GHz": {
-        "singlethread": 3320
+        "singlethread": 3320,
+        "multithread": 18459
     },
     "Intel Core i5-12600HL": {
         "singlethread": 3318,
@@ -2138,6 +2248,7 @@
     },
     "Intel Core i7-1280P": {
         "singlethread": 3314,
+        "multithread": 20162,
         "gaming": 4173
     },
     "AMD Ryzen 7 PRO 5750G": {
@@ -2145,12 +2256,17 @@
         "multithread": 24093
     },
     "Intel Core i5-12450H": {
-        "singlethread": 3305
+        "singlethread": 3306,
+        "multithread": 16263
     },
     "AMD Ryzen 7 PRO 6850H": {
         "singlethread": 3305,
         "multithread": 23414,
         "gaming": 2718
+    },
+    "Intel Xeon w5-3425": {
+        "singlethread": 3303,
+        "multithread": 36193
     },
     "AMD Ryzen 7 PRO 6850HS": {
         "singlethread": 3301,
@@ -2167,16 +2283,13 @@
     },
     "AMD Ryzen 7 7735HS": {
         "singlethread": 3296,
-        "multithread": 23168,
+        "multithread": 23170,
         "gaming": 2862
-    },
-    "Intel Xeon w5-3425": {
-        "singlethread": 3295,
-        "multithread": 36155
     },
     "Intel Core Ultra 5 125U": {
         "singlethread": 3295,
-        "gaming": 3817
+        "multithread": 17412,
+        "gaming": 3818
     },
     "AMD Ryzen 7 5700": {
         "singlethread": 3295,
@@ -2191,10 +2304,12 @@
         "gaming": 2836
     },
     "Intel Core 3 201E": {
-        "singlethread": 3284
+        "singlethread": 3284,
+        "multithread": 14817
     },
     "Intel Core i5-11600 @ 2.80GHz": {
-        "singlethread": 3284
+        "singlethread": 3284,
+        "multithread": 17921
     },
     "AMD Ryzen 7 5700G": {
         "singlethread": 3283,
@@ -2210,13 +2325,16 @@
     },
     "Intel Core 5 220U": {
         "singlethread": 3273,
+        "multithread": 14184,
         "gaming": 3266
     },
     "Intel Core i9-11900T @ 1.50GHz": {
-        "singlethread": 3272
+        "singlethread": 3272,
+        "multithread": 18461
     },
     "Snapdragon X Plus - X1P42100 - Qualcomm Ory": {
-        "singlethread": 3270
+        "singlethread": 3270,
+        "multithread": 18124
     },
     "Intel Xeon Gold 6442Y": {
         "singlethread": 3268,
@@ -2224,7 +2342,7 @@
     },
     "Intel Core i7-11700 @ 2.50GHz": {
         "singlethread": 3264,
-        "multithread": 20675
+        "multithread": 20676
     },
     "Intel Core i7-11700F @ 2.50GHz": {
         "singlethread": 3262,
@@ -2239,7 +2357,8 @@
         "singlethread": 3258
     },
     "Intel Pentium Gold 8505": {
-        "singlethread": 3256
+        "singlethread": 3256,
+        "multithread": 9170
     },
     "AMD Ryzen 5 5600": {
         "singlethread": 3256,
@@ -2253,13 +2372,16 @@
     },
     "Intel Core i7-1260P": {
         "singlethread": 3251,
+        "multithread": 16782,
         "gaming": 2480
     },
     "Intel Core i3-12100T": {
-        "singlethread": 3250
+        "singlethread": 3250,
+        "multithread": 12505
     },
     "AMD Ryzen 5 PRO 5655G": {
-        "singlethread": 3250
+        "singlethread": 3250,
+        "multithread": 20282
     },
     "Intel Xeon Silver 4410T": {
         "singlethread": 3243,
@@ -2275,14 +2397,17 @@
         "multithread": 20577
     },
     "AMD Ryzen 5 PRO 5655GE": {
-        "singlethread": 3239
+        "singlethread": 3239,
+        "multithread": 18241
     },
     "Intel Core i5-1240U": {
         "singlethread": 3239,
+        "multithread": 13406,
         "gaming": 3526
     },
     "Mediatek MT6983W/CZA": {
-        "singlethread": 3238
+        "singlethread": 3238,
+        "multithread": 9136
     },
     "AMD Ryzen 9 6900HS": {
         "singlethread": 3237,
@@ -2308,7 +2433,8 @@
         "multithread": 48734
     },
     "ARM - 12 Core 0 MHz": {
-        "singlethread": 3232
+        "singlethread": 3232,
+        "multithread": 14352
     },
     "Intel Xeon W-11955M @ 2.60GHz": {
         "singlethread": 3231,
@@ -2319,7 +2445,8 @@
         "multithread": 62564
     },
     "Intel Core i5-1240P": {
-        "singlethread": 3221
+        "singlethread": 3221,
+        "multithread": 16501
     },
     "AMD Ryzen 9 5900HS Creator Edition": {
         "singlethread": 3220,
@@ -2331,7 +2458,8 @@
         "multithread": 54666
     },
     "Intel Core i3-1215U": {
-        "singlethread": 3218
+        "singlethread": 3218,
+        "multithread": 10468
     },
     "Intel 300": {
         "singlethread": 3217
@@ -2358,16 +2486,20 @@
         "multithread": 160778
     },
     "Intel Core i7-12700TE": {
-        "singlethread": 3209
+        "singlethread": 3209,
+        "multithread": 19507
     },
     "Intel Xeon E-2378 @ 2.60GHz": {
-        "singlethread": 3209
+        "singlethread": 3209,
+        "multithread": 17332
     },
     "QTI SG8275": {
-        "singlethread": 3208
+        "singlethread": 3208,
+        "multithread": 10036
     },
     "Intel Xeon E-2334 @ 3.40GHz": {
-        "singlethread": 3203
+        "singlethread": 3203,
+        "multithread": 12674
     },
     "AMD Ryzen 7 6800HS Creator Edition": {
         "singlethread": 3202,
@@ -2375,13 +2507,16 @@
         "gaming": 2597
     },
     "Intel Xeon W-11555MRE @ 2.60GHz": {
-        "singlethread": 3201
+        "singlethread": 3201,
+        "multithread": 17484
     },
     "ARM - 6 Core 0 MHz": {
-        "singlethread": 3200
+        "singlethread": 3200,
+        "multithread": 8515
     },
     "AMD Ryzen 5 7535U": {
         "singlethread": 3199,
+        "multithread": 17001,
         "gaming": 2852
     },
     "Intel Xeon 6741P": {
@@ -2389,14 +2524,17 @@
         "multithread": 100660
     },
     "Snapdragon X Plus (8-core) @ 3.30 GHz": {
-        "singlethread": 3194
+        "singlethread": 3194,
+        "multithread": 17778
     },
     "Intel Core i7-1255U": {
         "singlethread": 3193,
-        "gaming": 2765
+        "multithread": 13237,
+        "gaming": 2764
     },
     "Intel Xeon W-11855M @ 3.20GHz": {
-        "singlethread": 3190
+        "singlethread": 3190,
+        "multithread": 17745
     },
     "Intel Xeon Silver 4510": {
         "singlethread": 3190,
@@ -2408,7 +2546,8 @@
         "gaming": 8901
     },
     "Intel Core i5-11500B @ 3.30GHz": {
-        "singlethread": 3184
+        "singlethread": 3184,
+        "multithread": 17206
     },
     "Intel Xeon Gold 6434": {
         "singlethread": 3184,
@@ -2420,29 +2559,34 @@
         "gaming": 2564
     },
     "AMD Ryzen 5 PRO 5650GE": {
-        "singlethread": 3183
+        "singlethread": 3183,
+        "multithread": 18197
     },
     "AMD Ryzen 5 5600GE": {
-        "singlethread": 3181
+        "singlethread": 3181,
+        "multithread": 18130
     },
     "AMD Ryzen 5 6600H": {
         "singlethread": 3179,
+        "multithread": 18669,
         "gaming": 2762
     },
     "AMD Ryzen 9 5900HX": {
         "singlethread": 3178,
-        "multithread": 22329,
+        "multithread": 22328,
         "gaming": 2438
     },
     "AMD Ryzen 5 5600G": {
-        "singlethread": 3177
+        "singlethread": 3177,
+        "multithread": 19717
     },
     "Intel Core i3-12100": {
-        "singlethread": 3174
+        "singlethread": 3173,
+        "multithread": 12171
     },
     "AMD Ryzen 7 7435HS": {
         "singlethread": 3169,
-        "multithread": 23397
+        "multithread": 23401
     },
     "Intel Xeon W-1290P @ 3.70GHz": {
         "singlethread": 3166,
@@ -2453,12 +2597,13 @@
         "multithread": 21409
     },
     "AMD Ryzen 7 6800U": {
-        "singlethread": 3163,
-        "multithread": 20342,
+        "singlethread": 3164,
+        "multithread": 20347,
         "gaming": 2527
     },
     "AMD Ryzen 5 Pro 7535U": {
         "singlethread": 3161,
+        "multithread": 16565,
         "gaming": 2800
     },
     "AMD EPYC 9474F": {
@@ -2474,39 +2619,47 @@
         "multithread": 89850
     },
     "AMD Ryzen 9 5980HS": {
-        "singlethread": 3153
+        "singlethread": 3153,
+        "multithread": 20309
     },
     "Intel Core i7-1260U": {
         "singlethread": 3153,
+        "multithread": 14011,
         "gaming": 3691
     },
     "Intel Core i5-1235U": {
-        "singlethread": 3151
+        "singlethread": 3151,
+        "multithread": 12924
     },
     "AMD Ryzen 7 Pro 7735U": {
         "singlethread": 3151,
+        "multithread": 18852,
         "gaming": 2566
     },
     "AMD Ryzen 5 PRO 6650U": {
         "singlethread": 3149,
+        "multithread": 16429,
         "gaming": 2666
     },
     "Intel Core i5-1340PE": {
-        "singlethread": 3147
+        "singlethread": 3147,
+        "multithread": 17476
     },
     "Qualcomm Snapdragon X Elite - X1E-78-100": {
         "singlethread": 3145,
         "multithread": 22879
     },
     "AMD Ryzen 3 PRO 7330U": {
-        "singlethread": 3145
+        "singlethread": 3145,
+        "multithread": 12477
     },
     "AMD EPYC 9845": {
         "singlethread": 3144,
         "multithread": 152985
     },
     "Intel Core i7-1265U": {
-        "singlethread": 3143
+        "singlethread": 3143,
+        "multithread": 13360
     },
     "Intel Core i9-11950H @ 2.60GHz": {
         "singlethread": 3141,
@@ -2514,35 +2667,42 @@
         "gaming": 2968
     },
     "Intel Core i3-12100TE": {
-        "singlethread": 3139
+        "singlethread": 3139,
+        "multithread": 11859
     },
     "AMD Ryzen 7 PRO 5800H": {
-        "singlethread": 3136
+        "singlethread": 3136,
+        "multithread": 19313
     },
     "AMD EPYC 9374F": {
         "singlethread": 3135,
         "multithread": 82009
     },
     "Intel Xeon W-11865MRE @ 2.60GHz": {
-        "singlethread": 3135
+        "singlethread": 3135,
+        "multithread": 19589
     },
     "AMD Ryzen 9 5900HS": {
         "singlethread": 3134,
         "multithread": 21345
     },
     "Intel Core i5-11500 @ 2.70GHz": {
-        "singlethread": 3131
+        "singlethread": 3131,
+        "multithread": 17110
     },
     "AMD Ryzen 5 6600U": {
         "singlethread": 3126,
+        "multithread": 16985,
         "gaming": 2806
     },
     "AMD Ryzen 5 7535HS": {
         "singlethread": 3124,
+        "multithread": 17921,
         "gaming": 2831
     },
     "Intel Core i5-1345URE": {
-        "singlethread": 3122
+        "singlethread": 3122,
+        "multithread": 11565
     },
     "Intel Core 5 220H": {
         "singlethread": 3120,
@@ -2555,7 +2715,8 @@
         "gaming": 2491
     },
     "AMD Ryzen Z2 Go": {
-        "singlethread": 3116
+        "singlethread": 3116,
+        "multithread": 12043
     },
     "Intel Core i9-10900KF @ 3.70GHz": {
         "singlethread": 3115,
@@ -2579,13 +2740,16 @@
     },
     "Intel Core i3-1305U": {
         "singlethread": 3112,
+        "multithread": 8745,
         "gaming": 3441
     },
     "Mediatek MT8798Z/CNZA": {
-        "singlethread": 3111
+        "singlethread": 3111,
+        "multithread": 9110
     },
     "AMD Ryzen 5 PRO 6650H": {
         "singlethread": 3110,
+        "multithread": 17936,
         "gaming": 2822
     },
     "Intel Xeon Gold 6438Y+": {
@@ -2593,33 +2757,41 @@
         "multithread": 62660
     },
     "AMD Ryzen 3 PRO 7335U": {
-        "singlethread": 3106
+        "singlethread": 3106,
+        "multithread": 12325
     },
     "Intel Core i9-11900H @ 2.50GHz": {
         "singlethread": 3102,
+        "multithread": 20163,
         "gaming": 2854
     },
     "AMD Ryzen 3 PRO 5350G": {
-        "singlethread": 3101
+        "singlethread": 3101,
+        "multithread": 13793
     },
     "AMD Ryzen 7 5800HS Creator Edition": {
         "singlethread": 3100,
         "multithread": 21166
     },
     "Intel Core i5-1245U": {
-        "singlethread": 3098
+        "singlethread": 3096,
+        "multithread": 13172
     },
     "Snapdragon 8 Gen2 Mobile Platform for Galaxy": {
-        "singlethread": 3093
+        "singlethread": 3093,
+        "multithread": 9362
     },
     "AMD Ryzen 3 PRO 5355GE": {
-        "singlethread": 3089
+        "singlethread": 3089,
+        "multithread": 12761
     },
     "AMD Ryzen 3 PRO 5350GE": {
-        "singlethread": 3087
+        "singlethread": 3087,
+        "multithread": 12648
     },
     "AMD Ryzen 5 6600HS Creator Edition": {
         "singlethread": 3085,
+        "multithread": 17942,
         "gaming": 2881
     },
     "Intel Core i7-1370PE": {
@@ -2627,13 +2799,16 @@
         "multithread": 21920
     },
     "Intel Xeon W-1290 @ 3.20GHz": {
-        "singlethread": 3083
+        "singlethread": 3083,
+        "multithread": 20073
     },
     "ARM - 8 Core 2424 MHz": {
-        "singlethread": 3083
+        "singlethread": 3083,
+        "multithread": 8610
     },
     "AMD Ryzen 3 5300GE": {
-        "singlethread": 3082
+        "singlethread": 3082,
+        "multithread": 12856
     },
     "Intel Xeon Gold 5412U": {
         "singlethread": 3074,
@@ -2645,77 +2820,101 @@
     },
     "Intel Core i7-11850H @ 2.50GHz": {
         "singlethread": 3070,
-        "gaming": 2841
+        "multithread": 20073,
+        "gaming": 2840
     },
     "Intel Core i9-10850K @ 3.60GHz": {
         "singlethread": 3067,
-        "multithread": 22033
+        "multithread": 22032
     },
     "Intel Xeon E-2336 @ 2.90GHz": {
-        "singlethread": 3064
+        "singlethread": 3064,
+        "multithread": 16212
     },
     "Intel Core Ultra 5 134U": {
         "singlethread": 3063,
+        "multithread": 12464,
         "gaming": 3207
     },
     "AMD Ryzen 5 5500": {
-        "singlethread": 3058
+        "singlethread": 3058,
+        "multithread": 19331
     },
     "AMD Ryzen 5 7430U": {
         "singlethread": 3058,
-        "gaming": 2771
+        "multithread": 16636,
+        "gaming": 2770
     },
     "AMD Ryzen 3 5300G": {
-        "singlethread": 3057
+        "singlethread": 3057,
+        "multithread": 13011
     },
     "AMD Ryzen 3 7335U": {
-        "singlethread": 3053
+        "singlethread": 3053,
+        "multithread": 12592
     },
     "AMD Ryzen 7 5825U": {
-        "singlethread": 3052
+        "singlethread": 3052,
+        "multithread": 18130
+    },
+    "Intel Core i3-1315UE": {
+        "singlethread": 3051,
+        "multithread": 8849
     },
     "Intel U300": {
         "singlethread": 3050,
+        "multithread": 8411,
         "gaming": 3310
     },
     "AMD Ryzen 5 7530U": {
         "singlethread": 3048,
+        "multithread": 15537,
         "gaming": 2504
     },
     "Intel Xeon E-2324G @ 3.10GHz": {
-        "singlethread": 3046
+        "singlethread": 3046,
+        "multithread": 10198
     },
     "Intel Core i3-11100HE @ 2.40GHz": {
-        "singlethread": 3044
+        "singlethread": 3044,
+        "multithread": 11673
     },
     "Intel Core i7-11800H @ 2.30GHz": {
         "singlethread": 3044,
+        "multithread": 20018,
         "gaming": 2805
     },
     "Intel Core i7-10700K @ 3.80GHz": {
-        "singlethread": 3043
+        "singlethread": 3043,
+        "multithread": 18611
     },
     "Intel Core i5-11500H @ 2.90GHz": {
-        "singlethread": 3042
+        "singlethread": 3042,
+        "multithread": 15800
     },
     "Intel Core i7-10700KF @ 3.80GHz": {
-        "singlethread": 3034
+        "singlethread": 3034,
+        "multithread": 18424
     },
     "Intel Core i9-9900KS @ 4.00GHz": {
-        "singlethread": 3034
+        "singlethread": 3034,
+        "multithread": 19441
     },
     "Intel Core i9-10900F @ 2.80GHz": {
-        "singlethread": 3029
+        "singlethread": 3029,
+        "multithread": 19791
     },
     "Intel Xeon Gold 5512U": {
         "singlethread": 3027,
         "multithread": 60347
     },
     "Mediatek Dimensity 9400 (MT6991)": {
-        "singlethread": 3022
+        "singlethread": 3022,
+        "multithread": 12506
     },
     "Intel Xeon w3-2425": {
-        "singlethread": 3022
+        "singlethread": 3022,
+        "multithread": 18838
     },
     "AMD Ryzen 7 5800H": {
         "singlethread": 3021,
@@ -2723,49 +2922,60 @@
     },
     "Intel Core i7-11600H @ 2.90GHz": {
         "singlethread": 3019,
+        "multithread": 16093,
         "gaming": 2622
     },
     "Intel Core i5-1335UE": {
-        "singlethread": 3017
+        "singlethread": 3017,
+        "multithread": 10863
     },
     "AMD EPYC 9384X": {
         "singlethread": 3015,
         "multithread": 69665
     },
     "AMD Ryzen 7 5800U": {
-        "singlethread": 3011
+        "singlethread": 3011,
+        "multithread": 18193
     },
     "Intel Core i9-10900 @ 2.80GHz": {
-        "singlethread": 3010
+        "singlethread": 3010,
+        "multithread": 19330
     },
     "Intel Xeon W-1270 @ 3.40GHz": {
-        "singlethread": 3007
+        "singlethread": 3007,
+        "multithread": 17437
     },
     "Intel Xeon Silver 4510T": {
         "singlethread": 3006,
         "multithread": 29119
     },
     "ARM - 16 Core 0 MHz": {
-        "singlethread": 3005
+        "singlethread": 3005,
+        "multithread": 19753
     },
     "AMD Ryzen 7 7730U": {
-        "singlethread": 3003
+        "singlethread": 3003,
+        "multithread": 18039
     },
     "ARM Firestorm-M1-Pro 8 Core 2064 MHz": {
-        "singlethread": 2999
+        "singlethread": 2999,
+        "multithread": 9872
     },
     "Intel Xeon Gold 6423N": {
         "singlethread": 2998,
         "multithread": 57434
     },
     "AMD Ryzen 7 PRO 7730U": {
-        "singlethread": 2998
+        "singlethread": 2998,
+        "multithread": 18362
     },
     "Intel Core Ultra 7 164U": {
-        "singlethread": 2996
+        "singlethread": 2996,
+        "multithread": 13296
     },
     "Intel Core i5-12500TE": {
-        "singlethread": 2994
+        "singlethread": 2994,
+        "multithread": 14632
     },
     "AMD EPYC 9454P": {
         "singlethread": 2993,
@@ -2776,68 +2986,76 @@
         "multithread": 64086
     },
     "Intel Xeon W-1270E @ 3.40GHz": {
-        "singlethread": 2990
+        "singlethread": 2990,
+        "multithread": 18635
     },
     "Intel Core i5-11400 @ 2.60GHz": {
-        "singlethread": 2990
+        "singlethread": 2990,
+        "multithread": 16692
     },
     "Intel Xeon W-1270P @ 3.80GHz": {
-        "singlethread": 2988
+        "singlethread": 2988,
+        "multithread": 17315
     },
     "Intel Xeon Silver 4416+": {
         "singlethread": 2987,
         "multithread": 44140
     },
     "Intel Core i7-1195G7 @ 2.90GHz": {
-        "singlethread": 2984
+        "singlethread": 2984,
+        "multithread": 10568
     },
     "AMD Ryzen 7 5800HS": {
-        "singlethread": 2984
+        "singlethread": 2984,
+        "multithread": 19631
     },
     "Intel Core i7-11850HE @ 2.60GHz": {
         "singlethread": 2982,
         "multithread": 21365
     },
-    "Intel Core i5-11400F @ 2.60GHz": {
-        "singlethread": 2981
-    },
     "Intel Pentium Gold G7400": {
         "singlethread": 2981
     },
+    "Intel Core i5-11400F @ 2.60GHz": {
+        "singlethread": 2981,
+        "multithread": 16907
+    },
     "Intel Xeon W-1250P @ 4.10GHz": {
-        "singlethread": 2980
+        "singlethread": 2980,
+        "multithread": 14355
     },
     "Intel Xeon Gold 6421N": {
         "singlethread": 2978,
         "multithread": 58797
     },
     "Intel Core i5-11400H @ 2.70GHz": {
-        "singlethread": 2976
+        "singlethread": 2976,
+        "multithread": 15352
     },
     "Intel Xeon Gold 6542Y": {
         "singlethread": 2975,
         "multithread": 59047
     },
     "Intel Xeon W-1290T @ 1.90GHz": {
-        "singlethread": 2974
+        "singlethread": 2974,
+        "multithread": 18409
     },
     "AMD Ryzen 7 5700X3D": {
         "singlethread": 2970,
-        "multithread": 26322,
+        "multithread": 26321,
         "gaming": 7820
     },
     "Intel Core i9-9990XE @ 4.00GHz": {
         "singlethread": 2970,
         "multithread": 30162
     },
-    "Intel Core i3-1315UE": {
-        "singlethread": 2965
-    },
     "AMD Ryzen 3 7330U": {
-        "singlethread": 2956
+        "singlethread": 2956,
+        "multithread": 10758
     },
     "AMD Ryzen 5 5500GT": {
-        "singlethread": 2955
+        "singlethread": 2955,
+        "multithread": 18640
     },
     "ARM Firestorm-M1 4 Core 2064 MHz": {
         "singlethread": 2954
@@ -2858,83 +3076,104 @@
         "singlethread": 2941
     },
     "AMD Ryzen 5 5500H": {
-        "singlethread": 2939
+        "singlethread": 2939,
+        "multithread": 11452
     },
     "Intel Core i5-1250PE": {
-        "singlethread": 2939
+        "singlethread": 2939,
+        "multithread": 18365
     },
     "Intel Core i7-11375H @ 3.30GHz": {
-        "singlethread": 2938
+        "singlethread": 2938,
+        "multithread": 11717
     },
     "AMD Ryzen 5 PRO 7530U": {
-        "singlethread": 2937
+        "singlethread": 2937,
+        "multithread": 14130
     },
     "AMD Ryzen 5 PRO 5675U": {
-        "singlethread": 2935
+        "singlethread": 2935,
+        "multithread": 14441
     },
     "Intel Core i5-11320H @ 3.20GHz": {
-        "singlethread": 2935
+        "singlethread": 2935,
+        "multithread": 10884
     },
     "QTI SM8650": {
-        "singlethread": 2934
+        "singlethread": 2934,
+        "multithread": 11422
     },
     "Intel Core i5-11260H @ 2.60GHz": {
-        "singlethread": 2925
+        "singlethread": 2925,
+        "multithread": 15542
     },
     "AMD EPYC 9634": {
         "singlethread": 2924,
         "multithread": 107944
     },
     "Intel Core i5-10600 @ 3.30GHz": {
-        "singlethread": 2924
+        "singlethread": 2924,
+        "multithread": 13657
     },
     "AMD EPYC 7443": {
         "singlethread": 2923,
         "multithread": 56686
-    },
-    "Intel Core i7-11370H @ 3.30GHz": {
-        "singlethread": 2920
     },
     "AMD EPYC 9R14": {
         "singlethread": 2920,
         "multithread": 116475
     },
     "Intel Core i9-9900K @ 3.60GHz": {
-        "singlethread": 2919
+        "singlethread": 2919,
+        "multithread": 18152
+    },
+    "Intel Core i7-11370H @ 3.30GHz": {
+        "singlethread": 2919,
+        "multithread": 11621
     },
     "AMD Ryzen 7 PRO 5875U": {
-        "singlethread": 2918
+        "singlethread": 2918,
+        "multithread": 16591
     },
     "Intel Core i5-10600K @ 4.10GHz": {
-        "singlethread": 2917
+        "singlethread": 2917,
+        "multithread": 14278
     },
     "Intel Core i7-1365URE": {
-        "singlethread": 2915
+        "singlethread": 2915,
+        "multithread": 10636
     },
     "Intel Core i3-11100B @ 3.60GHz": {
-        "singlethread": 2912
+        "singlethread": 2912,
+        "multithread": 11357
     },
     "AMD Ryzen 5 5600H": {
-        "singlethread": 2910
+        "singlethread": 2910,
+        "multithread": 16683
     },
     "Intel Core i9-9900KF @ 3.60GHz": {
-        "singlethread": 2909
+        "singlethread": 2908,
+        "multithread": 18087
     },
     "Samsung s5e9945": {
-        "singlethread": 2908
+        "singlethread": 2908,
+        "multithread": 10924
     },
     "Intel Core i5-10600KF @ 4.10GHz": {
-        "singlethread": 2908
+        "singlethread": 2908,
+        "multithread": 14169
     },
     "AMD Ryzen 7 PRO 5850U": {
-        "singlethread": 2907
+        "singlethread": 2907,
+        "multithread": 16958
     },
     "AMD EPYC 7443P": {
         "singlethread": 2907,
         "multithread": 56981
     },
     "AMD Ryzen 3 PRO 5475U": {
-        "singlethread": 2905
+        "singlethread": 2905,
+        "multithread": 11381
     },
     "AMD EPYC 9J14": {
         "singlethread": 2903,
@@ -2949,83 +3188,103 @@
         "multithread": 119618
     },
     "Intel Xeon E-2278G @ 3.40GHz": {
-        "singlethread": 2896
+        "singlethread": 2896,
+        "multithread": 16964
     },
     "AMD Ryzen 5 5600U": {
-        "singlethread": 2893
+        "singlethread": 2894,
+        "multithread": 15204
     },
     "Intel i7-1165G7": {
-        "singlethread": 2893
+        "singlethread": 2893,
+        "multithread": 8956
     },
     "Intel Xeon E-2288G @ 3.70GHz": {
-        "singlethread": 2892
+        "singlethread": 2892,
+        "multithread": 17443
     },
     "Intel Core i7-10700 @ 2.90GHz": {
-        "singlethread": 2891
+        "singlethread": 2891,
+        "multithread": 16161
     },
     "Intel Core i9-10900E @ 2.80GHz": {
-        "singlethread": 2891
+        "singlethread": 2891,
+        "multithread": 19469
     },
     "AMD EPYC 9684X": {
         "singlethread": 2891,
         "multithread": 121595
     },
     "Snapdragon X - X126100 - Qualcomm Oryon": {
-        "singlethread": 2888
+        "singlethread": 2888,
+        "multithread": 16801
     },
     "AMD EPYC 9V74": {
         "singlethread": 2888,
         "multithread": 117606
     },
     "AMD Ryzen 3 5425U": {
-        "singlethread": 2888
+        "singlethread": 2888,
+        "multithread": 11195
     },
     "AMD EPYC 9554": {
         "singlethread": 2885,
         "multithread": 108773
     },
-    "AMD Ryzen 5 PRO 5650U": {
-        "singlethread": 2883
-    },
     "QTI SM8550": {
-        "singlethread": 2883
+        "singlethread": 2883,
+        "multithread": 9071
     },
     "AMD EPYC 73F3": {
         "singlethread": 2883,
         "multithread": 46103
     },
+    "AMD Ryzen 5 PRO 5650U": {
+        "singlethread": 2882,
+        "multithread": 14574
+    },
     "Intel Xeon E-2276G @ 3.80GHz": {
-        "singlethread": 2880
+        "singlethread": 2880,
+        "multithread": 14126
     },
     "Intel Ultra 5 115U": {
-        "singlethread": 2876
+        "singlethread": 2876,
+        "multithread": 12381
     },
     "Intel Pentium Gold G7400E": {
         "singlethread": 2875
     },
     "Intel Core i7-10700F @ 2.90GHz": {
-        "singlethread": 2875
+        "singlethread": 2875,
+        "multithread": 16227
     },
     "Intel Core i3-10325 @ 3.90GHz": {
-        "singlethread": 2874
+        "singlethread": 2874,
+        "multithread": 10291
     },
     "AMD Ryzen 5 7235HS": {
-        "singlethread": 2873
+        "singlethread": 2873,
+        "multithread": 12243
     },
     "AMD Ryzen 5 5625U": {
-        "singlethread": 2872
+        "singlethread": 2871,
+        "multithread": 14795
     },
     "Intel Core i7-11700T @ 1.40GHz": {
-        "singlethread": 2871
+        "singlethread": 2871,
+        "multithread": 15685
     },
     "Intel Core i7-9700K @ 3.60GHz": {
-        "singlethread": 2865
+        "singlethread": 2865,
+        "multithread": 14413
     },
     "Intel Core i7-9700KF @ 3.60GHz": {
-        "singlethread": 2865
+        "singlethread": 2865,
+        "multithread": 14245
     },
     "Intel Core Ultra 5 115U": {
-        "singlethread": 2862
+        "singlethread": 2862,
+        "multithread": 12467
     },
     "Intel Xeon Gold 6416H": {
         "singlethread": 2860,
@@ -3036,25 +3295,32 @@
         "multithread": 74982
     },
     "Intel Core i7-11390H @ 3.40GHz": {
-        "singlethread": 2847
+        "singlethread": 2847,
+        "multithread": 9845
     },
     "Intel Core i7-10700E @ 2.90GHz": {
-        "singlethread": 2843
+        "singlethread": 2843,
+        "multithread": 16131
     },
     "Intel Core i3-10320 @ 3.80GHz": {
-        "singlethread": 2841
+        "singlethread": 2841,
+        "multithread": 9982
     },
     "Intel Xeon E-2286G @ 4.00GHz": {
-        "singlethread": 2836
+        "singlethread": 2836,
+        "multithread": 14008
     },
     "Intel Xeon W-1250 @ 3.30GHz": {
-        "singlethread": 2834
+        "singlethread": 2834,
+        "multithread": 13743
     },
     "AMD Ryzen 5 5560U": {
-        "singlethread": 2832
+        "singlethread": 2832,
+        "multithread": 15240
     },
     "Intel Core i5-1155G7 @ 2.50GHz": {
-        "singlethread": 2831
+        "singlethread": 2831,
+        "multithread": 9719
     },
     "Intel Xeon Platinum 8454H": {
         "singlethread": 2831,
@@ -3064,69 +3330,84 @@
         "singlethread": 2829,
         "multithread": 57970
     },
-    "Intel Core i3-1215UE": {
-        "singlethread": 2826
-    },
     "AMD EPYC 9184X": {
         "singlethread": 2822,
         "multithread": 47665
     },
     "Intel Core i7-8086K @ 4.00GHz": {
-        "singlethread": 2821
+        "singlethread": 2822,
+        "multithread": 14073
     },
     "Intel Xeon E-2274G @ 4.00GHz": {
-        "singlethread": 2821
+        "singlethread": 2821,
+        "multithread": 9764
     },
     "Intel Core i5-11600T @ 1.70GHz": {
-        "singlethread": 2821
+        "singlethread": 2821,
+        "multithread": 14447
+    },
+    "Intel Core i3-1215UE": {
+        "singlethread": 2819,
+        "multithread": 8331
     },
     "AMD Ryzen Embedded V3C14": {
-        "singlethread": 2818
+        "singlethread": 2818,
+        "multithread": 11882
     },
     "Intel Xeon E-2226G @ 3.40GHz": {
-        "singlethread": 2816
+        "singlethread": 2816,
+        "multithread": 11149
     },
     "Intel Xeon W-11865MLE @ 1.50GHz": {
-        "singlethread": 2813
+        "singlethread": 2813,
+        "multithread": 15917
     },
     "Intel Core i9-9900 @ 3.10GHz": {
-        "singlethread": 2807
+        "singlethread": 2807,
+        "multithread": 16307
     },
     "AMD EPYC 9745": {
         "singlethread": 2806,
         "multithread": 130698
     },
     "Intel Core i5-10500 @ 3.10GHz": {
-        "singlethread": 2805
+        "singlethread": 2805,
+        "multithread": 13190
     },
     "AMD Ryzen Embedded V3C48": {
-        "singlethread": 2804
+        "singlethread": 2804,
+        "multithread": 20203
     },
     "ARM Firestorm 8 Core 2064 MHz": {
         "singlethread": 2804
     },
     "Intel Core i5-10505 @ 3.20GHz": {
-        "singlethread": 2803
+        "singlethread": 2803,
+        "multithread": 12021
     },
     "AMD Ryzen 7 3800XT": {
         "singlethread": 2799,
         "multithread": 23494
     },
     "Intel Xeon W-1270TE @ 2.00GHz": {
-        "singlethread": 2796
+        "singlethread": 2796,
+        "multithread": 13553
     },
     "Intel Xeon E-2234 @ 3.60GHz": {
-        "singlethread": 2794
+        "singlethread": 2794,
+        "multithread": 9473
     },
     "Intel Xeon E-2236 @ 3.40GHz": {
-        "singlethread": 2788
+        "singlethread": 2788,
+        "multithread": 13900
     },
     "AMD EPYC 7K23": {
         "singlethread": 2788,
         "multithread": 81183
     },
     "Intel Core i5-11300H @ 3.10GHz": {
-        "singlethread": 2787
+        "singlethread": 2787,
+        "multithread": 10821
     },
     "AMD EPYC 9534": {
         "singlethread": 2786,
@@ -3144,10 +3425,12 @@
         "multithread": 35814
     },
     "Intel Core i7-1185G7 @ 3.00GHz": {
-        "singlethread": 2779
+        "singlethread": 2779,
+        "multithread": 10119
     },
     "AMD Ryzen 3 PRO 5450U": {
-        "singlethread": 2770
+        "singlethread": 2770,
+        "multithread": 11063
     },
     "Intel Core i3-9350K @ 4.00GHz": {
         "singlethread": 2769
@@ -3161,20 +3444,24 @@
         "multithread": 23509
     },
     "Intel Xeon E-2246G @ 3.60GHz": {
-        "singlethread": 2767
+        "singlethread": 2767,
+        "multithread": 13849
     },
     "Intel Core i3-10305 @ 3.80GHz": {
-        "singlethread": 2766
+        "singlethread": 2766,
+        "multithread": 9357
     },
     "Intel Core i7-1165G7 @ 2.80GHz": {
-        "singlethread": 2763
+        "singlethread": 2763,
+        "multithread": 9962
     },
     "Intel Xeon w5-3423": {
         "singlethread": 2763,
         "multithread": 28268
     },
     "Intel Core i9-10880H @ 2.30GHz": {
-        "singlethread": 2762
+        "singlethread": 2762,
+        "multithread": 14235
     },
     "Qualcomm Technologies, Inc SM8350AC": {
         "singlethread": 2758
@@ -3184,88 +3471,2943 @@
         "multithread": 84512
     },
     "Intel Core i7-9700 @ 3.00GHz": {
-        "singlethread": 2756
+        "singlethread": 2756,
+        "multithread": 13225
     },
     "Virtual @ 3.24GHz": {
-        "singlethread": 2755
+        "singlethread": 2755,
+        "multithread": 11715
     },
-    "AMD EPYC 9654P": {
-        "multithread": 116324
-    },
-    "AMD EPYC 9554P": {
-        "multithread": 105283
-    },
-    "AMD EPYC 9734": {
-        "multithread": 102286
-    },
-    "AMD EPYC 9754": {
-        "multithread": 98752
-    },
-    "AMD EPYC 7773X": {
-        "multithread": 91340
+    "Intel Xeon W-1290E @ 3.50GHz": {
+        "singlethread": 2755,
+        "multithread": 19060
     },
     "AMD EPYC 9454": {
+        "singlethread": 2754,
         "multithread": 86324
     },
-    "AMD EPYC 7J13": {
-        "multithread": 84786
+    "AMD Ryzen 5 3600XT": {
+        "singlethread": 2752,
+        "multithread": 18562,
+        "gaming": 3721
     },
-    "AMD EPYC 7763": {
-        "multithread": 84591
+    "AMD Ryzen 7 4980U Microsoft Surface Edition": {
+        "singlethread": 2752,
+        "multithread": 17469
     },
-    "Intel Xeon Platinum 8592+": {
-        "multithread": 84013
-    },
-    "AMD Ryzen Threadripper PRO 3995WX": {
-        "multithread": 83928
-    },
-    "AMD EPYC 7R43": {
-        "multithread": 83535
-    },
-    "AMD EPYC 7V13": {
-        "multithread": 82878
-    },
-    "AMD EPYC 7713": {
-        "multithread": 82825
+    "Intel Xeon W-2275 @ 3.30GHz": {
+        "singlethread": 2752,
+        "multithread": 27992
     },
     "AMD EPYC 7R13 64-Core": {
+        "singlethread": 2752,
         "multithread": 82158
     },
-    "AMD EPYC 7663": {
-        "multithread": 82087
+    "Intel Core i9-10980HK @ 2.40GHz": {
+        "singlethread": 2752,
+        "multithread": 15203
     },
-    "AMD EPYC 7T83": {
-        "multithread": 81757
+    "AMD EPYC 7473X": {
+        "singlethread": 2751,
+        "multithread": 59280
     },
-    "AMD EPYC 7713P": {
-        "multithread": 81447
+    "AMD EPYC 9554P": {
+        "singlethread": 2751,
+        "multithread": 105283
     },
-    "AMD Ryzen Threadripper 3990X": {
-        "multithread": 80421
+    "Intel Xeon W-1290TE @ 1.80GHz": {
+        "singlethread": 2749,
+        "multithread": 14505
     },
-    "AMD EPYC 7B13": {
-        "multithread": 77460
+    "AMD Ryzen 9 3900XT": {
+        "singlethread": 2742,
+        "multithread": 32576,
+        "gaming": 4042
+    },
+    "AMD EPYC 7543P": {
+        "singlethread": 2741,
+        "multithread": 66687
+    },
+    "Intel Xeon E-2186G @ 3.80GHz": {
+        "singlethread": 2741,
+        "multithread": 13785
+    },
+    "Intel Xeon Gold 6418H": {
+        "singlethread": 2741,
+        "multithread": 51711
+    },
+    "Intel Core i7-9700F @ 3.00GHz": {
+        "singlethread": 2741,
+        "multithread": 13175
+    },
+    "AMD Ryzen 5 7533HS": {
+        "singlethread": 2740,
+        "multithread": 14520
+    },
+    "AMD EPYC 7343": {
+        "singlethread": 2740,
+        "multithread": 43644
+    },
+    "AMD Ryzen 3 5400U": {
+        "singlethread": 2738,
+        "multithread": 10997
+    },
+    "AMD Ryzen 7 4700G": {
+        "singlethread": 2733,
+        "multithread": 20131
+    },
+    "Intel Xeon W-2245 @ 3.90GHz": {
+        "singlethread": 2732,
+        "multithread": 19458
+    },
+    "AMD EPYC 9654P": {
+        "singlethread": 2731,
+        "multithread": 116324
+    },
+    "AMD EPYC 7V13": {
+        "singlethread": 2729,
+        "multithread": 82878
+    },
+    "Intel Xeon W-10885M @ 2.40GHz": {
+        "singlethread": 2728,
+        "multithread": 15478
+    },
+    "Intel Core i5-9600K @ 3.70GHz": {
+        "singlethread": 2727,
+        "multithread": 10636
+    },
+    "Intel Xeon E-2286M @ 2.40GHz": {
+        "singlethread": 2725,
+        "multithread": 15238
+    },
+    "AMD Ryzen 9 4950U Mobile": {
+        "singlethread": 2724,
+        "multithread": 16290
+    },
+    "Intel Core i5-9600KF @ 3.70GHz": {
+        "singlethread": 2724,
+        "multithread": 10661
+    },
+    "Intel Core i7-8700B @ 3.20GHz": {
+        "singlethread": 2723,
+        "multithread": 11797
+    },
+    "Intel Xeon E-2224G @ 3.50GHz": {
+        "singlethread": 2721
+    },
+    "Intel Core i7-8700K @ 3.70GHz": {
+        "singlethread": 2720,
+        "multithread": 13577
+    },
+    "AMD EPYC 9124": {
+        "singlethread": 2719,
+        "multithread": 43846
+    },
+    "Intel Core i9-10920X @ 3.50GHz": {
+        "singlethread": 2714,
+        "multithread": 25992
+    },
+    "Intel Pentium Gold 8500": {
+        "singlethread": 2714
+    },
+    "Intel Core i5-9600 @ 3.10GHz": {
+        "singlethread": 2713,
+        "multithread": 10303
+    },
+    "AMD Ryzen 7 3800X": {
+        "singlethread": 2712,
+        "multithread": 23047
+    },
+    "Intel Core i5-1145G7 @ 2.60GHz": {
+        "singlethread": 2712,
+        "multithread": 9454
+    },
+    "Intel Xeon W-10855M @ 2.80GHz": {
+        "singlethread": 2712,
+        "multithread": 12336
+    },
+    "Intel Core i5-1230U": {
+        "singlethread": 2712,
+        "multithread": 10881,
+        "gaming": 2779
+    },
+    "Intel Core i3-9320 @ 3.70GHz": {
+        "singlethread": 2711
+    },
+    "QTI SM8735": {
+        "singlethread": 2711,
+        "multithread": 11144
+    },
+    "Intel Celeron G6900": {
+        "singlethread": 2711
+    },
+    "AMD Ryzen 5 4400G": {
+        "singlethread": 2711,
+        "multithread": 17160
+    },
+    "Intel Core i7-7700K @ 4.20GHz": {
+        "singlethread": 2708,
+        "multithread": 9627
+    },
+    "Intel Core i7-10875H @ 2.30GHz": {
+        "singlethread": 2708,
+        "multithread": 14635
+    },
+    "Intel Xeon E-2176G @ 3.70GHz": {
+        "singlethread": 2707,
+        "multithread": 13580
+    },
+    "AMD Ryzen 7 PRO 4750G": {
+        "singlethread": 2707,
+        "multithread": 20252
+    },
+    "AMD Ryzen 9 3950X": {
+        "singlethread": 2704,
+        "multithread": 38586
+    },
+    "AMD Ryzen 9 3900X": {
+        "singlethread": 2703,
+        "multithread": 32544,
+        "gaming": 4040
+    },
+    "Intel Xeon E-2244G @ 3.80GHz": {
+        "singlethread": 2701,
+        "multithread": 9666
+    },
+    "Intel Core i7-1250U": {
+        "singlethread": 2700,
+        "multithread": 11338,
+        "gaming": 3123
+    },
+    "Intel Xeon Platinum 8252C @ 3.80GHz": {
+        "singlethread": 2700,
+        "multithread": 28147
+    },
+    "Intel Core i7-7740X @ 4.30GHz": {
+        "singlethread": 2699,
+        "multithread": 9658
+    },
+    "Intel Core i5-1345UE": {
+        "singlethread": 2697,
+        "multithread": 10312
+    },
+    "AMD Ryzen Threadripper PRO 3945WX": {
+        "singlethread": 2697,
+        "multithread": 33494
+    },
+    "Google Tensor G4": {
+        "singlethread": 2696,
+        "multithread": 8199
+    },
+    "AMD Ryzen 9 4900H": {
+        "singlethread": 2696,
+        "multithread": 18979
+    },
+    "Intel Core i7-1370PRE": {
+        "singlethread": 2696,
+        "multithread": 18420
+    },
+    "Intel Core i9-10885H @ 2.40GHz": {
+        "singlethread": 2695,
+        "multithread": 14557
+    },
+    "AMD Ryzen 5 PRO 4655G": {
+        "singlethread": 2694,
+        "multithread": 16314
+    },
+    "Intel Core i9-9900B @ 3.10GHz": {
+        "singlethread": 2694,
+        "multithread": 15893
+    },
+    "Intel Core i3-10300 @ 3.70GHz": {
+        "singlethread": 2692,
+        "multithread": 9292
+    },
+    "AMD EPYC 7643": {
+        "singlethread": 2691,
+        "multithread": 76050
+    },
+    "AMD Ryzen 7 PRO 4700G": {
+        "singlethread": 2691,
+        "multithread": 19715
+    },
+    "Intel Core i3-9350KF @ 4.00GHz": {
+        "singlethread": 2688
+    },
+    "vendor Kirin9000E": {
+        "singlethread": 2687
+    },
+    "AMD Ryzen Embedded V2748": {
+        "singlethread": 2687,
+        "multithread": 18434
+    },
+    "Intel Xeon Gold 6448Y": {
+        "singlethread": 2686,
+        "multithread": 60449
+    },
+    "AMD Ryzen 7 PRO 4750GE": {
+        "singlethread": 2684,
+        "multithread": 18470
+    },
+    "AMD Ryzen Threadripper 3960X": {
+        "singlethread": 2683,
+        "multithread": 54774
+    },
+    "Intel Xeon W-2150B @ 3.00GHz": {
+        "singlethread": 2683,
+        "multithread": 20553
+    },
+    "AMD Ryzen 7 4700GE": {
+        "singlethread": 2682,
+        "multithread": 19674
+    },
+    "Intel Xeon W-3275M @ 2.50GHz": {
+        "singlethread": 2681,
+        "multithread": 40419
+    },
+    "Intel Xeon W-2255 @ 3.70GHz": {
+        "singlethread": 2681,
+        "multithread": 22414
+    },
+    "AMD Ryzen 7 PRO 3700": {
+        "singlethread": 2681,
+        "multithread": 22820
+    },
+    "AMD Ryzen Threadripper PRO 3955WX": {
+        "singlethread": 2679,
+        "multithread": 40155
+    },
+    "AMD EPYC 7573X": {
+        "singlethread": 2674,
+        "multithread": 69432
+    },
+    "Intel Xeon W-3335 @ 3.40GHz": {
+        "singlethread": 2673,
+        "multithread": 39293
+    },
+    "Intel Core i7-10850H @ 2.70GHz": {
+        "singlethread": 2669,
+        "multithread": 11649
+    },
+    "AMD Ryzen 3 3300X": {
+        "singlethread": 2669,
+        "multithread": 12598
+    },
+    "Intel Core i9-10900X @ 3.70GHz": {
+        "singlethread": 2669,
+        "multithread": 22398
+    },
+    "AMD Ryzen 5 PRO 4400G": {
+        "singlethread": 2665,
+        "multithread": 16365
+    },
+    "AMD Ryzen 5 PRO 4400GE": {
+        "singlethread": 2664,
+        "multithread": 14795
+    },
+    "Intel Core i9-10980XE @ 3.00GHz": {
+        "singlethread": 2662,
+        "multithread": 32408
+    },
+    "AMD Ryzen Threadripper 3970X": {
+        "singlethread": 2661,
+        "multithread": 63091
+    },
+    "AMD Ryzen 7 4850U Mobile": {
+        "singlethread": 2661,
+        "multithread": 17110
+    },
+    "AMD Ryzen 5 PRO 4655GE": {
+        "singlethread": 2660,
+        "multithread": 14171
+    },
+    "Intel Xeon E-2174G @ 3.80GHz": {
+        "singlethread": 2660,
+        "multithread": 9614
+    },
+    "Apple A12X Bionic": {
+        "singlethread": 2660,
+        "multithread": 11085
+    },
+    "Intel Xeon E-2146G @ 3.50GHz": {
+        "singlethread": 2659,
+        "multithread": 13234
+    },
+    "Intel Xeon Gold 5418Y": {
+        "singlethread": 2658,
+        "multithread": 46841
+    },
+    "AMD Ryzen 7 3700X": {
+        "singlethread": 2656,
+        "multithread": 22458
     },
     "AMD EPYC 7643P": {
+        "singlethread": 2655,
         "multithread": 77307
     },
+    "AMD Ryzen Threadripper PRO 3975WX": {
+        "singlethread": 2654,
+        "multithread": 62230
+    },
+    "Intel Xeon E-2134 @ 3.50GHz": {
+        "singlethread": 2654,
+        "multithread": 9338
+    },
+    "Intel Core i9-10940X @ 3.30GHz": {
+        "singlethread": 2653,
+        "multithread": 27779
+    },
+    "AMD Ryzen 5 4600G": {
+        "singlethread": 2653,
+        "multithread": 15990
+    },
+    "Intel Xeon E-2136 @ 3.30GHz": {
+        "singlethread": 2652,
+        "multithread": 13319
+    },
+    "AMD Ryzen 9 PRO 3900": {
+        "singlethread": 2651,
+        "multithread": 31333,
+        "gaming": 3946
+    },
+    "Intel Pentium Gold G6505 @ 4.20GHz": {
+        "singlethread": 2649
+    },
+    "AMD Ryzen 5 PRO 4650G": {
+        "singlethread": 2649,
+        "multithread": 16099
+    },
+    "AMD Ryzen 5 3600X": {
+        "singlethread": 2649,
+        "multithread": 18154,
+        "gaming": 3625
+    },
+    "Intel Xeon Gold 6250 @ 3.90GHz": {
+        "singlethread": 2648,
+        "multithread": 20552
+    },
+    "Mediatek MT8195": {
+        "singlethread": 2647,
+        "multithread": 8419
+    },
+    "Intel Core i3-10105F @ 3.70GHz": {
+        "singlethread": 2647,
+        "multithread": 8930
+    },
+    "Intel Core i7-1265UE": {
+        "singlethread": 2646,
+        "multithread": 9077
+    },
+    "Intel Xeon E-2124G @ 3.40GHz": {
+        "singlethread": 2645
+    },
+    "AMD Ryzen 7 5825C": {
+        "singlethread": 2645,
+        "multithread": 14561
+    },
+    "Intel Xeon E3-1285 v6 @ 4.10GHz": {
+        "singlethread": 2642,
+        "multithread": 9455
+    },
+    "AMD EPYC 7713": {
+        "singlethread": 2641,
+        "multithread": 82825
+    },
+    "Intel Xeon W-2225 @ 4.10GHz": {
+        "singlethread": 2641,
+        "multithread": 10470
+    },
+    "Intel Core i5-1135G7 @ 2.40GHz": {
+        "singlethread": 2641,
+        "multithread": 9515
+    },
+    "Intel Core i7-10870H @ 2.20GHz": {
+        "singlethread": 2640,
+        "multithread": 14171
+    },
+    "Intel Xeon W-2295 @ 3.00GHz": {
+        "singlethread": 2638,
+        "multithread": 30906
+    },
+    "Intel Xeon W-3235 @ 3.30GHz": {
+        "singlethread": 2637,
+        "multithread": 25548
+    },
+    "Intel Xeon W-3375 @ 2.50GHz": {
+        "singlethread": 2636,
+        "multithread": 59091
+    },
+    "Intel Xeon E-2144G @ 3.60GHz": {
+        "singlethread": 2635,
+        "multithread": 9392
+    },
+    "AMD EPYC 7313P": {
+        "singlethread": 2634,
+        "multithread": 41121
+    },
+    "Intel Xeon Gold 6430": {
+        "singlethread": 2633,
+        "multithread": 51490
+    },
+    "AMD Ryzen 5 4600GE": {
+        "singlethread": 2633,
+        "multithread": 15889
+    },
+    "Intel Core i7-8700 @ 3.20GHz": {
+        "singlethread": 2629,
+        "multithread": 12755
+    },
+    "Intel Core i7-10750H @ 2.60GHz": {
+        "singlethread": 2626,
+        "multithread": 11618
+    },
+    "Intel Core i9-9920X @ 3.50GHz": {
+        "singlethread": 2625,
+        "multithread": 24935
+    },
+    "Intel Xeon W-3365 @ 2.70GHz": {
+        "singlethread": 2625,
+        "multithread": 59038
+    },
+    "Qualcomm Technologies, Inc SM8250_AC": {
+        "singlethread": 2621
+    },
+    "Intel Core i9-9940X @ 3.30GHz": {
+        "singlethread": 2620,
+        "multithread": 28122
+    },
+    "Intel Xeon W-2235 @ 3.80GHz": {
+        "singlethread": 2619,
+        "multithread": 14300
+    },
+    "AMD EPYC 7713P": {
+        "singlethread": 2618,
+        "multithread": 81447
+    },
     "AMD EPYC 7C13": {
+        "singlethread": 2618,
         "multithread": 76322
+    },
+    "Intel Xeon w3-2423": {
+        "singlethread": 2614,
+        "multithread": 15556
+    },
+    "AMD Ryzen 3 7440U": {
+        "singlethread": 2614,
+        "multithread": 12991
+    },
+    "Intel Xeon Gold 6414U": {
+        "singlethread": 2610,
+        "multithread": 57200
+    },
+    "Intel Xeon W-2135 @ 3.70GHz": {
+        "singlethread": 2609,
+        "multithread": 14410
+    },
+    "Intel Xeon W-3245M @ 3.20GHz": {
+        "singlethread": 2609,
+        "multithread": 28067
+    },
+    "Intel Pentium Gold G6605 @ 4.30GHz": {
+        "singlethread": 2608
+    },
+    "Intel Core i7-13800HRE": {
+        "singlethread": 2608,
+        "multithread": 17362
+    },
+    "Intel Core i7-1160G7 @ 1.20GHz": {
+        "singlethread": 2607,
+        "multithread": 8989
+    },
+    "AMD EPYC 7663": {
+        "singlethread": 2606,
+        "multithread": 82087
+    },
+    "Intel Xeon Gold 6426Y": {
+        "singlethread": 2606,
+        "multithread": 37068
+    },
+    "Intel Xeon W-3275 @ 2.50GHz": {
+        "singlethread": 2606,
+        "multithread": 41469
+    },
+    "Intel Xeon E-2126G @ 3.30GHz": {
+        "singlethread": 2605,
+        "multithread": 10370
+    },
+    "AMD Ryzen 9 3900": {
+        "singlethread": 2604,
+        "multithread": 30586,
+        "gaming": 3763
+    },
+    "AMD EPYC 9354": {
+        "singlethread": 2601,
+        "multithread": 72615
+    },
+    "AMD Ryzen 5 PRO 4650GE": {
+        "singlethread": 2600,
+        "multithread": 15356
+    },
+    "Intel Xeon W-11555MLE @ 1.90GHz": {
+        "singlethread": 2599,
+        "multithread": 12207
+    },
+    "AMD Ryzen 7 4800H": {
+        "singlethread": 2598,
+        "multithread": 18224
+    },
+    "Intel Core i3-10100 @ 3.60GHz": {
+        "singlethread": 2596,
+        "multithread": 8549
+    },
+    "AMD Ryzen Threadripper PRO 3995WX": {
+        "singlethread": 2595,
+        "multithread": 83928
+    },
+    "Intel Xeon Platinum 8575C": {
+        "singlethread": 2593
+    },
+    "AMD Ryzen 5 4500": {
+        "singlethread": 2592,
+        "multithread": 16092
+    },
+    "Intel Core i3-10105 @ 3.70GHz": {
+        "singlethread": 2592,
+        "multithread": 8252
+    },
+    "vendor Kirin9000": {
+        "singlethread": 2592
+    },
+    "Intel Xeon E-2276M @ 2.80GHz": {
+        "singlethread": 2591,
+        "multithread": 11704
+    },
+    "Intel Core i5-1140G7 @ 1.10GHz": {
+        "singlethread": 2589,
+        "multithread": 8767
+    },
+    "Intel Core i3-13100TE": {
+        "singlethread": 2588,
+        "multithread": 10612
+    },
+    "Intel Xeon W-1250E @ 3.50GHz": {
+        "singlethread": 2588,
+        "multithread": 12212
+    },
+    "Intel Core i9-9960X @ 3.10GHz": {
+        "singlethread": 2587,
+        "multithread": 29907
+    },
+    "Intel Xeon E-2278GE @ 3.30GHz": {
+        "singlethread": 2587,
+        "multithread": 15765
+    },
+    "AMD Ryzen 9 4900HS": {
+        "singlethread": 2586,
+        "multithread": 18870
+    },
+    "Intel Xeon W-3245 @ 3.20GHz": {
+        "singlethread": 2585,
+        "multithread": 31066
+    },
+    "Intel Core i3-1115G4 @ 3.00GHz": {
+        "singlethread": 2585
+    },
+    "Intel Core i7-1185G7E @ 2.80GHz": {
+        "singlethread": 2585,
+        "multithread": 9926
+    },
+    "Intel Xeon W-3265M @ 2.70GHz": {
+        "singlethread": 2585,
+        "multithread": 34147
+    },
+    "Intel Xeon W-2155 @ 3.30GHz": {
+        "singlethread": 2584,
+        "multithread": 21063
+    },
+    "Intel Xeon W-2145 @ 3.70GHz": {
+        "singlethread": 2584,
+        "multithread": 17988
+    },
+    "Intel Core i3-10100F @ 3.60GHz": {
+        "singlethread": 2583,
+        "multithread": 8711
+    },
+    "Intel Core i7-10700T @ 2.00GHz": {
+        "singlethread": 2582,
+        "multithread": 12856
+    },
+    "Intel Xeon Platinum 8475B": {
+        "singlethread": 2581
+    },
+    "AMD Ryzen 5 7520C": {
+        "singlethread": 2580,
+        "multithread": 8654
+    },
+    "Intel Xeon W-3323 @ 3.50GHz": {
+        "singlethread": 2580,
+        "multithread": 27822
+    },
+    "Intel Core i5-10400H @ 2.60GHz": {
+        "singlethread": 2577,
+        "multithread": 8320
+    },
+    "AMD Ryzen 9 5900H": {
+        "singlethread": 2575,
+        "multithread": 15207
+    },
+    "Intel Core i7-8569U @ 2.80GHz": {
+        "singlethread": 2574,
+        "multithread": 8160
+    },
+    "Intel Core i5-8600K @ 3.60GHz": {
+        "singlethread": 2573,
+        "multithread": 10132
+    },
+    "Intel Xeon E-2314 @ 2.80GHz": {
+        "singlethread": 2573
+    },
+    "Intel Xeon W-3265 @ 2.70GHz": {
+        "singlethread": 2572,
+        "multithread": 30105
+    },
+    "Intel Xeon E-2224 @ 3.40GHz": {
+        "singlethread": 2572
+    },
+    "AMD Ryzen 3 PRO 4355GE": {
+        "singlethread": 2572,
+        "multithread": 10559
+    },
+    "Intel Core i5-9500F @ 3.00GHz": {
+        "singlethread": 2571,
+        "multithread": 9968
+    },
+    "AMD Ryzen Threadripper 3990X": {
+        "singlethread": 2569,
+        "multithread": 80421
+    },
+    "Intel Xeon Platinum 8368Q @ 2.60GHz": {
+        "singlethread": 2568,
+        "multithread": 46681
+    },
+    "Common KVM v2": {
+        "singlethread": 2566
+    },
+    "Intel Core i5-9500 @ 3.00GHz": {
+        "singlethread": 2565,
+        "multithread": 9826
+    },
+    "Intel Core i5-8600 @ 3.10GHz": {
+        "singlethread": 2565,
+        "multithread": 9952
+    },
+    "AMD EPYC 7B13": {
+        "singlethread": 2564,
+        "multithread": 77460
+    },
+    "AMD Ryzen 5 3600": {
+        "singlethread": 2562,
+        "multithread": 17701
+    },
+    "Intel Core i7-10700TE @ 2.00GHz": {
+        "singlethread": 2562,
+        "multithread": 13505
+    },
+    "Virtual @ 3.41GHz": {
+        "singlethread": 2561,
+        "multithread": 13665
+    },
+    "AMD EPYC 7773X": {
+        "singlethread": 2561,
+        "multithread": 91340
+    },
+    "Intel Core i5-10500H @ 2.50GHz": {
+        "singlethread": 2561,
+        "multithread": 11081
+    },
+    "Intel Core i5-10400 @ 2.90GHz": {
+        "singlethread": 2560,
+        "multithread": 12008
+    },
+    "AMD Ryzen 7 5700U": {
+        "singlethread": 2560,
+        "multithread": 15624
+    },
+    "AMD Ryzen 7 4800U": {
+        "singlethread": 2560,
+        "multithread": 16583
+    },
+    "Intel Core i7-9800X @ 3.80GHz": {
+        "singlethread": 2559,
+        "multithread": 18082
+    },
+    "Intel Xeon W-2125 @ 4.00GHz": {
+        "singlethread": 2558,
+        "multithread": 10029
+    },
+    "AMD Ryzen 7 4800HS": {
+        "singlethread": 2558,
+        "multithread": 18102
+    },
+    "AMD Ryzen 3 PRO 4200G": {
+        "singlethread": 2554,
+        "multithread": 10831
+    },
+    "Intel Core i9-7900X @ 3.30GHz": {
+        "singlethread": 2553,
+        "multithread": 21041
+    },
+    "Intel Xeon W-2140B @ 3.20GHz": {
+        "singlethread": 2553,
+        "multithread": 17323
+    },
+    "Intel Core i7-9700E @ 2.60GHz": {
+        "singlethread": 2553,
+        "multithread": 12658
+    },
+    "AMD EPYC 7R43": {
+        "singlethread": 2551,
+        "multithread": 83535
+    },
+    "Intel Core i9-9980XE @ 3.00GHz": {
+        "singlethread": 2550,
+        "multithread": 31566
+    },
+    "Intel Core i5-1245UE": {
+        "singlethread": 2546,
+        "multithread": 9473
+    },
+    "AMD Ryzen 3 PRO 4350G": {
+        "singlethread": 2546,
+        "multithread": 10924
+    },
+    "Intel Core i9-9900X @ 3.50GHz": {
+        "singlethread": 2545,
+        "multithread": 21619
+    },
+    "Intel Xeon E-2186M @ 2.90GHz": {
+        "singlethread": 2545,
+        "multithread": 11374
+    },
+    "Intel Xeon W-3175X @ 3.10GHz": {
+        "singlethread": 2544,
+        "multithread": 46125
+    },
+    "Intel Xeon Gold 6244 @ 3.60GHz": {
+        "singlethread": 2543,
+        "multithread": 18657
+    },
+    "AMD Ryzen 3 4300GE": {
+        "singlethread": 2543,
+        "multithread": 11226
+    },
+    "Intel Xeon E3-1275 v6 @ 3.80GHz": {
+        "singlethread": 2541,
+        "multithread": 9215
+    },
+    "Intel Core i5-10400F @ 2.90GHz": {
+        "singlethread": 2541,
+        "multithread": 12115
+    },
+    "Intel Core i5-7600K @ 3.80GHz": {
+        "singlethread": 2540
+    },
+    "Intel Core i5-7640X @ 4.00GHz": {
+        "singlethread": 2540
+    },
+    "AMD Ryzen 3 PRO 4200GE": {
+        "singlethread": 2540,
+        "multithread": 10930
+    },
+    "Intel Core i5-8500B @ 3.00GHz": {
+        "singlethread": 2537,
+        "multithread": 8873
+    },
+    "Intel Core i5-10300H @ 2.50GHz": {
+        "singlethread": 2537,
+        "multithread": 8262
+    },
+    "Intel Core i3-9300 @ 3.70GHz": {
+        "singlethread": 2535
+    },
+    "AMD EPYC 7453": {
+        "singlethread": 2533,
+        "multithread": 48453
+    },
+    "Intel Xeon E-2226GE @ 3.40GHz": {
+        "singlethread": 2532,
+        "multithread": 9090
+    },
+    "AMD Ryzen 3 4100": {
+        "singlethread": 2531,
+        "multithread": 11050
+    },
+    "Qualcomm Technologies, Inc KONA-IOT": {
+        "singlethread": 2528
+    },
+    "Intel Core i7-8565UC @ 1.80GHz": {
+        "singlethread": 2527
+    },
+    "Intel Core i7-7820X @ 3.60GHz": {
+        "singlethread": 2522,
+        "multithread": 17179
+    },
+    "Intel Xeon Gold 6336Y @ 2.40GHz": {
+        "singlethread": 2522,
+        "multithread": 45517
+    },
+    "Intel Xeon W-2191B @ 2.30GHz": {
+        "singlethread": 2520,
+        "multithread": 28255
+    },
+    "AMD EPYC 7763": {
+        "singlethread": 2518,
+        "multithread": 84591
+    },
+    "Intel Core i3-7350K @ 4.20GHz": {
+        "singlethread": 2517
+    },
+    "Intel Xeon W-3345 @ 3.00GHz": {
+        "singlethread": 2517,
+        "multithread": 47664
+    },
+    "AMD Ryzen 3 PRO 4350GE": {
+        "singlethread": 2517,
+        "multithread": 10926
+    },
+    "Intel Core i9-9980HK @ 2.40GHz": {
+        "singlethread": 2515,
+        "multithread": 14013
+    },
+    "Intel Pentium Gold G6600 @ 4.20GHz": {
+        "singlethread": 2513
+    },
+    "Intel Core i5-3170K @ 3.20GHz": {
+        "singlethread": 2510,
+        "multithread": 8882
+    },
+    "Intel Core i3-7320 @ 4.10GHz": {
+        "singlethread": 2509
+    },
+    "Intel Xeon E-2124 @ 3.30GHz": {
+        "singlethread": 2509
+    },
+    "Intel Xeon Gold 6346 @ 3.10GHz": {
+        "singlethread": 2509,
+        "multithread": 37708
+    },
+    "Intel Xeon E3-1280 v6 @ 3.90GHz": {
+        "singlethread": 2508,
+        "multithread": 9093
+    },
+    "AMD EPYC 7F52": {
+        "singlethread": 2507,
+        "multithread": 41322
+    },
+    "Intel Xeon w5-3433": {
+        "singlethread": 2507,
+        "multithread": 34722
+    },
+    "Intel Core i5-11400T @ 1.30GHz": {
+        "singlethread": 2506,
+        "multithread": 13091
+    },
+    "AMD Ryzen 7 4700U": {
+        "singlethread": 2503,
+        "multithread": 13199
+    },
+    "AMD Ryzen 5 3500X": {
+        "singlethread": 2502,
+        "multithread": 13171,
+        "gaming": 3695
+    },
+    "Intel Pentium Gold G6500 @ 4.10GHz": {
+        "singlethread": 2501
+    },
+    "Intel Xeon Gold 6334 @ 3.60GHz": {
+        "singlethread": 2500,
+        "multithread": 20512
+    },
+    "Intel Core i7-6700K @ 4.00GHz": {
+        "singlethread": 2500,
+        "multithread": 8927
+    },
+    "Intel Xeon Gold 6137 @ 3.90GHz": {
+        "singlethread": 2499,
+        "multithread": 19365
+    },
+    "AMD Ryzen 5 3500": {
+        "singlethread": 2499,
+        "multithread": 12791
+    },
+    "Intel Core i9-7920X @ 2.90GHz": {
+        "singlethread": 2499,
+        "multithread": 23494
+    },
+    "Intel Xeon Gold 6256 @ 3.60GHz": {
+        "singlethread": 2497,
+        "multithread": 23287
+    },
+    "Intel Core i5-11500T @ 1.50GHz": {
+        "singlethread": 2493,
+        "multithread": 12483
+    },
+    "Mediatek MT6893Z_T/CZA": {
+        "singlethread": 2493
+    },
+    "AMD Ryzen Threadripper 2920X": {
+        "singlethread": 2492,
+        "multithread": 25235
+    },
+    "AMD Ryzen Embedded V3C18I": {
+        "singlethread": 2491,
+        "multithread": 13856
+    },
+    "AMD Ryzen 5 PRO 4500U": {
+        "singlethread": 2491,
+        "multithread": 12117
+    },
+    "Hisilicon Kirin9000": {
+        "singlethread": 2490
+    },
+    "Intel Xeon Platinum 8360Y @ 2.40GHz": {
+        "singlethread": 2489,
+        "multithread": 54078
+    },
+    "Intel Core i9-10900T @ 1.90GHz": {
+        "singlethread": 2489,
+        "multithread": 14718
+    },
+    "Mediatek MT8792": {
+        "singlethread": 2488
+    },
+    "Intel Core i9-7940X @ 3.10GHz": {
+        "singlethread": 2488,
+        "multithread": 25611
+    },
+    "Intel Xeon Gold 6246 @ 3.30GHz": {
+        "singlethread": 2487,
+        "multithread": 22571
+    },
+    "Intel Core i3-9100F @ 3.60GHz": {
+        "singlethread": 2487
+    },
+    "Snapdragon 8350": {
+        "singlethread": 2484
+    },
+    "AMD Ryzen 5 PRO 3600": {
+        "singlethread": 2483,
+        "multithread": 17211
+    },
+    "AMD EPYC 7513": {
+        "singlethread": 2479,
+        "multithread": 59331
+    },
+    "Intel Xeon Platinum 8481C @ 2.70GHz": {
+        "singlethread": 2479,
+        "multithread": 11681
+    },
+    "Intel Xeon D-1726 @ 2.90GHz": {
+        "singlethread": 2477,
+        "multithread": 15511
+    },
+    "AMD Ryzen 7 PRO 4750U": {
+        "singlethread": 2476,
+        "multithread": 14898
+    },
+    "Intel Core i7-8559U @ 2.70GHz": {
+        "singlethread": 2475,
+        "multithread": 8240
+    },
+    "Intel Xeon Platinum 8375C @ 2.90GHz": {
+        "singlethread": 2474,
+        "multithread": 56202
+    },
+    "Intel Xeon W-2175 @ 2.50GHz": {
+        "singlethread": 2473,
+        "multithread": 23449
+    },
+    "Intel Core i9-9900T @ 2.10GHz": {
+        "singlethread": 2472,
+        "multithread": 13265
+    },
+    "Intel Core i3-9100 @ 3.60GHz": {
+        "singlethread": 2469
+    },
+    "Intel Core i9-9880H @ 2.30GHz": {
+        "singlethread": 2468,
+        "multithread": 13576
+    },
+    "Intel Celeron G6900E": {
+        "singlethread": 2467
+    },
+    "Intel Core i7-9850H @ 2.60GHz": {
+        "singlethread": 2466,
+        "multithread": 10933
+    },
+    "Mediatek Dimensity 9200 (MT6985)": {
+        "singlethread": 2466
+    },
+    "Intel Core i7-4790K @ 4.00GHz": {
+        "singlethread": 2466
+    },
+    "Mediatek MT6989": {
+        "singlethread": 2465,
+        "multithread": 10792
+    },
+    "Intel Xeon Gold 6348 @ 2.60GHz": {
+        "singlethread": 2465,
+        "multithread": 51843
+    },
+    "Snapdragon 8cx Gen 3 @ 3.0": {
+        "singlethread": 2463
+    },
+    "AMD EPYC 7T83": {
+        "singlethread": 2462,
+        "multithread": 81757
+    },
+    "Intel Core i5-1145G7E @ 2.60GHz": {
+        "singlethread": 2462,
+        "multithread": 8672
+    },
+    "Intel Core i3-8350K @ 4.00GHz": {
+        "singlethread": 2459
+    },
+    "Intel Xeon Gold 6144 @ 3.50GHz": {
+        "singlethread": 2459,
+        "multithread": 18864
+    },
+    "Intel Pentium Gold G6400 @ 4.00GHz": {
+        "singlethread": 2457
+    },
+    "Intel Core i5-7600 @ 3.50GHz": {
+        "singlethread": 2457
+    },
+    "AMD Ryzen Embedded V2516": {
+        "singlethread": 2457,
+        "multithread": 13329
+    },
+    "Intel Core i3-10305T @ 3.00GHz": {
+        "singlethread": 2457,
+        "multithread": 8136
+    },
+    "Intel Core i9-9820X @ 3.30GHz": {
+        "singlethread": 2456,
+        "multithread": 20428
+    },
+    "Intel Core i7-7900X @ 3.30GHz": {
+        "singlethread": 2455,
+        "multithread": 21008
+    },
+    "AMD Ryzen Threadripper 2950X": {
+        "singlethread": 2453,
+        "multithread": 29477
+    },
+    "AMD EPYC 7543": {
+        "singlethread": 2453,
+        "multithread": 62952
+    },
+    "Intel Core i9-7960X @ 2.80GHz": {
+        "singlethread": 2453,
+        "multithread": 28116
+    },
+    "Intel Core i5-10500E @ 3.10GHz": {
+        "singlethread": 2452,
+        "multithread": 11212
+    },
+    "AMD EPYC 7J13": {
+        "singlethread": 2450,
+        "multithread": 84786
+    },
+    "Intel Core i5-10600T @ 2.40GHz": {
+        "singlethread": 2450,
+        "multithread": 11409
+    },
+    "QTI SM8475": {
+        "singlethread": 2449
+    },
+    "Intel Core i9-7980XE @ 2.60GHz": {
+        "singlethread": 2448,
+        "multithread": 29750
+    },
+    "AMD EPYC 8434P": {
+        "singlethread": 2448,
+        "multithread": 66490
+    },
+    "Intel Xeon Platinum 8362 @ 2.80GHz": {
+        "singlethread": 2446,
+        "multithread": 56787
+    },
+    "SM8350": {
+        "singlethread": 2445
+    },
+    "Intel Xeon Platinum 8347C @ 2.10GHz": {
+        "singlethread": 2445,
+        "multithread": 49386
+    },
+    "Intel Xeon W-2170B @ 2.50GHz": {
+        "singlethread": 2444,
+        "multithread": 24332
+    },
+    "Intel Core i3-1125G4 @ 2.00GHz": {
+        "singlethread": 2444,
+        "multithread": 9352
+    },
+    "Intel Pentium Gold G5620 @ 4.00GHz": {
+        "singlethread": 2443
+    },
+    "Intel Core i7-7700 @ 3.60GHz": {
+        "singlethread": 2442,
+        "multithread": 8636
+    },
+    "Intel Core i3-1115G4E @ 3.00GHz": {
+        "singlethread": 2442
+    },
+    "Intel Xeon Gold 5315Y @ 3.20GHz": {
+        "singlethread": 2442,
+        "multithread": 20477
+    },
+    "Intel Xeon Gold 6530": {
+        "singlethread": 2441,
+        "multithread": 55177
+    },
+    "AMD EPYC 8534P": {
+        "singlethread": 2441,
+        "multithread": 71900
+    },
+    "Intel Core i5-8500 @ 3.00GHz": {
+        "singlethread": 2441,
+        "multithread": 9531
+    },
+    "Intel Xeon E3-1270 v6 @ 3.80GHz": {
+        "singlethread": 2440,
+        "multithread": 8876
+    },
+    "Intel Xeon E-2176M @ 2.70GHz": {
+        "singlethread": 2440,
+        "multithread": 10870
+    },
+    "QTI SM8450": {
+        "singlethread": 2439
+    },
+    "Intel Core i3-1215UL": {
+        "singlethread": 2439
+    },
+    "AMD Ryzen 3 7320C": {
+        "singlethread": 2439,
+        "multithread": 8265
+    },
+    "Intel Core i7-1365UE": {
+        "singlethread": 2433,
+        "multithread": 10019
+    },
+    "Intel Xeon W-3223 @ 3.50GHz": {
+        "singlethread": 2432,
+        "multithread": 16968
+    },
+    "Intel Xeon E3-1286 v3 @ 3.70GHz": {
+        "singlethread": 2430
+    },
+    "Intel Xeon D-1823NT @ 2.80GHz": {
+        "singlethread": 2429,
+        "multithread": 13673
+    },
+    "Intel Core i5-9400F @ 2.90GHz": {
+        "singlethread": 2428,
+        "multithread": 9456
+    },
+    "Intel Xeon Gold 5320H @ 2.40GHz": {
+        "singlethread": 2428,
+        "multithread": 31718
+    },
+    "AMD EPYC 9334": {
+        "singlethread": 2428,
+        "multithread": 64836
+    },
+    "Intel Xeon E-2278GEL @ 2.00GHz": {
+        "singlethread": 2428,
+        "multithread": 12024
+    },
+    "Intel Core i5-9400 @ 2.90GHz": {
+        "singlethread": 2427,
+        "multithread": 9377
+    },
+    "Intel Xeon W-2195 @ 2.30GHz": {
+        "singlethread": 2427,
+        "multithread": 27914
+    },
+    "Intel Xeon Silver 4410Y": {
+        "singlethread": 2426,
+        "multithread": 24797
+    },
+    "AMD Ryzen 5 7520U": {
+        "singlethread": 2424,
+        "multithread": 9085
+    },
+    "AMD Ryzen 3 4300G": {
+        "singlethread": 2424,
+        "multithread": 9845
+    },
+    "Intel Core i5-9600T @ 2.30GHz": {
+        "singlethread": 2424,
+        "multithread": 9627
+    },
+    "QTI SM8750": {
+        "singlethread": 2419,
+        "multithread": 12270
+    },
+    "Intel Core i7-9750HF @ 2.60GHz": {
+        "singlethread": 2419,
+        "multithread": 10490
+    },
+    "AMD Ryzen 5 5500U": {
+        "singlethread": 2419,
+        "multithread": 12832
+    },
+    "Intel Core i9-12900TE": {
+        "singlethread": 2419,
+        "multithread": 22887
+    },
+    "Samsung s5e8855": {
+        "singlethread": 2418
+    },
+    "Snapdragon 8cx Gen 3 @ 3.0 GHz": {
+        "singlethread": 2418,
+        "multithread": 11832
+    },
+    "AMD Ryzen 5 4600H": {
+        "singlethread": 2418,
+        "multithread": 14228
+    },
+    "Intel Core i5-10200H @ 2.40GHz": {
+        "singlethread": 2418
+    },
+    "AMD Ryzen 7 2700X": {
+        "singlethread": 2417,
+        "multithread": 17470
+    },
+    "Qualcomm SM8250": {
+        "singlethread": 2415
+    },
+    "AMD EPYC 75F3": {
+        "singlethread": 2414,
+        "multithread": 64505
+    },
+    "AMD Ryzen 3 3100": {
+        "singlethread": 2414,
+        "multithread": 11551
+    },
+    "AMD Ryzen 5 4500U": {
+        "singlethread": 2414,
+        "multithread": 10769
+    },
+    "Intel Xeon Platinum 8592+": {
+        "singlethread": 2411,
+        "multithread": 84013
+    },
+    "Intel Core i9-8950HK @ 2.90GHz": {
+        "singlethread": 2410,
+        "multithread": 10379
+    },
+    "AMD Ryzen 7 2700E": {
+        "singlethread": 2410,
+        "multithread": 14657
+    },
+    "AMD Ryzen 5 4600U": {
+        "singlethread": 2410,
+        "multithread": 13246
+    },
+    "AMD Ryzen 5 4600HS": {
+        "singlethread": 2408,
+        "multithread": 14319
+    },
+    "Intel Core i7-9700T @ 2.00GHz": {
+        "singlethread": 2408,
+        "multithread": 10588
+    },
+    "Intel Xeon E3-1245 v6 @ 3.70GHz": {
+        "singlethread": 2407,
+        "multithread": 8779
+    },
+    "Intel Core i3-7101E @ 3.90GHz": {
+        "singlethread": 2407
+    },
+    "Intel Xeon Silver 4309Y @ 2.80GHz": {
+        "singlethread": 2406,
+        "multithread": 18624
+    },
+    "Intel Xeon D-2799 @ 2.40GHz": {
+        "singlethread": 2404,
+        "multithread": 33792
+    },
+    "Intel Core i7-9750H @ 2.60GHz": {
+        "singlethread": 2404,
+        "multithread": 10671
+    },
+    "Intel Xeon E3-1585 v5 @ 3.50GHz": {
+        "singlethread": 2402,
+        "multithread": 8408
+    },
+    "AMD EPYC 7313": {
+        "singlethread": 2402,
+        "multithread": 38644
+    },
+    "Intel Core i7-6850K @ 3.60GHz": {
+        "singlethread": 2401,
+        "multithread": 11434
+    },
+    "Intel Core i7-1180G7 @ 1.30GHz": {
+        "singlethread": 2401
+    },
+    "AMD EPYC 7413": {
+        "singlethread": 2400,
+        "multithread": 50641
+    },
+    "Microsoft SQ3 @ 3.0 GHz": {
+        "singlethread": 2396,
+        "multithread": 11813
+    },
+    "Intel Xeon Gold 6342 @ 2.80GHz": {
+        "singlethread": 2396,
+        "multithread": 47076
+    },
+    "Google Tensor G3": {
+        "singlethread": 2395
+    },
+    "Intel Xeon Gold 6234 @ 3.30GHz": {
+        "singlethread": 2393,
+        "multithread": 17752
+    },
+    "Intel Xeon D-1736NT @ 2.70GHz": {
+        "singlethread": 2392,
+        "multithread": 17826
+    },
+    "Intel Core i5-1130G7 @ 1.10GHz": {
+        "singlethread": 2389,
+        "multithread": 8476
+    },
+    "AMD Ryzen 5 PRO 4650U": {
+        "singlethread": 2387,
+        "multithread": 12264
+    },
+    "Intel Xeon Platinum 8275CL @ 3.00GHz": {
+        "singlethread": 2386,
+        "multithread": 40794
+    },
+    "Intel Xeon Platinum 8380 @ 2.30GHz": {
+        "singlethread": 2385,
+        "multithread": 62318
+    },
+    "AMD Athlon Gold PRO 4150GE": {
+        "singlethread": 2384,
+        "multithread": 8259
+    },
+    "Intel Pentium Gold G6400E @ 3.80GHz": {
+        "singlethread": 2384
+    },
+    "AMD EPYC 7F72": {
+        "singlethread": 2384,
+        "multithread": 52740
+    },
+    "Intel Xeon Platinum 8358 @ 2.60GHz": {
+        "singlethread": 2382,
+        "multithread": 54416
+    },
+    "Intel Core i3-7300 @ 4.00GHz": {
+        "singlethread": 2381
+    },
+    "AMD Ryzen 5 2600X": {
+        "singlethread": 2381,
+        "multithread": 13893
+    },
+    "Intel Core i7-8809G @ 3.10GHz": {
+        "singlethread": 2379,
+        "multithread": 8519
+    },
+    "Intel Core i7-7800X @ 3.50GHz": {
+        "singlethread": 2379,
+        "multithread": 12990
+    },
+    "Intel Xeon E3-1270L v4 @ 3.00GHz": {
+        "singlethread": 2378
+    },
+    "Intel Xeon E5-1650 v4 @ 3.60GHz": {
+        "singlethread": 2377,
+        "multithread": 11384
+    },
+    "Intel Core i5-8269U @ 2.60GHz": {
+        "singlethread": 2377
+    },
+    "Intel Xeon Platinum 8151 @ 3.40GHz": {
+        "singlethread": 2372,
+        "multithread": 16208
+    },
+    "AMD EPYC 8024P": {
+        "singlethread": 2371,
+        "multithread": 20556
+    },
+    "Intel Core i5-8400 @ 2.80GHz": {
+        "singlethread": 2371,
+        "multithread": 9225
+    },
+    "AMD EPYC 7F32": {
+        "singlethread": 2370,
+        "multithread": 23198
+    },
+    "Intel Core i7-8850H @ 2.60GHz": {
+        "singlethread": 2368,
+        "multithread": 10139
+    },
+    "AMD EPYC 8324P": {
+        "singlethread": 2367,
+        "multithread": 57127
+    },
+    "Intel Xeon Gold 5317 @ 3.00GHz": {
+        "singlethread": 2366,
+        "multithread": 27448
+    },
+    "Intel Core i5-9400H @ 2.50GHz": {
+        "singlethread": 2364
+    },
+    "AMD EPYC 7371": {
+        "singlethread": 2363,
+        "multithread": 30782
+    },
+    "Intel Xeon Gold 6242R @ 3.10GHz": {
+        "singlethread": 2362,
+        "multithread": 36671
+    },
+    "AMD Ryzen 7 Extreme Edition": {
+        "singlethread": 2357,
+        "multithread": 16224
+    },
+    "AMD EPYC Embedded 8224P": {
+        "singlethread": 2357,
+        "multithread": 48873
+    },
+    "Intel Xeon W-3225 @ 3.70GHz": {
+        "singlethread": 2357,
+        "multithread": 18251
+    },
+    "Intel Xeon E3-1285L v4 @ 3.40GHz": {
+        "singlethread": 2356,
+        "multithread": 8092
+    },
+    "Mediatek Dimensity 8200-Ultimate (MT6896)": {
+        "singlethread": 2356
+    },
+    "Intel Xeon Gold 6254 @ 3.10GHz": {
+        "singlethread": 2356,
+        "multithread": 32599
+    },
+    "Intel Core i5-9500TE @ 2.20GHz": {
+        "singlethread": 2354,
+        "multithread": 9789
+    },
+    "Intel Xeon E3-1240 v6 @ 3.70GHz": {
+        "singlethread": 2353,
+        "multithread": 8682
+    },
+    "Intel Core i3-10105T @ 3.00GHz": {
+        "singlethread": 2353
+    },
+    "Intel Core i7-6950X @ 3.00GHz": {
+        "singlethread": 2352,
+        "multithread": 17687
+    },
+    "AMD 4700S": {
+        "singlethread": 2352,
+        "multithread": 17781
+    },
+    "Intel Core i5-8400H @ 2.50GHz": {
+        "singlethread": 2350
+    },
+    "Intel Xeon Gold 6338T @ 2.10GHz": {
+        "singlethread": 2348,
+        "multithread": 35801
+    },
+    "Intel Xeon Gold 6312U @ 2.40GHz": {
+        "singlethread": 2346,
+        "multithread": 42443
+    },
+    "Montage Jintide C5418Y": {
+        "singlethread": 2341,
+        "multithread": 49045
+    },
+    "Apple A13 Bionic": {
+        "singlethread": 2341
+    },
+    "AMD Ryzen 3 2300X": {
+        "singlethread": 2341
+    },
+    "Intel Xeon Gold 6246R @ 3.40GHz": {
+        "singlethread": 2341,
+        "multithread": 30468
+    },
+    "MT6893Z_A/CZA": {
+        "singlethread": 2341
+    },
+    "Samsung s5e8845": {
+        "singlethread": 2340
+    },
+    "AMD Ryzen 5 PRO 3350GE": {
+        "singlethread": 2340,
+        "multithread": 9643
+    },
+    "Intel Xeon Gold 6354 @ 3.00GHz": {
+        "singlethread": 2340,
+        "multithread": 39400
+    },
+    "ARM Neoverse-V2 72 Core 3519 MHz": {
+        "singlethread": 2340,
+        "multithread": 57240
+    },
+    "AMD Ryzen Threadripper 2970WX": {
+        "singlethread": 2340,
+        "multithread": 31026
+    },
+    "Intel Xeon Gold 6146 @ 3.20GHz": {
+        "singlethread": 2339,
+        "multithread": 23388
+    },
+    "AMD EPYC 8224P": {
+        "singlethread": 2339,
+        "multithread": 45421
+    },
+    "Intel Core i3-8145UE @ 2.20GHz": {
+        "singlethread": 2338
+    },
+    "Intel Xeon D-1718T @ 2.60GHz": {
+        "singlethread": 2338,
+        "multithread": 9674
+    },
+    "AMD Ryzen 3 7320U": {
+        "singlethread": 2337,
+        "multithread": 8651
+    },
+    "Intel Xeon E3-1281 v3 @ 3.70GHz": {
+        "singlethread": 2336
+    },
+    "Qualcomm Technologies, Inc KONA": {
+        "singlethread": 2335
+    },
+    "AMD Ryzen 3 5300U": {
+        "singlethread": 2332,
+        "multithread": 9566
+    },
+    "AMD Ryzen Threadripper 1900X": {
+        "singlethread": 2331,
+        "multithread": 16808
+    },
+    "Intel Core i7-6900K @ 3.20GHz": {
+        "singlethread": 2331,
+        "multithread": 14528
+    },
+    "Intel Core i7-9850HE @ 2.70GHz": {
+        "singlethread": 2329,
+        "multithread": 10411
+    },
+    "Intel Xeon E3-1286L v3 @ 3.20GHz": {
+        "singlethread": 2329
+    },
+    "ARM Neoverse-V2 72 Core 3465 MHz": {
+        "singlethread": 2328,
+        "multithread": 57369
+    },
+    "AMD EPYC 9754": {
+        "singlethread": 2328,
+        "multithread": 98752
+    },
+    "AMD Ryzen 5 2500X": {
+        "singlethread": 2327,
+        "multithread": 9455
+    },
+    "Intel Core i3-9300T @ 3.20GHz": {
+        "singlethread": 2325
+    },
+    "Intel Xeon Platinum 8270 @ 2.70GHz": {
+        "singlethread": 2325,
+        "multithread": 29986
+    },
+    "AMD Ryzen 3 PRO 4450U": {
+        "singlethread": 2323,
+        "multithread": 9683
+    },
+    "Intel Pentium Gold G7400T": {
+        "singlethread": 2323
+    },
+    "Intel Xeon Gold 6330N @ 2.20GHz": {
+        "singlethread": 2322,
+        "multithread": 36360
+    },
+    "Intel Xeon Platinum 8260M @ 2.40GHz": {
+        "singlethread": 2320,
+        "multithread": 34592
+    },
+    "AMD Ryzen 5 3400G": {
+        "singlethread": 2320,
+        "multithread": 9219
+    },
+    "Intel Core i7-1068NG7 @ 2.30GHz": {
+        "singlethread": 2318,
+        "multithread": 9226
+    },
+    "Intel Xeon Gold 5220R @ 2.20GHz": {
+        "singlethread": 2317,
+        "multithread": 31558
+    },
+    "Intel Core i5-6600K @ 3.50GHz": {
+        "singlethread": 2316
+    },
+    "Intel Xeon E3-1260L v5 @ 2.90GHz": {
+        "singlethread": 2316,
+        "multithread": 8237
+    },
+    "Intel Core i3-8100B @ 3.60GHz": {
+        "singlethread": 2316
+    },
+    "Intel Xeon Platinum 8260M @ 2.30GHz": {
+        "singlethread": 2315,
+        "multithread": 33970
+    },
+    "Intel Xeon Gold 6438N": {
+        "singlethread": 2315,
+        "multithread": 52789
+    },
+    "Virtual @ 2.95GHz": {
+        "singlethread": 2314,
+        "multithread": 10382
+    },
+    "Intel Xeon E5-1680 v4 @ 3.40GHz": {
+        "singlethread": 2313,
+        "multithread": 14246
+    },
+    "AMD Ryzen Threadripper 2990X": {
+        "singlethread": 2312,
+        "multithread": 25874
+    },
+    "Intel Xeon Gold 6240R @ 2.40GHz": {
+        "singlethread": 2312,
+        "multithread": 33353
+    },
+    "Intel Xeon E3-1535M v6 @ 3.10GHz": {
+        "singlethread": 2312
+    },
+    "Intel Core i3-1025G1 @ 1.20GHz": {
+        "singlethread": 2312
+    },
+    "Intel Xeon Gold 6253CL @ 3.10GHz": {
+        "singlethread": 2311,
+        "multithread": 28549
+    },
+    "ARM Neoverse-V2 72 Core 3447 MHz": {
+        "singlethread": 2311,
+        "multithread": 57299
+    },
+    "Intel Core i7-8557U @ 1.70GHz": {
+        "singlethread": 2311
+    },
+    "Intel Core i7-5950HQ @ 2.90GHz": {
+        "singlethread": 2311
+    },
+    "Intel Core i7-8709G @ 3.10GHz": {
+        "singlethread": 2311
+    },
+    "AMD EPYC 9734": {
+        "singlethread": 2310,
+        "multithread": 102286
+    },
+    "Intel Xeon E5-2689 v4 @ 3.10GHz": {
+        "singlethread": 2310,
+        "multithread": 17084
+    },
+    "AMD Ryzen Threadripper 1920X": {
+        "singlethread": 2308,
+        "multithread": 23105
+    },
+    "AMD Athlon Gold PRO 3150G": {
+        "singlethread": 2305
+    },
+    "Intel Pentium Gold G5600 @ 3.90GHz": {
+        "singlethread": 2303
+    },
+    "QTI SM8635": {
+        "singlethread": 2302,
+        "multithread": 8214
+    },
+    "QTI SM8350": {
+        "singlethread": 2302
+    },
+    "Intel Xeon E5-1630 v4 @ 3.70GHz": {
+        "singlethread": 2302
+    },
+    "Intel Core i7-8700T @ 2.40GHz": {
+        "singlethread": 2301,
+        "multithread": 10172
+    },
+    "Intel Core i5-8279U @ 2.40GHz": {
+        "singlethread": 2300
+    },
+    "Intel Xeon E3-1285 v4 @ 3.50GHz": {
+        "singlethread": 2300
+    },
+    "AMD Ryzen Threadripper 1920": {
+        "singlethread": 2299,
+        "multithread": 22066
+    },
+    "Intel Xeon Gold 5222 @ 3.80GHz": {
+        "singlethread": 2299,
+        "multithread": 9483
+    },
+    "Intel Core i9-10900TE @ 1.80GHz": {
+        "singlethread": 2298,
+        "multithread": 14159
+    },
+    "Intel Core i3-6320 @ 3.90GHz": {
+        "singlethread": 2298
+    },
+    "AMD Ryzen 5 2600E": {
+        "singlethread": 2297,
+        "multithread": 12346
+    },
+    "ARM - 8 Core 0 MHz": {
+        "singlethread": 2297,
+        "multithread": 8515
+    },
+    "Mediatek MT8789": {
+        "singlethread": 2296
+    },
+    "AMD Ryzen 3 4300U": {
+        "singlethread": 2296
+    },
+    "Intel Core i3-10300T @ 3.00GHz": {
+        "singlethread": 2296
+    },
+    "Intel Xeon Gold 6248R @ 3.00GHz": {
+        "singlethread": 2296,
+        "multithread": 35434
+    },
+    "Intel Core i7-8706G @ 3.10GHz": {
+        "singlethread": 2295
+    },
+    "Intel Core i7-1065G7 @ 1.30GHz": {
+        "singlethread": 2295,
+        "multithread": 8184
+    },
+    "Intel Xeon Gold 6326 @ 2.90GHz": {
+        "singlethread": 2295,
+        "multithread": 34240
+    },
+    "Intel Core i7-5775C @ 3.30GHz": {
+        "singlethread": 2292
+    },
+    "AMD Ryzen 5 3350GE": {
+        "singlethread": 2291,
+        "multithread": 9276
+    },
+    "AMD Ryzen 5 PRO 3400G": {
+        "singlethread": 2291,
+        "multithread": 9080
+    },
+    "Intel Xeon E3-1276 v3 @ 3.60GHz": {
+        "singlethread": 2288
+    },
+    "Intel Xeon E3-1270 v5 @ 3.60GHz": {
+        "singlethread": 2287,
+        "multithread": 8313
+    },
+    "Intel Xeon Gold 6314U @ 2.30GHz": {
+        "singlethread": 2287,
+        "multithread": 48916
+    },
+    "Intel Core i7-10710U @ 1.10GHz": {
+        "singlethread": 2287,
+        "multithread": 9303
+    },
+    "AMD Ryzen 7 PRO 2700X": {
+        "singlethread": 2285,
+        "multithread": 16949
+    },
+    "Intel Core i3-7100 @ 3.90GHz": {
+        "singlethread": 2285
+    },
+    "Intel Core i5-9300HF @ 2.40GHz": {
+        "singlethread": 2284
+    },
+    "Mediatek MT8797Z/CNZA": {
+        "singlethread": 2284
+    },
+    "Intel Core 3 N355": {
+        "singlethread": 2284,
+        "multithread": 10918
+    },
+    "AMD Ryzen 5 3400GE": {
+        "singlethread": 2283,
+        "multithread": 8848
+    },
+    "Intel Pentium Gold G5600F @ 3.90GHz": {
+        "singlethread": 2283
+    },
+    "ARM - 2 Core 0 MHz": {
+        "singlethread": 2283
+    },
+    "Intel Xeon Gold 5218T @ 2.10GHz": {
+        "singlethread": 2282,
+        "multithread": 21433
+    },
+    "Intel Xeon E3-1240 v5 @ 3.50GHz": {
+        "singlethread": 2282,
+        "multithread": 8264
+    },
+    "Intel Core i3-9100E @ 3.10GHz": {
+        "singlethread": 2281
+    },
+    "Intel Core i5-10500T @ 2.30GHz": {
+        "singlethread": 2281,
+        "multithread": 10120
+    },
+    "MediaTek MT6895": {
+        "singlethread": 2281
+    },
+    "AMD Ryzen Threadripper 2990WX": {
+        "singlethread": 2280,
+        "multithread": 32200
+    },
+    "Intel Celeron G6900T": {
+        "singlethread": 2280
+    },
+    "Intel Xeon E3-1271 v3 @ 3.60GHz": {
+        "singlethread": 2280
+    },
+    "MediaTek MT6983": {
+        "singlethread": 2279
+    },
+    "Intel Core i3-10100E @ 3.20GHz": {
+        "singlethread": 2279
+    },
+    "Intel Xeon E3-1275 v5 @ 3.60GHz": {
+        "singlethread": 2278,
+        "multithread": 8250
+    },
+    "Intel Core i7-6700 @ 3.40GHz": {
+        "singlethread": 2278
+    },
+    "Intel Xeon Gold 6268CL @ 2.80GHz": {
+        "singlethread": 2278,
+        "multithread": 34558
+    },
+    "Intel Core i3-6300 @ 3.80GHz": {
+        "singlethread": 2276
+    },
+    "Intel Core i7-8750H @ 2.20GHz": {
+        "singlethread": 2276,
+        "multithread": 9800
+    },
+    "AMD Ryzen Threadripper 1950X": {
+        "singlethread": 2276,
+        "multithread": 27595
+    },
+    "Google Tensor": {
+        "singlethread": 2274
+    },
+    "Intel Xeon E3-1280 v5 @ 3.70GHz": {
+        "singlethread": 2274,
+        "multithread": 8243
+    },
+    "Mediatek MT6891Z_T/CZA": {
+        "singlethread": 2274
+    },
+    "AMD Ryzen 5 PRO 2600": {
+        "singlethread": 2273,
+        "multithread": 13436
+    },
+    "Intel Core i7-5775R @ 3.30GHz": {
+        "singlethread": 2273
+    },
+    "Intel Pentium Gold G6505T @ 3.60GHz": {
+        "singlethread": 2271
+    },
+    "AMD EPYC 8124P": {
+        "singlethread": 2271,
+        "multithread": 36014
+    },
+    "Mediatek MT8791": {
+        "singlethread": 2271
+    },
+    "HiSilicon Kirin": {
+        "singlethread": 2271
+    },
+    "Intel Core i3-8300 @ 3.70GHz": {
+        "singlethread": 2269
+    },
+    "Intel Xeon D-1715TER @ 2.40GHz": {
+        "singlethread": 2269,
+        "multithread": 9104
+    },
+    "Intel Core i5-8600T @ 2.30GHz": {
+        "singlethread": 2268,
+        "multithread": 9242
+    },
+    "Intel Xeon Gold 6230 @ 2.10GHz": {
+        "singlethread": 2266,
+        "multithread": 26076
+    },
+    "Intel Core i5-5675R @ 3.10GHz": {
+        "singlethread": 2266
+    },
+    "Intel Xeon Gold 5220 @ 2.20GHz": {
+        "singlethread": 2266,
+        "multithread": 24154
+    },
+    "AMD EPYC 9224": {
+        "singlethread": 2266,
+        "multithread": 45223
+    },
+    "Intel Core i3-10100T @ 3.00GHz": {
+        "singlethread": 2265
+    },
+    "Intel Xeon Gold 6226R @ 2.90GHz": {
+        "singlethread": 2263,
+        "multithread": 26405
+    },
+    "QTI SM8250": {
+        "singlethread": 2262
+    },
+    "MT6893Z_D/CZA": {
+        "singlethread": 2262
+    },
+    "Intel Core i5-9300H @ 2.40GHz": {
+        "singlethread": 2261
+    },
+    "Intel Core i7-6800K @ 3.40GHz": {
+        "singlethread": 2261,
+        "multithread": 10741
+    },
+    "Intel Xeon W-2133 @ 3.60GHz": {
+        "singlethread": 2260,
+        "multithread": 12641
+    },
+    "Intel Xeon Gold 6248 @ 2.50GHz": {
+        "singlethread": 2260,
+        "multithread": 29552
+    },
+    "Mediatek MT6895Z_A/TCZA": {
+        "singlethread": 2260
+    },
+    "AMD Ryzen 5 PRO 3350G": {
+        "singlethread": 2257,
+        "multithread": 9177
+    },
+    "Intel Xeon D-2733NT @ 2.10GHz": {
+        "singlethread": 2257,
+        "multithread": 16206
+    },
+    "Mediatek MT6983Z/CZA": {
+        "singlethread": 2255
+    },
+    "Intel Pentium Gold 7505 @ 2.00GHz": {
+        "singlethread": 2255
+    },
+    "Intel Core i5-6600 @ 3.30GHz": {
+        "singlethread": 2254
+    },
+    "Intel Core i5-7500 @ 3.40GHz": {
+        "singlethread": 2253
+    },
+    "Intel Core i5-8300H @ 2.30GHz": {
+        "singlethread": 2253
+    },
+    "Intel Core i5-8257U @ 1.40GHz": {
+        "singlethread": 2253
+    },
+    "Intel Pentium Gold G6405 @ 4.10GHz": {
+        "singlethread": 2253
+    },
+    "Intel Xeon Silver 4215R @ 3.20GHz": {
+        "singlethread": 2249,
+        "multithread": 15002
+    },
+    "Intel Core i7-5675C @ 3.10GHz": {
+        "singlethread": 2249
+    },
+    "Intel Xeon E5-2643 v4 @ 3.40GHz": {
+        "singlethread": 2249,
+        "multithread": 11108
+    },
+    "Intel Xeon Gold 6143 @ 2.80GHz": {
+        "singlethread": 2248,
+        "multithread": 24786
+    },
+    "Intel Pentium Gold G5500 @ 3.80GHz": {
+        "singlethread": 2245
+    },
+    "Intel Core i7-10810U @ 1.10GHz": {
+        "singlethread": 2244
+    },
+    "QTI SM7550": {
+        "singlethread": 2243
+    },
+    "Intel Xeon E5-2698R v4 @ 2.20GHz": {
+        "singlethread": 2243,
+        "multithread": 25605
+    },
+    "Intel Pentium G4620 @ 3.70GHz": {
+        "singlethread": 2242
+    },
+    "Qualcomm Technologies, Inc SM8250": {
+        "singlethread": 2241
+    },
+    "AMD Ryzen 5 3350G": {
+        "singlethread": 2240,
+        "multithread": 8967
+    },
+    "Intel Xeon Gold 6230R @ 2.10GHz": {
+        "singlethread": 2239,
+        "multithread": 33608
+    },
+    "AMD Ryzen 5 2600": {
+        "singlethread": 2239,
+        "multithread": 13160
+    },
+    "Intel Xeon Gold 6208U @ 2.90GHz": {
+        "singlethread": 2239,
+        "multithread": 24670
+    },
+    "Intel Xeon Platinum 8260 @ 2.40GHz": {
+        "singlethread": 2239,
+        "multithread": 30347
+    },
+    "Intel Xeon E5-1620 v4 @ 3.50GHz": {
+        "singlethread": 2238
+    },
+    "Intel Xeon E3-1285 v3 @ 3.60GHz": {
+        "singlethread": 2238
+    },
+    "Google GS201": {
+        "singlethread": 2238
+    },
+    "Intel Pentium Gold G6500T @ 3.50GHz": {
+        "singlethread": 2238
+    },
+    "Intel Core i7-10510U @ 1.80GHz": {
+        "singlethread": 2237
+    },
+    "Intel Xeon E3-1245 v5 @ 3.50GHz": {
+        "singlethread": 2232
+    },
+    "Intel Xeon E3-1280 v3 @ 3.60GHz": {
+        "singlethread": 2231
+    },
+    "Mediatek MT8791V/HZA": {
+        "singlethread": 2231
+    },
+    "Intel Core i7-4790 @ 3.60GHz": {
+        "singlethread": 2228
+    },
+    "Intel Celeron G5925 @ 3.60GHz": {
+        "singlethread": 2228
+    },
+    "AMD Custom APU 0932": {
+        "singlethread": 2226,
+        "multithread": 9395
+    },
+    "Intel Xeon E5-2637 v4 @ 3.50GHz": {
+        "singlethread": 2226
+    },
+    "Intel Xeon Gold 5318H @ 2.50GHz": {
+        "singlethread": 2225,
+        "multithread": 29301
+    },
+    "Intel Core i7-10610U @ 1.80GHz": {
+        "singlethread": 2219
+    },
+    "Mediatek MT6891Z/CZA": {
+        "singlethread": 2219
+    },
+    "Intel Core i7-5850HQ @ 2.70GHz": {
+        "singlethread": 2219
+    },
+    "Mediatek MT6895Z/TCZA": {
+        "singlethread": 2216
+    },
+    "AMD Athlon Gold 7220U": {
+        "singlethread": 2216
+    },
+    "Intel Xeon Gold 6338 @ 2.00GHz": {
+        "singlethread": 2215,
+        "multithread": 38520
+    },
+    "Intel Xeon Gold 5218R @ 2.10GHz": {
+        "singlethread": 2214,
+        "multithread": 24694
+    },
+    "Intel Core i5-5675C @ 3.10GHz": {
+        "singlethread": 2214
+    },
+    "AMD Athlon Gold 3150G": {
+        "singlethread": 2212
+    },
+    "AMD Ryzen Embedded V2718": {
+        "singlethread": 2208,
+        "multithread": 15761
+    },
+    "Intel Xeon D-1747NTE @ 2.50GHz": {
+        "singlethread": 2208,
+        "multithread": 20279
+    },
+    "Intel Xeon Gold 6134 @ 3.20GHz": {
+        "singlethread": 2208,
+        "multithread": 16523
+    },
+    "AMD Ryzen 3 3200GE": {
+        "singlethread": 2207
+    },
+    "Intel Xeon E3-1230 v5 @ 3.40GHz": {
+        "singlethread": 2206
+    },
+    "Intel Xeon E3-1246 v3 @ 3.50GHz": {
+        "singlethread": 2206
+    },
+    "Intel Pentium Gold G5420 @ 3.80GHz": {
+        "singlethread": 2206
+    },
+    "Intel Xeon Gold 6154 @ 3.00GHz": {
+        "singlethread": 2205,
+        "multithread": 27560
+    },
+    "Intel Core i3-8100 @ 3.60GHz": {
+        "singlethread": 2203
+    },
+    "Intel Xeon D-2775TE @ 2.00GHz": {
+        "singlethread": 2203,
+        "multithread": 27299
+    },
+    "Intel Xeon Platinum 8260C @ 2.40GHz": {
+        "singlethread": 2203,
+        "multithread": 34420
+    },
+    "Apple A12Z Bionic": {
+        "singlethread": 2202,
+        "multithread": 9365
+    },
+    "Intel Xeon E3-1275 v3 @ 3.50GHz": {
+        "singlethread": 2202
+    },
+    "Mediatek MT6895Z_B/TCZA": {
+        "singlethread": 2201
+    },
+    "AMD Ryzen 7 PRO 2700": {
+        "singlethread": 2201,
+        "multithread": 15364
+    },
+    "Intel Xeon Platinum 8273CL @ 2.20GHz": {
+        "singlethread": 2200,
+        "multithread": 37320
+    },
+    "Intel Core i5-1035G1 @ 1.00GHz": {
+        "singlethread": 2198
+    },
+    "Intel Xeon D-1733NT @ 2.00GHz": {
+        "singlethread": 2198,
+        "multithread": 14849
+    },
+    "Intel Xeon W-2223 @ 3.60GHz": {
+        "singlethread": 2197,
+        "multithread": 8565
+    },
+    "Intel Core i7-7567U @ 3.50GHz": {
+        "singlethread": 2197
+    },
+    "QTI SM7675": {
+        "singlethread": 2197,
+        "multithread": 8658
+    },
+    "AMD Ryzen 7 1800X": {
+        "singlethread": 2197,
+        "multithread": 16314
+    },
+    "Intel Xeon E3-1230 v6 @ 3.50GHz": {
+        "singlethread": 2197,
+        "multithread": 8143
+    },
+    "Intel Core i5-8260U @ 1.60GHz": {
+        "singlethread": 2197
+    },
+    "Intel Core i7-4771 @ 3.50GHz": {
+        "singlethread": 2196
+    },
+    "Intel Core i7-4790S @ 3.20GHz": {
+        "singlethread": 2196
+    },
+    "AMD Ryzen 5 1600X": {
+        "singlethread": 2194,
+        "multithread": 13028
+    },
+    "Intel Xeon E3-1505M v6 @ 3.00GHz": {
+        "singlethread": 2194
+    },
+    "Intel Core i5-4690K @ 3.50GHz": {
+        "singlethread": 2193
+    },
+    "Intel Core i7-7920HQ @ 3.10GHz": {
+        "singlethread": 2193
+    },
+    "Intel Xeon E5-1660 v4 @ 3.20GHz": {
+        "singlethread": 2193,
+        "multithread": 13479
+    },
+    "Intel Pentium Gold G5400 @ 3.70GHz": {
+        "singlethread": 2192
+    },
+    "Intel Xeon D-2795NT @ 2.00GHz": {
+        "singlethread": 2192,
+        "multithread": 28463
+    },
+    "Intel Core i5-4690S @ 3.20GHz": {
+        "singlethread": 2192
+    },
+    "Intel Xeon Silver 4514Y": {
+        "singlethread": 2191,
+        "multithread": 29032
+    },
+    "Intel Core i5-1035G7 @ 1.20GHz": {
+        "singlethread": 2191
+    },
+    "Intel Core i7-4940MX @ 3.10GHz": {
+        "singlethread": 2191
+    },
+    "QTI QCS4490": {
+        "singlethread": 2191
+    },
+    "Intel Xeon Gold 6136 @ 3.00GHz": {
+        "singlethread": 2190,
+        "multithread": 20973
+    },
+    "Intel Xeon W-2123 @ 3.60GHz": {
+        "singlethread": 2190,
+        "multithread": 8519
+    },
+    "Intel Core i5-8259U @ 2.30GHz": {
+        "singlethread": 2190
+    },
+    "Intel Core i7-8705G @ 3.10GHz": {
+        "singlethread": 2190
+    },
+    "Intel Core i5-4690 @ 3.50GHz": {
+        "singlethread": 2188
+    },
+    "Intel Xeon E3-1270 v3 @ 3.50GHz": {
+        "singlethread": 2187
+    },
+    "AMD Ryzen 3 PRO 1300": {
+        "singlethread": 2187
+    },
+    "AMD Ryzen 3 3200G": {
+        "singlethread": 2185
+    },
+    "Intel Core i5-1035G4 @ 1.10GHz": {
+        "singlethread": 2182
+    },
+    "Intel Xeon Platinum 8268 @ 2.90GHz": {
+        "singlethread": 2182,
+        "multithread": 34604
+    },
+    "Intel Core i9-13900TE": {
+        "singlethread": 2181,
+        "multithread": 16265
+    },
+    "Mediatek MT6879V_T/ZA": {
+        "singlethread": 2181
+    },
+    "QTI QCM4490": {
+        "singlethread": 2181
+    },
+    "Intel Xeon Silver 4314 @ 2.40GHz": {
+        "singlethread": 2179,
+        "multithread": 29095
+    },
+    "Intel Xeon E3-1241 v3 @ 3.50GHz": {
+        "singlethread": 2179
+    },
+    "Intel Core i7-4980HQ @ 2.80GHz": {
+        "singlethread": 2177
+    },
+    "Qualcomm SM8350": {
+        "singlethread": 2175
+    },
+    "AMD Ryzen 7 2700": {
+        "singlethread": 2174,
+        "multithread": 15658
+    },
+    "Intel Xeon E5-2667 v4 @ 3.20GHz": {
+        "singlethread": 2174,
+        "multithread": 13753
+    },
+    "Intel Core i7-8665U @ 1.90GHz": {
+        "singlethread": 2174
+    },
+    "Intel Xeon Silver 4509Y": {
+        "singlethread": 2174,
+        "multithread": 18749
+    },
+    "Intel Core i7-7820EQ @ 3.00GHz": {
+        "singlethread": 2173
+    },
+    "Intel Xeon Gold 5217 @ 3.00GHz": {
+        "singlethread": 2173,
+        "multithread": 15429
+    },
+    "Intel Xeon D-2796TE @ 2.00GHz": {
+        "singlethread": 2172,
+        "multithread": 26342
+    },
+    "AMD Ryzen 7 2800H": {
+        "singlethread": 2172,
+        "multithread": 8144
+    },
+    "Intel Core i7-9700TE @ 1.80GHz": {
+        "singlethread": 2170,
+        "multithread": 9813
+    },
+    "Qualcomm Technologies, Inc SM7325": {
+        "singlethread": 2170
+    },
+    "Intel Xeon E3-1280 V2 @ 3.60GHz": {
+        "singlethread": 2170
+    },
+    "Intel Core i7-4770 @ 3.40GHz": {
+        "singlethread": 2168
+    },
+    "Intel Xeon Gold 6238R @ 2.20GHz": {
+        "singlethread": 2168,
+        "multithread": 34751
+    },
+    "Intel Core i3-6100 @ 3.70GHz": {
+        "singlethread": 2167
+    },
+    "Intel Xeon Gold 6242 @ 2.80GHz": {
+        "singlethread": 2165,
+        "multithread": 24994
+    },
+    "AMD Athlon Gold PRO 3150GE": {
+        "singlethread": 2165
+    },
+    "Intel Core i5-4670R @ 3.00GHz": {
+        "singlethread": 2164
+    },
+    "Intel Core i5-1038NG7 @ 2.00GHz": {
+        "singlethread": 2164,
+        "multithread": 8849
+    },
+    "Qualcomm Technologies, Inc SM8350": {
+        "singlethread": 2163
+    },
+    "Intel Core i3-1005G1 @ 1.20GHz": {
+        "singlethread": 2162
+    },
+    "Intel Celeron G5905 @ 3.50GHz": {
+        "singlethread": 2162
+    },
+    "Intel Core i5-8365UE @ 1.60GHz": {
+        "singlethread": 2161
+    },
+    "Venus based on Qualcomm Technologies, Inc SM8350": {
+        "singlethread": 2158
+    },
+    "MT6893Z/CZA": {
+        "singlethread": 2158
+    },
+    "Intel Core i7-4770R @ 3.20GHz": {
+        "singlethread": 2157
+    },
+    "Intel Core i7-4770K @ 3.50GHz": {
+        "singlethread": 2157
+    },
+    "Intel Core i5-7287U @ 3.30GHz": {
+        "singlethread": 2157
+    },
+    "Intel Xeon Gold 6122 @ 1.80GHz": {
+        "singlethread": 2157,
+        "multithread": 23781
+    },
+    "Intel Core i3-10110U @ 2.10GHz": {
+        "singlethread": 2154
+    },
+    "Intel Core i5-9500E @ 3.00GHz": {
+        "singlethread": 2153,
+        "multithread": 8829
+    },
+    "Intel Core i5-7600T @ 2.80GHz": {
+        "singlethread": 2153
+    },
+    "MT6877V/TTZA": {
+        "singlethread": 2152
+    },
+    "Intel Xeon E3-1585L v5 @ 3.00GHz": {
+        "singlethread": 2152
+    },
+    "Intel Xeon E3-1285L v3 @ 3.10GHz": {
+        "singlethread": 2152
+    },
+    "redwood based Qualcomm Technologies, Inc. SM7325": {
+        "singlethread": 2150
+    },
+    "Intel Xeon E3-1245 v3 @ 3.40GHz": {
+        "singlethread": 2149
+    },
+    "Intel Xeon Platinum 8280 @ 2.70GHz": {
+        "singlethread": 2149,
+        "multithread": 36830
+    },
+    "Intel Pentium G4500 @ 3.50GHz": {
+        "singlethread": 2147
+    },
+    "Intel Core i7-7660U @ 2.50GHz": {
+        "singlethread": 2147
+    },
+    "AMD Ryzen 5 PRO 1500": {
+        "singlethread": 2147,
+        "multithread": 9137
+    },
+    "Intel Core i3-4370 @ 3.80GHz": {
+        "singlethread": 2147
+    },
+    "Intel Pentium G4600 @ 3.60GHz": {
+        "singlethread": 2146
+    },
+    "Intel Xeon E3-1231 v3 @ 3.40GHz": {
+        "singlethread": 2144
+    },
+    "AMD Ryzen 5 2400G": {
+        "singlethread": 2144,
+        "multithread": 8733
+    },
+    "Intel Xeon Gold 6128 @ 3.40GHz": {
+        "singlethread": 2143,
+        "multithread": 12874
+    },
+    "Intel Xeon E3-1575M v5 @ 3.00GHz": {
+        "singlethread": 2143
+    },
+    "Intel Xeon E3-1240 v3 @ 3.40GHz": {
+        "singlethread": 2143
+    },
+    "Intel Xeon Platinum 8180 @ 2.50GHz": {
+        "singlethread": 2142,
+        "multithread": 38259
+    },
+    "Intel Xeon Gold 6140 @ 2.30GHz": {
+        "singlethread": 2142,
+        "multithread": 23927
+    },
+    "Intel Core i5-4670K @ 3.40GHz": {
+        "singlethread": 2142
+    },
+    "Intel Core i7-1185GRE @ 2.80GHz": {
+        "singlethread": 2142
+    },
+    "Snapdragon 8cx Gen 3 @ 2.69 GHz": {
+        "singlethread": 2142,
+        "multithread": 10799
+    },
+    "Intel Core i5-10310U @ 1.70GHz": {
+        "singlethread": 2141
+    },
+    "QTI SG8175P": {
+        "singlethread": 2140
+    },
+    "Intel Xeon Gold 6126 @ 2.60GHz": {
+        "singlethread": 2140,
+        "multithread": 17492
+    },
+    "AMD Ryzen 5 PRO 2400G": {
+        "singlethread": 2139,
+        "multithread": 8549
+    },
+    "Intel Xeon Gold 5122 @ 3.60GHz": {
+        "singlethread": 2139,
+        "multithread": 8883
+    },
+    "Intel Xeon E5-2696 v4 @ 2.20GHz": {
+        "singlethread": 2137,
+        "multithread": 24959
+    },
+    "Intel Core i7-7700T @ 2.90GHz": {
+        "singlethread": 2136
+    },
+    "Intel Xeon Silver 4316 @ 2.30GHz": {
+        "singlethread": 2135,
+        "multithread": 31892
+    },
+    "Intel Core i5-10400T @ 2.00GHz": {
+        "singlethread": 2135,
+        "multithread": 9707
+    },
+    "Intel Core i3-8140U @ 2.10GHz": {
+        "singlethread": 2135
+    },
+    "Montage Jintide C4215R": {
+        "singlethread": 2134,
+        "multithread": 14672
+    },
+    "Intel Xeon Gold 5218 @ 2.30GHz": {
+        "singlethread": 2134,
+        "multithread": 21728
+    },
+    "Intel Xeon Gold 6132 @ 2.60GHz": {
+        "singlethread": 2133,
+        "multithread": 22280
+    },
+    "Intel Core i5-4670 @ 3.40GHz": {
+        "singlethread": 2133
+    },
+    "Intel Core i5-10210U @ 1.60GHz": {
+        "singlethread": 2131
+    },
+    "Intel Core i5-9500T @ 2.20GHz": {
+        "singlethread": 2131,
+        "multithread": 8098
+    },
+    "Intel Xeon E3-1275L v3 @ 2.70GHz": {
+        "singlethread": 2131
+    },
+    "Intel Core i5-7440EQ @ 2.90GHz": {
+        "singlethread": 2131
+    },
+    "AMD EPYC 7402": {
+        "singlethread": 2129,
+        "multithread": 46012
+    },
+    "AMD Ryzen 3 PRO 3200GE": {
+        "singlethread": 2128
+    },
+    "SM7325": {
+        "singlethread": 2127
+    },
+    "Intel Core i5-13600HRE": {
+        "singlethread": 2127,
+        "multithread": 14591
+    },
+    "Intel Xeon E5-1660 v2 @ 3.70GHz": {
+        "singlethread": 2125,
+        "multithread": 10319
+    },
+    "QTI SM7635": {
+        "singlethread": 2124
+    },
+    "Intel Xeon E5-2673 v4 @ 2.30GHz": {
+        "singlethread": 2124,
+        "multithread": 21106
+    },
+    "Intel Celeron G5920 @ 3.50GHz": {
+        "singlethread": 2123
+    },
+    "Intel Xeon E5-1650 v3 @ 3.50GHz": {
+        "singlethread": 2122,
+        "multithread": 10390
+    },
+    "Intel Xeon Gold 6142 @ 2.60GHz": {
+        "singlethread": 2122,
+        "multithread": 25490
+    },
+    "AMD Ryzen 7 3700C": {
+        "singlethread": 2122
+    },
+    "Intel Xeon Platinum 8171M @ 2.60GHz": {
+        "singlethread": 2122,
+        "multithread": 29613
+    },
+    "Intel Xeon E5-1680 v3 @ 3.20GHz": {
+        "singlethread": 2122,
+        "multithread": 13273
+    },
+    "Intel Core i7-4770S @ 3.10GHz": {
+        "singlethread": 2121
+    },
+    "AMD Ryzen 3 1300X": {
+        "singlethread": 2121
+    },
+    "Intel CC150 @ 3.50GHz": {
+        "singlethread": 2121,
+        "multithread": 14233
+    },
+    "Intel Xeon E3-1275 V2 @ 3.50GHz": {
+        "singlethread": 2120
+    },
+    "Intel Core i3-N305": {
+        "singlethread": 2120,
+        "multithread": 9682
+    },
+    "Intel Core i7-5850EQ @ 2.70GHz": {
+        "singlethread": 2119
+    },
+    "AMD Ryzen 7 PRO 1700X": {
+        "singlethread": 2119,
+        "multithread": 15562
+    },
+    "Intel Core i7-8565U @ 1.80GHz": {
+        "singlethread": 2119
+    },
+    "AMD Ryzen 5 PRO 2400GE": {
+        "singlethread": 2118
+    },
+    "Mediatek Dimensity 7300-Ultra (MT6878)": {
+        "singlethread": 2118
+    },
+    "Intel Xeon Gold 6150 @ 2.70GHz": {
+        "singlethread": 2118,
+        "multithread": 26447
+    },
+    "Intel Celeron G5900 @ 3.40GHz": {
+        "singlethread": 2115
+    },
+    "AMD BC-250": {
+        "singlethread": 2115,
+        "multithread": 13201
+    },
+    "Intel Core i3-9100T @ 3.10GHz": {
+        "singlethread": 2113
+    },
+    "Mediatek MT8791V/TN": {
+        "singlethread": 2113
+    },
+    "Intel Xeon E5-1630 v3 @ 3.70GHz": {
+        "singlethread": 2113
+    },
+    "Intel Core i7-7820HQ @ 2.90GHz": {
+        "singlethread": 2113
+    },
+    "Samsung s5e9925": {
+        "singlethread": 2112
+    },
+    "Intel Xeon Silver 4310 @ 2.10GHz": {
+        "singlethread": 2111,
+        "multithread": 21903
+    },
+    "Intel Core i7-7820HK @ 2.90GHz": {
+        "singlethread": 2111
+    },
+    "Intel Xeon E3-1535M v5 @ 2.90GHz": {
+        "singlethread": 2110
+    },
+    "AMD EPYC 7742": {
+        "singlethread": 2108,
+        "multithread": 69140
+    },
+    "Intel Xeon E5-2697A v4 @ 2.60GHz": {
+        "singlethread": 2106,
+        "multithread": 21598
+    },
+    "Intel Xeon Platinum 8124M @ 3.00GHz": {
+        "singlethread": 2106,
+        "multithread": 25350
+    },
+    "AMD Ryzen 5 1500X": {
+        "singlethread": 2105,
+        "multithread": 9068
+    },
+    "Intel Xeon E3-1226 v3 @ 3.30GHz": {
+        "singlethread": 2104
+    },
+    "Intel Xeon E3-1225 v5 @ 3.30GHz": {
+        "singlethread": 2104
+    },
+    "Intel Core i7-8650U @ 1.90GHz": {
+        "singlethread": 2104
+    },
+    "Mediatek MT6893": {
+        "singlethread": 2104
+    },
+    "AMD EPYC 7662": {
+        "singlethread": 2102,
+        "multithread": 72298
+    },
+    "AMD Ryzen Embedded R2544": {
+        "singlethread": 2102,
+        "multithread": 8486
+    },
+    "AMD Ryzen 3 PRO 3200G": {
+        "singlethread": 2101
+    },
+    "AMD Ryzen 7 1700X": {
+        "singlethread": 2101,
+        "multithread": 15636
+    },
+    "Intel Xeon Gold 5215 @ 2.20GHz": {
+        "singlethread": 2101,
+        "multithread": 16304
+    },
+    "Intel Core i5-5575R @ 2.80GHz": {
+        "singlethread": 2097
+    },
+    "Intel Xeon Platinum 8168 @ 2.70GHz": {
+        "singlethread": 2097,
+        "multithread": 32373
+    },
+    "Intel Core i3-6098P @ 3.60GHz": {
+        "singlethread": 2095
+    },
+    "Intel Core i5-6500 @ 3.20GHz": {
+        "singlethread": 2093
+    },
+    "Intel Core i5-4670S @ 3.10GHz": {
+        "singlethread": 2093
+    },
+    "Intel Pentium G4560 @ 3.50GHz": {
+        "singlethread": 2092
+    },
+    "Intel Core i7-5700EQ @ 2.60GHz": {
+        "singlethread": 2092
+    },
+    "AMD EPYC Embedded 7292P": {
+        "singlethread": 2091,
+        "multithread": 30542
+    },
+    "Intel Xeon Gold 6130 @ 2.10GHz": {
+        "singlethread": 2090,
+        "multithread": 21306
+    },
+    "Intel Xeon E5-1680 v2 @ 3.00GHz": {
+        "singlethread": 2089,
+        "multithread": 12496
+    },
+    "Intel Core i5-9400T @ 1.80GHz": {
+        "singlethread": 2089,
+        "multithread": 8228
+    },
+    "Intel Xeon Silver 4310T @ 2.30GHz": {
+        "singlethread": 2089,
+        "multithread": 20607
+    },
+    "Intel Core i5-7360U @ 2.30GHz": {
+        "singlethread": 2089
+    },
+    "Intel Pentium G3470 @ 3.60GHz": {
+        "singlethread": 2089
+    },
+    "Intel Core i7-4960HQ @ 2.60GHz": {
+        "singlethread": 2088
+    },
+    "Intel Core i7-6567U @ 3.30GHz": {
+        "singlethread": 2087
+    },
+    "Intel Core i5-7440HQ @ 2.80GHz": {
+        "singlethread": 2087
+    },
+    "AMD Ryzen 5 2600H": {
+        "singlethread": 2085
+    },
+    "Intel Core i7-4790T @ 2.70GHz": {
+        "singlethread": 2084
+    },
+    "Intel Xeon E3-1545M v5 @ 2.90GHz": {
+        "singlethread": 2084
+    },
+    "Intel Core i7-5960X @ 3.00GHz": {
+        "singlethread": 2082,
+        "multithread": 13444
+    },
+    "Intel Xeon D-2753NT @ 2.00GHz": {
+        "singlethread": 2082,
+        "multithread": 20626
+    },
+    "Mediatek Dimensity 8400-Turbo (MT6899)": {
+        "singlethread": 2082,
+        "multithread": 8709
+    },
+    "Mediatek MT8791V/TZA": {
+        "singlethread": 2082
+    },
+    "Intel Xeon E3-1230 v3 @ 3.30GHz": {
+        "singlethread": 2081
+    },
+    "Intel Core i5-4590 @ 3.30GHz": {
+        "singlethread": 2081
+    },
+    "Intel Pentium Gold G6400T @ 3.40GHz": {
+        "singlethread": 2080
+    },
+    "Intel Xeon E3-1270 V2 @ 3.50GHz": {
+        "singlethread": 2080
+    },
+    "Intel Core i3-8145U @ 2.10GHz": {
+        "singlethread": 2080
+    },
+    "Intel Xeon Gold 6258R @ 2.70GHz": {
+        "singlethread": 2080,
+        "multithread": 40252
+    },
+    "AMD EPYC 7702P": {
+        "singlethread": 2079,
+        "multithread": 61539
+    },
+    "AMD EPYC 7R12": {
+        "singlethread": 2079,
+        "multithread": 48934
+    },
+    "Intel Xeon Gold 6148 @ 2.40GHz": {
+        "singlethread": 2078,
+        "multithread": 29116
+    },
+    "Intel Core i7-4930MX @ 3.00GHz": {
+        "singlethread": 2076
+    },
+    "Intel Xeon E5-2643 v3 @ 3.40GHz": {
+        "singlethread": 2076,
+        "multithread": 10447
+    },
+    "AMD Ryzen Embedded V1807B": {
+        "singlethread": 2074,
+        "multithread": 8185
+    },
+    "Intel Xeon E5-2690 v4 @ 2.60GHz": {
+        "singlethread": 2074,
+        "multithread": 19325
+    },
+    "AMD Athlon Silver PRO 3125GE": {
+        "singlethread": 2074
+    },
+    "AMD Ryzen 5 PRO 3400GE": {
+        "singlethread": 2074
+    },
+    "Intel Core i5-7400 @ 3.00GHz": {
+        "singlethread": 2073
+    },
+    "Intel Xeon E3-1265L v4 @ 2.30GHz": {
+        "singlethread": 2073
+    },
+    "Intel Core i7-3770 @ 3.40GHz": {
+        "singlethread": 2073
+    },
+    "Intel Core i5-8365U @ 1.60GHz": {
+        "singlethread": 2073
+    },
+    "Intel Core i5-8265UC @ 1.60GHz": {
+        "singlethread": 2072
+    },
+    "Intel Xeon E3-1225 v6 @ 3.30GHz": {
+        "singlethread": 2072
+    },
+    "Mediatek Dimensity 8350 (MT6897)": {
+        "singlethread": 2072
+    },
+    "Intel Core i7-3770K @ 3.50GHz": {
+        "singlethread": 2072
+    },
+    "Intel Core i3-4360 @ 3.70GHz": {
+        "singlethread": 2070
+    },
+    "AMD Ryzen Embedded V2A46": {
+        "singlethread": 2070
+    },
+    "Intel Core i3-8109U @ 3.00GHz": {
+        "singlethread": 2070
+    },
+    "Qualcomm Technologies, Inc SDM778G": {
+        "singlethread": 2070
     },
     "Intel Xeon 6740E": {
         "multithread": 76167
-    },
-    "AMD EPYC 7643": {
-        "multithread": 76050
-    },
-    "AMD EPYC 9354": {
-        "multithread": 72615
-    },
-    "AMD EPYC 7662": {
-        "multithread": 72298
-    },
-    "AMD EPYC 8534P": {
-        "multithread": 71900
     },
     "AMD EPYC 7V12": {
         "multithread": 70622
@@ -3273,68 +6415,20 @@
     "AMD EPYC 7H12": {
         "multithread": 69633
     },
-    "AMD EPYC 7573X": {
-        "multithread": 69432
-    },
-    "AMD EPYC 7742": {
-        "multithread": 69140
-    },
     "AMD EPYC 7702": {
         "multithread": 68870
     },
     "Intel Xeon Platinum 8571N": {
         "multithread": 68385
     },
-    "AMD EPYC 7543P": {
-        "multithread": 66687
-    },
-    "AMD EPYC 8434P": {
-        "multithread": 66490
-    },
     "AMD EPYC 7B12": {
         "multithread": 66044
-    },
-    "AMD EPYC 9334": {
-        "multithread": 64836
-    },
-    "AMD EPYC 75F3": {
-        "multithread": 64505
     },
     "AMD EPYC 7R32": {
         "multithread": 63239
     },
-    "AMD Ryzen Threadripper 3970X": {
-        "multithread": 63091
-    },
-    "AMD EPYC 7543": {
-        "multithread": 62952
-    },
-    "Intel Xeon Platinum 8380 @ 2.30GHz": {
-        "multithread": 62318
-    },
-    "AMD Ryzen Threadripper PRO 3975WX": {
-        "multithread": 62230
-    },
-    "AMD EPYC 7702P": {
-        "multithread": 61539
-    },
-    "Intel Xeon Gold 6448Y": {
-        "multithread": 60449
-    },
     "AMD EPYC 7K62": {
         "multithread": 59672
-    },
-    "AMD EPYC 7513": {
-        "multithread": 59331
-    },
-    "AMD EPYC 7473X": {
-        "multithread": 59280
-    },
-    "Intel Xeon W-3375 @ 2.50GHz": {
-        "multithread": 59091
-    },
-    "Intel Xeon W-3365 @ 2.70GHz": {
-        "multithread": 59038
     },
     "AMD EPYC 7642": {
         "multithread": 58795
@@ -3345,62 +6439,14 @@
     "AMD EPYC 7552": {
         "multithread": 57414
     },
-    "ARM Neoverse-V2 72 Core 3465 MHz": {
-        "multithread": 57369
-    },
-    "ARM Neoverse-V2 72 Core 3447 MHz": {
-        "multithread": 57299
-    },
-    "ARM Neoverse-V2 72 Core 3519 MHz": {
-        "multithread": 57240
-    },
-    "Intel Xeon Gold 6414U": {
-        "multithread": 57200
-    },
-    "AMD EPYC 8324P": {
-        "multithread": 57127
-    },
-    "Intel Xeon Platinum 8362 @ 2.80GHz": {
-        "multithread": 56787
-    },
     "ARM Neoverse-V2 96 Core 0 MHz": {
         "multithread": 56557
-    },
-    "Intel Xeon Platinum 8375C @ 2.90GHz": {
-        "multithread": 56202
-    },
-    "Intel Xeon Gold 6530": {
-        "multithread": 55177
-    },
-    "AMD Ryzen Threadripper 3960X": {
-        "multithread": 54776
-    },
-    "Intel Xeon Platinum 8358 @ 2.60GHz": {
-        "multithread": 54416
-    },
-    "Intel Xeon Platinum 8360Y @ 2.40GHz": {
-        "multithread": 54078
-    },
-    "Intel Xeon Gold 6438N": {
-        "multithread": 52789
-    },
-    "AMD EPYC 7F72": {
-        "multithread": 52740
     },
     "AMD EPYC 7532": {
         "multithread": 52030
     },
-    "Intel Xeon Gold 6348 @ 2.60GHz": {
-        "multithread": 51843
-    },
-    "Intel Xeon Gold 6418H": {
-        "multithread": 51711
-    },
     "AMD EPYC 7502": {
         "multithread": 51695
-    },
-    "Intel Xeon Gold 6430": {
-        "multithread": 51490
     },
     "AMD EPYC 7502P": {
         "multithread": 51054
@@ -3408,74 +6454,20 @@
     "Intel Xeon Gold 6554S": {
         "multithread": 50777
     },
-    "AMD EPYC 7413": {
-        "multithread": 50641
-    },
-    "Intel Xeon Platinum 8347C @ 2.10GHz": {
-        "multithread": 49386
-    },
-    "Montage Jintide C5418Y": {
-        "multithread": 49045
-    },
-    "AMD EPYC 7R12": {
-        "multithread": 48934
-    },
-    "Intel Xeon Gold 6314U @ 2.30GHz": {
-        "multithread": 48916
-    },
-    "AMD EPYC Embedded 8224P": {
-        "multithread": 48873
-    },
-    "AMD EPYC 7453": {
-        "multithread": 48453
-    },
-    "Intel Xeon W-3345 @ 3.00GHz": {
-        "multithread": 47664
-    },
     "ARM Ampere-1a 192 Core 2600 MHz": {
         "multithread": 47202
-    },
-    "Intel Xeon Gold 6342 @ 2.80GHz": {
-        "multithread": 47076
-    },
-    "Intel Xeon Gold 5418Y": {
-        "multithread": 46841
-    },
-    "Intel Xeon Platinum 8368Q @ 2.60GHz": {
-        "multithread": 46681
-    },
-    "Intel Xeon W-3175X @ 3.10GHz": {
-        "multithread": 46125
-    },
-    "AMD EPYC 7402": {
-        "multithread": 46012
     },
     "AMD EPYC 7452": {
         "multithread": 45875
     },
-    "Intel Xeon Gold 6336Y @ 2.40GHz": {
-        "multithread": 45517
-    },
-    "AMD EPYC 8224P": {
-        "multithread": 45421
-    },
     "AMD EPYC 7542": {
         "multithread": 45359
-    },
-    "AMD EPYC 9224": {
-        "multithread": 45223
     },
     "Intel Xeon Gold 6538N": {
         "multithread": 44895
     },
-    "AMD EPYC 9124": {
-        "multithread": 43846
-    },
     "AMD EPYC 7402P": {
         "multithread": 43759
-    },
-    "AMD EPYC 7343": {
-        "multithread": 43644
     },
     "ARM Neoverse-N1 128 Core 2800 MHz": {
         "multithread": 43111
@@ -3483,95 +6475,26 @@
     "AMD EPYC 7D12": {
         "multithread": 42900
     },
-    "Intel Xeon Gold 6312U @ 2.40GHz": {
-        "multithread": 42443
-    },
     "Intel Xeon Gold 6338N @ 2.20GHz": {
         "multithread": 42086
     },
     "Intel Xeon Gold 6330 @ 2.00GHz": {
         "multithread": 42072
     },
-    "Intel Xeon W-3275 @ 2.50GHz": {
-        "multithread": 41469
-    },
-    "AMD EPYC 7F52": {
-        "multithread": 41322
-    },
-    "AMD EPYC 7313P": {
-        "multithread": 41121
-    },
-    "Intel Xeon Platinum 8275CL @ 3.00GHz": {
-        "multithread": 40794
-    },
-    "Intel Xeon W-3275M @ 2.50GHz": {
-        "multithread": 40419
-    },
     "AMD EPYC 7352": {
         "multithread": 40370
-    },
-    "Intel Xeon Gold 6258R @ 2.70GHz": {
-        "multithread": 40252
-    },
-    "AMD Ryzen Threadripper PRO 3955WX": {
-        "multithread": 40155
-    },
-    "Intel Xeon Gold 6354 @ 3.00GHz": {
-        "multithread": 39400
-    },
-    "Intel Xeon W-3335 @ 3.40GHz": {
-        "multithread": 39293
     },
     "ARM Neoverse-N1 128 Core 3000 MHz": {
         "multithread": 39163
     },
-    "AMD EPYC 7313": {
-        "multithread": 38644
-    },
-    "AMD Ryzen 9 3950X": {
-        "multithread": 38586
-    },
     "Intel Xeon Gold 6450C": {
         "multithread": 38571
-    },
-    "Intel Xeon Gold 6338 @ 2.00GHz": {
-        "multithread": 38520
-    },
-    "Intel Xeon Platinum 8180 @ 2.50GHz": {
-        "multithread": 38259
     },
     "AMD EPYC 7551P": {
         "multithread": 38198
     },
-    "Intel Xeon Gold 6346 @ 3.10GHz": {
-        "multithread": 37708
-    },
     "Intel Xeon Gold 5320 @ 2.20GHz": {
         "multithread": 37558
-    },
-    "Intel Xeon Platinum 8273CL @ 2.20GHz": {
-        "multithread": 37320
-    },
-    "Intel Xeon Gold 6426Y": {
-        "multithread": 37068
-    },
-    "Intel Xeon Platinum 8280 @ 2.70GHz": {
-        "multithread": 36830
-    },
-    "Intel Xeon Gold 6242R @ 3.10GHz": {
-        "multithread": 36671
-    },
-    "Intel Xeon Gold 6330N @ 2.20GHz": {
-        "multithread": 36360
-    },
-    "AMD EPYC 8124P": {
-        "multithread": 36014
-    },
-    "Intel Xeon Gold 6338T @ 2.10GHz": {
-        "multithread": 35801
-    },
-    "Intel Xeon Gold 6248R @ 3.00GHz": {
-        "multithread": 35434
     },
     "ARM Neoverse-N1 80 Core 3000 MHz": {
         "multithread": 35253
@@ -3581,45 +6504,6 @@
     },
     "ARM Neoverse-N1 80 Core 0 MHz": {
         "multithread": 34878
-    },
-    "Intel Xeon Gold 6238R @ 2.20GHz": {
-        "multithread": 34751
-    },
-    "Intel Xeon w5-3433": {
-        "multithread": 34722
-    },
-    "Intel Xeon Platinum 8268 @ 2.90GHz": {
-        "multithread": 34604
-    },
-    "Intel Xeon Platinum 8260M @ 2.40GHz": {
-        "multithread": 34592
-    },
-    "Intel Xeon Gold 6268CL @ 2.80GHz": {
-        "multithread": 34558
-    },
-    "Intel Xeon Platinum 8260C @ 2.40GHz": {
-        "multithread": 34420
-    },
-    "Intel Xeon Gold 6326 @ 2.90GHz": {
-        "multithread": 34240
-    },
-    "Intel Xeon W-3265M @ 2.70GHz": {
-        "multithread": 34147
-    },
-    "Intel Xeon Platinum 8260M @ 2.30GHz": {
-        "multithread": 33970
-    },
-    "Intel Xeon D-2799 @ 2.40GHz": {
-        "multithread": 33792
-    },
-    "Intel Xeon Gold 6230R @ 2.10GHz": {
-        "multithread": 33608
-    },
-    "AMD Ryzen Threadripper PRO 3945WX": {
-        "multithread": 33494
-    },
-    "Intel Xeon Gold 6240R @ 2.40GHz": {
-        "multithread": 33353
     },
     "Intel Xeon Gold 5318Y @ 2.10GHz": {
         "multithread": 33139
@@ -3633,72 +6517,11 @@
     "AMD EPYC 7302P": {
         "multithread": 32690
     },
-    "Intel Xeon Gold 6254 @ 3.10GHz": {
-        "multithread": 32599
-    },
-    "AMD Ryzen 9 3900XT": {
-        "multithread": 32576,
-        "gaming": 4042
-    },
-    "AMD Ryzen 9 3900X": {
-        "multithread": 32544,
-        "gaming": 4040
-    },
-    "Intel Core i9-10980XE @ 3.00GHz": {
-        "multithread": 32408
-    },
-    "Intel Xeon Platinum 8168 @ 2.70GHz": {
-        "multithread": 32373
-    },
-    "AMD Ryzen Threadripper 2990WX": {
-        "multithread": 32200
-    },
-    "Intel Xeon Silver 4316 @ 2.30GHz": {
-        "multithread": 31892
-    },
-    "Intel Xeon Gold 5320H @ 2.40GHz": {
-        "multithread": 31718
-    },
-    "Intel Core i9-9980XE @ 3.00GHz": {
-        "multithread": 31566
-    },
-    "Intel Xeon Gold 5220R @ 2.20GHz": {
-        "multithread": 31558
-    },
     "Intel Xeon Platinum 8259CL @ 2.50GHz": {
         "multithread": 31403
     },
-    "AMD Ryzen 9 PRO 3900": {
-        "multithread": 31333,
-        "gaming": 3946
-    },
-    "Intel Xeon W-3245 @ 3.20GHz": {
-        "multithread": 31073
-    },
-    "AMD Ryzen Threadripper 2970WX": {
-        "multithread": 31026
-    },
-    "Intel Xeon W-2295 @ 3.00GHz": {
-        "multithread": 30906
-    },
     "ARM Neoverse-N1 60 Core 0 MHz": {
         "multithread": 30828
-    },
-    "AMD EPYC 7371": {
-        "multithread": 30782
-    },
-    "AMD Ryzen 9 3900": {
-        "multithread": 30586,
-        "gaming": 3763
-    },
-    "AMD EPYC Embedded 7292P": {
-        "multithread": 30542
-    },
-    "Intel Xeon Gold 6246R @ 3.40GHz": {
-        "multithread": 30468
-    },
-    "Intel Xeon Platinum 8260 @ 2.40GHz": {
-        "multithread": 30347
     },
     "Intel Xeon Platinum 8180M @ 2.50GHz": {
         "multithread": 30313
@@ -3706,47 +6529,14 @@
     "AMD EPYC 7282": {
         "multithread": 30137
     },
-    "Intel Xeon W-3265 @ 2.70GHz": {
-        "multithread": 30105
-    },
-    "Intel Xeon Platinum 8270 @ 2.70GHz": {
-        "multithread": 29986
-    },
-    "Intel Core i9-9960X @ 3.10GHz": {
-        "multithread": 29907
-    },
     "ARM Neoverse-N1 96 Core 2800 MHz": {
         "multithread": 29890
-    },
-    "Intel Core i9-7980XE @ 2.60GHz": {
-        "multithread": 29750
-    },
-    "Intel Xeon Platinum 8171M @ 2.60GHz": {
-        "multithread": 29613
-    },
-    "Intel Xeon Gold 6248 @ 2.50GHz": {
-        "multithread": 29552
-    },
-    "AMD Ryzen Threadripper 2950X": {
-        "multithread": 29477
-    },
-    "Intel Xeon Gold 5318H @ 2.50GHz": {
-        "multithread": 29301
     },
     "Intel Xeon Gold 6238 @ 2.10GHz": {
         "multithread": 29118
     },
-    "Intel Xeon Gold 6148 @ 2.40GHz": {
-        "multithread": 29116
-    },
-    "Intel Xeon Silver 4314 @ 2.40GHz": {
-        "multithread": 29095
-    },
     "Intel Xeon Gold 6266C @ 3.00GHz": {
         "multithread": 29049
-    },
-    "Intel Xeon Silver 4514Y": {
-        "multithread": 29032
     },
     "Intel Xeon Platinum 8160 @ 2.10GHz": {
         "multithread": 28787
@@ -3754,29 +6544,8 @@
     "AMD EPYC 7303": {
         "multithread": 28572
     },
-    "Intel Xeon Gold 6253CL @ 3.10GHz": {
-        "multithread": 28549
-    },
-    "Intel Xeon D-2795NT @ 2.00GHz": {
-        "multithread": 28463
-    },
-    "Intel Xeon W-2191B @ 2.30GHz": {
-        "multithread": 28255
-    },
     "Intel Xeon Gold 6210U @ 2.50GHz": {
         "multithread": 28219
-    },
-    "Intel Xeon Platinum 8252C @ 3.80GHz": {
-        "multithread": 28147
-    },
-    "Intel Core i9-9940X @ 3.30GHz": {
-        "multithread": 28122
-    },
-    "Intel Core i9-7960X @ 2.80GHz": {
-        "multithread": 28116
-    },
-    "Intel Xeon W-3245M @ 3.20GHz": {
-        "multithread": 28067
     },
     "ARM Neoverse-N1 64 Core 0 MHz": {
         "multithread": 28040
@@ -3784,38 +6553,14 @@
     "Intel Xeon Platinum 8173M @ 2.00GHz": {
         "multithread": 28025
     },
-    "Intel Xeon W-2275 @ 3.30GHz": {
-        "multithread": 27992
-    },
-    "Intel Xeon W-2195 @ 2.30GHz": {
-        "multithread": 27914
-    },
     "AMD EPYC 7401P": {
         "multithread": 27836
-    },
-    "Intel Xeon W-3323 @ 3.50GHz": {
-        "multithread": 27822
-    },
-    "Intel Core i9-10940X @ 3.30GHz": {
-        "multithread": 27779
-    },
-    "AMD Ryzen Threadripper 1950X": {
-        "multithread": 27595
-    },
-    "Intel Xeon Gold 6154 @ 3.00GHz": {
-        "multithread": 27560
     },
     "Intel Xeon Gold 6212U @ 2.40GHz": {
         "multithread": 27470
     },
-    "Intel Xeon Gold 5317 @ 3.00GHz": {
-        "multithread": 27448
-    },
     "AMD EPYC 7571": {
         "multithread": 27445
-    },
-    "Intel Xeon D-2775TE @ 2.00GHz": {
-        "multithread": 27299
     },
     "ARM Neoverse-N1 48 Core 0 MHz": {
         "multithread": 27266
@@ -3829,50 +6574,14 @@
     "Intel Xeon Platinum 8175M @ 2.50GHz": {
         "multithread": 26659
     },
-    "Intel Xeon Gold 6150 @ 2.70GHz": {
-        "multithread": 26447
-    },
-    "Intel Xeon Gold 6226R @ 2.90GHz": {
-        "multithread": 26405
-    },
-    "Intel Xeon D-2796TE @ 2.00GHz": {
-        "multithread": 26342
-    },
-    "Intel Xeon Gold 6230 @ 2.10GHz": {
-        "multithread": 26076
-    },
     "AMD EPYC 7351P": {
         "multithread": 26042
     },
-    "Intel Core i9-10920X @ 3.50GHz": {
-        "multithread": 25992
-    },
-    "AMD Ryzen Threadripper 2990X": {
-        "multithread": 25874
-    },
-    "Intel Core i9-7940X @ 3.10GHz": {
-        "multithread": 25611
-    },
     "AMD EPYC 7551": {
-        "multithread": 25606
-    },
-    "Intel Xeon E5-2698R v4 @ 2.20GHz": {
-        "multithread": 25605
-    },
-    "Intel Xeon W-3235 @ 3.30GHz": {
-        "multithread": 25548
-    },
-    "Intel Xeon Gold 6142 @ 2.60GHz": {
-        "multithread": 25490
+        "multithread": 25996
     },
     "Intel Xeon Platinum 8167M @ 2.00GHz": {
         "multithread": 25396
-    },
-    "Intel Xeon Platinum 8124M @ 3.00GHz": {
-        "multithread": 25350
-    },
-    "AMD Ryzen Threadripper 2920X": {
-        "multithread": 25235
     },
     "AMD EPYC 7272": {
         "multithread": 25161
@@ -3880,44 +6589,17 @@
     "Intel Xeon E5-2699 v4 @ 2.20GHz": {
         "multithread": 25039
     },
-    "Intel Xeon Gold 6242 @ 2.80GHz": {
-        "multithread": 24994
-    },
-    "Intel Xeon E5-2696 v4 @ 2.20GHz": {
-        "multithread": 24959
-    },
-    "Intel Core i9-9920X @ 3.50GHz": {
-        "multithread": 24935
-    },
     "AMD EPYC 7501": {
         "multithread": 24925
     },
-    "Intel Xeon Silver 4410Y": {
-        "multithread": 24797
-    },
-    "Intel Xeon Gold 6143 @ 2.80GHz": {
-        "multithread": 24786
-    },
-    "Intel Xeon Gold 5218R @ 2.10GHz": {
-        "multithread": 24694
-    },
     "Intel Xeon Gold 6240 @ 2.60GHz": {
         "multithread": 24677
-    },
-    "Intel Xeon Gold 6208U @ 2.90GHz": {
-        "multithread": 24670
-    },
-    "Intel Xeon W-2170B @ 2.50GHz": {
-        "multithread": 24332
     },
     "Intel Xeon Gold 6152 @ 2.10GHz": {
         "multithread": 24287
     },
     "Intel Xeon Gold 6222V @ 1.80GHz": {
         "multithread": 24254
-    },
-    "Intel Xeon Gold 5220 @ 2.20GHz": {
-        "multithread": 24154
     },
     "Intel Xeon E5-2679 v4 @ 2.50GHz": {
         "multithread": 24131
@@ -3932,73 +6614,19 @@
         "multithread": 24013
     },
     "Intel Xeon Gold 6138 @ 2.00GHz": {
-        "multithread": 23949
-    },
-    "Intel Xeon Gold 6140 @ 2.30GHz": {
-        "multithread": 23927
-    },
-    "Intel Xeon Gold 6122 @ 1.80GHz": {
-        "multithread": 23781
-    },
-    "Intel Core i9-7920X @ 2.90GHz": {
-        "multithread": 23494
-    },
-    "Intel Xeon W-2175 @ 2.50GHz": {
-        "multithread": 23449
-    },
-    "Intel Xeon Gold 6146 @ 3.20GHz": {
-        "multithread": 23388
-    },
-    "Intel Xeon Gold 6256 @ 3.60GHz": {
-        "multithread": 23287
+        "multithread": 23810
     },
     "AMD EPYC 7351": {
         "multithread": 23226
     },
-    "AMD EPYC 7F32": {
-        "multithread": 23198
-    },
     "Intel Xeon Platinum 8176 @ 2.10GHz": {
         "multithread": 23179
-    },
-    "AMD Ryzen Threadripper 1920X": {
-        "multithread": 23105
-    },
-    "AMD Ryzen 7 3800X": {
-        "multithread": 23047
-    },
-    "Intel Core i9-12900TE": {
-        "multithread": 22887
     },
     "Intel Xeon E5-2698 v4 @ 2.20GHz": {
         "multithread": 22832
     },
-    "AMD Ryzen 7 PRO 3700": {
-        "multithread": 22820
-    },
     "Intel Xeon Platinum P-8124 @ 3.00GHz": {
         "multithread": 22674
-    },
-    "Intel Xeon Gold 6246 @ 3.30GHz": {
-        "multithread": 22571
-    },
-    "AMD Ryzen 7 3700X": {
-        "multithread": 22458
-    },
-    "Intel Xeon W-2255 @ 3.70GHz": {
-        "multithread": 22414
-    },
-    "Intel Core i9-10900X @ 3.70GHz": {
-        "multithread": 22398
-    },
-    "Intel Xeon Gold 6132 @ 2.60GHz": {
-        "multithread": 22280
-    },
-    "AMD Ryzen Threadripper 1920": {
-        "multithread": 22066
-    },
-    "Intel Xeon Silver 4310 @ 2.10GHz": {
-        "multithread": 21903
     },
     "Intel Xeon Gold 6262 @ 1.90GHz": {
         "multithread": 21823
@@ -4006,50 +6634,20 @@
     "Intel Xeon Gold 6130T @ 2.10GHz": {
         "multithread": 21804
     },
-    "Intel Xeon Gold 5218 @ 2.30GHz": {
-        "multithread": 21728
-    },
     "AMD EPYC 7281": {
         "multithread": 21621
-    },
-    "Intel Core i9-9900X @ 3.50GHz": {
-        "multithread": 21619
     },
     "Intel Xeon E7-8891 v3 @ 2.80GHz": {
         "multithread": 21615
     },
-    "Intel Xeon E5-2697A v4 @ 2.60GHz": {
-        "multithread": 21598
-    },
     "Intel Xeon E5-2696 v3 @ 2.30GHz": {
         "multithread": 21527
-    },
-    "Intel Xeon Gold 5218T @ 2.10GHz": {
-        "multithread": 21433
     },
     "Hygon C86-4G (OPN:3490)": {
         "multithread": 21378
     },
-    "Intel Xeon Gold 6130 @ 2.10GHz": {
-        "multithread": 21306
-    },
     "Intel Xeon E5-2699C v4 @ 2.20GHz": {
         "multithread": 21172
-    },
-    "Intel Xeon E5-2673 v4 @ 2.30GHz": {
-        "multithread": 21106
-    },
-    "Intel Xeon W-2155 @ 3.30GHz": {
-        "multithread": 21063
-    },
-    "Intel Core i9-7900X @ 3.30GHz": {
-        "multithread": 21036
-    },
-    "Intel Core i7-7900X @ 3.30GHz": {
-        "multithread": 21008
-    },
-    "Intel Xeon Gold 6136 @ 3.00GHz": {
-        "multithread": 20973
     },
     "Intel Xeon E5-2697 v4 @ 2.30GHz": {
         "multithread": 20954
@@ -4063,32 +6661,8 @@
     "AMD EPYC 7262": {
         "multithread": 20779
     },
-    "Intel Xeon D-2753NT @ 2.00GHz": {
-        "multithread": 20626
-    },
-    "Intel Xeon Silver 4310T @ 2.30GHz": {
-        "multithread": 20607
-    },
-    "AMD EPYC 8024P": {
-        "multithread": 20556
-    },
-    "Intel Xeon W-2150B @ 3.00GHz": {
-        "multithread": 20553
-    },
-    "Intel Xeon Gold 6250 @ 3.90GHz": {
-        "multithread": 20552
-    },
-    "Intel Xeon Gold 6334 @ 3.60GHz": {
-        "multithread": 20512
-    },
-    "Intel Xeon Gold 5315Y @ 3.20GHz": {
-        "multithread": 20477
-    },
     "Intel Xeon Gold 6226 @ 2.70GHz": {
         "multithread": 20429
-    },
-    "Intel Core i9-9820X @ 3.30GHz": {
-        "multithread": 20428
     },
     "Intel Xeon Gold 6138T @ 2.00GHz": {
         "multithread": 20356
@@ -4096,19 +6670,619 @@
     "Intel Xeon E5-4667 v4 @ 2.20GHz": {
         "multithread": 20319
     },
-    "AMD Ryzen 5 3600XT": {
-        "gaming": 3721
+    "ARM Neoverse-N1 64 Core 2200 MHz": {
+        "multithread": 20250
     },
-    "AMD Ryzen 5 3500X": {
-        "gaming": 3695
+    "Intel Xeon E5-2699 v3 @ 2.30GHz": {
+        "multithread": 20001
     },
-    "AMD Ryzen 5 3600X": {
-        "gaming": 3625
+    "Intel Xeon E5-2686 v4 @ 2.30GHz": {
+        "multithread": 19945
     },
-    "Intel Core i7-1250U": {
-        "gaming": 3123
+    "AMD EPYC 3451": {
+        "multithread": 19532
     },
-    "Intel Core i5-1230U": {
-        "gaming": 2779
+    "AMD EPYC 7252": {
+        "multithread": 19411
+    },
+    "Intel Xeon D-2183IT @ 2.20GHz": {
+        "multithread": 19377
+    },
+    "Intel Xeon D-2752TER @ 1.80GHz": {
+        "multithread": 19102
+    },
+    "Intel Xeon E5-2676 v4 @ 2.40GHz": {
+        "multithread": 18978
+    },
+    "Intel Xeon E5-2695 v4 @ 2.10GHz": {
+        "multithread": 18953
+    },
+    "Hygon C86 7255 16-core": {
+        "multithread": 18831
+    },
+    "ARM Neoverse-N1 80 Core 2600 MHz": {
+        "multithread": 18823
+    },
+    "Intel Xeon E5-2698 v3 @ 2.30GHz": {
+        "multithread": 18805
+    },
+    "Intel Xeon E5-2682 v4 @ 2.50GHz": {
+        "multithread": 18676
+    },
+    "AMD Ryzen AI Max 385": {
+        "multithread": 18441
+    },
+    "Intel Xeon Gold 5120 @ 2.20GHz": {
+        "multithread": 18251
+    },
+    "Intel Xeon E7-8880 v3 @ 2.30GHz": {
+        "multithread": 18244
+    },
+    "Intel Xeon E5-2697 v3 @ 2.60GHz": {
+        "multithread": 18214
+    },
+    "Intel Xeon E5-2686 v3 @ 2.00GHz": {
+        "multithread": 18148
+    },
+    "Intel Xeon Gold 5120T @ 2.20GHz": {
+        "multithread": 18127
+    },
+    "Intel Xeon D-2187NT @ 2.00GHz": {
+        "multithread": 18070
+    },
+    "Intel Xeon E5-2666 v4 @ 2.80GHz": {
+        "multithread": 17958
+    },
+    "Intel Xeon Phi 7290 @ 1.50GHz": {
+        "multithread": 17839
+    },
+    "Intel Xeon Silver 4214R @ 2.40GHz": {
+        "multithread": 17834
+    },
+    "Intel Xeon E5-2687W v4 @ 3.00GHz": {
+        "multithread": 17828
+    },
+    "AMD EPYC 7232P": {
+        "multithread": 17731
+    },
+    "Intel Xeon E5-2683 v4 @ 2.10GHz": {
+        "multithread": 17591
+    },
+    "ARM Neoverse-N1 64 Core 3000 MHz": {
+        "multithread": 17515
+    },
+    "Intel Xeon E5-2680R v4 @ 2.40GHz": {
+        "multithread": 17487
+    },
+    "Intel Xeon E5-4669 v3 @ 2.10GHz": {
+        "multithread": 17430
+    },
+    "Intel Xeon E5-2680 v4 @ 2.40GHz": {
+        "multithread": 17388
+    },
+    "ARM Neoverse-N1 32 Core 0 MHz": {
+        "multithread": 17384
+    },
+    "Intel Atom P5362": {
+        "multithread": 17276
+    },
+    "Intel Xeon Gold 5118 @ 2.30GHz": {
+        "multithread": 16815
+    },
+    "Intel Xeon E5-2695 v3 @ 2.30GHz": {
+        "multithread": 16594
+    },
+    "Intel Xeon Gold 5117 @ 2.00GHz": {
+        "multithread": 16487
+    },
+    "Intel Xeon E7-4809 v2 @ 1.90GHz": {
+        "multithread": 16471
+    },
+    "Intel Xeon Silver 4214Y @ 2.20GHz": {
+        "multithread": 16442
+    },
+    "Intel Xeon Silver 4214 @ 2.20GHz": {
+        "multithread": 16320
+    },
+    "Intel Xeon E5-2698B v3 @ 2.00GHz": {
+        "multithread": 16287
+    },
+    "Intel Xeon E5-4650 v4 @ 2.20GHz": {
+        "multithread": 16225
+    },
+    "Intel Xeon E5-2669 v3 @ 2.30GHz": {
+        "multithread": 16107
+    },
+    "Intel Xeon E5-2690 v3 @ 2.60GHz": {
+        "multithread": 16068
+    },
+    "Intel Xeon E5-2660 v4 @ 2.00GHz": {
+        "multithread": 15741
+    },
+    "Intel Xeon Gold 5215 @ 2.50GHz": {
+        "multithread": 15719
+    },
+    "Intel Xeon D-1746TER @ 2.00GHz": {
+        "multithread": 15660
+    },
+    "Intel Xeon E5-4667 v3 @ 2.00GHz": {
+        "multithread": 15397
+    },
+    "Intel Xeon E5-4660 v4 @ 2.20GHz": {
+        "multithread": 15375
+    },
+    "Intel Xeon Silver 4116T @ 2.10GHz": {
+        "multithread": 15187
+    },
+    "Intel Xeon Silver 4210R @ 2.40GHz": {
+        "multithread": 15172
+    },
+    "Intel Xeon D-2166NT @ 2.00GHz": {
+        "multithread": 15105
+    },
+    "Intel Xeon Silver 4116 @ 2.10GHz": {
+        "multithread": 15015
+    },
+    "AMD EPYC 7301": {
+        "multithread": 14991
+    },
+    "AMD EPYC 7251": {
+        "multithread": 14935
+    },
+    "Intel Xeon E5-2680 v3 @ 2.50GHz": {
+        "multithread": 14905
+    },
+    "Intel Xeon E5-2658A v3 @ 2.20GHz": {
+        "multithread": 14879
+    },
+    "Intel Xeon Gold 5115 @ 2.40GHz": {
+        "multithread": 14875
+    },
+    "Intel Xeon E5-1681 v3 @ 2.90GHz": {
+        "multithread": 14820
+    },
+    "AMD Ryzen 7 1700": {
+        "multithread": 14796
+    },
+    "Intel Xeon E5-2683 v3 @ 2.00GHz": {
+        "multithread": 14777
+    },
+    "AMD Ryzen 7 PRO 1700": {
+        "multithread": 14696
+    },
+    "Intel Xeon E5-2678 v3 @ 2.50GHz": {
+        "multithread": 14665
+    },
+    "ARM Neoverse-N2 16 Core 0 MHz": {
+        "multithread": 14636
+    },
+    "Intel Xeon E5-2687W v3 @ 3.10GHz": {
+        "multithread": 14540
+    },
+    "Intel Xeon Silver 4215 @ 2.50GHz": {
+        "multithread": 14439
+    },
+    "Intel Xeon E5-2658 v4 @ 2.30GHz": {
+        "multithread": 14434
+    },
+    "Intel Xeon Silver 4123 @ 3.00GHz": {
+        "multithread": 14405
+    },
+    "Intel Xeon E5-2697 v2 @ 2.70GHz": {
+        "multithread": 14293
+    },
+    "Intel Xeon E5-4660 v3 @ 2.10GHz": {
+        "multithread": 14256
+    },
+    "Intel Xeon D-1732TE @ 1.90GHz": {
+        "multithread": 14254
+    },
+    "Intel Xeon E5-2673 v3 @ 2.40GHz": {
+        "multithread": 14218
+    },
+    "Intel Xeon E5-2696 v2 @ 2.50GHz": {
+        "multithread": 14053
+    },
+    "Intel Xeon E5-2666 v3 @ 2.90GHz": {
+        "multithread": 14041
+    },
+    "AMD EPYC 3251": {
+        "multithread": 13757
+    },
+    "Intel Xeon Silver 4210 @ 2.20GHz": {
+        "multithread": 13608
+    },
+    "Intel Xeon E5-2670 v3 @ 2.30GHz": {
+        "multithread": 13499
+    },
+    "Intel Xeon E5-2658 v3 @ 2.20GHz": {
+        "multithread": 13487
+    },
+    "Intel Xeon E5-2695 v2 @ 2.40GHz": {
+        "multithread": 13402
+    },
+    "Intel Xeon E5-2690 v2 @ 3.00GHz": {
+        "multithread": 13396
+    },
+    "Intel Xeon D-1587 @ 1.70GHz": {
+        "multithread": 13352
+    },
+    "Intel Xeon E5-2650 v4 @ 2.20GHz": {
+        "multithread": 13330
+    },
+    "Intel Xeon E5-2676 v3 @ 2.40GHz": {
+        "multithread": 13286
+    },
+    "Intel Xeon E5-2675 v3 @ 1.80GHz": {
+        "multithread": 13180
+    },
+    "Intel Xeon D-1581 @ 1.80GHz": {
+        "multithread": 13173
+    },
+    "Intel Atom P5342": {
+        "multithread": 13085
+    },
+    "Intel Xeon Silver 4114 @ 2.20GHz": {
+        "multithread": 13072
+    },
+    "Intel Xeon E5-2660 v3 @ 2.60GHz": {
+        "multithread": 13060
+    },
+    "Intel Xeon E5-4627 v4 @ 2.60GHz": {
+        "multithread": 12969
+    },
+    "Intel Xeon E5-2685 v3 @ 2.60GHz": {
+        "multithread": 12944
+    },
+    "Intel Xeon E5-2650L v4 @ 1.70GHz": {
+        "multithread": 12717
+    },
+    "Intel Xeon E5-2680 v2 @ 2.80GHz": {
+        "multithread": 12634
+    },
+    "Intel Xeon E5-1660 v3 @ 3.00GHz": {
+        "multithread": 12579
+    },
+    "Intel Xeon E5-2667 v3 @ 3.20GHz": {
+        "multithread": 12510
+    },
+    "Intel Xeon E5-2640 v4 @ 2.40GHz": {
+        "multithread": 12446
+    },
+    "Intel Xeon E5-2618L v4 @ 2.20GHz": {
+        "multithread": 12429
+    },
+    "Intel Xeon E5-2649 v3 @ 2.30GHz": {
+        "multithread": 12399
+    },
+    "Intel Xeon E5-2673 v2 @ 3.30GHz": {
+        "multithread": 12331
+    },
+    "Hygon C86 3350 8-core": {
+        "multithread": 12292
+    },
+    "AMD Ryzen 5 1600": {
+        "multithread": 12270
+    },
+    "Intel Xeon E5-2667 v2 @ 3.30GHz": {
+        "multithread": 12269
+    },
+    "Intel Xeon E5-2687W v2 @ 3.40GHz": {
+        "multithread": 12258
+    },
+    "Intel Xeon D-2143IT @ 2.20GHz": {
+        "multithread": 12207
+    },
+    "Intel Xeon E5-2692 v2 @ 2.20GHz": {
+        "multithread": 12119
+    },
+    "Intel Xeon D-2141I @ 2.20GHz": {
+        "multithread": 12117
+    },
+    "Intel Xeon E5-2650L v3 @ 1.80GHz": {
+        "multithread": 11865
+    },
+    "ARM Neoverse-N1 32 Core 1700 MHz": {
+        "multithread": 11841
+    },
+    "Intel Xeon E5-2648L v4 @ 1.80GHz": {
+        "multithread": 11839
+    },
+    "AMD Ryzen 5 PRO 1600": {
+        "multithread": 11833
+    },
+    "Intel Xeon E5-2663 v3 @ 2.80GHz": {
+        "multithread": 11777
+    },
+    "ARM Neoverse-N1 80 Core 2800 MHz": {
+        "multithread": 11755
+    },
+    "Intel Xeon E5-2650 v3 @ 2.30GHz": {
+        "multithread": 11751
+    },
+    "Intel Xeon D-2146NT @ 2.30GHz": {
+        "multithread": 11736
+    },
+    "Intel Xeon D-1577 @ 1.30GHz": {
+        "multithread": 11645
+    },
+    "Intel Xeon E5-4657L v2 @ 2.40GHz": {
+        "multithread": 11613
+    },
+    "Intel Xeon E5-4669 v4 @ 2.20GHz": {
+        "multithread": 11523
+    },
+    "ARM Neoverse-V1 16 Core 0 MHz": {
+        "multithread": 11519
+    },
+    "Intel Xeon E5-4628L v4 @ 1.80GHz": {
+        "multithread": 11503
+    },
+    "Intel Xeon E5-2630 v4 @ 2.20GHz": {
+        "multithread": 11496
+    },
+    "Hygon C86 3250 8-core": {
+        "multithread": 11476
+    },
+    "ARM Neoverse-N1 16 Core 0 MHz": {
+        "multithread": 11459
+    },
+    "StratoVirt": {
+        "multithread": 11440
+    },
+    "Intel Xeon E5-2670 v2 @ 2.50GHz": {
+        "multithread": 11388
+    },
+    "Intel Xeon E5-4627 v3 @ 2.60GHz": {
+        "multithread": 11344
+    },
+    "Intel Xeon E5-2618L v3 @ 2.30GHz": {
+        "multithread": 11310
+    },
+    "Hygon C86-3G (OPN:3350)": {
+        "multithread": 11305
+    },
+    "Intel Xeon Bronze 3508U": {
+        "multithread": 11224
+    },
+    "AMD EPYC 7261": {
+        "multithread": 11149
+    },
+    "Intel Xeon Silver 4208 @ 2.10GHz": {
+        "multithread": 11095
+    },
+    "Intel Xeon Silver 4209T @ 2.20GHz": {
+        "multithread": 11080
+    },
+    "Intel Xeon E5-2628L v4 @ 1.90GHz": {
+        "multithread": 11079
+    },
+    "Intel Xeon E5-2640 v3 @ 2.60GHz": {
+        "multithread": 11044
+    },
+    "Intel Xeon E5-4655 v4 @ 2.50GHz": {
+        "multithread": 10912
+    },
+    "Intel Xeon E5-4650 v2 @ 2.40GHz": {
+        "multithread": 10907
+    },
+    "Intel Xeon E5-4650 v3 @ 2.10GHz": {
+        "multithread": 10838
+    },
+    "Intel Xeon E5-2470 v2 @ 2.40GHz": {
+        "multithread": 10664
+    },
+    "Intel Xeon E5-2658 v2 @ 2.40GHz": {
+        "multithread": 10528
+    },
+    "Intel Xeon E5-4620 v3 @ 2.00GHz": {
+        "multithread": 10525
+    },
+    "Intel Xeon D-1567 @ 2.10GHz": {
+        "multithread": 10447
+    },
+    "Intel Xeon E5-2660 v2 @ 2.20GHz": {
+        "multithread": 10384
+    },
+    "Intel Xeon E5-4640 v3 @ 1.90GHz": {
+        "multithread": 10372
+    },
+    "Intel Core i7-5930K @ 3.50GHz": {
+        "multithread": 10366
+    },
+    "Intel Xeon Silver 4109T @ 2.00GHz": {
+        "multithread": 10348
+    },
+    "Intel Xeon E5-2630 v3 @ 2.40GHz": {
+        "multithread": 10301
+    },
+    "Intel Xeon Silver 4110 @ 2.10GHz": {
+        "multithread": 10291
+    },
+    "Intel Xeon D-1540 @ 2.00GHz": {
+        "multithread": 10037
+    },
+    "Intel Xeon D-1541 @ 2.10GHz": {
+        "multithread": 10024
+    },
+    "Intel Xeon E5-2687W @ 3.10GHz": {
+        "multithread": 10018
+    },
+    "Intel Xeon E5-2630L v4 @ 1.80GHz": {
+        "multithread": 9972
+    },
+    "Intel Xeon Bronze 3408U": {
+        "multithread": 9969
+    },
+    "Intel Core i7-4960X @ 3.60GHz": {
+        "multithread": 9955
+    },
+    "Intel Xeon E5-2628L v3 @ 2.00GHz": {
+        "multithread": 9949
+    },
+    "Intel Xeon E5-2648L v3 @ 1.80GHz": {
+        "multithread": 9847
+    },
+    "ARM Kunpeng-920 24 Core 2600 MHz": {
+        "multithread": 9841
+    },
+    "Intel Core i7-5820K @ 3.30GHz": {
+        "multithread": 9831
+    },
+    "Intel Xeon E5-2650 v2 @ 2.60GHz": {
+        "multithread": 9811
+    },
+    "Intel Xeon E5-2690 @ 2.90GHz": {
+        "multithread": 9779
+    },
+    "AMD Ryzen Embedded V2546": {
+        "multithread": 9656
+    },
+    "ARM FT-2000+/64 64 Core 0 MHz": {
+        "multithread": 9605
+    },
+    "Intel Xeon E5-2651 v2 @ 1.80GHz": {
+        "multithread": 9551
+    },
+    "ARM HUAWEI,Kunpeng 920 24 Core 2600 MHz": {
+        "multithread": 9496
+    },
+    "Intel Xeon E5-2689 @ 2.60GHz": {
+        "multithread": 9489
+    },
+    "Intel Xeon E5-4627 v2 @ 3.30GHz": {
+        "multithread": 9425
+    },
+    "Intel Xeon E5-4620 v2 @ 2.60GHz": {
+        "multithread": 9424
+    },
+    "Intel Core i7-4930K @ 3.40GHz": {
+        "multithread": 9381
+    },
+    "Intel Xeon E5-4655 v3 @ 2.90GHz": {
+        "multithread": 9377
+    },
+    "Intel Xeon E5-2680 @ 2.70GHz": {
+        "multithread": 9349
+    },
+    "Intel Xeon E5-1650 v2 @ 3.50GHz": {
+        "multithread": 9331
+    },
+    "Intel Xeon E5-2620 v4 @ 2.10GHz": {
+        "multithread": 9295
+    },
+    "Intel Xeon D-1557 @ 1.50GHz": {
+        "multithread": 9285
+    },
+    "CIX P1 CD8180": {
+        "multithread": 9277
+    },
+    "Hygon C86 3185 8-core": {
+        "multithread": 9243
+    },
+    "Intel Xeon E5-2643 v2 @ 3.50GHz": {
+        "multithread": 9243
+    },
+    "Intel Core i5-10500TE @ 2.30GHz": {
+        "multithread": 9195
+    },
+    "Intel Xeon E5-2629 v3 @ 2.40GHz": {
+        "multithread": 9139
+    },
+    "Intel Xeon Silver 4108 @ 1.80GHz": {
+        "multithread": 9103
+    },
+    "Intel Xeon D-1548 @ 2.00GHz": {
+        "multithread": 9075
+    },
+    "Intel Xeon E5-4648 v3 @ 1.70GHz": {
+        "multithread": 9061
+    },
+    "ARM Neoverse-N1 12 Core 0 MHz": {
+        "multithread": 8994
+    },
+    "Intel Xeon E5-2450 v2 @ 2.50GHz": {
+        "multithread": 8967
+    },
+    "Intel Xeon E5-2670 @ 2.60GHz": {
+        "multithread": 8928
+    },
+    "ARM Kunpeng-920 24 Core 0 MHz": {
+        "multithread": 8870
+    },
+    "Intel Xeon E5-2648L v2 @ 1.90GHz": {
+        "multithread": 8828
+    },
+    "ARM - 32 Core 3300 MHz": {
+        "multithread": 8684
+    },
+    "ARM X-Gene 32 Core 3300 MHz": {
+        "multithread": 8684
+    },
+    "AMD EPYC 3201": {
+        "multithread": 8672
+    },
+    "Intel Xeon E5-2630L v3 @ 1.80GHz": {
+        "multithread": 8661
+    },
+    "Intel Atom C5125": {
+        "multithread": 8631
+    },
+    "Intel Core i7-3970X @ 3.50GHz": {
+        "multithread": 8588
+    },
+    "Intel Xeon E5-4650L @ 2.60GHz": {
+        "multithread": 8533
+    },
+    "Intel Xeon W-11155MLE @ 1.80GHz": {
+        "multithread": 8502
+    },
+    "Intel Xeon E5-2628 v3 @ 2.50GHz": {
+        "multithread": 8447
+    },
+    "Intel Core i7-3960X @ 3.30GHz": {
+        "multithread": 8434
+    },
+    "Intel Xeon E5-4650 @ 2.70GHz": {
+        "multithread": 8407
+    },
+    "AMD EPYC 8324PN 32-Core": {
+        "multithread": 8375
+    },
+    "Intel Core i5-1145GRE @ 2.60GHz": {
+        "multithread": 8373
+    },
+    "Intel Xeon E5-1660 @ 3.30GHz": {
+        "multithread": 8362
+    },
+    "Intel Core i3-N300": {
+        "multithread": 8347
+    },
+    "AMD EPYC 3151": {
+        "multithread": 8306
+    },
+    "Intel Xeon E5-2470 @ 2.30GHz": {
+        "multithread": 8300
+    },
+    "AMD Opteron 6386 SE": {
+        "multithread": 8291
+    },
+    "Intel Xeon E5-2665 @ 2.40GHz": {
+        "multithread": 8271
+    },
+    "ARM X-Gene 32 Core 3000 MHz": {
+        "multithread": 8202
+    },
+    "Intel Core i7-3930K @ 3.20GHz": {
+        "multithread": 8202
+    },
+    "Intel Xeon E-2276ME @ 2.80GHz": {
+        "multithread": 8167
+    },
+    "ARM - 32 Core 2911 MHz": {
+        "multithread": 8132
+    },
+    "Intel Xeon E5-2660 @ 2.20GHz": {
+        "multithread": 8091
     }
 }

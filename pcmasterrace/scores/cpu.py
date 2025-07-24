@@ -14,25 +14,35 @@ URLS = {
 
 def scrape_page(url, score_type):
     print(f"Scraping {score_type} from {url}")
-    res = requests.get(url, headers=HEADERS, timeout=10)
-    res.raise_for_status()
-    soup = BeautifulSoup(res.text, "html.parser")
+    all_cpu_scores = {}
 
-    names = soup.select(".prdname")
-    scores = soup.select(".count")
+    pages = [1] if score_type == "gaming" else [1, 2]
 
-    if not names or not scores:
-        raise ValueError("Failed to locate .prdname or .count elements")
+    for page in pages:
+        page_url = url if page == 1 else f"{url}/page{page}"
+        print(f"  Scraping page {page_url}")
+        res = requests.get(page_url, headers=HEADERS, timeout=10)
+        res.raise_for_status()
+        soup = BeautifulSoup(res.text, "html.parser")
 
-    cpu_scores = {}
-    for name_tag, score_tag in zip(names, scores):
-        name = name_tag.get_text(strip=True)
-        try:
-            score = int(score_tag.get_text(strip=True).replace(",", ""))
-        except ValueError:
-            continue  # skip malformed scores
-        cpu_scores[name] = score
-    return cpu_scores
+        names = soup.select(".prdname")
+        scores = soup.select(".count")
+
+        if not names or not scores:
+            print(f"  Warning: Failed to locate .prdname or .count elements on {page_url}")
+            continue
+
+        for name_tag, score_tag in zip(names, scores):
+            name = name_tag.get_text(strip=True)
+            try:
+                score = int(score_tag.get_text(strip=True).replace(",", ""))
+            except ValueError:
+                continue  # skip malformed scores
+            all_cpu_scores[name] = score
+
+        time.sleep(1)  # be polite between pages
+
+    return all_cpu_scores
 
 
 def main():
