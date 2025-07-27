@@ -1,7 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
 import json
 import time
+
+import requests
+from bs4 import BeautifulSoup
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; benchmark-scraper/1.0)"}
 

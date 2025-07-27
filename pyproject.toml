@@ -13,7 +13,7 @@ dependencies = []
 [dependency-groups]
 dev = [
     "black==23.12.0",
-    "ruff==0.11.11",
+    "ruff==0.12.5",
     "pre-commit==3.6.0"
 ]
 
@@ -47,12 +47,18 @@ exclude = [
     "site-packages",
     "venv",
 ]
+
+[tool.ruff.lint]
 select = ["C90", "E", "F", "I001", "PGH004", "RUF100"]
-ignore = ["F405", "E741", "C901", "F403", "E501"]
+ignore = ["F405", "E741", "C901", "F403", "E501", "E722"]
 fixable = ["ALL"]
-mccabe.max-complexity = 25
-isort.combine-as-imports = true
 unfixable = []
+
+[tool.ruff.lint.mccabe]
+max-complexity = 25
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
 
 [tool.black]
 line-length = "110"

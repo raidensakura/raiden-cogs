@@ -1,9 +1,10 @@
 import io
 import json
-import discord
-from pathlib import Path
-from PIL import Image, ImageDraw, ImageFont
 import re
+from pathlib import Path
+
+import discord
+from PIL import Image, ImageDraw, ImageFont
 
 FONT_PATH = Path(__file__).parent / "fonts" / "NotoSans.ttf"
 ALT_FONT_PATH = Path(__file__).parent / "fonts" / "BitcountPropDouble.ttf"

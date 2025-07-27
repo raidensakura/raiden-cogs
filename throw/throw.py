@@ -1,12 +1,13 @@
 from random import choice
 
 import discord
+from tabulate import tabulate
+
 from redbot.core import Config, commands
 from redbot.core.bot import Red
 from redbot.core.commands import Context
-from redbot.core.utils.chat_formatting import bold, box, quote
+from redbot.core.utils.chat_formatting import box
 from redbot.core.utils.menus import DEFAULT_CONTROLS, menu
-from tabulate import tabulate
 
 from .constants import *
 
@@ -64,7 +65,7 @@ class Throw(commands.Cog):
             em.set_image(url="https://i.imgur.com/IX2IfuM.gif")
             return await ctx.send(embed=em)
         if member.id == ctx.author.id:
-            return await ctx.send(f"Congratulations, **{ctx.author.name}**. " "You threw yourself.")
+            return await ctx.send(f"Congratulations, **{ctx.author.name}**. You threw yourself.")
         async with ctx.typing():
             item = choice(ITEMS)
             hit = choice([True, False])
@@ -111,8 +112,8 @@ class Throw(commands.Cog):
             def parse_actions(data, array, action: str):
                 for key, value in data.items():
                     if action in key:
-                        sent = str(data.get(f"ITEMS_THROWN", " ")).replace("0", " ")
-                        received = str(data.get(f"TIMES_HIT", " ")).replace("0", " ")
+                        sent = str(data.get("ITEMS_THROWN", " ")).replace("0", " ")
+                        received = str(data.get("TIMES_HIT", " ")).replace("0", " ")
                         array.append([action.lower(), received, sent])
 
             for act in self.possible_actions:

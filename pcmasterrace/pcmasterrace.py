@@ -1,25 +1,29 @@
-import discord
-from redbot.core import commands, Config
 import json
+import logging
 import re
+
+import discord
+
+from redbot.core import Config, commands
+from redbot.core.utils.views import SimpleMenu
+
 from .utils import (
-    get_page,
-    draw_bar_graph,
-    build_combo_embed,
-    DEFAULT_WEIGHT,
-    DEFAULT_COLOR,
     CPU_SCORES_PATH,
+    DEFAULT_COLOR,
+    DEFAULT_WEIGHT,
     GPU_SCORES_PATH,
     WEIGHTS_PATH,
+    build_combo_embed,
+    draw_bar_graph,
+    get_page,
 )
 from .views import ScoreView, UserScoreView
-from redbot.core.utils.views import SimpleMenu
-import logging
 
 with open(WEIGHTS_PATH, "r", encoding="utf-8") as f:
     WEIGHTS = json.load(f)
 
 log = logging.getLogger("red.raidensakura.pcmasterrace")
+
 
 class PCMasterRace(commands.Cog):
     """Submit and rank your CPU/GPU combos!"""
@@ -141,14 +145,17 @@ class PCMasterRace(commands.Cog):
         """
         if len(options) == 1:
             return options[0]
-        desc = "\n".join(f"{i+1}. `{opt}`" for i, opt in enumerate(options))
-        prompt = (
-            f"Multiple matches found for `{name}`. Please reply with the number of your choice:\n{desc}"
-        )
+        desc = "\n".join(f"{i + 1}. `{opt}`" for i, opt in enumerate(options))
+        prompt = f"Multiple matches found for `{name}`. Please reply with the number of your choice:\n{desc}"
         await ctx.send(prompt)
 
         def check(m):
-            return m.author == ctx.author and m.channel == ctx.channel and m.content.isdigit() and 1 <= int(m.content) <= len(options)
+            return (
+                m.author == ctx.author
+                and m.channel == ctx.channel
+                and m.content.isdigit()
+                and 1 <= int(m.content) <= len(options)
+            )
 
         try:
             msg = await ctx.bot.wait_for("message", check=check, timeout=30)
@@ -583,14 +590,16 @@ class PCMasterRace(commands.Cog):
             combo_score = self.combined_score(cpu_score, gpu_score)
             cpu_full = await self.regex_match(data["cpu"], self.cpu_scores.keys()) or data["cpu"]
             gpu_full = await self.regex_match(data["gpu"], self.gpu_scores.keys()) or data["gpu"]
-            user_data.append({
-                "member": member,
-                "cpu_score": cpu_score,
-                "gpu_score": gpu_score,
-                "combo_score": combo_score,
-                "cpu_full": cpu_full,
-                "gpu_full": gpu_full,
-            })
+            user_data.append(
+                {
+                    "member": member,
+                    "cpu_score": cpu_score,
+                    "gpu_score": gpu_score,
+                    "combo_score": combo_score,
+                    "cpu_full": cpu_full,
+                    "gpu_full": gpu_full,
+                }
+            )
 
         # Sort by combined score descending
         user_data.sort(key=lambda d: d["combo_score"], reverse=True)
@@ -599,8 +608,10 @@ class PCMasterRace(commands.Cog):
         desc = ""
         base = user_data[0]
         for other in user_data[1:]:
+
             def percent(a, b):
                 return (a / b) * 100 if b else 0
+
             cpu_percent = percent(other["cpu_score"], base["cpu_score"])
             gpu_percent = percent(other["gpu_score"], base["gpu_score"])
             combo_percent = percent(other["combo_score"], base["combo_score"])
@@ -644,11 +655,7 @@ class PCMasterRace(commands.Cog):
             cpu_scores + gpu_scores + combo_scores,
             "Build Comparison",
             labels=labels * 3,
-            bar_colors=(
-                [0xFF6666] * len(labels) +
-                [0x66FF66] * len(labels) +
-                [0x6666FF] * len(labels)
-            ),
+            bar_colors=([0xFF6666] * len(labels) + [0x66FF66] * len(labels) + [0x6666FF] * len(labels)),
             group_labels=["CPU", "GPU", "Combined"],
             group_size=len(labels),
         )
@@ -660,6 +667,7 @@ class PCMasterRace(commands.Cog):
             embed.set_image(url="attachment://compare.png")
 
         await ctx.send(embed=embed, files=files)
+
 
 def setup(bot):
     cog = PCMasterRace(bot)

@@ -1,5 +1,6 @@
 import discord
-from .utils import get_page, draw_bar_graph, get_page_dict, DEFAULT_COLOR
+
+from .utils import DEFAULT_COLOR, draw_bar_graph, get_page, get_page_dict
 
 
 class TabButton(discord.ui.Button):
@@ -58,7 +59,7 @@ class PageDropdown(discord.ui.Select):
             if end - start < 25 and end == total_pages:
                 start = max(0, end - 25)
         options = [
-            discord.SelectOption(label=f"Page {i+1}", value=str(i), default=(i == current_page))
+            discord.SelectOption(label=f"Page {i + 1}", value=str(i), default=(i == current_page))
             for i in range(start, end)
         ]
         super().__init__(
