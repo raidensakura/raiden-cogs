@@ -593,8 +593,8 @@ class PCMasterRace(commands.Cog):
                 await ctx.send("Please mention another member to compare.")
                 return
             members = (ctx.author, members[0])
-        # If more than 10 members, limit for readability
-        if len(members) > 10:
+        # If more than 3 members, limit for readability
+        if len(members) > 3:
             await ctx.send("You can compare up to 10 users at once.")
             return
 
