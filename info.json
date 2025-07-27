@@ -1,7 +1,9 @@
 {
-    "author" : ["raidensakura"],
-    "install_msg" : "Thanks for downloading my repo. For issues and questions about my cogs, feel free to contact me via https://dsc.gg/transience",
-    "name" : "raiden-cogs",
-    "short" : "Cogs made by Raiden for Red Discord bot.",
-    "description" : "Contains cogs that I made for fun in the process of learning Python."
+    "author": [
+        "raidensakura"
+    ],
+    "description": "Contains cogs that I made for fun in the process of learning Python.",
+    "install_msg": "Thanks for downloading my repo. For issues and questions about my cogs, feel free to contact me via https://dsc.gg/transience",
+    "name": "raiden-cogs",
+    "short": "Cogs made by Raiden for Red Discord bot."
 }
