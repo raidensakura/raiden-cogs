@@ -424,10 +424,10 @@ class PCMasterRace(commands.Cog):
     async def combo_set(self, ctx, *, combo: str = ""):
         """
         Set, update, or remove your CPU/GPU combo.
-        Example usage: `pcmr set combo Ryzen 7 5800X + RTX 3080`\n
+        Example usage: `[p]pcmr set combo Ryzen 7 5800X + RTX 3080`\n
 
         If you already have a combo, it will be updated.
-        To remove your combo, use: `pcmr set combo remove`
+        To remove your combo, use: `[p]pcmr set combo remove`
         """
         if combo is None:
             await ctx.send_help(ctx.command)
@@ -580,8 +580,8 @@ class PCMasterRace(commands.Cog):
     async def compare(self, ctx, *members: discord.Member):
         """
         Compare builds of multiple users (CPU, GPU, and combined).
-        Usage: {prefix}pcmr compare @user1 @user2 [@user3 ...]
-        If no users are provided, compares you and your combo.
+        Usage: `[p]pcmr compare @user1 @user2 [@user3 ...]`
+        If no users are provided, shows only your combo.
         If one user is provided, compares you and that user.
         """
         # If no members provided, compare user with themselves (show their own stats)
