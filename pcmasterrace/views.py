@@ -4,14 +4,18 @@ from .utils import DEFAULT_COLOR, draw_bar_graph, get_page, get_page_dict
 
 
 class TabButton(discord.ui.Button):
-    def __init__(self, label, tab_name, author, style=discord.ButtonStyle.secondary, row=1):
+    def __init__(
+        self, label, tab_name, author, style=discord.ButtonStyle.secondary, row=1
+    ):
         super().__init__(label=label, style=style, custom_id=f"tab_{tab_name}", row=row)
         self.tab_name = tab_name
         self.author = author
 
     async def callback(self, interaction: discord.Interaction):
         if interaction.user.id != self.author.id:
-            await interaction.response.send_message("This button isn't for you.", ephemeral=True)
+            await interaction.response.send_message(
+                "This button isn't for you.", ephemeral=True
+            )
             return
 
         view = self.view
@@ -23,14 +27,20 @@ class TabButton(discord.ui.Button):
 
 
 class PageButton(discord.ui.Button):
-    def __init__(self, label, delta, author, style=discord.ButtonStyle.secondary, row=1):
-        super().__init__(label=label, style=style, custom_id=f"page_{label.lower()}", row=row)
+    def __init__(
+        self, label, delta, author, style=discord.ButtonStyle.secondary, row=1
+    ):
+        super().__init__(
+            label=label, style=style, custom_id=f"page_{label.lower()}", row=row
+        )
         self.delta = delta
         self.author = author
 
     async def callback(self, interaction: discord.Interaction):
         if interaction.user.id != self.author.id:
-            await interaction.response.send_message("This button isn't for you.", ephemeral=True)
+            await interaction.response.send_message(
+                "This button isn't for you.", ephemeral=True
+            )
             return
 
         view = self.view
@@ -59,7 +69,9 @@ class PageDropdown(discord.ui.Select):
             if end - start < 25 and end == total_pages:
                 start = max(0, end - 25)
         options = [
-            discord.SelectOption(label=f"Page {i + 1}", value=str(i), default=(i == current_page))
+            discord.SelectOption(
+                label=f"Page {i + 1}", value=str(i), default=(i == current_page)
+            )
             for i in range(start, end)
         ]
         super().__init__(
@@ -74,7 +86,9 @@ class PageDropdown(discord.ui.Select):
 
     async def callback(self, interaction: discord.Interaction):
         if interaction.user.id != self.author.id:
-            await interaction.response.send_message("This dropdown isn't for you.", ephemeral=True)
+            await interaction.response.send_message(
+                "This dropdown isn't for you.", ephemeral=True
+            )
             return
 
         view = self.view
@@ -151,12 +165,16 @@ class ScoreView(discord.ui.View):
         for btn in self.tab_buttons:
             self.add_item(btn)
 
-        pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.gray, row=1)
+        pagination_buttons = make_pagination_buttons(
+            ctx.author, discord.ButtonStyle.gray, row=1
+        )
         self.prev_button, self.next_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
 
-        self.page_dropdown = PageDropdown(self.total_pages, self.page, ctx.author, row=2)
+        self.page_dropdown = PageDropdown(
+            self.total_pages, self.page, ctx.author, row=2
+        )
         self.add_item(self.page_dropdown)
 
         self.update_tab_styles()
@@ -167,7 +185,9 @@ class ScoreView(discord.ui.View):
 
     def update_page_dropdown(self, total_pages, current_page):
         self.remove_item(self.page_dropdown)
-        self.page_dropdown = PageDropdown(total_pages, current_page, self.ctx.author, row=2)
+        self.page_dropdown = PageDropdown(
+            total_pages, current_page, self.ctx.author, row=2
+        )
         self.add_item(self.page_dropdown)
 
     async def update_message(self, interaction):
@@ -211,7 +231,9 @@ class UserScoreView(discord.ui.View):
         for btn in self.tab_buttons:
             self.add_item(btn)
 
-        pagination_buttons = make_pagination_buttons(ctx.author, discord.ButtonStyle.secondary, row=1)
+        pagination_buttons = make_pagination_buttons(
+            ctx.author, discord.ButtonStyle.secondary, row=1
+        )
         self.prev_button, self.next_button = pagination_buttons
         for btn in pagination_buttons:
             self.add_item(btn)
@@ -238,7 +260,9 @@ class UserScoreView(discord.ui.View):
 
     def update_page_dropdown(self, total_pages, current_page):
         self.remove_item(self.page_dropdown)
-        self.page_dropdown = PageDropdown(total_pages, current_page, self.ctx.author, row=2)
+        self.page_dropdown = PageDropdown(
+            total_pages, current_page, self.ctx.author, row=2
+        )
         self.add_item(self.page_dropdown)
 
     async def update_message(self, interaction):

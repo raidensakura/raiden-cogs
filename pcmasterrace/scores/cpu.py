@@ -30,7 +30,9 @@ def scrape_page(url, score_type):
         scores = soup.select(".count")
 
         if not names or not scores:
-            print(f"  Warning: Failed to locate .prdname or .count elements on {page_url}")
+            print(
+                f"  Warning: Failed to locate .prdname or .count elements on {page_url}"
+            )
             continue
 
         for name_tag, score_tag in zip(names, scores):

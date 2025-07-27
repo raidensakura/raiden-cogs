@@ -127,7 +127,12 @@ def draw_bar_graph(
     if group_labels and group_size:
         group_label_height = 24
         num_groups = (len(page_items) + group_size - 1) // group_size
-        height = margin * 2 + len(page_items) * (bar_height + spacing) + num_groups * group_label_height + 60
+        height = (
+            margin * 2
+            + len(page_items) * (bar_height + spacing)
+            + num_groups * group_label_height
+            + 60
+        )
     else:
         height = margin * 2 + len(page_items) * (bar_height + spacing) + 60
 
@@ -150,7 +155,9 @@ def draw_bar_graph(
     for idx, (name, value) in enumerate(page_items):
         # Draw group label if needed
         if group_labels and group_size and idx % group_size == 0:
-            group_label = group_labels[group_idx] if group_idx < len(group_labels) else ""
+            group_label = (
+                group_labels[group_idx] if group_idx < len(group_labels) else ""
+            )
             # Calculate text width to center horizontally
             group_label_bbox = draw.textbbox((0, 0), group_label, font=group_font)
             group_label_width = group_label_bbox[2] - group_label_bbox[0]
@@ -194,7 +201,11 @@ def draw_bar_graph(
             bar_len = int((width - label_width - margin * 2) * (value / max_score))
 
         # Bar color
-        bar_color = page_colors[idx] if page_colors and idx < len(page_colors) else default_bar_color
+        bar_color = (
+            page_colors[idx]
+            if page_colors and idx < len(page_colors)
+            else default_bar_color
+        )
 
         draw.rectangle(
             [label_width, y, label_width + bar_len, y + bar_height],
@@ -205,7 +216,9 @@ def draw_bar_graph(
         label_y = y + 2
         if len(label_lines) == 2:
             line_height = (bar_height - 4) // 2
-            draw.text((margin, label_y), label_lines[0], font=label_font_used, fill=text_color)
+            draw.text(
+                (margin, label_y), label_lines[0], font=label_font_used, fill=text_color
+            )
             draw.text(
                 (margin, label_y + line_height),
                 label_lines[1],
@@ -237,7 +250,9 @@ def draw_bar_graph(
                 fill=inside_text_color,
             )
         else:
-            draw.text((score_x_outside, score_y), score_text, font=font_score, fill=text_color)
+            draw.text(
+                (score_x_outside, score_y), score_text, font=font_score, fill=text_color
+            )
 
         y += bar_height + spacing
 

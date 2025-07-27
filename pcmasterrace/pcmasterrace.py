@@ -32,7 +32,9 @@ class PCMasterRace(commands.Cog):
 
     def __init__(self, bot):
         self.bot = bot
-        self.config = Config.get_conf(self, identifier=1234567890, force_registration=True)
+        self.config = Config.get_conf(
+            self, identifier=1234567890, force_registration=True
+        )
         self.config.register_user(**self.default_user)
 
         with open(CPU_SCORES_PATH, "r", encoding="utf-8") as f:
@@ -288,7 +290,13 @@ class PCMasterRace(commands.Cog):
             int: The combined performance score as an integer.
         """
 
-        return int(round(2 * (cpu_score * gpu_score) / (cpu_weight * gpu_score + gpu_weight * cpu_score)))
+        return int(
+            round(
+                2
+                * (cpu_score * gpu_score)
+                / (cpu_weight * gpu_score + gpu_weight * cpu_score)
+            )
+        )
 
     async def get_all_users(self, guild):
         """
@@ -332,8 +340,12 @@ class PCMasterRace(commands.Cog):
             cpu_weighted_scores[name] = await self.fetch_cpu_score(name)
 
         # Sort GPU and CPU scores by weighted score, highest first
-        gpu_weighted_scores = dict(sorted(gpu_weighted_scores.items(), key=lambda x: x[1], reverse=True))
-        cpu_weighted_scores = dict(sorted(cpu_weighted_scores.items(), key=lambda x: x[1], reverse=True))
+        gpu_weighted_scores = dict(
+            sorted(gpu_weighted_scores.items(), key=lambda x: x[1], reverse=True)
+        )
+        cpu_weighted_scores = dict(
+            sorted(cpu_weighted_scores.items(), key=lambda x: x[1], reverse=True)
+        )
 
         view = ScoreView(ctx, gpu_weighted_scores, cpu_weighted_scores)
         await self.send_view(ctx, view, cpu_weighted_scores)
@@ -362,7 +374,9 @@ class PCMasterRace(commands.Cog):
 
         cpu_scores = dict(sorted(cpu_scores.items(), key=lambda x: x[1], reverse=True))
         gpu_scores = dict(sorted(gpu_scores.items(), key=lambda x: x[1], reverse=True))
-        combined_scores = dict(sorted(combined_scores.items(), key=lambda x: x[1], reverse=True))
+        combined_scores = dict(
+            sorted(combined_scores.items(), key=lambda x: x[1], reverse=True)
+        )
 
         view = UserScoreView(ctx, cpu_scores, gpu_scores, combined_scores)
         await self.send_view(ctx, view, cpu_scores)
@@ -383,7 +397,9 @@ class PCMasterRace(commands.Cog):
         page_scores, total_pages = get_page(cpu_scores, 0)
         title = f"CPU Scores (Page 1/{total_pages})"
         img_bytes = draw_bar_graph(page_scores, title)
-        embed = discord.Embed(title=title, color=await ctx.embed_color() or DEFAULT_COLOR)
+        embed = discord.Embed(
+            title=title, color=await ctx.embed_color() or DEFAULT_COLOR
+        )
         files = []
         view.prev_button.disabled = True
         view.next_button.disabled = total_pages <= 1
@@ -431,8 +447,12 @@ class PCMasterRace(commands.Cog):
         cpu_name = parts[0].strip()
         gpu_name = parts[1].strip()
 
-        matched_cpu = await self.regex_match(cpu_name, self.cpu_scores.keys(), return_options=True, ctx=ctx)
-        matched_gpu = await self.regex_match(gpu_name, self.gpu_scores.keys(), return_options=True, ctx=ctx)
+        matched_cpu = await self.regex_match(
+            cpu_name, self.cpu_scores.keys(), return_options=True, ctx=ctx
+        )
+        matched_gpu = await self.regex_match(
+            gpu_name, self.gpu_scores.keys(), return_options=True, ctx=ctx
+        )
 
         if not matched_cpu:
             await ctx.send(f"Could not find CPU score for `{cpu_name}`.")
@@ -588,8 +608,14 @@ class PCMasterRace(commands.Cog):
             cpu_score = await self.fetch_cpu_score(data["cpu"])
             gpu_score = await self.fetch_gpu_score(data["gpu"])
             combo_score = self.combined_score(cpu_score, gpu_score)
-            cpu_full = await self.regex_match(data["cpu"], self.cpu_scores.keys()) or data["cpu"]
-            gpu_full = await self.regex_match(data["gpu"], self.gpu_scores.keys()) or data["gpu"]
+            cpu_full = (
+                await self.regex_match(data["cpu"], self.cpu_scores.keys())
+                or data["cpu"]
+            )
+            gpu_full = (
+                await self.regex_match(data["gpu"], self.gpu_scores.keys())
+                or data["gpu"]
+            )
             user_data.append(
                 {
                     "member": member,
@@ -655,7 +681,11 @@ class PCMasterRace(commands.Cog):
             cpu_scores + gpu_scores + combo_scores,
             "Build Comparison",
             labels=labels * 3,
-            bar_colors=([0xFF6666] * len(labels) + [0x66FF66] * len(labels) + [0x6666FF] * len(labels)),
+            bar_colors=(
+                [0xFF6666] * len(labels)
+                + [0x66FF66] * len(labels)
+                + [0x6666FF] * len(labels)
+            ),
             group_labels=["CPU", "GPU", "Combined"],
             group_size=len(labels),
         )
