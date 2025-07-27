@@ -5,7 +5,6 @@ from re import split
 import discord
 
 from redbot.core import commands
-from redbot.core.bot import Red
 
 log = logging.getLogger("red.raidensakura.choose")
 
@@ -72,16 +71,3 @@ class Choose(commands.Cog):
             return await ctx.send(
                 "Oops, I encountered an error while trying to send the embed."
             )
-
-
-async def setup(bot: Red) -> None:
-    global old_choose
-    old_choose = bot.get_command("choose")
-    if old_choose:
-        bot.remove_command(old_choose.name)
-
-    cog = Choose(bot)
-
-    r = bot.add_cog(cog)
-    if r is not None:
-        await r
