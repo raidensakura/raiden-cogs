@@ -10,7 +10,7 @@ services:
       - .env
     environment:
       EXTRA_ARGS: --dev --debug
-      REDBOT_VERSION: ==3.5.20
+      # REDBOT_VERSION: ==3.5.20
     develop:
       watch:
       - path: ./pcmasterrace

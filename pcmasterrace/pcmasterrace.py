@@ -479,6 +479,87 @@ class PCMasterRace(commands.Cog):
         )
         await ctx.send(embed=embed)
 
+    @set_cmd.command(name="cpu")
+    async def cpu_set(self, ctx, *, cpu: str = ""):
+        """Set or remove your CPU.
+        Example: `[p]pcmr set cpu Ryzen 7 5800X`"""
+        if cpu is None or not cpu.strip():
+            await ctx.send_help(ctx.command)
+            return
+        if cpu.strip().lower() == "remove":
+            await self.config.user(ctx.author).cpu.set(None)
+            await ctx.send("Your CPU has been removed from your combo.")
+            return
+
+        matched = await self.regex_match(
+            cpu, self.cpu_scores.keys(), return_options=True, ctx=ctx
+        )
+        if not matched:
+            await ctx.send(f"Could not find CPU score for `{cpu}`.")
+            return
+
+        cpu_scores = await self.fetch_all_cpu_scores(matched)
+        user_data = await self.config.user(ctx.author).all()
+        # preserve existing GPU if present for embed
+        gpu_name = user_data.get("gpu")
+        gpu_scores = {}
+        if gpu_name:
+            gpu_scores = await self.fetch_all_gpu_scores(gpu_name)
+
+        await self.config.user(ctx.author).cpu.set(matched)
+
+        embed = build_combo_embed(
+            self,
+            ctx.author,
+            matched,
+            gpu_name,
+            cpu_scores,
+            gpu_scores,
+            embed_color=await ctx.embed_color() or DEFAULT_COLOR,
+            combined_score_title="Your CPU has been set!",
+        )
+        await ctx.send(embed=embed)
+
+    @set_cmd.command(name="gpu")
+    async def gpu_set(self, ctx, *, gpu: str = ""):
+        """Set or remove your GPU.
+        Example: `[p]pcmr set gpu RTX 3080`"""
+        if gpu is None or not gpu.strip():
+            await ctx.send_help(ctx.command)
+            return
+        if gpu.strip().lower() == "remove":
+            await self.config.user(ctx.author).gpu.set(None)
+            await ctx.send("Your GPU has been removed from your combo.")
+            return
+
+        matched = await self.regex_match(
+            gpu, self.gpu_scores.keys(), return_options=True, ctx=ctx
+        )
+        if not matched:
+            await ctx.send(f"Could not find GPU score for `{gpu}`.")
+            return
+
+        gpu_scores = await self.fetch_all_gpu_scores(matched)
+        user_data = await self.config.user(ctx.author).all()
+        cpu_name = user_data.get("cpu")
+        cpu_scores = {}
+        if cpu_name:
+            cpu_scores = await self.fetch_all_cpu_scores(cpu_name)
+
+        await self.config.user(ctx.author).gpu.set(matched)
+
+        embed = build_combo_embed(
+            self,
+            ctx.author,
+            cpu_name,
+            matched,
+            cpu_scores,
+            gpu_scores,
+            embed_color=await ctx.embed_color() or DEFAULT_COLOR,
+            combined_score_title="Your GPU has been set!",
+        )
+        await ctx.send(embed=embed)
+
     @view_cmd.command(name="combo")
     async def combo_view(self, ctx, member: discord.Member = None):
         """View your or another member's combo."""
