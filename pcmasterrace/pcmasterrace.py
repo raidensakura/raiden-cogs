@@ -676,7 +676,7 @@ class PCMasterRace(commands.Cog):
             members = (ctx.author, members[0])
         # If more than 3 members, limit for readability
         if len(members) > 3:
-            await ctx.send("You can compare up to 10 users at once.")
+            await ctx.send("You can only compare yourself up to 2 other users at once.")
             return
 
         # Gather data for all members
