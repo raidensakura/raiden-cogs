@@ -47,6 +47,11 @@
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/pcmasterrace">pcmasterrace</a></td>
    <td>A cog to track PC build combo and rank them among other builds in the server.</td>
   </tr>
+
+  <tr>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/hoyotools">hoyotools</a></td>
+   <td>A tool to manage your Hoyoverse game accounts. Currently support features like code redemption, and auto-claim daily login.</td>
+  </tr>
  
 </table>
 
