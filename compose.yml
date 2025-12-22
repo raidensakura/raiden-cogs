@@ -6,17 +6,11 @@ services:
     volumes:
       - ./redbot:/data
       - ./pcmasterrace:/cogs/pcmasterrace
+      - ./hoyotools:/cogs/hoyotools
     env_file:
       - .env
     environment:
       EXTRA_ARGS: --dev --debug
-      # REDBOT_VERSION: ==3.5.20
-    develop:
-      watch:
-      - path: ./pcmasterrace
-        action: restart
-        ignore:
-        - __pycache__
 
 networks:
   default:

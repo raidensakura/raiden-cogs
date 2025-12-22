@@ -5,7 +5,7 @@ repos:
       - id: check-ast
       - id: check-json
       - id: pretty-format-json
-        args: ["--indent", "4"]
+        args: ["--autofix", "--indent", "4"]
       - id: end-of-file-fixer
       - id: mixed-line-ending
   - repo: https://github.com/astral-sh/ruff-pre-commit
