@@ -90,15 +90,15 @@ class HoyoTools(commands.Cog):
             for _ in range(3):
                 try:
                     reward = await client.claim_daily_reward(game=SUPPORTED_GAMES[game])
-                    results[game] = f"✔ {reward.amount}× {reward.name} (UID {censored})"
+                    results[game] = f"✅ {reward.amount}× {reward.name} (UID {censored})"
                     break
 
                 except genshin.AlreadyClaimed:
-                    results[game] = f"✔ Already claimed (UID {censored})"
+                    results[game] = f"✅ Already claimed (UID {censored})"
                     break
 
                 except Exception as e:
-                    errors.append(f"{GAME_NAMES.get(game)}: {e}")
+                    errors.append(f"❌ {GAME_NAMES.get(game)}: {e}")
                     break
 
         if errors:
@@ -225,7 +225,7 @@ class HoyoTools(commands.Cog):
         embed.add_field(name="👤 Users processed", value=str(stats["users"]))
         embed.add_field(name="🍪 Cookies processed", value=str(stats["cookies"]))
         embed.add_field(name="✅ Successful claims", value=str(stats["success"]))
-        embed.add_field(name="✔ Already claimed", value=str(stats["already"]))
+        embed.add_field(name="✅ Already claimed", value=str(stats["already"]))
         embed.add_field(name="❌ Errors", value=str(stats["errors"]))
 
         if stats["per_game"]:
