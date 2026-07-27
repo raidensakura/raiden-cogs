@@ -35,6 +35,32 @@ def scrape_gpu_scores(url, score_type):
     return data
 
 
+def load_previous_data(filename):
+    """Load previous JSON data to validate new scrape."""
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {}
+
+
+def validate_data(new_data, old_data, threshold=0.8):
+    """Validate that new data is not empty and hasn't dropped drastically."""
+    if not new_data:
+        raise ValueError(
+            "❌ Scraping produced empty data. Aborting to prevent data loss."
+        )
+    new_count = len(new_data)
+    old_count = len(old_data)
+    if old_count > 0 and new_count < old_count * threshold:
+        raise ValueError(
+            f"❌ Data count dropped from {old_count} to {new_count} "
+            f"({100*new_count/old_count:.1f}% of previous). "
+            f"This suggests a scraping failure. Aborting to prevent data loss."
+        )
+    return True
+
+
 def main():
     gpu_data = {}
 
@@ -46,10 +72,14 @@ def main():
             gpu_data[gpu][score_type] = score
         time.sleep(2)
 
+    # Validate before writing
+    old_data = load_previous_data("gpu.json")
+    validate_data(gpu_data, old_data)
+
     with open("gpu.json", "w", encoding="utf-8") as f:
         json.dump(gpu_data, f, indent=2)
 
-    print("✅ Scraping complete. Data saved to 'gpu_benchmarks.json'.")
+    print("✅ Scraping complete. Data saved to 'gpu.json'.")
 
 
 if __name__ == "__main__":
