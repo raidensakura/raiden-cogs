@@ -77,7 +77,7 @@ def main():
     validate_data(gpu_data, old_data)
 
     with open("gpu.json", "w", encoding="utf-8") as f:
-        json.dump(gpu_data, f, indent=2)
+        json.dump(gpu_data, f, indent=4)
 
     print("✅ Scraping complete. Data saved to 'gpu.json'.")
 

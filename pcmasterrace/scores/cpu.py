@@ -90,7 +90,7 @@ def main():
     validate_data(results, old_data)
 
     with open("cpu.json", "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+        json.dump(results, f, indent=4)
 
     print("✅ Scraping complete. Data saved to 'cpu.json'.")
 
