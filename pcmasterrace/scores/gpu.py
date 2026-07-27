@@ -18,19 +18,11 @@ def scrape_gpu_scores(url, score_type):
     res.raise_for_status()
     soup = BeautifulSoup(res.text, "html.parser")
 
-    gpu_tags = soup.select(".rank-check")
+    # GPU names are in input[type="checkbox"] value attributes
+    gpu_tags = soup.select('input[type="checkbox"]')
     score_tags = soup.select(".mx-2.text-slate-900.text-sm.font-bold")
 
-    # Be tolerant to site HTML changes: don't raise on mismatched counts.
-    # Log a warning and proceed using the available/minimum set of elements.
-    if not gpu_tags or not score_tags:
-        print(
-            f"Warning: Missing GPU or score elements at {url} (gpu={len(gpu_tags)}, scores={len(score_tags)}); proceeding with available data."
-        )
-    elif len(gpu_tags) != len(score_tags):
-        print(
-            f"Warning: Mismatch in GPU ({len(gpu_tags)}) and score ({len(score_tags)}) count at {url}; proceeding with min length."
-        )
+    print(f"  Found {len(gpu_tags)} GPU elements and {len(score_tags)} score elements")
 
     data = {}
     for gpu_tag, score_tag in zip(gpu_tags, score_tags):
