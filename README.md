@@ -52,6 +52,11 @@
    <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/hoyotools">hoyotools</a></td>
    <td>A tool to manage your Hoyoverse game accounts. Currently support features like code redemption, and auto-claim daily login.</td>
   </tr>
+
+  <tr>
+   <td><a href="https://github.com/raidensakura/raiden-cogs/tree/main/membercard">membercard</a></td>
+   <td>Generate themed member ID cards and optional welcome images for new server members.</td>
+  </tr>
  
 </table>
 
