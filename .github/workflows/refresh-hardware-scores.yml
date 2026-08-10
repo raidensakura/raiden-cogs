@@ -36,6 +36,22 @@ jobs:
         working-directory: pcmasterrace/scores
         run: python gpu.py
 
+      - name: Compress score data
+        working-directory: pcmasterrace/scores
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          for filename in ("cpu.json", "gpu.json"):
+              path = Path(filename)
+              data = json.loads(path.read_text(encoding="utf-8"))
+              path.write_text(
+                  json.dumps(data, separators=(",", ":")) + "\n",
+                  encoding="utf-8",
+              )
+          PY
+
       - name: Commit updated score files
         run: |
           git config user.name "github-actions[bot]"

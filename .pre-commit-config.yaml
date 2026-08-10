@@ -1,3 +1,5 @@
+exclude: ^pcmasterrace/scores/(cpu|gpu)\.json$
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.4.0
