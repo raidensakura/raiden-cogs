@@ -36,10 +36,11 @@ class Throw(commands.Cog):
         s = "s" if len(self.__author__) > 1 else ""
         return f"{pre_processed}\n\nAuthor{s}: {', '.join(self.__author__)}\nCog Version: {self.__version__}"
 
-    # TODO: Delete user throw stats
-    async def red_delete_data_for_user(self, **kwargs):
-        """Nothing to delete"""
-        return
+    async def red_delete_data_for_user(self, *, requester, user_id: int) -> None:
+        """Remove the user's global and per-server throw statistics."""
+        await self.config.user_from_id(user_id).clear()
+        for guild_id in (await self.config.all_members()).keys():
+            await self.config.member_from_ids(guild_id, user_id).clear()
 
     @staticmethod
     async def temp_tip(ctx: commands.Context):

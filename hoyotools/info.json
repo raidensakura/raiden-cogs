@@ -3,7 +3,7 @@
     "author": [
         "raidensakura"
     ],
-    "description": "A cog for various utilities related to Hoyoverse games",
+    "description": "A cog for various utilities related to Hoyoverse games. This cog is neither affiliated with nor endorsed by Hoyoverse.",
     "disabled": false,
     "end_user_data_statement": "This cog stores user provided Hoyolab account token to perform various actions on the user's behalf.",
     "hidden": false,

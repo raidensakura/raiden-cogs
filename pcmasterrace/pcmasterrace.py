@@ -45,6 +45,10 @@ class PCMasterRace(commands.Cog):
     async def cog_load(self):
         await self.migrate_user_combos()
 
+    async def red_delete_data_for_user(self, *, requester, user_id: int) -> None:
+        """Remove the user's saved CPU and GPU selections."""
+        await self.config.user_from_id(user_id).clear()
+
     async def migrate_user_combos(self):
         # Migrate user configs: convert saved CPU/GPU strings to full part names if needed
         all_users = await self.config.all_users()

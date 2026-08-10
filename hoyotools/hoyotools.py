@@ -60,8 +60,12 @@ class HoyoTools(commands.Cog):
     async def red_delete_data_for_user(
         self, *, requester: RequestType, user_id: int
     ) -> None:
-        # TODO: Replace this with the proper end user data removal handling.
-        super().red_delete_data_for_user(requester=requester, user_id=user_id)
+        """Remove all data this cog persists for a user.
+
+        This includes authentication cookies, saved redemption codes, and the
+        per-user auto-login and notification preferences.
+        """
+        await self.config.user_from_id(user_id).clear()
 
     def _make_client(self, cookie: str):
         client = genshin.Client(lang="en-us")
