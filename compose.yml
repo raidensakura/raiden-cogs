@@ -7,6 +7,7 @@ services:
       - ./redbot:/data
       - ./pcmasterrace:/cogs/pcmasterrace
       - ./hoyotools:/cogs/hoyotools
+      - ./membercard:/cogs/membercard
     env_file:
       - .env
     environment:
