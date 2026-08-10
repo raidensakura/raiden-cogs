@@ -1,0 +1,22 @@
+{
+    "author": [
+        "raidensakura"
+    ],
+    "description": "Generates a welcome image for new members using Pillow, featuring their avatar, username, join date, and roles. Supports multiple selectable card themes, and includes a command to view any member's card on demand.",
+    "disabled": false,
+    "end_user_data_statement": "This cog does not persistently store any personal data about individual users beyond their chosen card theme preference. It also stores per-server settings (whether welcome cards are enabled and which channel to post them in).",
+    "hidden": false,
+    "install_msg": "Thanks for installing. Welcome cards are off by default: use `[p]membercard toggle` to enable them and `[p]membercard channel` to pick a channel. Use `[p]membercard theme` to pick a card theme for `view`, and `[p]membercard testwelcome` (owner only) to preview the welcome message.",
+    "min_bot_version": "3.4.12",
+    "name": "MemberCard",
+    "required_cogs": {},
+    "requirements": [
+        "pillow"
+    ],
+    "short": "Sends an ID-card style welcome image when members join.",
+    "tags": [
+        "membercard",
+        "welcome"
+    ],
+    "type": "COG"
+}
