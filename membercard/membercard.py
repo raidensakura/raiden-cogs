@@ -10,6 +10,77 @@ from .card import DEFAULT_THEME, THEMES, render_card
 
 log = logging.getLogger("red.raidensakura.membercard")
 
+THEME_DESCRIPTIONS = {
+    "classic": "An ID-badge style card with a barcode footer.",
+    "laevatain": "A full-art profile card with a stat panel.",
+    "fangyi": "A green-trimmed full-art profile card.",
+    "yvonne": "A pink-trimmed full-art profile card.",
+    "perlica": "A steel-blue full-art profile card.",
+}
+
+
+class ThemePicker(discord.ui.Select):
+    """A private theme selector that refreshes the card preview when changed."""
+
+    def __init__(self, cog: "MemberCard", member: discord.Member, theme: str):
+        options = [
+            discord.SelectOption(
+                label=name.title(),
+                value=name,
+                description=THEME_DESCRIPTIONS.get(name),
+                default=name == theme,
+            )
+            for name in THEMES
+        ]
+        super().__init__(
+            placeholder="Choose a card theme",
+            min_values=1,
+            max_values=1,
+            options=options,
+            custom_id="membercard_theme_picker",
+        )
+        self.cog = cog
+        self.member = member
+
+    async def callback(self, interaction: discord.Interaction):
+        if interaction.user.id != self.member.id:
+            await interaction.response.send_message(
+                "This theme picker isn't for you.", ephemeral=True
+            )
+            return
+
+        theme = self.values[0]
+        await interaction.response.defer()
+        try:
+            buffer = await self.cog._generate_card(self.member, theme_override=theme)
+        except Exception as exc:
+            log.exception(
+                "Failed to generate theme preview for %s.", self.member.id, exc_info=exc
+            )
+            await interaction.edit_original_response(
+                content="Something went wrong while generating that theme preview."
+            )
+            return
+
+        await self.cog.config.user(self.member).theme.set(theme)
+        self.view.set_theme(theme)
+        embed = self.cog._theme_preview_embed(self.member, theme)
+        file = discord.File(buffer, filename="membercard.png")
+        await interaction.edit_original_response(
+            content=None, embed=embed, attachments=[file], view=self.view
+        )
+
+
+class ThemePickerView(discord.ui.View):
+    def __init__(self, cog: "MemberCard", member: discord.Member, theme: str):
+        super().__init__(timeout=180)
+        self.add_item(ThemePicker(cog, member, theme))
+
+    def set_theme(self, theme: str) -> None:
+        picker = self.children[0]
+        for option in picker.options:
+            option.default = option.value == theme
+
 
 class MemberCard(commands.Cog):
     """
@@ -18,7 +89,7 @@ class MemberCard(commands.Cog):
     """
 
     __author__ = ["raidensakura"]
-    __version__ = "1.0.0"
+    __version__ = "1.1.0"
 
     default_guild = {"enabled": False, "channel": None}
     default_user = {"theme": None}
@@ -75,6 +146,13 @@ class MemberCard(commands.Cog):
     async def _generate_card(
         self, member: discord.Member, *, theme_override: str = None
     ) -> io.BytesIO:
+        # Interaction payloads can contain a lightweight Member without presence
+        # activities. Prefer Red's cached guild member so theme-picker previews
+        # receive the same custom-status data as prefix-command card renders.
+        cached_member = member.guild.get_member(member.id)
+        if cached_member is not None:
+            member = cached_member
+
         avatar_bytes = await member.display_avatar.with_size(512).read()
 
         guild_icon_bytes = None
@@ -134,13 +212,29 @@ class MemberCard(commands.Cog):
             title=f"Welcome to {member.guild.name}!",
             description=(
                 f"{member.mention} just joined the server.\n"
-                f"Use `{prefix}membercard theme` to change your card's theme."
+                "Choose and preview your card theme with "
+                f"`{prefix}membercard theme` or `/membercard theme`."
             ),
             color=member.color if member.color.value else discord.Color.blurple(),
         )
         embed.set_image(url="attachment://membercard.png")
         file = discord.File(buffer, filename="membercard.png")
         return embed, file
+
+    @staticmethod
+    def _theme_preview_embed(member: discord.Member, theme: str) -> discord.Embed:
+        embed = discord.Embed(
+            title="Choose your member card theme",
+            description=(
+                f"Selected theme: **{theme.title()}**\n"
+                f"{THEME_DESCRIPTIONS.get(theme, '')}\n\n"
+                "Choose another option below to preview it. Your selection is saved "
+                "automatically."
+            ),
+            color=member.color if member.color.value else discord.Color.blurple(),
+        )
+        embed.set_image(url="attachment://membercard.png")
+        return embed
 
     @commands.Cog.listener()
     async def on_member_join(self, member: discord.Member):
@@ -177,7 +271,7 @@ class MemberCard(commands.Cog):
         except discord.HTTPException as exc:
             log.exception("Failed to send member card in %s.", channel.id, exc_info=exc)
 
-    @commands.group(name="membercard", aliases=["mcard"])
+    @commands.hybrid_group(name="membercard", aliases=["mcard"])
     @commands.guild_only()
     async def membercard(self, ctx: commands.Context):
         """Manage and view member ID cards."""
@@ -228,35 +322,34 @@ class MemberCard(commands.Cog):
 
     @membercard.command(name="theme")
     @commands.guild_only()
-    async def membercard_theme(self, ctx: commands.Context, theme: str = None):
+    @commands.bot_has_permissions(attach_files=True, embed_links=True)
+    async def membercard_theme(self, ctx: commands.Context):
         """
-        View or set your personal member card theme.
+        Choose your personal member card theme from an interactive preview.
 
         Used by both `[p]membercard view` and your welcome card. Defaults to
         `classic` until you set one.
         """
-        if theme is None:
-            current = await self.config.user(ctx.author).theme()
-            available = ", ".join(f"`{name}`" for name in THEMES)
-            if current in THEMES:
-                await ctx.send(
-                    f"Your current theme is `{current}`.\nAvailable themes: {available}"
+        theme = await self._resolve_theme(ctx.author)
+        async with ctx.typing():
+            try:
+                buffer = await self._generate_card(ctx.author, theme_override=theme)
+            except Exception as exc:
+                log.exception(
+                    "Failed to generate theme preview for %s.",
+                    ctx.author.id,
+                    exc_info=exc,
                 )
-            else:
                 await ctx.send(
-                    "You haven't set a theme; defaulting to `classic`.\n"
-                    f"Available themes: {available}"
+                    "Something went wrong while generating that theme preview."
                 )
-            return
+                return
 
-        theme = theme.lower()
-        if theme not in THEMES:
-            available = ", ".join(f"`{name}`" for name in THEMES)
-            await ctx.send(f"Unknown theme `{theme}`. Available themes: {available}")
-            return
-
-        await self.config.user(ctx.author).theme.set(theme)
-        await ctx.send(f"Your member card theme is now set to `{theme}`.")
+        await ctx.send(
+            embed=self._theme_preview_embed(ctx.author, theme),
+            file=discord.File(buffer, filename="membercard.png"),
+            view=ThemePickerView(self, ctx.author, theme),
+        )
 
     @membercard.command(name="toggle")
     @commands.guild_only()

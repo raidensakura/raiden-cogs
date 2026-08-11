@@ -17,20 +17,21 @@
 | `laevatain` | A full-art profile card over a fixed backdrop, with a stat panel and status quote box. |
 | `fangyi` | Same full-art layout as `laevatain`, over a different backdrop with a green trim. |
 | `yvonne` | Same full-art layout, over a different backdrop with a pink trim. |
+| `perlica` | Same full-art layout as `laevatain`, over a Perlica backdrop with a steel-blue trim. |
 
-`[p]membercard theme` sets which theme is used for both your welcome card and `[p]membercard view`. Defaults to `classic` until you set one.
+`[p]membercard theme` or `/membercard theme` opens a theme picker with an in-embed card preview. Selecting a theme updates the preview and saves it for both your welcome card and `view`. It defaults to `classic` until you make a selection.
 
-Welcome cards are **off by default** — enable them with `[p]membercard toggle`.
+Welcome cards are **off by default** — enable them with `[p]membercard toggle` or `/membercard toggle`.
 
 <h2 align="center">Commands</h2>
 
 | Command | Description |
 | --- | --- |
-| `[p]membercard view [member]` | View your own or another member's ID card. |
-| `[p]membercard theme [theme]` | View or set your personal card theme, used by `view`. |
-| `[p]membercard toggle` | Toggle whether a card is posted when a member joins. Off by default. Requires Manage Server. |
-| `[p]membercard channel [channel]` | Set the channel welcome cards are posted in. Leave blank to reset to the server's system channel. Requires Manage Server. |
-| `[p]membercard testwelcome [member]` | Preview the welcome message as it would appear on join. Bot owner only. |
+| `[p]membercard view [member]` / `/membercard view [member]` | View your own or another member's ID card. |
+| `[p]membercard theme` / `/membercard theme` | Open a personal theme picker with a live card preview. |
+| `[p]membercard toggle` / `/membercard toggle` | Toggle whether a card is posted when a member joins. Off by default. Requires Manage Server. |
+| `[p]membercard channel [channel]` / `/membercard channel [channel]` | Set the channel welcome cards are posted in. Leave blank to reset to the server's system channel. Requires Manage Server. |
+| `[p]membercard testwelcome [member]` / `/membercard testwelcome [member]` | Preview the welcome message as it would appear on join. Bot owner only. |
 
 `[p]mcard` also works as a shorthand alias for `[p]membercard`.
 

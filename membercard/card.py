@@ -4,7 +4,7 @@ import io
 
 from PIL import Image
 
-from .themes import classic, fangyi, laevatain, yvonne
+from .themes import classic, fangyi, laevatain, perlica, yvonne
 
 DEFAULT_THEME = "classic"
 
@@ -13,6 +13,7 @@ THEMES = {
     "laevatain": laevatain.render,
     "fangyi": fangyi.render,
     "yvonne": yvonne.render,
+    "perlica": perlica.render,
 }
 
 # Themes draw at a higher internal resolution than this; downscaling to it with a
